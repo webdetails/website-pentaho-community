@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sparkl | Pentaho Community</title>
+        <meta name="description" content="Open source Business Intelligence package including ETL, analysis, metadata and reporting capabilities, now with a totally fresh redesigned interface.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <style>
+            body {
+                padding: 30px 0px;
+            }
+        </style>
+        <link rel="stylesheet" href="../css/bootstrap-theme.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/cbpScroller.css">
+
+        <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body id="sparkl">
+    
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src=""></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="active"><a href="javascript: void();">About</a></li>
+          <li><a href="../underConstruction.html">Projects</a></li>
+          <li><a href="../underConstruction.html">Training</a></li>
+          <li><a href="../underConstruction.html">Marketplace</a></li>
+          <li class="dropdown">
+            <a href="../underConstruction.html" class="dropdown-toggle" data-toggle="dropdown">Whatever <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="../underConstruction.html">About</a></li>
+              <li><a href="../underConstruction.html">Projects</a></li>
+              <li><a href="../underConstruction.html">Training</a></li>
+              <li class="divider"></li>
+              <li><a href="../underConstruction.html">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="../underConstruction.html">One more separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="../underConstruction.html">Support</a></li>
+          <li><a class="btn btn-default btn-blue" id="tryPentaho" href="#">Try Pentaho EE</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
+      <div class="container cbp-so-section" id="containerHeader">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+            <h1>Create Pentaho Apps easily</h1>
+            <p><strong>Sparkl</strong>, or Pentaho App Builder, the plugin's creation instrument that aims to leverage as much as possible of our existing plugins stack. It sits on two major cornerstones of Pentaho: the <strong>CTools</strong> and <strong>Pentaho Data Integration</strong>.</p>
+            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Sparkl <img src="../img/download-icon.png"></span></p>
+          </div>
+          <div class="col-lg-5 cbp-so-side cbp-so-side-right">
+            <img src="../img/sparkl-header-dashboard.png" alt="">
+            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Sparkl <img src="../img/download-icon.png"></span></p>
+          </div>
+        </div>
+      </div> <!-- /container -->  
+
+      <div class="hr"></div>
+      <div class="lightContainerBack">
+        <div class="container lightContainer">
+          <div class="row" id="hiddenMobile">
+            <div id="myCarousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
+                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
+                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Get started</li>
+                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="3" class="col-xs-4 noSelect">Contribute</li>
+              </ol>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item">
+                  <div class="row secondRow" id="whats-new-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p>Building plugins has been, so far, something only reachable by those who have development knowledge, leaving out of the picture lots of people with interesting ideas for new plugins, that could eventually help in a particular customer scenario. <br><br> These people usually lack the proper JAVA knowledge, but are commonly familiar with Pentaho implementations. <br><br> Being familiar with the <a href="http://www.webdetails.pt/ctools.html" target="_blank">CTools</a> and <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a>, they will have all the required knowledge to create applications that will impress their customers.</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="image-holder">
+                        <img src="../img/sparkl-screen-01.png" alt="" id="image-set-display-1" class="image-set-display">
+                      </div>
+                      <div class="screen-previewer">
+                        <div class="preview-block active"><img src="../img/sparkl-screen-01.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-screen-02.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-screen-03.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-screen-04.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-screen-05.png" alt=""></div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item"><div class="row">
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p>There are two sections when we edit a <strong>Sparkl</strong> application: plugins' metadata and elements' definition. <br><br> The element group is basically composed by two types of elements: <strong>Dashboards</strong>, for the front-end side of the application, and <strong>Endpoints</strong>, for the back-end logic.</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="image-holder">
+                        <img src="../img/sparkl-concepts-01.png" alt="" id="image-set-display-2" class="image-set-display">
+                      </div>
+                      <div class="screen-previewer" id="screen-previewer-2">
+                        <div class="preview-block active"><img src="../img/sparkl-concepts-01.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-concepts-02.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-concepts-03.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-concepts-04.png" alt=""></div>
+                        <div class="preview-block"><img src="../img/sparkl-concepts-05.png" alt=""></div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row secondRow">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <strong>Dashboards</strong>
+                      <p>By filtering the Dashboard element types, we'll see how many screens our plugin has. The User Interfaces are generated through <a href="http:/www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, and we can jump from <strong>Sparkl</strong> to <a href="http:/www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, if we want to edit our dashboard. Exactly like if we were creating a dashboard.</p>
+                    </div>
+                    <div class="col-lg-4" id="screenshots-description">
+                      <strong>Endpoints</strong>
+                      <p>In the core of <strong>Sparkl</strong>, we have pluggable support for several element types. The original idea was to support back-end logic in Javascript, JAVA and others, but <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a> worked so well out of the box, that we didn't yet feel the need for anything else.</p>
+                    </div>
+                    <div class="col-lg-4" id="screenshots-description">
+                      <strong>Documentation</strong>
+                      <p>You can access the <a href="#">Sparkl Documentation</a>, where we communicate what are the application's Dashboards and Endpoints, their goals, logic, actions and how all these are wrapped up to build a consistent plugin.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="item"><div class="row">
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/01.png" class="getStartedNumber"> Create a plugin with <strong>Sparkl</strong></p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/02.png" class="getStartedNumber"> Give it a name</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-02.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/03.png" class="getStartedNumber"> Fill in the plugin info</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-03.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/04.png" class="getStartedNumber"> Add an element</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-04.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/05.png" class="getStartedNumber"> Add two dashboards</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-05.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/06.png" class="getStartedNumber"> Edit the dashboards</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-06.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/07.png" class="getStartedNumber"> Add a simple row</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-07.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/08.png" class="getStartedNumber"> Preview it</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-08.png" alt="">
+                    </div>
+                  </div>
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p><img src="../img/09.png" class="getStartedNumber"> Share it</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/getStarted-09.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="item"><div class="row">
+                  <div class="row secondRow" id="marketplace-images">
+                    <div class="col-lg-4" id="screenshots-description">
+                      <p>If you are happy with the plugin, submit it to the <strong>Pentaho Marketplace</strong> and let everyone take advantage of it.</p>
+                    </div>
+                    <div class="col-lg-8">
+                      <img src="../img/marketplace-screen-sparkl.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>   
+          </div>
+        </div>
+        <div class="row" id="showMobile">
+            <div class="col-lg-12">
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Description</span>
+                        </div>                        
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-4" id="screenshots-description">
+                          <p>Building plugins has been, so far, something only reachable by those who have development knowledge, leaving out of the picture lots of people with interesting ideas for new plugins, that could eventually help in a particular customer scenario. <br><br> These people usually lack the proper JAVA knowledge, but are commonly familiar with Pentaho implementations. <br><br> Being familiar with the <a href="http://www.webdetails.pt/ctools.html" target="_blank">CTools</a> and <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a>, they will have all the required knowledge to create applications that will impress their customers.</p>
+                        </div>
+                        <div class="col-lg-8">
+                          <img src="../img/sparkl-screen-01.png" alt="">
+                          <img src="../img/sparkl-screen-02.png" alt="">
+                          <img src="../img/sparkl-screen-03.png" alt="">
+                          <img src="../img/sparkl-screen-04.png" alt="">
+                          <img src="../img/sparkl-screen-05.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Main concepts</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-4" id="screenshots-description">
+                          <p>There are two sections when we edit a <strong>Sparkl</strong> application: plugins' metadata and elements' definition. <br><br> The element group is basically composed by two types of elements: <strong>Dashboards</strong>, for the front-end side of the application, and <strong>Endpoints</strong>, for the back-end logic.</p>
+                        </div>
+                        <div class="col-lg-8">
+                          <img src="../img/sparkl-concepts-01.png" alt="">
+                          <img src="../img/sparkl-concepts-02.png" alt="">
+                          <img src="../img/sparkl-concepts-03.png" alt="">
+                          <img src="../img/sparkl-concepts-04.png" alt="">
+                          <img src="../img/sparkl-concepts-05.png" alt="">
+                        </div>
+                      </div>
+
+                      <div class="row secondRow">
+                        <div class="col-lg-4" id="screenshots-description">
+                          <strong>Dashboards</strong>
+                          <p>By filtering the Dashboard element types, we'll see how many screens our plugin has. The User Interfaces are generated through <a href="http:/www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, and we can jump from <strong>Sparkl</strong> to <a href="http:/www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, if we want to edit our dashboard. Exactly like if we were creating a dashboard.</p>
+                        </div>
+                        <div class="col-lg-4" id="screenshots-description">
+                          <strong>Endpoints</strong>
+                          <p>In the core of <strong>Sparkl</strong>, we have pluggable support for several element types. The original idea was to support back-end logic in Javascript, JAVA and others, but <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a> worked so well out of the box, that we didn't yet feel the need for anything else.</p>
+                        </div>
+                        <div class="col-lg-4" id="screenshots-description">
+                          <strong>Documentation</strong>
+                          <p>You can access the <a href="#">Sparkl Documentation</a>, where we communicate what are the application's Dashboards and Endpoints, their goals, logic, actions and how all these are wrapped up to build a consistent plugin.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Get started</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="row" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/01.png" class="getStartedNumber"> Create a plugin with <strong>Sparkl</strong></p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/02.png" class="getStartedNumber"> Give it a name</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-02.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/03.png" class="getStartedNumber"> Fill in the plugin info</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-03.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/04.png" class="getStartedNumber"> Add an element</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-04.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/05.png" class="getStartedNumber"> Add two dashboards</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-05.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/06.png" class="getStartedNumber"> Edit the dashboards</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-06.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/07.png" class="getStartedNumber"> Add a simple row</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-07.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/08.png" class="getStartedNumber"> Preview it</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-08.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row secondRow" id="marketplace-images">
+                          <div class="col-lg-4" id="screenshots-description">
+                            <p><img src="../img/09.png" class="getStartedNumber"> Share it</p>
+                          </div>
+                          <div class="col-lg-8">
+                            <img src="../img/getStarted-09.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contribute</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-4" id="screenshots-description">
+                          <p>If you are happy with the plugin, submit it to the <strong>Pentaho Marketplace</strong> and let everyone take advantage of it.</p>
+                        </div>
+                        <div class="col-lg-8">
+                          <img src="../img/marketplace-screen-sparkl.png">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>      
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="../js/vendor/bootstrap.min.js"></script>
+
+        <script>
+            function preloader() {
+              if (document.images) {
+                var img1 = new Image();
+                var img2 = new Image();
+
+                img1.src = "../img/pentaho-logo-small.png";
+                img2.src = "../img/pentaho-logo.png";
+              }
+            }
+            function addLoadEvent(func) {
+              var oldonload = window.onload;
+              if (typeof window.onload != 'function') {
+                window.onload = func;
+              } else {
+                window.onload = function() {
+                  if (oldonload) {
+                    oldonload();
+                  }
+                  func();
+                }
+              }
+            }
+            addLoadEvent(preloader);
+        </script>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/cbpScroller.js"></script>
+        <script src="../js/classie.js"></script>
+        <script>
+          new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+        </script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('#tabs').tab();
+            });
+        </script> 
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

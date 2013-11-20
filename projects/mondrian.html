@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Mondrian | Pentaho Community</title>
+        <meta name="description" content="Open source Business Intelligence package including ETL, analysis, metadata and reporting capabilities, now with a totally fresh redesigned interface.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <style>
+            body {
+                padding: 30px 0px;
+            }
+        </style>
+        <link rel="stylesheet" href="../css/bootstrap-theme.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/cbpScroller.css">
+
+        <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body class="pluginPage">
+    
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src=""></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+          <!--<li class="active"><a href="javascript: void();">About</a></li>
+          <li><a href="underConstruction.html">Projects</a></li>
+          <li><a href="underConstruction.html">Training</a></li>
+          <li><a href="underConstruction.html">Marketplace</a></li>
+          <li class="dropdown">
+            <a href="underConstruction.html" class="dropdown-toggle" data-toggle="dropdown">Whatever <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="underConstruction.html">About</a></li>
+              <li><a href="underConstruction.html">Projects</a></li>
+              <li><a href="underConstruction.html">Training</a></li>
+              <li class="divider"></li>
+              <li><a href="underConstruction.html">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="underConstruction.html">One more separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="underConstruction.html">Support</a></li>-->
+          <li><a class="btn btn-default btn-blue" id="tryPentaho" href="#">Try Pentaho EE</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
+      <div class="container cbp-so-section" id="containerHeader">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+            <h1>Mondrian</h1>
+            <p><strong>Mondrian</strong> or Pentaho Analysis Services is an Online Analytics Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.</p>
+            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Mondrian <img src="../img/download-icon.png"></span></p>
+          </div>
+          <div class="col-lg-5 cbp-so-side cbp-so-side-right">
+            <img src="../img/mondrian-header-dashboard.png" alt="">
+            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Mondrian <img src="../img/download-icon.png"></span></p>
+          </div>
+        </div>
+      </div> <!-- /container -->  
+
+      <div class="hr"></div>
+      <div class="lightContainerBack">
+        <div class="container lightContainer">
+          <div class="row" id="hiddenMobile">
+            <div id="myCarousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
+                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
+                <li id="in-development-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">In development</li>
+                <li id="contribute-tab" data-target="#myCarousel" data-slide-to="3" class="col-xs-4 noSelect">Contribute</li>
+                <li id="downloads-tab" data-target="#myCarousel" data-slide-to="4" class="col-xs-4 noSelect">Downloads</li>
+              </ol>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item" id="plugin-description">
+                  <div class="row secondRow">
+                    <div class="col-lg-8">
+                      <h5>Analyze all your data in real-time</h5>
+                      <p>Analysing huge quantities of data as never been so easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing (OLAP) written in Java, the system responds to queries - even if they are millions of records, occupying several gigabytes - fast enough to allow an interactive exploration of the data. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling into and 
+cross-tabulating information.</p>
+                      <br>
+                      <div style="text-align: center;">
+                        <img src="../img/cubo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-bar">
+                        <h1>Quick Links</h1>
+                        <a href="">FAQ</a><br>
+                        <a href="">Online Documentation</a><br>
+                        <a href="">Julian Hyde's Blog</a><br>
+                        <a href="">Forum</a><br>
+                        <a href="">Mailing List</a>
+                        <a href="">Mondrian on SourceForge</a><br>
+                        <a href="">JPivot</a><br>
+                        <a href="">ResGen</a><br>
+                        <a href="">Partners</a>
+                        <a href="">Source</a>
+                        <h1>Support</h1>
+                        <a href="">Get Support</a>
+                      </div>
+                      <div class="info-bar">
+                        <h1>Training and Education</h1>
+                        <a href="">Pentaho Training and Education</a>
+                        <a href="">Training FAQ</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row secondRow greenRow">
+                    <div class="col-lg-12">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h5>Frequently asked questions</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <p class="faq-title">How do I use Mondrian in my application?</p>
+                          <p>There are several ways. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="faq-title">What API does Mondrian use?</p>
+                          <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>., an extension to JDBC for OLAP applications. It also has a provider for XML for Analysis.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
+                          <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
+                        </div>
+                      </div>
+                      <div class="row secondRow">
+                        <div class="col-lg-4">
+                          <p class="faq-title">How can Mondrian be extended?</p>
+                          <p>todo: User-defined functions<br>
+                          todo: Cell readers<br>
+                          todo: Member readers</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="faq-title">Can Mondrian handle large datasets?</p>
+                          <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="faq-title">How do I enable tracing?</p>
+                          <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row secondRow" id="new-features">
+                    <div class="col-lg-12">
+                      <div class="row first-feature-row">
+                        <div class="col-lg-4">
+                          <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="specialTitle">Partitioned Cubes</p>
+                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                      </div>
+                      <div class="row" id="mainConceptsRow">
+                        <div class="col-lg-4">
+                          <div class="mainConceptOption active" id="presentationLayer">Presentation Layer</div>
+                          <div class="mainConceptOption" id="dimensionalLayer">Dimensional Layer</div>
+                          <div class="mainConceptOption" id="starLayer">Star Layer</div>
+                          <div class="mainConceptOption" id="storageLayer">Storage Layer</div>
+                        </div>
+                        <div class="col-lg-8">
+                          <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what the user sees on his monitor, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line and bar charts, and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+                          <div class="mainConceptContent" id="dimensionalLayerContent">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluted in multiple phases and the axes are the first to be computed, then the values of the cells within the axes.</div>
+                          <div class="mainConceptContent" id="starLayerContent">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
+                          <div class="mainConceptContent" id="storageLayerContent">The <strong>Storage Layer</strong> is a Relational Database Management  System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row secondRow">
+                    <div class="col-lg-8">
+                      <h5>Where We’re Headed</h5>
+
+                      <div class="row" id="pdi5-info">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 3.6.0 (5.0.0 GA Suite Release)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 98%;"><span>98%</span></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row" style="margin-left: -15px;" id="dev-list">
+                        <div class="col-lg-3">
+                          <h6>Roadmap</h6>
+                        </div>
+                        <div class="col-lg-9">
+                          <input class="col-lg-12" id="search-dev-list" onkeyup="filterItems(this.value)" placeholder="Search">
+                        </div>
+                      </div>
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 3.5.x (4.8.2 GA Suite Release)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 80%;"><span>80%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 3.5.x (4.8.1 GA Suite Release)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 100%;"><span>Launched</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 3.6.x (5.0.0 Backlog)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 20%;"><span>20%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 4.0.0 (5.1.0 GA Suite Release)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 98%;"><span>98%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 4.0.0 (5.1.0 Suite Backlog)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 2%;"><span class="specialPercent">2%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 4.1.0 (TBD GA Suite Release)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <span>0%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian Backlog
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 40%;"><span>40%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Future Release
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 2%;"><span class="specialPercent">2%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 3.7.x (5.1.0 Suite Backlog)
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <span>0%</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                      <!-- dev item -->
+                      <div class="row dev-item">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-7">
+                              <p class="in-development-title">
+                                Mondrian 5.1.0 GA
+                              </p>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="progressbar">
+                                <div class="progressbar-content" style="width: 12%;"><span class="specialPercent">12%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 bottom-info-links">
+                              <div class="row">
+                                <a href="">+ More Info</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end dev item -->
+
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-bar">
+                        <h1>Developer Resources</h1>
+                        <a href="">Roadmap</a><br>
+                        <a href="">Sprint Homepage</a><br>
+                        <a href="">Open Issues</a><br>
+                        <a href="">Continuous Integration Builds</a><br>
+                        <a href="">Mondrian Source</a>
+                        <a href="">Schema Workbench Source</a><br>
+                        <a href="">Aggregation Designer Source</a><br>
+                        <a href="">Developer Forum</a>
+                      </div>
+                      <div class="info-bar">
+                        <h6>Contribute to the project</h6>
+                        <p>You can participate by contributing new code, reporting bugs, testing new releases, answering questions and more. Welcome to the team.</strong></p>
+                        
+                        <h1>Places to contribute</h1>
+                        <a href="">Write a tech tip</a><br>
+                        <a href="">Report a bug in JIRA</a><br>
+                        <a href="">Answer posts on the forums</a><br>
+                        <a href="">Write some code</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row secondRow">
+                    <div class="col-lg-12">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h5>How to contribute</h5>
+                        </div>
+                      </div>
+                      <div class="row first-feature-row">
+                        <div class="col-lg-4">
+                          <p>The open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
+                        </div>
+                        <div class="col-lg-4">
+                         <p>Here’s your guide to submitting just about any contribution to the Pentaho project. If you don’t find the answers you need here, please post your question to our forums, located at <a href="">Forums</a>.</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h6>Places to contribute</h6>
+                        </div>
+                      </div>
+                      <div class="row" id="contribute-list">
+                        <div class="col-lg-4">
+                          <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Discussion forums in JIRA</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      There are two primary ways of making sure your contributions are reviewed in a timely fashion and recognized - through our <a href="">Discussion Forums</a> and by way of our issue and bug tracking system, <a href="">JIRA</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Reporting a bug</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      All bug reports are recorded and tracked through our JIRA issue and bug tracking system. You can find our JIRA system at <a href="http://jira.pentaho.org">http://jira.pentaho.org</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contributing code</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      We rely on our community contributions of time and code (and we'll never turn down money or beer) to keep our commitment to deliver a quality business intelligence platform in the open source arena.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting code</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     Bug fixes, new features and improvements are each types of cases in our JIRA system; use the type appropriate to your case. You can find our JIRA system at <a href="http://jira.pentaho.org">http://jira.pentaho.org</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="panel-group" id="accordion2">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Solutions</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Solutions should be submitted through the new feature type case in our JIRA system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting your ideas</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseSix" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Whether you are a developer who is implementing the platform or a business analyst who needs to solve a particular problem using it, your suggestions are valuable! We encourage any community member to share their needs with us, as long as they are related to business intelligence software and the problems addressed by BI.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contributing documentation</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseSeven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      If you would like to contribute an improvement to our documentation, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/">Pentaho Documentation Wiki</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Internationalized contributions</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseEight" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     The place to start with a language specific contribution is to look under our International Forums for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="panel-group" id="accordion3">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseNine">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting test results</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseNine" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      The Pentaho team is in the process of building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you are willing to contribute time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org">contact us</a>. We will send you a matrix spreadsheet where you identify the environment and test variables in play, and submit your results back to us.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTen">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Offering your time</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org">send us an email</a> with a description of the resources you have and the commitment you can make and we will be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseEleven">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Snacks and such</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseEleven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Any good community member knows a decent meal (or even a handful of corn chips) goes a long way toward increasing developer productivity. Well, it at least improves their outlook anyway?<br><br>
+
+                                      If you would like to submit a contribution of beer, snacks, soda, beer, chocolate, pizza or pretty much anything else edible (like beer), send your package to:<br><br>
+                                      Pentaho Corporation <br>
+                                      5950 Hazeltine National Drive, Suite #340 <br>
+                                      Orlando, FL 32822 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwelve">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Gifts and other acts of bribery</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwelve" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="row secondRow" id="plugin-downloads">
+                    <div class="col-lg-12 main-plugin-download">
+                      <div class="row main-plugin-header">
+                        <div class="col-lg-8 main-plugin-title">
+                          <strong>Mondrian 3.5.0</strong> Stable
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Mondrian <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Mondrian <img src="../img/download-icon.png"></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 main-plugin-content">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <p><strong>Mondrian 3.5.0</strong> is a bugfix release based off the previous 3.4.1 version. It includes many enhancements and performance fixes as well as better native support for native resolution of tuples when access controls are added.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <span class="contentContext">New Features</span>
+                          
+                          <ul>
+                            <li><p>Tuples evaluation now push down natively the constraints imposed by roles.</p></li>
+                            <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
+                            <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
+                            <li><p>Resolves tuples only joins to the fact table if absolutely necessary.</p></li>
+                            <li><p>Upgraded Apache Xerces.</p></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-4"><br>
+                          <ul>
+                            <li><p>Improved processing of large volumes of data when a member grant is used with a partial rollup policy.</p></li>
+                            <li><p>Enables a mode in which nothing gets cached and the data returned is always the latest available from the database.</p></li>
+                            <li><p>Allows more than one measure to be included in the RETURN clause of a DRILLTHROUGH statement.</p></li>
+                            <li><p>Added support for native evaluation of regular expressions with Netezza.</p></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row main-plugin-footerNotes">
+                        <div class="col-lg-8">
+                          <p>See Release Notes for more info</p>
+                        </div>
+                        <div class="col-lg-4">
+                         <a href="">ChangeLog <img src="../img/changelog.png"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row secondRow">
+                    <div class="col-lg-12">
+                      <h6>Previous releases</h6>
+                    </div>
+                  </div>
+                  <div class="row previousDownloadRow">
+                    <div class="col-lg-8">
+                      <p><strong>Mondrian 3.4.1</strong> Stable</p>
+                    </div>
+                    <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                    </div>
+                  </div>
+                  <div class="row previousDownloadRow">
+                    <div class="col-lg-8">
+                      <p><strong>Mondrian 3.4.1</strong> Stable</p>
+                    </div>
+                    <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                    </div>
+                  </div>
+                  <div class="row previousDownloadRow">
+                    <div class="col-lg-8">
+                      <p><strong>Mondrian 3.3.0</strong> Stable</p>
+                    </div>
+                    <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                    </div>
+                  </div>
+                  <div class="row previousDownloadRow">
+                    <div class="col-lg-8">
+                      <p><strong>Schema Workbench 3.3.0</strong> Stable</p>
+                    </div>
+                    <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                    </div>
+                  </div>
+                  <div class="row previousDownloadRow">
+                    <div class="col-lg-8">
+                      <p><strong>Aggregation Designer 1.3.0</strong> Stable</p>
+                    </div>
+                    <div class="col-lg-4">
+                          <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                          <p class="small-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download <img src="../img/download-icon.png"></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>   
+          </div>
+          <div class="row" id="showMobile">
+            <div class="col-lg-12">
+              <div class="panel-group" id="accordionMain">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainOne">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Description</span>
+                        </div>                        
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseMainOne" class="panel-collapse collapse">
+                    <div class="panel-body" id="panel-body-with-green">
+                      <div class="row">
+                        <div class="col-lg-8">
+                          <h5>Analyze all your data in real-time</h5>
+                          <p>Analysing huge quantities of data as never been so easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing (OLAP) written in Java, the system responds to queries - even if they are millions of records, occupying several gigabytes - fast enough to allow an interactive exploration of the data. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling into and 
+    cross-tabulating information.</p>
+                          <br>
+                          <div style="text-align: center;">
+                            <img src="../img/cubo.png" alt="">
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="info-bar">
+                            <h1>Quick Links</h1>
+                            <a href="">FAQ</a><br>
+                            <a href="">Online Documentation</a><br>
+                            <a href="">Julian Hyde's Blog</a><br>
+                            <a href="">Forum</a><br>
+                            <a href="">Mailing List</a>
+                            <a href="">Mondrian on SourceForge</a><br>
+                            <a href="">JPivot</a><br>
+                            <a href="">ResGen</a><br>
+                            <a href="">Partners</a>
+                            <a href="">Source</a>
+                            <h1>Support</h1>
+                            <a href="">Get Support</a>
+                          </div>
+                          <div class="info-bar">
+                            <h1>Training and Education</h1>
+                            <a href="">Pentaho Training and Education</a>
+                            <a href="">Training FAQ</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row secondRow greenRow">
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <h5>Frequently asked questions</h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <p class="faq-title">How do I use Mondrian in my application?</p>
+                              <p>There are several ways. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p class="faq-title">What API does Mondrian use?</p>
+                              <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>., an extension to JDBC for OLAP applications. It also has a provider for XML for Analysis.</p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
+                              <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
+                            </div>
+                          </div>
+                          <div class="row secondRow">
+                            <div class="col-lg-4">
+                              <p class="faq-title">How can Mondrian be extended?</p>
+                              <p>todo: User-defined functions<br>
+                              todo: Cell readers<br>
+                              todo: Member readers</p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p class="faq-title">Can Mondrian handle large datasets?</p>
+                              <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                            </div>
+                            <div class="col-lg-4">
+                              <p class="faq-title">How do I enable tracing?</p>
+                              <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainTwo">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Main Concepts</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseMainTwo" class="panel-collapse collapse">
+                    <div class="panel-body" id="new-features">
+                      <div class="row" style="margin-top: 15px;">
+                        <div class="col-lg-4">
+                          <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                        </div>
+                        <div class="col-lg-4">
+                          <p class="specialTitle">Partitioned Cubes</p>
+                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                      </div>
+                      <div class="row" id="mainConceptsRow">
+                        <div class="col-lg-4">
+                          <div class="mainConceptOption active" id="presentationLayer1">Presentation Layer</div>
+                          <div class="mainConceptContent active" id="presentationLayer1Content">The <strong>Presentation Layer</strong> determines what the user sees on his monitor, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line and bar charts, and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+
+                          <div class="mainConceptOption" id="dimensionalLayer1">Dimensional Layer</div>
+                          <div class="mainConceptContent" id="dimensionalLayer1Content">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluted in multiple phases and the axes are the first to be computed, then the values of the cells within the axes.</div>
+
+                          <div class="mainConceptOption" id="starLayer1">Star Layer</div>
+                          <div class="mainConceptContent" id="starLayer1Content">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
+
+                          <div class="mainConceptOption" id="storageLayer1">Storage Layer</div>
+                          <div class="mainConceptContent" id="storageLayer1Content">The <strong>Storage Layer</strong> is a Relational Database Management  System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainThree">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;In Development</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseMainThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row secondRow">
+                        <div class="col-lg-8">
+                          <h5>Where We’re Headed</h5>
+
+                          <div class="row" id="pdi5-info">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 3.6.0 (5.0.0 GA Suite Release)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 98%;"><span>98%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row" style="margin-left: -15px;" id="dev-list">
+                            <div class="col-lg-3">
+                              <h6>Roadmap</h6>
+                            </div>
+                            <div class="col-lg-9">
+                              <input class="col-lg-12" id="search-dev-list" onkeyup="filterItems(this.value)" placeholder="Search">
+                            </div>
+                          </div>
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 3.5.x (4.8.2 GA Suite Release)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 80%;"><span>80%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 3.5.x (4.8.1 GA Suite Release)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 100%;"><span>Launched</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 3.6.x (5.0.0 Backlog)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 20%;"><span>20%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 4.0.0 (5.1.0 GA Suite Release)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 98%;"><span>98%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 4.0.0 (5.1.0 Suite Backlog)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 2%;"><span class="specialPercent">2%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 4.1.0 (TBD GA Suite Release)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <span>0%</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian Backlog
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 40%;"><span>40%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Future Release
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 2%;"><span class="specialPercent">2%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 3.7.x (5.1.0 Suite Backlog)
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <span>0%</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                          <!-- dev item -->
+                          <div class="row dev-item">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-7">
+                                  <p class="in-development-title">
+                                    Mondrian 5.1.0 GA
+                                  </p>
+                                </div>
+                                <div class="col-lg-5">
+                                  <div class="progressbar">
+                                    <div class="progressbar-content" style="width: 12%;"><span class="specialPercent">12%</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 bottom-info-links">
+                                  <div class="row">
+                                    <a href="">+ More Info</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end dev item -->
+
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="info-bar">
+                            <h1>Developer Resources</h1>
+                            <a href="">Roadmap</a><br>
+                            <a href="">Sprint Homepage</a><br>
+                            <a href="">Open Issues</a><br>
+                            <a href="">Continuous Integration Builds</a><br>
+                            <a href="">Mondrian Source</a>
+                            <a href="">Schema Workbench Source</a><br>
+                            <a href="">Aggregation Designer Source</a><br>
+                            <a href="">Developer Forum</a>
+                          </div>
+                          <div class="info-bar">
+                            <h6>Contribute to the project</h6>
+                            <p>You can participate by contributing new code, reporting bugs, testing new releases, answering questions and more. Welcome to the team.</strong></p>
+                            
+                            <h1>Places to contribute</h1>
+                            <a href="">Write a tech tip</a><br>
+                            <a href="">Report a bug in JIRA</a><br>
+                            <a href="">Answer posts on the forums</a><br>
+                            <a href="">Write some code</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainFour">
+                        <div class="row">
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contribute</span>
+                        </div> 
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseMainFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h5>How to contribute</h5>
+                        </div>
+                      </div>
+                      <div class="row first-feature-row">
+                        <div class="col-lg-4">
+                          <p>The open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
+                        </div>
+                        <div class="col-lg-4">
+                         <p>Here’s your guide to submitting just about any contribution to the Pentaho project. If you don’t find the answers you need here, please post your question to our forums, located at <a href="">Forums</a>.</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h6>Places to contribute</h6>
+                        </div>
+                      </div>
+                      <div class="row" id="contribute-list">
+                        <div class="col-lg-4">
+                          <div class="panel-group" id="accordionPlaces">
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesOne">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Discussion forums in JIRA</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      There are two primary ways of making sure your contributions are reviewed in a timely fashion and recognized - through our <a href="">Discussion Forums</a> and by way of our issue and bug tracking system, <a href="">JIRA</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesTwo">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Reporting a bug</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      All bug reports are recorded and tracked through our JIRA issue and bug tracking system. You can find our JIRA system at <a href="http://jira.pentaho.org">http://jira.pentaho.org</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesThree">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contributing code</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      We rely on our community contributions of time and code (and we'll never turn down money or beer) to keep our commitment to deliver a quality business intelligence platform in the open source arena.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesFour">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting code</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     Bug fixes, new features and improvements are each types of cases in our JIRA system; use the type appropriate to your case. You can find our JIRA system at <a href="http://jira.pentaho.org">http://jira.pentaho.org</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesFive">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Solutions</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Solutions should be submitted through the new feature type case in our JIRA system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesSix">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting your ideas</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesSix" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Whether you are a developer who is implementing the platform or a business analyst who needs to solve a particular problem using it, your suggestions are valuable! We encourage any community member to share their needs with us, as long as they are related to business intelligence software and the problems addressed by BI.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesSeven">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contributing documentation</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesSeven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      If you would like to contribute an improvement to our documentation, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/">Pentaho Documentation Wiki</a>.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesEight">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Internationalized contributions</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesEight" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     The place to start with a language specific contribution is to look under our International Forums for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesNine">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Submitting test results</span>
+                                    </div>                        
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesNine" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      The Pentaho team is in the process of building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you are willing to contribute time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org">contact us</a>. We will send you a matrix spreadsheet where you identify the environment and test variables in play, and submit your results back to us.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesTen">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Offering your time</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesTen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org">send us an email</a> with a description of the resources you have and the commitment you can make and we will be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesEleven">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Snacks and such</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesEleven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      Any good community member knows a decent meal (or even a handful of corn chips) goes a long way toward increasing developer productivity. Well, it at least improves their outlook anyway?<br><br>
+
+                                      If you would like to submit a contribution of beer, snacks, soda, beer, chocolate, pizza or pretty much anything else edible (like beer), send your package to:<br><br>
+                                      Pentaho Corporation <br>
+                                      5950 Hazeltine National Drive, Suite #340 <br>
+                                      Orlando, FL 32822 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionPlaces" href="#collapsePlacesTwelve">
+                                    <div class="row">
+                                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Gifts and other acts of bribery</span>
+                                    </div> 
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapsePlacesTwelve" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="../js/vendor/bootstrap.min.js"></script>
+
+        <script>
+            function preloader() {
+              if (document.images) {
+                var img1 = new Image();
+                var img2 = new Image();
+
+                img1.src = "../img/pentaho-logo-small.png";
+                img2.src = "../img/pentaho-logo.png";
+              }
+            }
+            function addLoadEvent(func) {
+              var oldonload = window.onload;
+              if (typeof window.onload != 'function') {
+                window.onload = func;
+              } else {
+                window.onload = function() {
+                  if (oldonload) {
+                    oldonload();
+                  }
+                  func();
+                }
+              }
+            }
+            addLoadEvent(preloader);
+        </script>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/cbpScroller.js"></script>
+        <script src="../js/classie.js"></script>
+        <script>
+          new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+        </script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $('#tabs').tab();
+            });
+        </script> 
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
