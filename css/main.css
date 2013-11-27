@@ -224,7 +224,7 @@ img {
 
 .btn-green {
   background: #3BA749;
-  color: #fff;
+  color: #fefefe !important;
   text-shadow: none;
   font-family:'Open Sans', Helvetica, Arial, sans-serif;
   border: 0;
@@ -1032,7 +1032,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 =========================================================== */
 
 .pluginPage #containerHeader h1 {
-  font-size: 30px;
+  font-size: 45px;
 }
 
 .pluginPage #containerHeader h1 strong {
@@ -1305,7 +1305,8 @@ p.in-development-description {
   margin-left:-5px;
 }
 
-#mainConceptsRow {
+#mainConceptsRow,
+#mainConceptsRow2 {
   background: #efefef;
   margin-top: 30px;
 }
@@ -1358,11 +1359,20 @@ p.in-development-description {
   display: block;
 }
 
+.mainConceptContent .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 #contribute-list #accordionPlaces div.panel div.panel-heading h4.panel-title a.accordion-toggle, 
 #contribute-list #accordionPlaces div.panel div.panel-heading h4.panel-title a.accordion-toggle:link, 
 #contribute-list #accordionPlaces div.panel div.panel-heading h4.panel-title a.accordion-toggle:visited {
   line-height: 20px;
   padding: 9px 0px;
+}
+
+.main-plugin-footerNotes a {
+  color: #39A34A;
 }
 
 @media (max-width: 1199px) {
@@ -1377,5 +1387,10 @@ p.in-development-description {
 
   .pluginPage .specialTitle {
     margin-top: 40px;
+  }
+
+  .main-plugin-footerNotes .col-lg-4,
+  .main-plugin-footerNotes .col-lg-8 {
+    text-align: center;
   }
 }

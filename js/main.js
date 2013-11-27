@@ -37,12 +37,13 @@ $(document).ready(function(){
 	});
 
 	$('.mainConceptOption').click(function() {
-		$('.mainConceptOption').removeClass('active');
-		$('.mainConceptContent').removeClass('active');
+		$conceptContainer = $(this).closest('.row');
+		$conceptContainer.find('.mainConceptOption').removeClass('active');
+		$conceptContainer.find('.mainConceptContent').removeClass('active');
 		$(this).addClass('active');
 		var myID = $(this).attr('id');
 		myID = "" + myID + "Content";
-		$('#'+myID).addClass('active');
+		$conceptContainer.find('#'+myID).addClass('active');
 	});
 
 	myFunction();
