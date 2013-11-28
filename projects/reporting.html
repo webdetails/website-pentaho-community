@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Mondrian | Pentaho Community</title>
-        <meta name="description" content="Online Analytics Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.">
+        <title>Reporting | Pentaho Community</title>
+        <meta name="description" content="Transform your data into information.">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../css/bootstrap.css">
@@ -45,9 +45,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li class="active"><a href="mondrian.html">Mondrian</a></li>
+              <li><a href="mondrian.html">Mondrian</a></li>
               <li><a href="kettle.html">Data Integration</a></li>
-              <li><a href="reporting.html">Reporting</a></li>
+              <li class="active"><a href="reporting.html">Reporting</a></li>
               <li><a href="weka.html">Data Mining</a></li>
               <li><a href="sparkl.html">Sparkl</a></li>
             </ul>
@@ -62,13 +62,13 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Mondrian</h1>
-            <p><strong>Mondrian</strong> or Analysis Services is an Online Analytics Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.</p>
-            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Mondrian <img src="../img/download-icon.png"></span></p>
+            <h1>Reporting</h1>
+            <p><b>Reporting</b> is a suite of open-source reporting tools that allows you to create relational and analytical reports from a wide range of data-sources.</p>
+            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Reporting <img src="../img/download-icon.png"></span></p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
-            <img src="../img/mondrian-header-dashboard.png" alt="">
-            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Mondrian <img src="../img/download-icon.png"></span></p>
+            <img src="../img/reporting-header-dashboard.png" alt="">
+            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Reporting <img src="../img/download-icon.png"></span></p>
           </div>
         </div>
       </div> <!-- /container -->  
@@ -80,7 +80,7 @@
             <div id="myCarousel" class="carousel slide">
               <ol class="carousel-indicators">
                 <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
-                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
+                <li id="main-concepts" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main Concepts</li>
                 <li id="contribute-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Contribute</li>
               </ol>
               <!-- Carousel items -->
@@ -88,34 +88,40 @@
                 <div class="active item" id="plugin-description">
                   <div class="row secondRow">
                     <div class="col-lg-8">
-                      <h5>Analyze all your data in real-time</h5>
-                      <p>Analysing huge quantities of data as never been so easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing (OLAP) written in Java, the system responds to queries - even if they are millions of records, occupying several gigabytes - fast enough to allow an interactive exploration of the data. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling into and 
-cross-tabulating information.</p>
+                      <h5>Transform your data into information</h5>
+                      <p>Transform all your data into meaningful information tailored to your audience with <b>Reporting</b>, a suite of open-source tools that allows you to create pixel-perfect reports of your data in PDF, Excel, HTML, Text, Rich-Text-File, XML and CSV. These computer generated reports easily refine data from various sources into a human readable form.</p>
                       <br>
-                      <div style="text-align: center;">
-                        <img src="../img/cubo.png" alt="">
+                      <div id="whats-new-images">
+                        <div class="image-holder">
+                          <img src="../img/reporting-screen1.png" alt="" id="image-set-display-1" class="image-set-display">
+                        </div>
+                        <div class="screen-previewer">
+                          <div class="preview-block active"><img src="../img/reporting-screen1.png" alt=""></div>
+                          <div class="preview-block"><img src="../img/reporting-screen2.png" alt=""></div>
+                          <div class="preview-block"><img src="../img/reporting-screen3.png" alt=""></div>
+                          <div class="preview-block"><img src="../img/reporting-screen4.png" alt=""></div>
+                          <div class="preview-block"><img src="../img/reporting-screen5.png" alt=""></div>
+                          <div class="clear"></div>
+                        </div>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="info-bar">
                         <h1>Quick Links</h1>
                         <a href="">FAQ</a><br>
-                        <a href="">Online Documentation</a><br>
-                        <a href="">Julian Hyde's Blog</a><br>
-                        <a href="">Forum</a><br>
-                        <a href="">Mailing List</a>
-                        <a href="">Mondrian on SourceForge</a><br>
-                        <a href="">JPivot</a><br>
-                        <a href="">ResGen</a><br>
-                        <a href="">Partners</a><br>
-                        <a href="">Source</a>
+                        <a href="">Reporting Wiki</a><br>
+                        <a href="">Reporting Blog</a><br>
+                        <a href="">Tech Tips</a><br>
+                        <a href="">Technical WebEx's</a>
+                        <a href="">Pentaho Reporting for Java Devs Book</a><br>
+                        <a href="">Partners</a>
                         <h1>Support</h1>
                         <a href="">Get Support</a>
                       </div>
                       <div class="info-bar">
                         <h1>Training and Education</h1>
                         <a href="">Pentaho Training and Education</a><br>
-                        <a href="">Training FAQ</a>
+                        <a href="">Pentaho Training FAQ</a>
                       </div>
                     </div>
                   </div>
@@ -128,32 +134,30 @@ cross-tabulating information.</p>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="faq-title">How do I use Mondrian in my application?</p>
-                          <p>There are several ways. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                          <p class="faq-title">What does Pentaho use for its reporting engine?</p>
+                          <p>Reporting uses the JFreeReport engine. The JFreeReport project is owned and sponsored by Pentaho.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">What API does Mondrian use?</p>
-                          <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>., an extension to JDBC for OLAP applications. It also has a provider for XML for Analysis.</p>
+                          <p class="faq-title">What types of companies can use Reporting?</p>
+                          <p>The Reporting Project was built to serve production, operational and end-user reporting needs.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
-                          <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
+                          <p class="faq-title">What types of users can use Reporting?</p>
+                          <p>Anyone who can access a browser, email, or is capable of reading a printout.</p>
                         </div>
                       </div>
                       <div class="row secondRow">
                         <div class="col-lg-4">
-                          <p class="faq-title">How can Mondrian be extended?</p>
-                          <p>todo: User-defined functions<br>
-                          todo: Cell readers<br>
-                          todo: Member readers</p>
+                          <p class="faq-title">Can I use Reporting out-of-the-box?</p>
+                          <p>Yes. It was designed to be used as both an out-of-the-box reporting application and as a reporting component for use in other applications. Some companies will simply want to download the project in a standalone manner and start building, scheduling, and distributing reports. While others will want to embed and integrate the project into their own applications, only using the components they need, and customizing it to fit their application.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">Can Mondrian handle large datasets?</p>
-                          <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                          <p class="faq-title">Can I embed Reporting into my applications?</p>
+                          <p>Absolutely. The first step would be to create a report definition and add it to a solution definition (everything revolves around a "solution" in Pentaho). Then, the server-side components make that report available with the additional features of auditing, web services and so-on. You can then link to the solution from your own JSP, execute the report through web services, embed the report within your portal, or others.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How do I enable tracing?</p>
-                          <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
+                          <p class="faq-title">Can I customize how reports look?</p>
+                          <p>Yes. Reporting styling is flexible, and allows the report designer to choose the granularity at which they want to manipulate the look and feel, right down to font styling on individual characters. Of course images and logos can be added to reports.</p>
                         </div>
                       </div>
                     </div>
@@ -164,27 +168,24 @@ cross-tabulating information.</p>
                     <div class="col-lg-12">
                       <div class="row first-feature-row">
                         <div class="col-lg-4">
-                          <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                          <p>Reporting's development is driven by the goal to create a flexible yet simple to use reporting engine. It is a a suite of open-source tools that includes the <b>Report Designer</b>, <b>Reporting Engine</b> and <b>Reporting SDK</b>.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="specialTitle">Partitioned Cubes</p>
-                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                          <p>With high performance at low memory consumption the report processing can scale from small footprint embedded scenarios to large-scale enterprise reporting scenarios. <b></b>Reporting</b> integrates perfectly with the <b>BI Server</b> and allows you to share reports with co-workers and peers.</p>
                         </div>
                         <div class="col-lg-4">
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow">
                         <div class="col-lg-4">
-                          <div class="mainConceptOption active" id="presentationLayer">Presentation Layer</div>
-                          <div class="mainConceptOption" id="dimensionalLayer">Dimensional Layer</div>
-                          <div class="mainConceptOption" id="starLayer">Star Layer</div>
-                          <div class="mainConceptOption" id="storageLayer">Storage Layer</div>
+                          <div class="mainConceptOption active" id="presentationLayer">Report Designer</div>
+                          <div class="mainConceptOption" id="dimensionalLayer">Reporting Engine</div>
+                          <div class="mainConceptOption" id="starLayer">Reporting SDK</div>
                         </div>
                         <div class="col-lg-8">
-                          <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what the user sees on his monitor, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line and bar charts, and advanced visualization tools such as clickable maps and dynamic graphics.</div>
-                          <div class="mainConceptContent" id="dimensionalLayerContent">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluted in multiple phases and the axes are the first to be computed, then the values of the cells within the axes.</div>
-                          <div class="mainConceptContent" id="starLayerContent">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
-                          <div class="mainConceptContent" id="storageLayerContent">The <strong>Storage Layer</strong> is a Relational Database Management  System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                          <div class="mainConceptContent active" id="presentationLayerContent">The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data-sources used.</div>
+                          <div class="mainConceptContent" id="dimensionalLayerContent">The <b>Reporting Engine</b> is a embeddable Java reporting library that is used by the report designer to generate reports. The library can be used in both in server-side and client side scenarios. Originally known as JFreeReport, it is designed to follow the approach of banded reporting with absolutely positioned elements.</div>
+                          <div class="mainConceptContent" id="starLayerContent">The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.</div>
                         </div>
                       </div>
                     </div>
@@ -493,34 +494,35 @@ cross-tabulating information.</p>
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row">
                         <div class="col-lg-8">
-                          <h5>Analyze all your data in real-time</h5>
-                          <p>Analysing huge quantities of data as never been so easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing (OLAP) written in Java, the system responds to queries - even if they are millions of records, occupying several gigabytes - fast enough to allow an interactive exploration of the data. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling into and 
-    cross-tabulating information.</p>
+                          <h5>Transform your data into information</h5>
+                          <p>Transform all your data into meaningful information tailored to your audience with <b>Reporting</b>, a suite of open-source tools that allows you to create pixel-perfect reports of your data in PDF, Excel, HTML, Text, Rich-Text-File, XML and CSV. These computer generated reports easily refine data from various sources into a human readable form.</p>
                           <br>
-                          <div style="text-align: center;">
-                            <img src="../img/cubo.png" alt="">
-                          </div>
+                          <img src="../img/reporting-screen1.png" alt="">
+                          <img src="../img/reporting-screen2.png" alt="">
+                          <img src="../img/reporting-screen3.png" alt="">
+                          <img src="../img/reporting-screen4.png" alt="">
+                          <img src="../img/reporting-screen5.png" alt="">
                         </div>
                         <div class="col-lg-4">
                           <div class="info-bar">
                             <h1>Quick Links</h1>
+                            <a href="">Documentation</a><br>
+                            <a href="">Source Code</a><br>
                             <a href="">FAQ</a><br>
-                            <a href="">Online Documentation</a><br>
-                            <a href="">Julian Hyde's Blog</a><br>
                             <a href="">Forum</a><br>
-                            <a href="">Mailing List</a>
-                            <a href="">Mondrian on SourceForge</a><br>
-                            <a href="">JPivot</a><br>
-                            <a href="">ResGen</a><br>
-                            <a href="">Partners</a><br>
-                            <a href="">Source</a>
+                            <a href="">Matt's Blog</a>
+                            <a href="">Case Studies</a><br>
+                            <a href="">JAVA API Examples</a><br>
+                            <a href="">Recorded Demos</a><br>
+                            <a href="">Partners</a>
                             <h1>Support</h1>
                             <a href="">Get Support</a>
                           </div>
                           <div class="info-bar">
-                            <h1>Training and Education</h1>
-                            <a href="">Pentaho Training and Education</a><br>
-                            <a href="">Training FAQ</a>
+                            <h1>Training</h1>
+                            <a href="">Mastering PDI</a><br>
+                            <a href="">Pentaho BI Suite Bootcamp</a><br>
+                            <a href="">See All</a>
                           </div>
                         </div>
                       </div>
@@ -533,32 +535,30 @@ cross-tabulating information.</p>
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">How do I use Mondrian in my application?</p>
-                              <p>There are several ways. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                              <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I analyze the problem?</p>
+                              <p>Edit the Spoon.bat file and  1) replace in the last line "start javaw" with only "java"  2) add a "pause" in the next line  3) Save and try it again.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">What API does Mondrian use?</p>
-                              <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>., an extension to JDBC for OLAP applications. It also has a provider for XML for Analysis.</p>
+                              <p class="faq-title">How to use JNDI?</p>
+                              <p>If you look in the PDI main directory you will see a sub-directory "simple-jndi", which contains a file called "jdbc.properties". You should change this file so that the JNDI information matches the one you use in your application server.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
-                              <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
+                              <p class="faq-title">How to sequentialize transformations?</p>
+                              <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequentialize them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                             </div>
                           </div>
                           <div class="row secondRow">
                             <div class="col-lg-4">
-                              <p class="faq-title">How can Mondrian be extended?</p>
-                              <p>todo: User-defined functions<br>
-                              todo: Cell readers<br>
-                              todo: Member readers</p>
+                              <p class="faq-title">What's the difference between transformations and jobs?</p>
+                              <p>Transformations are about moving and transforming rows from source to target. Jobs are more about high level flow control: executing transformations, sending mails on failure, ftp'ing files, ...</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">Can Mondrian handle large datasets?</p>
-                              <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                              <p class="faq-title">How to use database connections from repository?</p>
+                              <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How do I enable tracing?</p>
-                              <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
+                              <p class="faq-title">How to do a database join with PDI?</p>
+                              <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                             </div>
                           </div>
                         </div>
@@ -580,28 +580,24 @@ cross-tabulating information.</p>
                     <div class="panel-body" id="new-features">
                       <div class="row" style="margin-top: 15px;">
                         <div class="col-lg-4">
-                          <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                          <p>Reporting's development is driven by the goal to create a flexible yet simple to use reporting engine. It is a a suite of open-source tools that includes the <b>Report Designer</b>, <b>Reporting Engine</b> and <b>Reporting SDK</b>.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="specialTitle">Partitioned Cubes</p>
-                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                          <p>With high performance at low memory consumption the report processing can scale from small footprint embedded scenarios to large-scale enterprise reporting scenarios. <b></b>Reporting</b> integrates perfectly with the <b>BI Server</b> and allows you to share reports with co-workers and peers.</p>
                         </div>
                         <div class="col-lg-4">
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow">
                         <div class="col-lg-4">
-                          <div class="mainConceptOption active" id="presentationLayer1">Presentation Layer</div>
-                          <div class="mainConceptContent active" id="presentationLayer1Content">The <strong>Presentation Layer</strong> determines what the user sees on his monitor, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line and bar charts, and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+                          <div class="mainConceptOption active" id="presentationLayer1">Report Designer</div>
+                          <div class="mainConceptContent active" id="presentationLayer1Content">The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data-sources used.</div>
 
-                          <div class="mainConceptOption" id="dimensionalLayer1">Dimensional Layer</div>
-                          <div class="mainConceptContent" id="dimensionalLayer1Content">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluted in multiple phases and the axes are the first to be computed, then the values of the cells within the axes.</div>
+                          <div class="mainConceptOption" id="dimensionalLayer1">Reporting Engine</div>
+                          <div class="mainConceptContent" id="dimensionalLayer1Content">The <b>Reporting Engine</b> is a embeddable Java reporting library that is used by the report designer to generate reports. The library can be used in both in server-side and client side scenarios. Originally known as JFreeReport, it is designed to follow the approach of banded reporting with absolutely positioned elements.</div>
 
-                          <div class="mainConceptOption" id="starLayer1">Star Layer</div>
-                          <div class="mainConceptContent" id="starLayer1Content">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
-
-                          <div class="mainConceptOption" id="storageLayer1">Storage Layer</div>
-                          <div class="mainConceptContent" id="storageLayer1Content">The <strong>Storage Layer</strong> is a Relational Database Management  System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                          <div class="mainConceptOption" id="starLayer1">Reporting SDK</div>
+                          <div class="mainConceptContent" id="starLayer1Content">The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.</div>
                         </div>
                       </div>
                     </div>
@@ -610,14 +606,14 @@ cross-tabulating information.</p>
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainThree">
+                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainFour">
                         <div class="row">
                           <span class="col-md-12">&nbsp;&nbsp;&nbsp;Contribute</span>
                         </div> 
                       </a>
                     </h4>
                   </div>
-                  <div id="collapseMainThree" class="panel-collapse collapse">
+                  <div id="collapseMainFour" class="panel-collapse collapse">
                     <div class="panel-body">
                       <div class="row">
                         <div class="col-lg-12">
@@ -912,12 +908,8 @@ cross-tabulating information.</p>
           <div class="row secondRow" id="plugin-downloads">
             <div class="col-lg-12 main-plugin-download">
               <div class="row main-plugin-header">
-                <div class="col-lg-8 main-plugin-title">
-                  <strong>Mondrian 3.6.1</strong> Stable
-                </div>
-                <div class="col-lg-4">
-                  <p class="large-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green plugin-download-button">Download Mondrian <img src="../img/download-icon.png"></a></p>
-                  <p class="small-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green">Download Mondrian <img src="../img/download-icon.png"></a></p>
+                <div class="col-lg-12 main-plugin-title">
+                  <strong>Reporting 5.0.1</strong> Stable
                 </div>
               </div>
             </div>
@@ -927,26 +919,28 @@ cross-tabulating information.</p>
               <div class="row">
                 <div class="col-lg-4">
                   <span class="contentContext">Description</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque, est a facilisis scelerisque, quam erat fermentum lorem, eget pulvinar dolor velit et dui. Quisque semper viverra velit et convallis. Sed fringilla accumsan neque, sit amet adipiscing sem semper et.</p>
+
+                  <p><b>Reporting 5.0.1</b> is a stable version of the open-source suite and includes Report Designer 5.0.1 and Reporting Engine SDK 5.0.1</p>
                 </div>
                 <div class="col-lg-4">
                   <span class="contentContext">New Features</span>
                   
                   <ul>
-                    <li><p>Tuples evaluation now push down natively the constraints imposed by roles.</p></li>
-                    <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
-                    <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
-                    <li><p>Resolves tuples only joins to the fact table if absolutely necessary.</p></li>
-                    <li><p>Upgraded Apache Xerces.</p></li>
+                    <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+                    <li><p>Nunc iaculis nibh vitae lorem sodales rhoncus.</p></li>
+                    <li><p>Suspendisse fringilla diam et augue accumsan condimentum.</p></li>
+                    <li><p>Proin eu augue tincidunt, hendrerit nunc vitae, imperdiet lorem.</p></li>
+                    <li><p>Nulla sed tellus vehicula, mattis urna sit amet, volutpat orci.</p></li>
                   </ul>
                 </div>
                 <div class="col-lg-4"><br>
                   <span class="contentContext"></span>
                   <ul>
-                    <li><p>Improved processing of large volumes of data when a member grant is used with a partial rollup policy.</p></li>
-                    <li><p>Enables a mode in which nothing gets cached and the data returned is always the latest available from the database.</p></li>
-                    <li><p>Allows more than one measure to be included in the RETURN clause of a DRILLTHROUGH statement.</p></li>
-                    <li><p>Added support for native evaluation of regular expressions with Netezza.</p></li>
+                    <li><p>Phasellus ullamcorper erat sed risus eleifend dignissim.</p></li>
+                    <li><p>Nulla pharetra libero at tellus elementum convallis.</p></li>
+                    <li><p>Cras sagittis ipsum dignissim arcu vehicula vulputate.</p></li>
+                    <li><p>Aenean fermentum quam eu nulla porta, in iaculis tortor consequat.</p></li>
+                    <li><p>Etiam pulvinar tellus vel lorem porttitor, vitae lacinia risus consectetur.</p></li>
                   </ul>
                 </div>
               </div>
@@ -958,15 +952,29 @@ cross-tabulating information.</p>
                  <a href="">ChangeLog <img src="../img/changelog.png"></a>
                 </div>
               </div>
+              <div class="row download-row" id="downloadList">
+                <div class="col-lg-4">
+                  <span class="os-title">Report Designer for Windows / Linux</span>
+                  <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.0.1-stable/prd-ce-5.0.1-stable.zip/download" target="_blank">Download <img src="../img/download-icon.png"></a></p>
+                </div>
+                <div class="col-lg-4">
+                  <span class="os-title">Report Designer for Mac OS X</span>
+                  <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.0.1-stable/prd-ce-mac-5.0.1-stable.zip/download" target="_blank">Download <img src="../img/download-icon.png"></a></p>
+                </div>
+                <div class="col-lg-4">
+                  <span class="os-title">Reporting SDK 5.0.1</span>
+                  <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.0.1-stable/pre-classic-sdk-5.0.1-stable.zip/download" target="_blank">Download <img src="../img/download-icon.png"></a></p>
+                </div>
+              </div>
               <div class="row otherVersionDownloadRow">
                 <div class="col-lg-12">
-                  <p>If you're looking for a different version, you can find it <a href="http://sourceforge.net/projects/mondrian/files/mondrian/" target="_blank">here</a>.</p>
+                  <p>If you're looking for a different version, you can find it <a href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/" target="_blank">here</a>.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>      
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

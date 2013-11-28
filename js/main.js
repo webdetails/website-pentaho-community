@@ -49,7 +49,7 @@ $(document).ready(function(){
 	myFunction();
 
 	$('.dropdown').hover(function() {
-		if($(window).width() > 767) {
+		if($(window).width() > 920) {
 			$(this).addClass('open');
 		}
 	}, function() {
@@ -72,7 +72,7 @@ function myFunction() {
 }
 
 function removeOpen() {		
-	if((($('.dropdown-menu').is(":hover") == false) && ($('.dropdown').is(":hover") == false)) && ($(window).width() > 767)) {
+	if((($('.dropdown-menu').is(":hover") == false) && ($('.dropdown').is(":hover") == false)) && ($(window).width() > 920)) {
 		$('.dropdown').removeClass('open');
 	}
 }

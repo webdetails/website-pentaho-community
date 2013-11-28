@@ -132,6 +132,14 @@ img {
   background-repeat: repeat-x;
 }
 
+.backPage > .hr-lighter2 {
+  margin: 0px -50px 0px;
+  height: 5px;
+  background: #fefefe;
+  background-image: url(../img/hr.png);
+  background-repeat: repeat-x;
+}
+
 .backPage > .hr-lighter-reverse {
   margin: 0px -50px 0px;
   height: 5px;
@@ -942,6 +950,10 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   color: #fff;
 }
 
+.navbar-nav > li > .dropdown-menu {
+  border-top-left-radius: 4px;
+}
+
 @media (max-width: 920px)   {
   #tryPentaho {
     width: 200px;
@@ -1274,6 +1286,8 @@ p.in-development-description {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .previousDownloadRow {
@@ -1297,7 +1311,6 @@ p.in-development-description {
   padding-left: 18px;
   margin: 0;
   list-style-position: outside;
-  margin-top: 20px;
 }
 
 .main-plugin-content ul li p
@@ -1371,8 +1384,22 @@ p.in-development-description {
   padding: 9px 0px;
 }
 
-.main-plugin-footerNotes a {
+.main-plugin-footerNotes a,
+.otherVersionDownloadRow a {
   color: #39A34A;
+}
+
+.otherVersionDownloadRow {
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.plugin-download-button {
+  margin-top: 24px !important;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background: #666;
 }
 
 @media (max-width: 1199px) {
@@ -1391,6 +1418,15 @@ p.in-development-description {
 
   .main-plugin-footerNotes .col-lg-4,
   .main-plugin-footerNotes .col-lg-8 {
+    text-align: center;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #fefefe !important;
+      background: #666 !important;
+  }
+
+  .otherVersionDownloadRow {
     text-align: center;
   }
 }
