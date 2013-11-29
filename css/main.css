@@ -1430,3 +1430,170 @@ p.in-development-description {
     text-align: center;
   }
 }
+
+
+/* ==========================================================================
+  MARKETPLACE
+   =========================================================================== */
+
+  .plugin-statistics {
+    background: #39A34A;
+    border: 2px solid #ebebeb;
+    color: #fefefe;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 21px;
+  }
+
+  .plugin-statistics p.number {
+    font-size: 30px;
+    margin-bottom: -10px;
+    font-weight: 400;
+  }
+
+  .plugin-statistics .plugin-statistic {
+    border-left: 1px solid #ebebeb;
+  }
+
+  .image-holder-marketplace-screens {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .submit-item > div {
+    min-height: 235px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  }
+
+  .submit-item img {
+    margin-top:20px;
+  }
+
+  .submit-title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .submit-description {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: -10px;
+  }
+
+  .pluginPage .grayRow {
+    background: #d4d4d4;
+    margin-right: -45px;
+    margin-left: -30px;
+    padding-left: 18px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(../img/sombrinha.png);
+    background-repeat: no-repeat;
+    background-position: top -18px center;
+  }
+
+  .pluginPage .grayRow p {
+    margin-top: 10px;
+  }
+
+  .pluginPage .grayRow a.btn.btn-default,
+  .pluginPage .grayRow a.btn.btn-default:link,
+  .pluginPage .grayRow a.btn.btn-default:visited
+   {
+    display: block;
+    background: none;
+    border: 1px solid #39A34A;
+    text-shadow: none;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+    font-weight: 600;
+    padding: 8px 20px;
+  }
+
+  .pluginPage .grayRow a.btn.btn-default:hover {
+    background: #39A34A;
+    color: #d3d3d3;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  }
+
+  .pluginPage .grayRow a.btn.btn-default:active {
+    background: #39A34A;
+    color: #d3d3d3;
+    -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+  }
+
+@media (max-width: 1199px) {
+  .plugin-statistics .plugin-statistic {
+    border-left: none;
+    border-top: 1px solid #ebebeb;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #collapseMainTwoLPacks .panel-body {
+    padding-bottom: 0px;
+  }
+}
+
+/* ==========================================================================
+  LANGUAGE PACKS
+   =========================================================================== */
+
+#language-packs #containerHeader h1 {
+  font-size: 35px;
+}
+
+#language-packs #containerHeader .btn {
+  margin-top: 10px;
+}
+
+.btn-gray,
+.btn-gray:link,
+.btn-gray:visited {
+  background: none;
+  color: #3BA749;
+  text-shadow: none;
+  font-family:'Open Sans', Helvetica, Arial, sans-serif;
+  border: 0;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 8px 20px;
+  display: block;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #3BA749;
+
+
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+  -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+  box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+}
+
+
+.btn-gray:hover {
+  background: #39A34A;
+  color: #d3d3d3;
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+
+.btn-gray:active {
+  background: #39A34A;
+  color: #d3d3d3;
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+  -moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+  box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+}
