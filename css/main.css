@@ -1501,37 +1501,6 @@ p.in-development-description {
     margin-top: 10px;
   }
 
-  .pluginPage .grayRow a.btn.btn-default,
-  .pluginPage .grayRow a.btn.btn-default:link,
-  .pluginPage .grayRow a.btn.btn-default:visited
-   {
-    display: block;
-    background: none;
-    border: 1px solid #39A34A;
-    text-shadow: none;
-    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-    -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-    font-weight: 600;
-    padding: 8px 20px;
-  }
-
-  .pluginPage .grayRow a.btn.btn-default:hover {
-    background: #39A34A;
-    color: #d3d3d3;
-    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
-    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
-    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  }
-
-  .pluginPage .grayRow a.btn.btn-default:active {
-    background: #39A34A;
-    color: #d3d3d3;
-    -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
-    -moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
-    box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
-  }
-
 @media (max-width: 1199px) {
   .plugin-statistics .plugin-statistic {
     border-left: none;
@@ -1557,10 +1526,10 @@ p.in-development-description {
   margin-top: 10px;
 }
 
-.btn-gray,
-.btn-gray:link,
-.btn-gray:visited {
-  background: none;
+a.btn-gray,
+a.btn-gray:link,
+a.btn-gray:visited {
+  background: #cdcdcd;
   color: #3BA749;
   text-shadow: none;
   font-family:'Open Sans', Helvetica, Arial, sans-serif;
@@ -1576,24 +1545,181 @@ p.in-development-description {
   border: 1px solid #3BA749;
 
 
-  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-  -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.3);
-  box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+  -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,.1);
 }
 
 
-.btn-gray:hover {
-  background: #39A34A;
-  color: #d3d3d3;
-  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+a.btn-gray:hover {
+  background: #dedede; /* Old browsers */
+  background: -moz-linear-gradient(top,  #dedede 0%, #cdcdcd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(100%,#cdcdcd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #dedede 0%,#cdcdcd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#cdcdcd',GradientType=0 ); /* IE6-9 */
+
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+  box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+  transition: .3s background linear;
+  -moz-transition: .3s background linear;
+  -webkit-transition: .3s background linear;
 }
 
-.btn-gray:active {
-  background: #39A34A;
-  color: #d3d3d3;
-  -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
-  -moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
-  box-shadow: inset 2px 2px 3px rgba(0,0,0,.3);
+a.btn-gray:active {
+  -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+  -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+}
+
+.currentlyTranslated {
+  background: #ebebeb;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 2px;
+}
+
+#currentlyTranslatedTitle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.currentlyTranslatedTitle {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.currentlyTranslatedTitle b {
+  font-weight: 500;
+}
+
+.currentlyTranslated .btn-green {
+  margin-top: 0px;
+}
+
+.currentlyTranslated .flag {
+  margin-top: 5px;
+}
+
+.currentlyTranslated .langName {
+  margin-top: 6px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.newLanguage {
+    background: #39A34A;
+    border: 2px solid #ebebeb;
+    color: #fefefe;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.newLanguage b {
+  font-weight: 500;
+}
+
+.newLanguage .btn {
+  display: block;
+}
+
+.smaller {
+  font-size: 16px;
+}
+
+.forkDetails {
+  display: block;
+  float: left;
+  width: 80%;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.forkIcon {
+  width: 30px;
+  display: block;
+  float: left;
+}
+
+.forkItem {
+  margin-bottom: 20px;
+}
+
+.grayRow h5 {
+  line-height: 1.3;
+}
+
+#grayRowButtonMarketplace {
+  background: #3BA749;
+  color: #fefefe !important;
+  text-shadow: none;
+  font-family:'Open Sans', Helvetica, Arial, sans-serif;
+  border: 0;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 8px 20px;
+  margin-top: 32px;
+  display: block;
+  text-align: left;
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+
+
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+#grayRowButtonMarketplace:hover,
+#grayRowButtonMarketplace:focus,
+#grayRowButtonMarketplace:active {
+  color: #fff;
+  background-image: linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  background-image: -o-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  background-image: -moz-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  background-image: -webkit-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  background-image: -ms-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.49, #3BA749),
+    color-stop(0.88, #7FB83F)
+  );
+  outline: 0;
+}
+
+.btn {
+  font-weight: 400 !important;
+}
+
+#getStartedPropose {
+  margin-top: 0px;
+}
+
+@media (max-width: 1199px) {
+  .currentlyTranslated .btn {
+    margin-top: 10px;
+  }
+
+  #startNewLang {
+    margin-bottom: 40px;
+  }
+
+  .lastForkItem {
+    margin-bottom: 20px;
+  }
+
+  .forkDetails {
+    margin-bottom: 20px;
+  }
 }
