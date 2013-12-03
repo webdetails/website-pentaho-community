@@ -46,6 +46,10 @@ body {
   max-width: 960px !important;
 }
 
+#containerHeader {
+  height: 250px;
+}
+
 .carousel-inner a,
 .carousel-inner a:link,
 .carousel-inner a:visited,
@@ -1002,7 +1006,6 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 =========================================================== */
 
 #sparkl .backPage {
-  padding-top: 20px;
   background: #0d9be0; /* Old browsers */
   background: -moz-linear-gradient(left,  #0d9be0 0%, #49bee7 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0d9be0), color-stop(100%,#49bee7)); /* Chrome,Safari4+ */
@@ -1585,6 +1588,7 @@ a.btn-gray:active {
 #currentlyTranslatedTitle {
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 30px;
 }
 
 .currentlyTranslatedTitle {
@@ -1698,6 +1702,12 @@ a.btn-gray:active {
   outline: 0;
 }
 
+#grayRowButtonMarketplace:active {
+  -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+  -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
+}
+
 .btn {
   font-weight: 400 !important;
 }
@@ -1722,4 +1732,16 @@ a.btn-gray:active {
   .forkDetails {
     margin-bottom: 20px;
   }
+}
+
+code {
+  color: #000;
+  background: #ebebeb;
+}
+
+.greenText {
+  text-align: right;
+  color: #3BA749;
+  font-size: 13px;
+  line-height: 35px;
 }
