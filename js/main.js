@@ -46,30 +46,18 @@ $(document).ready(function(){
 		$conceptContainer.find('#'+myID).addClass('active');
 	});
 
-	myFunction();
-
-	$('.dropdown').hover(function() {
+	/*$('.dropdown').hover(function() {
 		if($(window).width() > 920) {
 			$(this).addClass('open');
 		}
 	}, function() {
 		setInterval(removeOpen, 100);
-	});
+	});*/
 });
 
 $(window).resize(function() {
 	myFunction();
 })
-
-function myFunction() {
-	/*if( $(window).width() < 250 ) {
-		$('.navbar-brand img').attr('src','img/pentaho-logo-small.png');
-		return false;
-	} else {*/
-		$('.navbar-brand img').attr('src','img/pentaho-logo.png');		
-		return false;
-	//}
-}
 
 function removeOpen() {		
 	if((($('.dropdown-menu').is(":hover") == false) && ($('.dropdown').is(":hover") == false)) && ($(window).width() > 920)) {

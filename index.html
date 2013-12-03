@@ -22,7 +22,7 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body id="pentahoHome">
     
     <nav class="navbar navbar-default" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,7 +33,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src=""></a>
+        <a class="navbar-brand" href="http://www.pentaho.com/"><img src="img/pentaho-logo.png"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,17 +41,22 @@
         <ul class="nav navbar-nav">
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="javascript: void();">Community</a></li>
-          <li><a href="marketplace.html">Marketplace</a></li>
-          <li><a href="languagepacks.html">Whatever</a></li>
+          <li class="active"><a href="">Community</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Marketplace <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="projects/mondrian.html">Mondrian</a></li>
-              <li><a href="projects/kettle.html">Data Integration</a></li>
-              <li><a href="projects/reporting.html">Reporting</a></li>
-              <li><a href="projects/weka.html">Data Mining</a></li>
-              <li><a href="projects/sparkl.html">Sparkl</a></li>
+              <li><a href="marketplace/plugins">Plugins</a></li>
+              <li><a href="marketplace/language-packs">Language Packs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Projects <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="projects/mondrian">Mondrian</a></li>
+              <li><a href="projects/data-integration">Data Integration</a></li>
+              <li><a href="projects/reporting">Reporting</a></li>
+              <li><a href="projects/data-mining">Data Mining</a></li>
+              <li><a href="projects/sparkl">Sparkl</a></li>
             </ul>
           </li>
           <li><a target="_blank" class="btn btn-default btn-blue" id="tryPentaho" href="http://www.pentaho.com/testdrive">Try Pentaho EE</a></li>
@@ -458,6 +463,7 @@
         <script src="js/main.js"></script>
         <script src="js/cbpScroller.js"></script>
         <script src="js/classie.js"></script>
+        <script src="js/twitter-bootstrap-hover-dropdown.js"></script>
         <script>
           new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
         </script>
