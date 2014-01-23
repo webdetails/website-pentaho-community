@@ -82,6 +82,7 @@ p {
 h1 {
 	font-size: 45px;
 	color: #5d6672;
+  margin-left: -2px;
 }
 
 h2 {
@@ -1052,6 +1053,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   color: #5d6672;
   margin-bottom: 30px;
   line-height: 30px;
+  margin-left: -2px;
 }
 
 .pluginPage .info-bar {
@@ -1748,11 +1750,7 @@ code {
   line-height: 35px;
 }
 
-a.marketplaceLinks,
-a.marketplaceLinks:link,
-a.marketplaceLinks:visited,
-a.marketplaceLinks:hover,
-a.marketplaceLinks:active {
+.marketplaceLinks {
   display: block;
   color: #333e49;
   text-decoration: none;
@@ -1762,28 +1760,14 @@ a.marketplaceLinks:active {
   -ms-transition: all .3s linear;
   -o-transition: all .3s linear;
   transition: all .3s linear;
-}
-
-a.marketplaceLinks:hover,
-a.marketplaceLinks:active {
-  background: #f3f3f3;
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  -ms-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  transition: all .3s linear;
-}
-
-a.marketplaceLinks:hover > div,
-a.marketplaceLinks:active > div {
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  -ms-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  transition: all .3s linear;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ebebeb;
+  margin-bottom: 40px;
 }
 
 .navbar .navbar-nav > li.open > a.dropdown-toggle {
