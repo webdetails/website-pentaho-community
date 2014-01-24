@@ -45,19 +45,7 @@ $(document).ready(function(){
 		myID = "" + myID + "Content";
 		$conceptContainer.find('#'+myID).addClass('active');
 	});
-
-	/*$('.dropdown').hover(function() {
-		if($(window).width() > 920) {
-			$(this).addClass('open');
-		}
-	}, function() {
-		setInterval(removeOpen, 100);
-	});*/
 });
-
-$(window).resize(function() {
-	myFunction();
-})
 
 function removeOpen() {		
 	if((($('.dropdown-menu').is(":hover") == false) && ($('.dropdown').is(":hover") == false)) && ($(window).width() > 920)) {
