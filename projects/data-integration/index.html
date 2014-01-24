@@ -65,17 +65,18 @@
     </nav>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
+      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>.</div>
       <div class="container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
             <h1>Data Integration - <strong>Kettle</strong></h1>
             <p>Data Integration (or <strong>Kettle</strong>) delivers powerful Extraction, Transformation, and Loading (ETL) capabilities, using a groundbreaking, metadata-driven approach.</p>
-            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Kettle <img src="../../img/download-icon.png"></span></p>
+            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Downloads <img src="../../img/download-icon.png"></span></p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
             <img src="../../img/kettle-header-dashboard.png" alt="">
-            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Kettle <img src="../../img/download-icon.png"></span></p>
+            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Downloads <img src="../../img/download-icon.png"></span></p>
           </div>
         </div>
       </div> <!-- /container -->  
@@ -96,7 +97,7 @@
                   <div class="row secondRow">
                     <div class="col-lg-8">
                       <h5>Reliable Service Architecture</h5>
-                      <p>With an intuitive, graphical, drag and drop design environment, and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
+                      <p>With an intuitive, graphical, drag and drop design environment and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
                       <br>
                       <div id="whats-new-images">
                         <div class="image-holder">
@@ -144,16 +145,21 @@
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I analyze the problem?</p>
-                          <p>Edit the Spoon.bat file and  1) replace in the last line "start javaw" with only "java"  2) add a "pause" in the next line  3) Save and try it again.</p>
+                          <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</p>
+                          <p>Edit the Spoon.bat file and:</p>
+                          <ol style="font-weight: 300; margin-left: -20px;">
+                            <li>Replace in the last line "start javaw" with only "java"</li>
+                            <li>Add a "pause" in the next line</li>
+                            <li>Save and try it again.</li>
+                          </ol>
                         </div>
                         <div class="col-lg-4">
                           <p class="faq-title">How to use JNDI?</p>
-                          <p>If you look in the PDI main directory you will see a sub-directory "simple-jndi", which contains a file called "jdbc.properties". You should change this file so that the JNDI information matches the one you use in your application server.</p>
+                          <p>If you look inside the PDI main directory you'll see a sub-directory called "simple-jndi", which contains a file named "jdbc.properties". You should change this file so the JNDI information matches the one you use in your application server.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How to sequentialize transformations?</p>
-                          <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequentialize them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
+                          <p class="faq-title">Can I sequence transformations?</p>
+                          <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequence them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                         </div>
                       </div>
                       <div class="row secondRow">
@@ -425,7 +431,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
+                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
                                     </div>
                                   </div>
                                 </div>
@@ -445,7 +451,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:community@pentaho.com" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
                                     </div>
                                   </div>
                                 </div>
@@ -490,7 +496,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:community@pentaho.com">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
                                     </div>
                                   </div>
                                 </div>
@@ -523,7 +529,7 @@
                       <div class="row">
                         <div class="col-lg-8">
                           <h5>Reliable Service Architecture</h5>
-                          <p>With an intuitive, graphical, drag and drop design environment, and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
+                          <p>With an intuitive, graphical, drag and drop design environment and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
                           <br>
                           <img src="../../img/screen1.png" alt="">
                           <img src="../../img/screen2.png" alt="">
@@ -563,16 +569,21 @@
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I analyze the problem?</p>
-                              <p>Edit the Spoon.bat file and  1) replace in the last line "start javaw" with only "java"  2) add a "pause" in the next line  3) Save and try it again.</p>
+                              <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</p>
+                              <p>Edit the Spoon.bat file and:</p>
+                              <ol style="font-weight: 300; margin-left: -20px;">
+                                <li>Replace in the last line "start javaw" with only "java"</li>
+                                <li>Add a "pause" in the next line</li>
+                                <li>Save and try it again.</li>
+                              </ol>
                             </div>
                             <div class="col-lg-4">
                               <p class="faq-title">How to use JNDI?</p>
-                              <p>If you look in the PDI main directory you will see a sub-directory "simple-jndi", which contains a file called "jdbc.properties". You should change this file so that the JNDI information matches the one you use in your application server.</p>
+                              <p>If you look inside the PDI main directory you'll see a sub-directory called "simple-jndi", which contains a file named "jdbc.properties". You should change this file so the JNDI information matches the one you use in your application server.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How to sequentialize transformations?</p>
-                              <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequentialize them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
+                              <p class="faq-title">Can I sequence transformations?</p>
+                              <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequence them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                             </div>
                           </div>
                           <div class="row secondRow">
@@ -855,7 +866,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
+                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
                                     </div>
                                   </div>
                                 </div>
@@ -875,7 +886,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:community@pentaho.com" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
                                     </div>
                                   </div>
                                 </div>
@@ -920,7 +931,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:community@pentaho.com">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
                                     </div>
                                   </div>
                                 </div>
@@ -955,8 +966,8 @@
                   <strong>Data Integration 5.0.1.A</strong> Stable
                 </div>
                 <div class="col-lg-4">
-                  <p class="large-button"><a class="btn btn-default btn-green plugin-download-button" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.0.1-stable/pdi-ce-5.0.1.A-stable.zip/download" target="_blank">Download Kettle <img src="../../img/download-icon.png"></a></p>
-                  <p class="small-button"><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.0.1-stable/pdi-ce-5.0.1-stable.zip/download" target="_blank">Download Kettle <img src="../../img/download-icon.png"></a></p>
+                  <p class="large-button"><a class="btn btn-default btn-green plugin-download-button" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.0.1-stable/pdi-ce-5.0.1.A-stable.zip/download" target="_blank">Download <img src="../../img/download-icon.png"></a></p>
+                  <p class="small-button"><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.0.1-stable/pdi-ce-5.0.1-stable.zip/download" target="_blank">Download <img src="../../img/download-icon.png"></a></p>
                 </div>
               </div>
             </div>
@@ -988,7 +999,7 @@
                   <p>See Release Notes for more info</p>
                 </div>
                 <div class="col-lg-4">
-                 <a href="http://jira.pentaho.com/browse/PDI#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank">ChangeLog <img src="../../img/changelog.png"></a>
+                 <a href="http://jira.pentaho.com/browse/PDI#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank">Change Log <img src="../../img/changelog.png"></a>
                 </div>
               </div>
               <div class="row otherVersionDownloadRow">

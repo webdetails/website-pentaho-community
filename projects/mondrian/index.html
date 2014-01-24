@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Mondrian | Pentaho Community</title>
-        <meta name="description" content="Online Analytics Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.">
+        <meta name="description" content="Online Analytical Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
@@ -65,17 +65,18 @@
     </nav>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
+      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>.</div>
       <div class="container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
             <h1>Mondrian</h1>
-            <p>Online Analytics Processing server (OLAP), allowing Pentaho's business users to analyze large and complex amounts of data in real-time.</p>
-            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Mondrian <img src="../../img/download-icon.png"></span></p>
+            <p>Online Analytical Processing server (OLAP), allowing Pentaho's business users to analyze large and complex amounts of data in real-time.</p>
+            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Downloads <img src="../../img/download-icon.png"></span></p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
             <img src="../../img/mondrian-header-dashboard.png" alt="">
-            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Mondrian <img src="../../img/download-icon.png"></span></p>
+            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Downloads <img src="../../img/download-icon.png"></span></p>
           </div>
         </div>
       </div> <!-- /container -->  
@@ -96,7 +97,7 @@
                   <div class="row secondRow">
                     <div class="col-lg-8">
                       <h5>Analyze all your data in real-time</h5>
-                      <p>Analysing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
+                      <p>Analyzing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
                       <br>
                       <div style="text-align: center;">
                         <img src="../../img/cubo.png" alt="">
@@ -137,7 +138,7 @@
                       <div class="row">
                         <div class="col-lg-4">
                           <p class="faq-title">How do I use Mondrian in my application?</p>
-                          <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                          <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
                         </div>
                         <div class="col-lg-4">
                           <p class="faq-title">Which API does Mondrian use?</p>
@@ -151,12 +152,12 @@
                       <div class="row secondRow">
                         <div class="col-lg-4">
                           <p class="faq-title">How can Mondrian be extended?</p>
-                          <p>todo: User-defined functions<br>
-                          todo: Cell readers<br>
-                          todo: Member readers</p>
+                          <p>to do: User-defined functions<br>
+                          to do: Cell readers<br>
+                          to do: Member readers</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">Can Mondrian handle large datasets?</p>
+                          <p class="faq-title">Can Mondrian handle large data sets?</p>
                           <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
                         </div>
                         <div class="col-lg-4">
@@ -176,7 +177,7 @@
                         </div>
                         <div class="col-lg-4">
                           <p class="specialTitle">Partitioned Cubes</p>
-                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
                         </div>
                         <div class="col-lg-4">
                         </div>
@@ -189,7 +190,7 @@
                           <div class="mainConceptOption" id="storageLayer">Storage Layer</div>
                         </div>
                         <div class="col-lg-8">
-                          <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+                          <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
                           <div class="mainConceptContent" id="dimensionalLayerContent">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells within the axes.</div>
                           <div class="mainConceptContent" id="starLayerContent">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
                           <div class="mainConceptContent" id="storageLayerContent">The <strong>Storage Layer</strong> is a Relational Database Management System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
@@ -404,7 +405,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
+                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
                                     </div>
                                   </div>
                                 </div>
@@ -424,7 +425,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:community@pentaho.com" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
                                     </div>
                                   </div>
                                 </div>
@@ -469,7 +470,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:community@pentaho.com">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
                                     </div>
                                   </div>
                                 </div>
@@ -502,7 +503,7 @@
                       <div class="row">
                         <div class="col-lg-8">
                           <h5>Analyze all your data in real-time</h5>
-                          <p>Analysing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
+                          <p>Analyzing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
                           <br>
                           <div style="text-align: center;">
                             <img src="../../img/cubo.png" alt="">
@@ -543,7 +544,7 @@
                           <div class="row">
                             <div class="col-lg-4">
                               <p class="faq-title">How do I use Mondrian in my application?</p>
-                              <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a dataset over the web.</p>
+                              <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
                             </div>
                             <div class="col-lg-4">
                               <p class="faq-title">Which API does Mondrian use?</p>
@@ -557,12 +558,12 @@
                           <div class="row secondRow">
                             <div class="col-lg-4">
                               <p class="faq-title">How can Mondrian be extended?</p>
-                              <p>todo: User-defined functions<br>
-                              todo: Cell readers<br>
-                              todo: Member readers</p>
+                              <p>to do: User-defined functions<br>
+                              to do: Cell readers<br>
+                              to do: Member readers</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">Can Mondrian handle large datasets?</p>
+                              <p class="faq-title">Can Mondrian handle large data sets?</p>
                               <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
                             </div>
                             <div class="col-lg-4">
@@ -593,7 +594,7 @@
                         </div>
                         <div class="col-lg-4">
                           <p class="specialTitle">Partitioned Cubes</p>
-                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are unioned together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
                         </div>
                         <div class="col-lg-4">
                         </div>
@@ -601,7 +602,7 @@
                       <div class="row" id="mainConceptsRow">
                         <div class="col-lg-4">
                           <div class="mainConceptOption active" id="presentationLayer1">Presentation Layer</div>
-                          <div class="mainConceptContent active" id="presentationLayer1Content">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional datasets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+                          <div class="mainConceptContent active" id="presentationLayer1Content">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
 
                           <div class="mainConceptOption" id="dimensionalLayer1">Dimensional Layer</div>
                           <div class="mainConceptContent" id="dimensionalLayer1Content">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells within the axes.</div>
@@ -823,7 +824,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:communityconnection@pentaho.org" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
+                                      The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.
                                     </div>
                                   </div>
                                 </div>
@@ -843,7 +844,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:communityconnection@pentaho.org" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
+                                      If you want to get involved, have the time or resources to commit, and are not sure where to dig in, <a href="mailto:community@pentaho.com" target="_blank">send us an email</a> with a description of the resources you have and the commitment you can make, and we'll be happy to hook you up with a Pentaho team member to coordinate the best use of your time.
                                     </div>
                                   </div>
                                 </div>
@@ -888,7 +889,7 @@
                                 <div class="panel-body">
                                   <div class="row">
                                     <div class="col-md-12">
-                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:communityconnection@pentaho.org">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
+                                     While we do not condone frivolous gifts or taking bribes, we are not above such gestures either. If there is a certain body of work that, when completed, makes your life easier, and you have a small yacht surprisingly available for a weekend, we can definitely talk. <a href="mailto:community@pentaho.com">Contact us</a> with your offer, and we can surely find SOMEONE, a Pentaho team member or a community member, that can help you out!
                                     </div>
                                   </div>
                                 </div>
@@ -914,7 +915,7 @@
         <div class="container lightContainer" id="downloadList">
           <div class="row">
             <div class="col-lg-4">
-              <h2 class="h2-dark">Download</h2>
+              <h2 class="h2-dark">Downloads</h2>
             </div>
             <div class="col-lg-8"></div>
           </div>
@@ -925,8 +926,8 @@
                   <strong>Mondrian 3.6.1</strong> Stable
                 </div>
                 <div class="col-lg-4">
-                  <p class="large-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green plugin-download-button">Download Mondrian <img src="../../img/download-icon.png"></a></p>
-                  <p class="small-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green">Download Mondrian <img src="../../img/download-icon.png"></a></p>
+                  <p class="large-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green plugin-download-button">Download <img src="../../img/download-icon.png"></a></p>
+                  <p class="small-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.6.1/mondrian-3.6.1.jar/download" target="_blank" class="btn btn-default btn-green">Download <img src="../../img/download-icon.png"></a></p>
                 </div>
               </div>
             </div>
@@ -952,7 +953,7 @@
                 <div class="col-lg-4"><br id="hiddenMobile">
                   <span class="contentContext"></span>
                   <ul>
-                    <li><p>Improved processing of large volumes of data when a member grant is used with a partial rollup policy.</p></li>
+                    <li><p>Improved processing of large volumes of data when a member grant is used with a partial roll-up policy.</p></li>
                     <li><p>Enables a mode in which nothing gets cached and the data returned is always the latest available from the database.</p></li>
                     <li><p>Allows more than one measure to be included in the RETURN clause of a DRILLTHROUGH statement.</p></li>
                     <li><p>Added support for native evaluation of regular expressions with Netezza.</p></li>
@@ -964,7 +965,7 @@
                   <p>See Release Notes for more info</p>
                 </div>
                 <div class="col-lg-4">
-                 <a href="http://jira.pentaho.com/browse/MONDRIAN#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank">ChangeLog <img src="../../img/changelog.png"></a>
+                 <a href="http://jira.pentaho.com/browse/MONDRIAN#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank">Change Log <img src="../../img/changelog.png"></a>
                 </div>
               </div>
               <div class="row otherVersionDownloadRow">
