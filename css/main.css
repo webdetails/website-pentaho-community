@@ -1793,3 +1793,64 @@ code {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+
+#header-carousel .carousel-inner {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  top: 0;
+}
+
+#header-carousel ol.carousel-indicators {
+  position: absolute;
+  bottom: -20px;
+}
+
+#header-carousel ol.carousel-indicators li {
+  position: relative;
+  cursor: pointer;
+  width: 13px;
+  height: 13px !important;
+  margin: 4px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #39a74a;
+  padding: 0;
+}
+
+#header-carousel ol.carousel-indicators li.active {
+  background: #39a74a;
+}
+
+#header-carousel ol.carousel-indicators .active:after {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  background: none;
+  left: 0;
+  top: 0;
+}
+
+#header-carousel .item #highlight-header {
+  height: 365px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  background-image: url(../img/BigData_Sparkl_Community.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+}
+
+#plugin-downloads {
+  margin-top: 30px;
+}

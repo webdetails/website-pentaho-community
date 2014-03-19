@@ -67,21 +67,45 @@
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
       <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>.</div>
       
-      <div class="container cbp-so-section" id="containerHeader">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Introducing Pentaho Community Edition 5.0</h1>
-            <p>Promoting innovation, participation, and cooperation. <br>
-            This release includes the <strong>Pentaho Marketplace</strong> where community members can explore and install community-developed Pentaho plugins with just one click.</p>
-            <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Pentaho CE <img src="img/download-icon.png"></span></p>
+      <!-- carousel -->
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="container cbp-so-section" id="containerHeader">
+              <!-- Example row of columns -->
+              <div class="row">
+                <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+                  <h1>Introducing Pentaho Community Edition 5.0</h1>
+                  <p>Promoting innovation, participation, and cooperation. <br>
+                  This release includes the <strong>Pentaho Marketplace</strong> where community members can explore and install community-developed Pentaho plugins with just one click.</p>
+                  <p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Pentaho CE <img src="img/download-icon.png"></span></p>
+                </div>
+                <div class="col-lg-5 cbp-so-side cbp-so-side-right">
+                  <img src="img/dash1.png" alt="">
+                  <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Pentaho CE <img src="img/download-icon.png"></span></p>
+                </div>
+              </div>
+            </div> <!-- /container -->  
           </div>
-          <div class="col-lg-5 cbp-so-side cbp-so-side-right">
-            <img src="img/dash1.png" alt="">
-            <p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Pentaho CE <img src="img/download-icon.png"></span></p>
+          <div class="item">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <div id="highlight-header" onclick="window.open('http://www.webdetails.pt/training');" title="Big Data &amp; Sparkl Training"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div> <!-- /container -->  
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#header-carousel" data-slide-to="1"></li>
+        </ol>
+      </div>
+      <!-- end carousel -->
 
       <div class="hr"></div>
       <div class="lightContainerBack">
@@ -497,6 +521,28 @@
         <script src="js/twitter-bootstrap-hover-dropdown.js"></script>
         <script>
           new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+        </script>
+
+        <script src="js/jquery.touchSwipe.js"></script>
+        <script>
+         
+          $(document).ready(function() {  
+
+            //Enable swiping...
+            $("#header-carousel").swipe( {
+              //Generic swipe handler for all directions
+              swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                $(this).carousel('next'); 
+              },
+              swipeRight: function() {
+                $(this).carousel('prev'); 
+              },
+              //Default is 75px, set to 0 for demo so any distance triggers swipe
+              threshold:100
+            });
+
+          });
+            
         </script>
 
         <script type="text/javascript">
