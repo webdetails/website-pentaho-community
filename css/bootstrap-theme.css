@@ -181,10 +181,9 @@
   border-bottom-right-radius: 0;
 }
 
-.navbar .navbar-nav > li > a.dropdown-toggle:hover,
-.navbar .navbar-nav > li > a.dropdown-toggle:active {
-  background-color: #FFFFFF;
-  box-shadow: none;
+.navbar .navbar-nav > li.open > a.dropdown-toggle {
+  background-color: #FFFFFF !important;
+  box-shadow: none !important;
 }
 
 .navbar .navbar-nav > .active > a,
