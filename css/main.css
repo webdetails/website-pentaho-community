@@ -42,12 +42,24 @@ body {
   min-width: 320px;
 }
 
+.text-green {
+  color: #39a74a;
+}
+
+.text-blue {
+  color: #005fa2;
+}
+
 .container {
   max-width: 960px !important;
 }
 
 #containerHeader {
   height: 250px;
+}
+
+#containerHeader p strong {
+  font-weight: 600;
 }
 
 #pentahoHome #containerHeader {
@@ -1644,6 +1656,11 @@ a.btn-gray:active {
     margin-top: 30px;
 }
 
+.newLanguage.background-grey {
+    background: #f1f2f2;
+    color: #707880;
+}
+
 .newLanguage b {
   font-weight: 500;
 }
@@ -1853,4 +1870,23 @@ code {
 
 #plugin-downloads {
   margin-top: 30px;
+}
+
+/* PROJECT MATURITY CLASSIFICATION */
+
+.project-maturity-classification-item-title {
+  font-size: 23px;
+  line-height: 30px;
+  margin-top: 8px;
+  display: block;
+  color: #39a74a;
+  font-weight: 300;
+}
+
+.project-maturity-classification-item-title b {
+  font-weight: 600;
+}
+
+.project-maturity-classification-item-title.text-blue {
+  color: #005fa2;
 }
