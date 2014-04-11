@@ -1774,6 +1774,11 @@ a.btn-gray:active {
   .forkDetails {
     margin-bottom: 20px;
   }
+
+  #getStartedPropose {
+    margin-bottom: 10px;
+  }
+
 }
 
 code {
