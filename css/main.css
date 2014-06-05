@@ -463,6 +463,22 @@ img {
   margin-top: 30px;
 }
 
+.info-bar a {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.info-bar a:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+}
+
 .info-bar:before {
   position: absolute;
   content: '';
@@ -621,7 +637,11 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 .download-row {
   margin-top: 20px;
   position: relative;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
+}
+
+#pentahoHome .download-row {
+  padding-left: 8px;
 }
 
 .other-versions {
@@ -1097,6 +1117,22 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   margin-top: 20px;
 }
 
+.pluginPage .info-bar a {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.pluginPage .info-bar a:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+}
+
 .pluginPage .greenRow {
   background: #39A34A;
   border-top: 5px solid #5d6672;
@@ -1298,7 +1334,7 @@ p.in-development-description {
 
 
 .main-plugin-footerNotes .col-lg-4 {
-  text-align: right;
+  text-align: left;
 }
 
 .main-plugin-footerNotes * {
@@ -1456,6 +1492,7 @@ p.in-development-description {
 
   .otherVersionDownloadRow {
     text-align: center;
+    margin-top: 10px;
   }
 }
 
