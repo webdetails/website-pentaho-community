@@ -482,7 +482,7 @@ img {
 
 @media (max-width: 767px) {
   .backPage {
-    padding: 50px 0 0;
+    padding: 0;
   } 
 
   #tabs li > a {
