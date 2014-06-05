@@ -1453,8 +1453,12 @@ p.in-development-description {
   color: #39A34A;
 }
 
-.otherVersionDownloadRow {
-  margin-top: 30px;
+.otherVersionDownloadRow p {
+  font-size: 12px;
+  text-align: right;
+}
+
+.otherVersionDownloadRow p a {
   font-size: 12px;
 }
 
@@ -1482,7 +1486,7 @@ p.in-development-description {
 
   .main-plugin-footerNotes .col-lg-4,
   .main-plugin-footerNotes .col-lg-8 {
-    text-align: center;
+    text-align: left;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -1490,8 +1494,8 @@ p.in-development-description {
       background: #666 !important;
   }
 
-  .otherVersionDownloadRow {
-    text-align: center;
+  .otherVersionDownloadRow p {
+    text-align: left;
     margin-top: 10px;
   }
 }
