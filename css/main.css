@@ -209,6 +209,10 @@ img {
   padding-top: 15px;
 }
 
+#pentaho5-container {
+  overflow: hidden;
+}
+
 #pentaho5-container h2 {
   padding-bottom: 15px;
 }
@@ -241,7 +245,7 @@ img {
 }
 
 #pentaho5-container .col-lg-5 img {
-  margin-top: 80px;
+  margin-top: -130px;
 }
 
 #pentaho5-container h2 {
@@ -508,14 +512,15 @@ img {
   .btn-green img {
     margin-left: 5px;
   }
-
-  #pentaho5-container .col-lg-5 img {
-    margin-top: 30px;
-  }
 }
 
 @media (max-width: 1199px) {
 
+
+  #pentaho5-container .col-lg-5 img {
+    margin-top: 10px;
+    margin-bottom: -160px;
+  }
 
   #containerHeader {
     height: auto;
@@ -1936,4 +1941,54 @@ code {
 
 .project-maturity-classification-item-title.text-blue {
   color: #005fa2;
+}
+
+p.topLine-pentaho5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #313131;
+  font-weight: 700;
+  margin-bottom: .5em;
+  margin-left: 4px;
+}
+
+p.headLine-pentaho5 {
+  font-size: 60px;
+  font-weight: 300;
+  color: #005ca7;
+  line-height: 1.05;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#pentaho5-container a,
+#pentaho5-container a:link,
+#pentaho5-container a:visited {
+  color: #005ca7;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+  position: relative;
+}
+
+#pentaho5-container a:after {
+  content: "";
+  background-size: contain;
+  display: inline-block;
+  height: 13px;
+  width: 15px;
+  margin-left: 10px;
+  background-image: url(../img/right-arrow.svg);
+  background-repeat: no-repeat;
+  bottom: 0px;
+}
+
+.no-svg #pentaho5-container a:after {
+  background-image: url(../img/right-arrow.png);
+}
+
+#pentaho5-container a:hover,
+#pentaho5-container a:active,
+#pentaho5-container a:focus {
+  text-decoration: underline;
 }
