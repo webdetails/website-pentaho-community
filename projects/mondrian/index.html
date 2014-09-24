@@ -215,6 +215,9 @@
                         <div class="col-lg-4">
                          <p>Here’s your guide to submitting just about any contribution to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                         </div>
+                        <div class="col-lg-4">
+                         <p>Don't forget to take a look at the <a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a> before getting started with Mondrian.</p>
+                        </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-12">
@@ -642,6 +645,9 @@
                         <div class="col-lg-4">
                          <p>Here’s your guide to submitting just about any contribution to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                         </div>
+                        <div class="col-lg-4">
+                          <p>Don't forget to take a look at the <a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a> before getting started with Mondrian.</p>
+                        </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-12">
@@ -944,20 +950,19 @@
                   <span class="contentContext">New Features</span>
                   
                   <ul>
-                    <li><p>Tuples evaluation now push down natively the constraints imposed by roles.</p></li>
-                    <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
-                    <li><p>Fixes some issues in the way Mondrian was splitting segments across multiple sub-segments.</p></li>
-                    <li><p>Resolves tuples only joins to the fact table if absolutely necessary.</p></li>
-                    <li><p>Upgraded Apache Xerces.</p></li>
+                    <li><p>Beta support for JMX (Java Management Extensions) monitoring.</p></li>
+                    <li><p>Support for olap4j 1.2.0.</p></li>
+                    <li><p>Support for NuoDB.</p></li>
+                    <li><p>Improved in-memory rollups.</p></li>
+                    <li><p>Fixed issues with Impala and Hive dialects.</p></li>
                   </ul>
                 </div>
                 <div class="col-lg-4"><br id="hiddenMobile">
                   <span class="contentContext" id="hiddenMobile"></span>
                   <ul>
-                    <li><p>Improved processing of large volumes of data when a member grant is used with a partial roll-up policy.</p></li>
-                    <li><p>Enables a mode in which nothing gets cached and the data returned is always the latest available from the database.</p></li>
-                    <li><p>Allows more than one measure to be included in the RETURN clause of a DRILLTHROUGH statement.</p></li>
-                    <li><p>Added support for native evaluation of regular expressions with Netezza.</p></li>
+                    <li><p>Fixed issues where using roles would prevent all of the members from being cached and retrieved correctly.</p></li>
+                    <li><p>Fixed arithmetic errors when compound slicers are used.</p></li>
+                    <li><p>Fixed concurrency issues with the segment indexes and external caches.</p></li>
                   </ul>
                 </div>
               </div>
