@@ -218,7 +218,7 @@ img {
 }
 
 #pentaho5-container img {
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 #pentaho5-content hr {
@@ -1958,7 +1958,24 @@ p.headLine-pentaho5 {
   color: #005ca7;
   line-height: 1.05;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+p.subHeadLine-pentaho5 {
+  font-size: 22px;
+  line-height: 29px;
+  margin: 0 4px 35px;
+  position: relative;
+}
+
+p.subHeadLine-pentaho5:after {
+  position: absolute;
+  bottom: -25px;
+  left: 1px;
+  height: 11px;
+  width: 175px;
+  background: #febe10;
+  content: '';
 }
 
 #pentaho5-container a,
