@@ -791,7 +791,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -webkit-transition: 0.6s ease-in-out left;
           transition: 0.6s ease-in-out left;
 
-  padding: 40px 45px 30px 30px;
+  padding: 40px 45px 30px 45px;
 }
 
 .carousel-inner > .active,
@@ -1907,7 +1907,7 @@ code {
   top: 0;
 }
 
-#header-carousel .item #highlight-header {
+#header-carousel .item .highlight-header-special {
   height: 365px;
   margin-top: -20px;
   margin-bottom: 20px;
@@ -1918,6 +1918,14 @@ code {
   background-size: contain;
   background-position: center center;
   cursor: pointer;
+}
+
+#header-carousel .item .highlight-header-special#highlight-header-pentahoWorld {
+  background-image: url(../img/pentaho-world-banner.jpg);
+}
+
+#header-carousel .item .highlight-header-special#highlight-header-marketplace {
+  background-image: url(../img/pentaho-marketplace-banner.png);
 }
 
 #plugin-downloads {
