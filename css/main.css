@@ -1071,6 +1071,10 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   margin-right: 4px;
 }
 
+.row.marketplace-images {
+  margin-top: 30px;
+}
+
 /* ===========================================================
 ========================== PLUGINS ===========================
 =========================================================== */
