@@ -45,6 +45,13 @@ $(document).ready(function(){
 		myID = "" + myID + "Content";
 		$conceptContainer.find('#'+myID).addClass('active');
 	});
+
+	if (!Modernizr.svg) {
+		navbarSrc = $("a.navbar-brand img").attr("src");
+		navbarSrc = navbarSrc.replace('svg','png');
+	  	$("a.navbar-brand img").attr("src", navbarSrc);
+	}
+	$("a.navbar-brand").attr("target", "_blank");
 });
 
 function removeOpen() {		
