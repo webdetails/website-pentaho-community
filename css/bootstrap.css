@@ -375,7 +375,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #D7D8DB;
 }
 
 .sr-only {
@@ -3996,13 +3996,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: #777777;
+  border-bottom-color: #777777;
 }
 
 .nav a:hover .caret {
-  border-top-color: #2a6496;
-  border-bottom-color: #2a6496;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
 
 .nav-tabs .dropdown-menu {
@@ -4184,11 +4184,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  outline: 0;
+}
+
+.navbar-brand img {
+  outline: 0;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+  outline: 0;
 }
 
 @media (min-width: 921px) {
@@ -4207,6 +4213,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
+  outline: 0;
 }
 
 .navbar-toggle .icon-bar {
@@ -4403,7 +4410,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
   background-color: #e7e7e7;
 }
 
@@ -4415,12 +4421,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #5D6672;
+  border-color: #666;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #5D6672;
+  background-color: #666;
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar,
@@ -4429,7 +4435,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #5D6672;
+  background-color: #666;
 }
 
 .navbar-default .navbar-collapse,
@@ -4454,13 +4460,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a .caret,
 .navbar-default .navbar-nav > .open > a:hover .caret,
 .navbar-default .navbar-nav > .open > a:focus .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
-}
-
-.navbar-default .navbar-nav > .dropdown > a .caret {
   border-top-color: #777777;
   border-bottom-color: #777777;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown.open > a .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 @media (max-width: 920px) {
@@ -4469,8 +4476,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
-    background-color: transparent;
+    color: #ffffff;
+    background-color: #666666;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,

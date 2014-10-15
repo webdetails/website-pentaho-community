@@ -40,6 +40,7 @@ body {
   line-height: 1.7;
   color: #616161;
   min-width: 320px;
+  padding-top: 45px;
 }
 
 .text-green {
@@ -149,8 +150,8 @@ ul {
   overflow: hidden;
 	padding: 0px 0px 0px 0px;
 	background: #dbdbdb;
-	max-width: 1200px;
-	margin: 30px auto;
+	max-width: 1212px;
+	margin: 26px auto 30px;
 	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 	box-shadow: 0px 0px 10px rgba(0,0,0,.3);
@@ -507,16 +508,20 @@ a.large-button {
 }
 
 .info-bar a:before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  font-size: 10px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  margin: -2px 5px 0 -9px;
+  border-radius: 50%;
+  background-color: #39a74a;
 }
 
 .info-bar:before {
   position: absolute;
   content: '';
-  height: 5px;
+  height: 12px;
   width: 100%;
   background: #efefef;
   left: 0;
@@ -831,7 +836,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -webkit-transition: 0.6s ease-in-out left;
           transition: 0.6s ease-in-out left;
 
-  padding: 40px 45px 30px 45px;
+  padding: 40px 45px;
 }
 
 .carousel-inner > .active,
@@ -1001,7 +1006,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
    ========================================================================== */
 
 .navbar {
-  max-width: 1000px;
+  max-width: 1010px;
   margin: auto;
   background: none;
   border: none;
@@ -1010,6 +1015,15 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -webkit-box-shadow: none;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.navbar .dropdown-menu {
+  padding-bottom: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 12px;
+  background: #fff;
+  border-radius: 0 !important;
 }
 
 .navbar-brand {
@@ -1067,6 +1081,16 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   .navbar .navbar-nav > li > a.dropdown-toggle:focus {
     background: none;
     box-shadow: none;
+  }
+
+  .navbar .dropdown-menu {
+    padding: 5px 0 5px 16px;
+  }
+
+  .dropdown-menu > li > a {
+      font-size: 16px !important;
+      padding: 0.6em 1.7em;
+      font-weight: normal;
   }
 
   .carousel-inner > .item {
@@ -1193,13 +1217,6 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   line-height: 20px;
   position: relative;
   padding-left: 10px;
-}
-
-.pluginPage .info-bar a:before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  font-size: 10px;
 }
 
 .pluginPage .greenRow {
@@ -1543,7 +1560,16 @@ p.in-development-description {
   margin-top: 24px !important;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+.dropdown-menu > li > a {
+    font-size: 13px;
+    padding: 0.6em 1.7em;
+    font-weight: normal;
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, .dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
     background: #666;
 }
 
