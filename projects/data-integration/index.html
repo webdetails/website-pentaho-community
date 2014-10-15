@@ -1003,32 +1003,6 @@
         <script src="../../js/vendor/bootstrap.min.js"></script>
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
 
-        <script>
-            function preloader() {
-              if (document.images) {
-                var img1 = new Image();
-                var img2 = new Image();
-
-                img1.src = "../../img/pentaho-logo-small.png";
-                img2.src = "../../img/pentaho-logo.png";
-              }
-            }
-            function addLoadEvent(func) {
-              var oldonload = window.onload;
-              if (typeof window.onload != 'function') {
-                window.onload = func;
-              } else {
-                window.onload = function() {
-                  if (oldonload) {
-                    oldonload();
-                  }
-                  func();
-                }
-              }
-            }
-            addLoadEvent(preloader);
-        </script>
-
         <script src="../../js/main.js"></script>
         <script src="../../js/classie.js"></script>
 
