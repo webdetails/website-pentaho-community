@@ -546,6 +546,12 @@ a.large-button {
 
 @media (max-width: 1199px) {
 
+  
+
+  .pluginPage .greenRow {
+    margin-right: -30px !important;
+    margin-left: -30px !important;
+  }
 
   #pentaho5-container .col-lg-5 img {
     margin-top: 10px;
@@ -1197,19 +1203,12 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 }
 
 .pluginPage .greenRow {
-  background: #39A34A;
-  border-top: 5px solid #5d6672;
-  color: #fefefe;
+  background: #efefef;
   margin-right: -45px;
-  margin-left: -30px;
+  margin-left: -45px;
   padding-left: 18px;
   padding-right: 20px;
-  padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.pluginPage .greenRow h5 {
-  color: #fefefe;
 }
 
 .pluginPage .specialTitle {
@@ -1218,19 +1217,24 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   border-bottom: 1px solid #d7d8db;
 }
 
-
-.pluginPage .greenRow a:link,
-.pluginPage .greenRow a:visited,
-.pluginPage .greenRow a:hover,
-.pluginPage .greenRow a:active {
-  color: #fefefe;
+.green-row-hr {
+  margin: 0px -20px 40px;
+  position: relative;
+  padding: 0;
+  height: 1px;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.06);
+  background: #D7D8DB;
+  clear: both;
 }
 
 .pluginPage p.faq-title {
-  font-weight:500;
-  margin-bottom: 20px;
-  font-size: 17px;
-  line-height: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 24px;
+  color: #39a74a;
+  margin-top: 0px;
+  margin-bottom: 16px;
 }
 
 .pluginPage #plugin-description {
