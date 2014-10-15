@@ -36,9 +36,9 @@ html { overflow-y: scroll;}
 body {
 	background: #d3d3d3;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
-  color: #333e49;
+  color: #616161;
   min-width: 320px;
 }
 
@@ -73,7 +73,6 @@ body {
 .other-versions a:link,
 .other-versions a:visited {
   color: #39a74a;
-  font-weight: 600;
 }
 
 .carousel-inner a:hover,
@@ -85,41 +84,65 @@ body {
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6,
-p {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+
+p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+b, strong {
+  font-weight: 600;
 }
 
 h1 {
 	font-size: 45px;
-	color: #5d6672;
+	color: #333333;
   margin-left: -2px;
 }
 
 h2 {
   color: #005c99;
   margin-top: 0px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 24px;
+  color: #39a74a;
+  margin-top: 30px;
+  margin-bottom: 16px;
 }
 
 h2.h2-dark {
-  color: #5d6672;
-  padding-bottom: 15px;
-  border-bottom: 5px solid #5d6672;
-}
-
-h6 {
-  font-size: 18px;
-  color: #39a74a;
-  margin-top: 30px;
+  color: #333333;
 }
 
 ul {
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.backPage ul {
+  padding-left: 20px;  
+}
+
+.backPage ul li {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.backPage ul li:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  margin: -2px 5px 0 -9px;
+  border-radius: 50%;
+  background-color: #39a74a;
 }
 
 .backPage {
@@ -203,12 +226,6 @@ img {
   max-width: 960px;
 }
 
-#screenshots-description p {
-  border-top: 5px solid #efefef;
-  margin-top: 6px;
-  padding-top: 15px;
-}
-
 #pentaho5-container {
   overflow: hidden;
 }
@@ -267,13 +284,20 @@ img {
   display: block;
   text-align: left;
   position: relative;
-  font-size: 12px;
-  line-height: 20px;
-
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 8px 15px;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  text-decoration: none;
 
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+a.large-button {
+  text-decoration: none;
+  outline: 0 !important;
 }
 
 .btn-green:hover,
@@ -299,7 +323,7 @@ img {
 .btn-green img {
   position: absolute;
   right: 10px;
-  margin-top: 1px;
+  margin-top: 3px;
 }
 
 .small-button-green {
@@ -347,7 +371,13 @@ img {
 }
 
 .large-button {
-  width: 186px;
+  width: auto;
+  display: inline-block;
+  min-width: 142px;
+}
+
+.small-button-green {
+  margin-bottom: 10px;
 }
 
 .small-button {
@@ -407,7 +437,7 @@ img {
 
 #tabs li > a {
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
   color: #a5a5a5;
   border: none;
   transition: color .2s linear;
@@ -419,7 +449,7 @@ img {
 #tabs li > a:hover,
 #tabs li > a:focus {
   background: none;
-  color: #333e49;
+  color: #333333;
   border: none;
   transition: color .2s linear;
   -moz-transition: color .2s linear;
@@ -427,7 +457,7 @@ img {
 }
 
 #tabs li.active > a {
-  color: #333e49;
+  color: #333333;
   background: #fff;
   border: none;
   margin-top: 0;
@@ -438,12 +468,12 @@ img {
   position: absolute;
   content: '';
   height: 5px;
-  background: #333e49;
+  background: #333333;
   bottom: 0px;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #333e49;
+  border-bottom: 1px solid #333333;
 }
 
 #tabs-image img {
@@ -494,10 +524,10 @@ img {
 }
 
 .info-bar h1 {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #333e49;
+  font-weight: bold;
+  color: #333333;
 }
 
 @media (max-width: 767px) {
@@ -606,6 +636,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
   line-height: 40px;
   padding-left: 10px;
   position: relative;
+  font-weight: 400;
+  text-decoration:  none;
 }
 
 div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:before {
@@ -614,14 +646,13 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:be
   height: 16px;
   background-image: url(../img/arrow-right.png);
   position: absolute;
-  top: 12px;
+  top: 50%;
   left: 15px;
+  margin-top: -8px;
 }
 
-div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:hover,
-div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:focus {
+div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:hover {
   background: #fff;
-  text-decoration:  none;
 }
 
 div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed) {
@@ -635,8 +666,9 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   height: 16px;
   background-image: url(../img/arrow-down.png);
   position: absolute;
-  top: 12px;
+  top: 50%;
   left: 15px;
+  margin-top: -8px;
 }
 
 .download-row {
@@ -652,7 +684,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 .other-versions {
   font-size: 13px;
   position: relative;
-  margin-top: 25px;
+  margin-top: 35px;
   vertical-align: bottom;
 }
 
@@ -660,6 +692,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
+  color: #333;
 }
 
 .panel-body .col-md-12 {
@@ -680,18 +713,17 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 @media (max-width: 480px) {
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
-    font-size: 13px !important;
   }
 
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed) {
     background: #fff;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
 @media (max-width: 1199px) {
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:before {
@@ -700,7 +732,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
     height: 16px;
     background-image: url(../img/arrow-right.png);
     position: absolute;
-    top: 12px;
+    top: 50%;
+    margin-top: -8px;
     left: 15px;
   }
 
@@ -710,7 +743,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
     height: 16px;
     background-image: url(../img/arrow-down.png);
     position: absolute;
-    top: 12px;
+    top: 50%;
+    margin-top: -8px;
     left: 15px;
   }
 
@@ -872,7 +906,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 .carousel-indicators li:hover,
 .carousel-indicators li:focus {
   border: 0;
-  color: #5d6672;
+  color: #333333;
   opacity: 1;
   transition: color .2s linear;
   -moz-transition: color .2s linear;
@@ -889,7 +923,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   border: 0;
   background: #fff;
   position: relative;
-  color: #333e49;
+  color: #333333;
   width: auto;
   border-radius: 5px 5px 0px 0px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
@@ -986,6 +1020,26 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   color: #fff;
 }
 
+#tryPentaho {
+  font-size: 18px;
+    color: #fff;
+    padding: 10px 22px 9px;
+    background-color: #005ca7;
+    background-image: -webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,#247dc5),color-stop(100%,#015ea9));
+    background-image: -webkit-linear-gradient(#247dc5,#015ea9);
+    background-image: -moz-linear-gradient(#247dc5,#015ea9);
+    background-image: -o-linear-gradient(#247dc5,#015ea9);
+    background-image: linear-gradient(#247dc5,#015ea9);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    border: none;
+    text-shadow: 0 1px rgba(255,255,255,.3);
+    line-height: 1.42857143;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
 .navbar-nav > li > .dropdown-menu {
   border-top-left-radius: 4px;
 }
@@ -994,12 +1048,12 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   #tryPentaho {
     width: 200px;
     margin: 30px auto 0px;
-    ;
   }
 
   .navbar .navbar-nav > li > a.dropdown-toggle {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    outline: 0;
   }
 
   .navbar .navbar-nav > li > a.dropdown-toggle:hover,
@@ -1084,7 +1138,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   padding: 5px 15px;
   text-align: right;
   font-size: 12px;
-  color: #5d6672;
+  color: #333333;
   border-top: 1px solid #ccc;
 }
 
@@ -1112,7 +1166,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 .pluginPage h5 {
   font-size: 30px;
-  color: #5d6672;
+  color: #333333;
   margin-bottom: 30px;
   line-height: 30px;
   margin-left: -2px;
@@ -1160,7 +1214,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 .pluginPage .specialTitle {
   font-weight: 600;
-  border-bottom: 5px solid #efefef;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d7d8db;
 }
 
 
@@ -1188,17 +1243,13 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 .pluginPage #new-features .feature-title {
   color: #39A34A;
-  font-weight: 400;
-  border-bottom: 5px solid #efefef;
+  font-weight: 300;
+  border-bottom: 1px solid #D7D8DB;
   position: relative;
-  padding-left: 40px;
   margin-top: 30px;
-}
-
-.pluginPage #new-features .feature-title img {
-  position: absolute;
-  left: 0px;
-  margin-top: 9px;
+  font-size: 24px;
+  line-height: 30px;
+  padding-bottom: 5px;
 }
 
 #pdi5-info {
@@ -1228,7 +1279,7 @@ p.in-development-title {
 
 p.in-development-description {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .progressbar {
@@ -1271,7 +1322,7 @@ p.in-development-description {
 .bottom-info-links a:hover,
 .bottom-info-links a:active {
   font-size: 11px;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 15px;
   margin-right: 8px;
 }
@@ -1286,7 +1337,7 @@ p.in-development-description {
   background-image: url(../img/lupa.png);
   background-repeat: no-repeat;
   background-position: right center;
-  color: #5d6672;
+  color: #333333;
 }
 
 #search-dev-list:focus,
@@ -1302,14 +1353,22 @@ p.in-development-description {
 #contribute-list div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle,
 #contribute-list div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:link,
 #contribute-list div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:visited {
-  color: #5d6672;
+  color: #333333;
   font-weight: 300;
   font-size: 13px;
 }
 
+#contribute-list .accordion-toggle span.col-md-12 {
+  display: block;
+  width: 100%;
+  padding: 5px 28px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 #contribute-list .panel-body {
   background: #efefef;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -1324,8 +1383,14 @@ p.in-development-description {
   margin-bottom: 25px;
 }
 
+.main-plugin-header p.large-button {
+  margin-bottom: 0;
+}
+
 .main-plugin-title {
-  margin-top: 25px;
+  margin-top: 24px;
+  color: #333;
+  line-height: 38px;
 }
 
 .main-plugin-content {
@@ -1454,7 +1519,6 @@ p.in-development-description {
 #contribute-list #accordionPlaces div.panel div.panel-heading h4.panel-title a.accordion-toggle:link, 
 #contribute-list #accordionPlaces div.panel div.panel-heading h4.panel-title a.accordion-toggle:visited {
   line-height: 20px;
-  padding: 9px 0px;
 }
 
 .main-plugin-footerNotes a,
@@ -1564,12 +1628,14 @@ p.in-development-description {
   .submit-title {
     font-size: 18px;
     margin-top: 20px;
+    font-weight: 300;
   }
 
   .submit-description {
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     margin-top: -10px;
+    color: #616161;
   }
 
   .pluginPage .grayRow {
@@ -1666,6 +1732,12 @@ a.btn-gray:active {
   margin-bottom: 2px;
 }
 
+.currentlyTranslated b small {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #currentlyTranslatedTitle {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1676,6 +1748,7 @@ a.btn-gray:active {
   font-size: 22px;
   font-weight: 300;
   line-height: 22px;
+  color: #333;
 }
 
 .currentlyTranslatedTitle b {
@@ -1701,10 +1774,16 @@ a.btn-gray:active {
     border: 2px solid #ebebeb;
     color: #fefefe;
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-size: 18px;
     text-align: left;
     margin-top: 30px;
+}
+
+.newLanguage p {
+  font-weight: 300;
+  margin: 0;
+  line-height: 40px;
 }
 
 .newLanguage.background-grey {
@@ -1846,7 +1925,7 @@ code {
 
 .marketplaceLinks {
   display: block;
-  color: #333e49;
+  color: #333333;
   text-decoration: none;
   font-weight: 300;
   -webkit-transition: all .3s linear;
@@ -1978,6 +2057,8 @@ p.subHeadLine-pentaho5 {
   line-height: 29px;
   margin: 0 4px 35px;
   position: relative;
+  font-weight: 300;
+  color: #333;
 }
 
 p.subHeadLine-pentaho5:after {
@@ -1995,7 +2076,7 @@ p.subHeadLine-pentaho5:after {
 #pentaho5-container a:visited {
   color: #005ca7;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 5px;
   position: relative;
 }
