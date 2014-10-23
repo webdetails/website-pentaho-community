@@ -2034,12 +2034,20 @@ code {
   cursor: pointer;
 }
 
+#header-carousel .item > img {
+  min-width: 100%;
+}
+
 #header-carousel .item .highlight-header-special#highlight-header-pentahoWorld {
   background-image: url(../img/pentaho-world-banner.jpg);
 }
 
 #header-carousel .item .highlight-header-special#highlight-header-marketplace {
   background-image: url(../img/pentaho-marketplace-banner.png);
+}
+
+#header-carousel .item .highlight-header-special#highlight-header-pcm14 {
+  background: none;
 }
 
 #plugin-downloads {
