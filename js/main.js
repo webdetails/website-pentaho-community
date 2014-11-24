@@ -50,8 +50,6 @@ $(document).ready(function(){
 		navbarSrc = $("a.navbar-brand img").attr("src");
 		navbarSrc = navbarSrc.replace('svg','png');
 	  	$("a.navbar-brand img").attr("src", navbarSrc);
-	  	
-	  	$('#pcm2014-logo').attr('src', 'img/pcm2014-logo.png')
 	}
 	$("a.navbar-brand").attr("target", "_blank");
 });
