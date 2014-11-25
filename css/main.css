@@ -535,7 +535,7 @@ a.large-button {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #333333;
+  color: #333333 !important;
 }
 
 @media (max-width: 767px) {
@@ -554,7 +554,15 @@ a.large-button {
 
 @media (max-width: 1199px) {
 
-  
+  .darkContainer,
+  .darkContainer * {
+    text-align: center;  
+  }
+
+  .link-marketplacerow {
+    text-align: center !important;
+    margin-top: 20px;
+  }
 
   .pluginPage .greenRow {
     margin-right: -30px !important;
@@ -604,9 +612,19 @@ a.large-button {
     margin-top: 0px;
   }
 
-  #containerHeader .col-lg-5 {
+  #containerHeader .col-lg-5,
+  #containerHeader .pug-london {
     text-align: center;
     margin-top: 30px;
+  }
+
+  .btn.btn-header {
+    margin-bottom: 20px;
+  }
+
+  .pluginPage .btn.btn-header {
+    margin-top: 40px !important;
+    margin-bottom: 0;
   }
 
   #tabs-image {
@@ -1744,6 +1762,8 @@ a.btn-gray:active {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .currentlyTranslated b small {
@@ -1787,17 +1807,19 @@ a.btn-gray:active {
     background: #39A34A;
     border: 2px solid #ebebeb;
     color: #fefefe;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 18px;
     text-align: left;
     margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .newLanguage p {
-  font-weight: 300;
+  font-weight: 300 !important;
   margin: 0;
-  line-height: 40px;
+  line-height: 24px;
 }
 
 .newLanguage.background-grey {
@@ -1811,6 +1833,12 @@ a.btn-gray:active {
 
 .newLanguage .btn {
   display: block;
+}
+
+.newLanguage .col-lg-4:last-child,
+.newLanguage .col-lg-5:last-child {
+  text-align: right;
+
 }
 
 .smaller {
@@ -1920,6 +1948,15 @@ a.btn-gray:active {
 
   #getStartedPropose {
     margin-bottom: 10px;
+  }
+
+  .newLanguage {
+      text-align: center;
+  }
+
+  .newLanguage .col-lg-4 {
+    text-align: center !important;
+    margin-top: 20px;
   }
 
 }
@@ -2123,4 +2160,214 @@ p.subHeadLine-pentaho5:after {
 #pentaho5-container a:active,
 #pentaho5-container a:focus {
   text-decoration: underline;
+}
+
+
+/* ===========================================================
+========================== GREY BUTTONS ============================
+=========================================================== */
+
+
+.btn-grey {
+  background: #999;
+  color: #fefefe !important;
+  font-family:'Open Sans', Helvetica, Arial, sans-serif;
+  border: 0;
+  font-weight: 500;
+  display: block;
+  text-align: left;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 8px 15px;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #999;
+  
+  -webkit-box-shadow:inset 0px 3px 5px 0px #909090;
+  box-shadow:inset 0px 3px 5px 0px #909090;
+}
+
+
+.btn-grey:hover,
+.btn-grey:focus {
+  color: #fff;
+  background: #666;
+  border: 1px solid #666;
+  box-shadow:none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.btn-grey:active {
+  background: #666;
+  color: #fff;
+  border: 1px solid #666;
+  
+  -webkit-box-shadow:inset 0px 3px 5px 0px #535353;
+  box-shadow:inset 0px 3px 5px 0px #535353;
+}
+  
+
+.darkContainer {
+  background: #D3D3D3;
+  padding: 20px 0;
+  text-align: left;
+  font-size: 16px;
+  line-height:24px;
+  color: #616161;
+  font-weight:400;
+  border-top: 1px solid #CCC;
+  
+}
+
+.link-marketplacerow {
+  text-align: right;
+}
+
+.txt-greyArea {
+  position: relative;
+  color: #616161;
+  font-size:16px;
+  font-weight:400 !important;
+  margin: 0;
+}
+
+a.link-row{
+  font-size:24px;
+  font-weight:300 !important;
+  color:#39A74A;
+  line-height: 24px;
+}
+
+.launch {
+  float:right;
+  margin-right:130px;
+  width:120px;
+}
+
+.launch-button {
+ margin-left:60px;
+ margin-right:60px;
+ margin-bottom:-5px;
+ padding: 15px 0px 0px 0px;
+}
+
+.separador{
+ border-top: 1px solid rgb(207, 207, 207);
+ margin-top:10px
+ 
+ }
+
+.btn-grey img {
+position: absolute;
+right: 12px;
+margin-top: 4px;
+}
+
+
+/* ===========================================================
+========================== HEADER EXTRAS + LINKS ============================
+=========================================================== */
+
+#buttonHeader{
+  margin-top: 30px;
+}
+
+.btn.btn-header {
+  font-size:24px;
+  color:#39A74A;
+  cursor:pointer;
+  background: none;
+  border: none;
+  border-top: 11px solid #efefef;
+  box-shadow: none;
+  padding: 0;
+  padding-top:12px;
+  font-weight: 300 !important;
+  display: inline-block;
+  border-radius: 0;
+  margin-top: 40px;
+}
+
+.btn.btn-header img {
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+}
+
+.pluginPage .btn.btn-header {
+  margin-top: 20px;
+}
+
+.link-header{
+  margin-top: 60px;
+}
+
+.marketplace-text {
+  padding: 15px 0px 5px;
+  position: relative;
+  color: #616161;
+  font-size:16px;
+  text-align:center;
+  line-height:24px;
+  font-weight:400;
+}
+
+.link-marketplacetab{
+  font-size:24px;
+  font-weight:300;
+  color:#39A74A;
+  padding-top:12px;
+}
+
+.link-tab{
+	text-align:center;
+	padding:10px 0px 0px 0px;
+  }
+  
+.info-bar-marketplace{
+  border: 1px solid rgb(207, 207, 207);
+  padding: 10px 20px 10px;
+  position: relative;
+  border-radius: 0px 0px 5px 5px;
+  margin-top: 30px;
+  }
+  
+ 
+.info-bar-marketplace:before {
+  position: absolute;
+  content: '';
+  height: 12px;
+  width: 100%;
+  background: #efefef;
+  left: 0;
+  top: 0px;
+}
+
+/* ===========================================================
+========================== SPARKL PAGE ============================
+=========================================================== */
+
+.sparklPage{
+  font-size: 30px;
+  color: #333333;
+  margin-bottom: 30px;
+  line-height: 32px;
+  margin-left: -2px;
+}
+  
+.sparklPage-Quick {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333333;
+}
+
+
+a.link-popup {
+  margin-top: 60px;
+  font-size:24px;
+  font-weight:300;
 }
