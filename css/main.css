@@ -319,9 +319,9 @@ a.large-button {
   background: #34913D;
   color: #fff;
   
-  -webkit-box-shadow: 0px 3px 5px 0px #2D7A31;
-     -moz-box-shadow: 0px 3px 5px 0px #2D7A31;
-          box-shadow: 0px 3px 5px 0px #2D7A31;
+  -webkit-box-shadow: inset 0px 3px 5px 0px #2D7A31;
+     -moz-box-shadow: inset 0px 3px 5px 0px #2D7A31;
+          box-shadow: inset 0px 3px 5px 0px #2D7A31;
 }
 	
 .btn-green img {
@@ -1086,8 +1086,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   }
 
   .dropdown-menu > li > a {
-      font-size: 16px !important;
-      padding: 0.6em 1.7em;
+      font-size: 14px !important;
       font-weight: normal;
   }
 
@@ -1099,6 +1098,42 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   .carousel-inner > .item .col-lg-8 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent !important;
+      background-color: transparent !important;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+      background-color: #333E48 !important;
+  }
+
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  body {
+    padding-top: 20px;
+  }
+
+  ul.dropdown-menu {
+    background: #fff !important;
+    font-size: 14px;
+  }
+
+  .dropdown-menu > li > a:hover, 
+  .dropdown-menu > li > a:focus, .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+      background: #FFF !important;
+      color: #333 !important;
+  }
+
+  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  body .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #333 !important;
+      background: #FFF !important;
   }
 }
 
