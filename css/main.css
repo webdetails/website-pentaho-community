@@ -612,7 +612,7 @@ a.large-button {
     margin-top: 0px;
   }
 
-  #containerHeader .col-lg-5,
+  #containerHeader .col-lg-6:last-child,
   #containerHeader .pug-london {
     text-align: center;
     margin-top: 30px;
@@ -1154,27 +1154,23 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 ========================== SPARKL ============================
 =========================================================== */
 
-#sparkl .backPage {
-  background: #0d9be0; /* Old browsers */
-  background: -moz-linear-gradient(left,  #0d9be0 0%, #49bee7 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0d9be0), color-stop(100%,#49bee7)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  #0d9be0 0%,#49bee7 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  #0d9be0 0%,#49bee7 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  #0d9be0 0%,#49bee7 100%); /* IE10+ */
-  background: linear-gradient(to right,  #0d9be0 0%,#49bee7 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d9be0', endColorstr='#49bee7',GradientType=1 ); /* IE6-9 */
-}
+/*#sparkl .backPage {
+  background: #0d9be0;
+  background: -moz-linear-gradient(left,  #0d9be0 0%, #49bee7 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0d9be0), color-stop(100%,#49bee7));
+  background: -webkit-linear-gradient(left,  #0d9be0 0%,#49bee7 100%);
+  background: -o-linear-gradient(left,  #0d9be0 0%,#49bee7 100%);
+  background: -ms-linear-gradient(left,  #0d9be0 0%,#49bee7 100%);
+  background: linear-gradient(to right,  #0d9be0 0%,#49bee7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d9be0', endColorstr='#49bee7',GradientType=1 );
+}*/
 
-#sparkl h1 {
+/*#sparkl h1 {
   color: #fff;
-}
+}*/
 
 #sparkl #containerHeader p {
   color: #616161;
-}
-
-#sparkl #containerHeader .col-lg-5 > img {
-  margin-top: 0px;
 }
 
 #sparkl .backPage > .hr {
@@ -1222,7 +1218,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   font-size: 45px;
 }
 
-.pluginPage #containerHeader h1 strong {
+.pluginPage #containerHeader h1 strong,
+#sparkl #containerHeader h1 strong {
   font-weight: 500;
 }
 
