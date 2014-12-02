@@ -1,0 +1,146 @@
+[
+   {
+      "name":       	"The Data Warehousing Community",
+      "city":       	"Brisbane",
+      "country":    	"Australia",
+      "membersNum": 	51,
+      "groupUrl":   	"http://www.meetup.com/DataWarehouseExperts/",
+      "joinUrl":    	"http://www.meetup.com/DataWarehouseExperts/join/"
+   },
+   {
+      "name":       	"Mid-Atlantic Pentaho User Group",
+      "city":       	"Washington, DC",
+      "country":    	"USA",
+      "membersNum": 	11,
+      "groupUrl":   	"http://www.meetup.com/Mid-Atlantic-Pentaho-User-Group/",
+      "joinUrl":    	"http://www.meetup.com/Mid-Atlantic-Pentaho-User-Group/join/"
+   },
+   {
+      "name":       	"Silicon Valley Pentaho Community Meetup",
+      "city":       	"Mountain View, CA",
+      "country":    	"USA",
+      "membersNum": 	17,
+      "groupUrl":   	"http://www.meetup.com/Silicon-Valley-Pentaho-Community-Meetup/",
+      "joinUrl":    	"http://www.meetup.com/Silicon-Valley-Pentaho-Community-Meetup/join/"
+   },
+   {
+      "name":       	"Pentaho London User Group",
+      "city":       	"London",
+      "country":    	"UK",
+      "membersNum": 	162,
+      "groupUrl":   	"http://www.meetup.com/Pentaho-London-User-Group/",
+      "joinUrl":    	"http://www.meetup.com/Pentaho-London-User-Group/join/"
+   },
+   {
+      "name":       	"Oslo Pentaho practitioners",
+      "city":       	"Oslo",
+      "country":    	"Norway",
+      "membersNum": 	0,
+      "groupUrl":   	"http://www.meetup.com/Oslo-Pentaho-practitioners/",
+      "joinUrl":    	"http://www.meetup.com/Oslo-Pentaho-practitioners/join/"
+   },
+   {
+      "name":       	"NYC Pentaho User Group",
+      "city":       	"New York, NY",
+      "country":    	"USA",
+      "membersNum": 	83,
+      "groupUrl":   	"http://www.meetup.com/NYC-Pentaho-User-Group/",
+      "joinUrl":    	"http://www.meetup.com/NYC-Pentaho-User-Group/join/"
+   },
+   {
+      "name":       	"Chicago Pentaho User Group",
+      "city":       	"Chicago, IL",
+      "country":    	"USA",
+      "membersNum": 	39,
+      "groupUrl":   	"http://www.meetup.com/Chicago-Pentaho/",
+      "joinUrl":    	"http://www.meetup.com/Chicago-Pentaho/join/"
+   },
+   {
+      "name":       	"Grupo de usuarios de Pentaho y Saiku de Madrid",
+      "city":       	"Madrid",
+      "country":    	"Spain",
+      "membersNum": 	54,
+      "groupUrl":   	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/",
+      "joinUrl":    	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/join/"
+   },
+   {
+      "name":       	"Bay Area Pentaho User Group",
+      "city":       	"San Francisco, CA",
+      "country":    	"USA",
+      "membersNum": 	53,
+      "groupUrl":   	"http://www.meetup.com/Bay-Area-Pentaho-User-Group/",
+      "joinUrl":    	"http://www.meetup.com/Bay-Area-Pentaho-User-Group/join/"
+   },
+   {
+      "name":       	"Dallas Fort Worth Pentaho Users Group",
+      "city":       	"Dallas, TX",
+      "country":    	"USA",
+      "membersNum": 	32,
+      "groupUrl":   	"http://www.meetup.com/DFW-Pentaho-Users-Group/",
+      "joinUrl":    	"http://www.meetup.com/DFW-Pentaho-Users-Group/join/"
+   },
+   {
+      "name":       	"New Zealand Big Data and Business Intelligence Meetup",
+      "city":       	"Auckland",
+      "country":    	"New Zealand",
+      "membersNum": 	510,
+      "groupUrl":   	"http://www.meetup.com/NZ-Big-Data/",
+      "joinUrl":    	"http://www.meetup.com/NZ-Big-Data/join/"
+   },
+   {
+      "name":       	"Information Management Melbourne",
+      "city":       	"Melbourne",
+      "country":    	"Australia",
+      "membersNum": 	64,
+      "groupUrl":   	"http://www.meetup.com/Information-Management-Melbourne/",
+      "joinUrl":    	"http://www.meetup.com/Information-Management-Melbourne/join/"
+   },
+   {
+      "name":       	"Business Intelligence Big Data Integration ETL Analysts",
+      "city":       	"New York, NY",
+      "country":    	"USA",
+      "membersNum": 	180,
+      "groupUrl":   	"http://www.meetup.com/Business-Intelligence-Big-Data-Integration-ETL-Analysts/",
+      "joinUrl":    	"http://www.meetup.com/Business-Intelligence-Big-Data-Integration-ETL-Analysts/join/"
+   },
+   {
+      "name":       	"Open Analytics in Sydney",
+      "city":       	"Sydney",
+      "country":    	"Australia",
+      "membersNum": 	65,
+      "groupUrl":   	"http://www.meetup.com/Open-Analytics-in-Sydney/",
+      "joinUrl":    	"http://www.meetup.com/Open-Analytics-in-Sydney/join/"
+   },
+   {
+      "name":       	"San Francisco Data Warehouse Group",
+      "city":       	"San Francisco, CA",
+      "country":    	"USA",
+      "membersNum": 	584,
+      "groupUrl":   	"http://www.meetup.com/SF-Data-Warehouse-Group/",
+      "joinUrl":    	"http://www.meetup.com/SF-Data-Warehouse-Group/join/"
+   },
+   {
+      "name":       	"#BigDataBx - de la théorie aux bonnes pratiques",
+      "city":       	"Bordeaux",
+      "country":    	"France",
+      "membersNum": 	31,
+      "groupUrl":   	"http://www.meetup.com/BigDataBx-de-la-theorie-aux-bonnes-pratiques/",
+      "joinUrl":    	"http://www.meetup.com/BigDataBx-de-la-theorie-aux-bonnes-pratiques/join/"
+   },
+   {
+      "name":       	"Silicon Valley Open Source Business Intelligence",
+      "city":       	"Mountain View, CA",
+      "country":    	"USA",
+      "membersNum": 	230,
+      "groupUrl":   	"http://www.meetup.com/OpensourceBI/",
+      "joinUrl":    	"http://www.meetup.com/OpensourceBI/join/"
+   },
+   {
+      "name":        "Open Source Data Consortium",
+      "city":        "Morrisville, NC",
+      "country":     "USA",
+      "membersNum":  53,
+      "groupUrl":    "http://www.meetup.com/OSDCRTP/",
+      "joinUrl":     "http://www.meetup.com/OSDCRTP/join/"
+   }
+]

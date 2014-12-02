@@ -398,12 +398,12 @@ a.large-button {
   float: left;
   cursor: pointer;
   opacity: 0.5;
-  border: 2px solid rgba(57,167,74,0);
+  border: 1px solid rgba(57,167,74,0);
 }
 
 .preview-block.active {
   opacity: 1;
-  border: 2px solid rgba(57,167,74,1);
+  border: 1px solid rgba(57,167,74,1);
 }
 
 .screen-previewer {
@@ -613,6 +613,7 @@ a.large-button {
   }
 
   #containerHeader .col-lg-6:last-child,
+  #containerHeader .col-lg-5:last-child,
   #containerHeader .pug-london {
     text-align: center;
     margin-top: 30px;
@@ -2337,6 +2338,7 @@ margin-top: 4px;
   position: relative;
   top: -1px;
   margin-left: 10px;
+  width: 16px;
 }
 
 .pluginPage .btn.btn-header {
@@ -2412,4 +2414,209 @@ a.link-popup {
   margin-top: 60px;
   font-size:24px;
   font-weight:300;
+}
+
+
+
+/* ===========================================================
+======================== USER GROUPS =========================
+=========================================================== */
+
+.userGroups-list button.dropdown-toggle {
+  margin-top: 10px;
+  border-radius: 0;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  text-align: left;
+  padding-left: 20px;
+  color: #333333;
+  font-size: 15px;
+  position: relative;
+  box-shadow: none
+}
+
+.userGroups-list button.dropdown-toggle .caret {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -2px;
+  border-top: 4px solid #333;  
+  border-right: 4px solid transparent;
+  border-bottom: 0 dotted;
+  border-left: 4px solid transparent;
+}
+
+.open .dropdown-toggle.btn-default {
+  color: #fff;
+  background-color: #666;
+  border-color: #666;
+  text-shadow: none;
+}
+
+.userGroups-list .open button.dropdown-toggle .caret {
+  border-top: 4px solid #fff;
+}
+
+.userGroups-list ul {
+  padding: 0;
+}
+
+.userGroups-list ul li {
+  margin-top: 0;
+}
+
+.userGroups-list ul li:before {
+  display: none;
+}
+
+.userGroups-list .dropdown-menu {
+  min-width: 100%;
+  margin-top: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -msie-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+       -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  max-height: 269px;
+  overflow-y: auto;
+}
+
+.userGroups-list .dropdown-menu a,
+.userGroups-list .dropdown-menu a:link,
+.userGroups-list .dropdown-menu a:visited {
+  color: #333;
+  cursor: pointer;
+}
+
+.userGroups-list .dropdown-menu a:hover,
+.userGroups-list .dropdown-menu a:active,
+.userGroups-list .dropdown-menu a:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.userGroups-list .dropdown-menu .selected a,
+.userGroups-list .dropdown-menu .selected a:link,
+.userGroups-list .dropdown-menu .selected a:visited,
+.userGroups-list .dropdown-menu .selected a:hover,
+.userGroups-list .dropdown-menu .selected a:active,
+.userGroups-list .dropdown-menu .selected a:focus {
+  color: #999999;
+  background: #fff;
+  pointer-events: none;
+  cursor: default;
+}
+
+.userGroup-container {
+  background: #f1f2f2;
+  border: 1px solid #f1f2f2;
+  height: 210px;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  -webkit-transition: all .3s linear;
+    -msie-transition: all .3s linear;
+     -moz-transition: all .3s linear;
+       -o-transition: all .3s linear;
+          transition: all .3s linear;
+}
+
+.userGroup-container:hover {
+  background: #e9e9e9;
+  border: 1px solid #cfcfcf;
+}
+
+a.userGroup-link {
+  text-decoration: none;
+  display: block;
+  height: 210px;
+}
+
+.userGroup {
+  padding: 20px;
+  height: 210px;
+  display: block;
+}
+
+.userGroup-name {
+  color: #333333;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  height: 100px
+}
+
+.userGroup-location {
+  font-size: 13px;
+  color: #8c8c8c;
+  line-height: 16px;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 13px;
+}
+
+.userGroup-location img {
+  width: 26px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.userGroup-memberArea {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  padding: 0 20px 20px;
+}
+
+.userGroup-members {
+  font-size: 13px;
+  color: #8c8c8c;
+  line-height: 24px;  
+  height: 24px;
+}
+
+.userGroup-membersNum {
+  font-size: 16px;
+  color: #39a74a;
+  font-weight: 600;
+}
+
+.userGroup-memberArea a.btn.btn-green {
+  pointer-events: auto;
+  margin: 0;
+  line-height: 16px;
+  font-size: 13px;
+  padding: 3px 15px 5px;
+}
+
+[ng\:cloak], [ng-cloak],[data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
+
+@media (max-width: 991px) {
+  .userGroup-container {
+    height: auto;
+  }
+
+  a.userGroup-link {
+    height: auto;
+  }
+
+  .userGroup {
+    height: auto;
+    padding-bottom: 57px;
+  }
+
+  .userGroup-name {
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .userGroups-list button.dropdown-toggle {
+    margin-bottom: 30px;
+  }
 }
