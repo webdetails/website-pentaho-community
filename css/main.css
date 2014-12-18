@@ -1484,6 +1484,10 @@ p.in-development-description {
   display: block;
 }
 
+.main-plugin-content ul.featuresList li:first-child {
+  margin-top: 0px;
+}
+
 .previousDownloadRow {
   background: #efefef;
   padding-top: 7px;
