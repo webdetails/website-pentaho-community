@@ -150,5 +150,13 @@
       "membersNum":  67,
       "groupUrl":    "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/",
       "joinUrl":     "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/join/"
+   },
+   {
+      "name":        "Open Source BI Meetup in Tokyo",
+      "city":        "Tokyo",
+      "country":     "Japan",
+      "membersNum":  79,
+      "groupUrl":    "https://atnd.org/events/search?q=pentaho&search%5Bevent%5D%5Bplace%5D=&search%5Bevent%5D%5Bstarted_date_from%5D=2014-01-01&search%5Bevent%5D%5Bstarted_date_to%5D=&search%5Bevent%5D%5Bmore_than_0_entry%5D=1",
+      "joinUrl":     "http://groups.google.com/d/forum/pentaho-user-jp-ml"
    }
 ]
