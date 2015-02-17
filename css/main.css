@@ -271,6 +271,20 @@ img {
   line-height: 1.2;
 }
 
+#pentaho5-container #pentaho5-content > a,
+#pentaho5-container #pentaho5-content > a:link,
+#pentaho5-container #pentaho5-content > a:visited,
+#pentaho5-container #pentaho5-content > a:hover,
+#pentaho5-container #pentaho5-content > a:active,
+#pentaho5-container #pentaho5-content > a:focus {
+  margin: 0;
+  padding: 0;
+}
+
+#pentaho5-container a:after {
+  display: none !important;
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -2148,6 +2162,7 @@ code {
   color: #005fa2;
 }
 
+/*
 p.topLine-pentaho5 {
   font-size: 18px;
   text-transform: uppercase;
@@ -2217,6 +2232,7 @@ p.subHeadLine-pentaho5:after {
 #pentaho5-container a:focus {
   text-decoration: underline;
 }
+*/
 
 
 /* ===========================================================
