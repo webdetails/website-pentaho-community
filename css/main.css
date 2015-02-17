@@ -749,7 +749,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   display: block;
 }
 
-#panel-body-with-green {
+#panel-body-with-green,
+.contribute-body {
   padding-bottom: 0px;
 }
 
@@ -1292,12 +1293,17 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   font-weight: 300;
   line-height: 30px;
   font-size: 24px;
-  color: #39a74a;
+  color: #7c8289;
   margin-top: 0px;
   margin-bottom: 16px;
 }
 
-.pluginPage #plugin-description {
+.pluginPage p.faq-title.secondRow {
+  margin-top: 70px;
+}
+
+.pluginPage #plugin-description,
+.pluginPage .plugin-contribute {
   padding-bottom: 0px;
 }
 
@@ -1628,6 +1634,10 @@ p.in-development-description {
   .pluginPage p.faq-title {
     margin-top: 40px;
     margin-bottom: 10px;
+  }
+
+  .pluginPage p.faq-title.secondRow {
+    margin-top: 40px;
   }
 
   .pluginPage .specialTitle {
