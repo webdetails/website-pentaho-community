@@ -290,7 +290,7 @@ img {
    ========================================================================== */
 
 .btn-green {
-  background: #3BA749;
+  background: #34913D;
   color: #fefefe !important;
   text-shadow: none;
   font-family:'Open Sans', Helvetica, Arial, sans-serif;
@@ -307,9 +307,9 @@ img {
   border-radius: 4px;
   text-decoration: none;
   
-  -webkit-box-shadow: inset 0px 3px 5px 0px #379940;
-     -moz-box-shadow: inset 0px 3px 5px 0px #379940;
-          box-shadow: inset 0px 3px 5px 0px #379940;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 
 }
 
@@ -320,17 +320,18 @@ a.large-button {
 
 .btn-green:hover,
 .btn-green:focus {
+  background-color: #3BA749;
   color: #fff;
-  background-color:#34913D;
   outline: 0;
   
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: inset 0px 3px 5px 0px #379940;
+     -moz-box-shadow: inset 0px 3px 5px 0px #379940;
+          box-shadow: inset 0px 3px 5px 0px #379940;
 }
 
-.btn-green:active {
-  background: #34913D;
+.btn-green:active,
+.btn-green:hover:active {
+  background-color: #34913D;
   color: #fff;
   
   -webkit-box-shadow: inset 0px 3px 5px 0px #2D7A31;
@@ -2413,7 +2414,7 @@ margin-top: 4px;
   border: 1px solid rgb(207, 207, 207);
   padding: 10px 20px 10px;
   position: relative;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0;
   margin-top: 30px;
   }
   
