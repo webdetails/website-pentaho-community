@@ -67,6 +67,14 @@ body {
   height: auto;
 }
 
+#containerHeader .event-banner {
+  height: 376px;
+}
+
+#pentaho-day-2015-item {
+  background: #FFFFFF url(../img/pentaho-day-2015-banner.png) no-repeat top -75px right 140px;
+}
+
 .carousel-inner a,
 .carousel-inner a:link,
 .carousel-inner a:visited,
@@ -637,9 +645,23 @@ a.large-button {
 
   #containerHeader .col-lg-6:last-child,
   #containerHeader .col-lg-5:last-child,
-  #containerHeader .pug-london {
+  #containerHeader .event-banner {
     text-align: center;
     margin-top: 30px;
+  }
+
+  #containerHeader .event-banner {
+    height: auto;
+  }
+
+  #containerHeader .event-banner > img {
+    margin: 0 auto;
+    width: 504px;
+    max-width: 100%;
+  }
+
+  #pentaho-day-2015-item {
+    background: #FFFFFF;
   }
 
   .btn.btn-header {
