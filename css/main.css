@@ -75,6 +75,10 @@ body {
   background: #FFFFFF url(../img/pentaho-day-2015-banner.png) no-repeat top -75px right 140px;
 }
 
+#training-bigdata-sparkl-item {
+  background: #FFFFFF url(../img/training-bigdata-sparkl-banner.png) no-repeat top -5px right 140px;
+}
+
 .carousel-inner a,
 .carousel-inner a:link,
 .carousel-inner a:visited,
@@ -660,7 +664,8 @@ a.large-button {
     max-width: 100%;
   }
 
-  #pentaho-day-2015-item {
+  #pentaho-day-2015-item,
+  #training-bigdata-sparkl-item {
     background: #FFFFFF;
   }
 
