@@ -1078,6 +1078,11 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 .navbar-brand {
   padding: 0px 15px;
+  width: 298px;
+  height: 65px;
+  position: absolute;
+  top: -13px;
+  left: 8px;
 }
 
 .navbar-collapse {
@@ -1115,6 +1120,12 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 }
 
 @media (max-width: 920px)   {
+  .navbar-brand {
+    width: 260px;
+    top: -3px;
+    left: 0px;
+  }
+
   #tryPentaho {
     width: 200px;
     margin: 30px auto 0px;
