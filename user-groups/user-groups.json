@@ -16,18 +16,10 @@
       "joinUrl":    	"http://www.meetup.com/Mid-Atlantic-Pentaho-User-Group/join/"
    },
    {
-      "name":       	"Silicon Valley Pentaho Community Meetup",
-      "city":       	"Mountain View, CA",
-      "country":    	"USA",
-      "membersNum": 	27,
-      "groupUrl":   	"http://www.meetup.com/Silicon-Valley-Pentaho-Community-Meetup/",
-      "joinUrl":    	"http://www.meetup.com/Silicon-Valley-Pentaho-Community-Meetup/join/"
-   },
-   {
       "name":       	"Pentaho London User Group",
       "city":       	"London",
       "country":    	"UK",
-      "membersNum": 	311,
+      "membersNum": 	324,
       "groupUrl":   	"http://www.meetup.com/Pentaho-London-User-Group/",
       "joinUrl":    	"http://www.meetup.com/Pentaho-London-User-Group/join/"
    },
@@ -35,7 +27,7 @@
       "name":       	"Oslo Pentaho practitioners",
       "city":       	"Oslo",
       "country":    	"Norway",
-      "membersNum": 	22,
+      "membersNum": 	23,
       "groupUrl":   	"http://www.meetup.com/Oslo-Pentaho-practitioners/",
       "joinUrl":    	"http://www.meetup.com/Oslo-Pentaho-practitioners/join/"
    },
@@ -43,7 +35,7 @@
       "name":       	"NYC Pentaho User Group",
       "city":       	"New York, NY",
       "country":    	"USA",
-      "membersNum": 	93,
+      "membersNum": 	94,
       "groupUrl":   	"http://www.meetup.com/NYC-Pentaho-User-Group/",
       "joinUrl":    	"http://www.meetup.com/NYC-Pentaho-User-Group/join/"
    },
@@ -51,7 +43,7 @@
       "name":       	"Chicago Pentaho User Group",
       "city":       	"Chicago, IL",
       "country":    	"USA",
-      "membersNum": 	46,
+      "membersNum": 	47,
       "groupUrl":   	"http://www.meetup.com/Chicago-Pentaho/",
       "joinUrl":    	"http://www.meetup.com/Chicago-Pentaho/join/"
    },
@@ -59,7 +51,7 @@
       "name":       	"Grupo de usuarios de Pentaho y Saiku de Madrid",
       "city":       	"Madrid",
       "country":    	"Spain",
-      "membersNum": 	163,
+      "membersNum": 	171,
       "groupUrl":   	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/",
       "joinUrl":    	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/join/"
    },
@@ -67,7 +59,7 @@
       "name":       	"Bay Area Pentaho User Group",
       "city":       	"San Francisco, CA",
       "country":    	"USA",
-      "membersNum": 	62,
+      "membersNum": 	60,
       "groupUrl":   	"http://www.meetup.com/Bay-Area-Pentaho-User-Group/",
       "joinUrl":    	"http://www.meetup.com/Bay-Area-Pentaho-User-Group/join/"
    },
@@ -83,7 +75,7 @@
       "name":       	"New Zealand Big Data and Business Intelligence Meetup",
       "city":       	"Auckland",
       "country":    	"New Zealand",
-      "membersNum": 	960,
+      "membersNum": 	990,
       "groupUrl":   	"http://www.meetup.com/NZ-Big-Data/",
       "joinUrl":    	"http://www.meetup.com/NZ-Big-Data/join/"
    },
@@ -91,7 +83,7 @@
       "name":       	"Information Management Melbourne",
       "city":       	"Melbourne",
       "country":    	"Australia",
-      "membersNum": 	103,
+      "membersNum": 	115,
       "groupUrl":   	"http://www.meetup.com/Information-Management-Melbourne/",
       "joinUrl":    	"http://www.meetup.com/Information-Management-Melbourne/join/"
    },
@@ -107,7 +99,7 @@
       "name":       	"Open Analytics in Sydney",
       "city":       	"Sydney",
       "country":    	"Australia",
-      "membersNum": 	86,
+      "membersNum": 	88,
       "groupUrl":   	"http://www.meetup.com/Open-Analytics-in-Sydney/",
       "joinUrl":    	"http://www.meetup.com/Open-Analytics-in-Sydney/join/"
    },
@@ -115,7 +107,7 @@
       "name":       	"San Francisco Data Warehouse Group",
       "city":       	"San Francisco, CA",
       "country":    	"USA",
-      "membersNum": 	716,
+      "membersNum": 	722,
       "groupUrl":   	"http://www.meetup.com/SF-Data-Warehouse-Group/",
       "joinUrl":    	"http://www.meetup.com/SF-Data-Warehouse-Group/join/"
    },
@@ -131,7 +123,7 @@
       "name":       	"Silicon Valley Open Source Business Intelligence",
       "city":       	"Mountain View, CA",
       "country":    	"USA",
-      "membersNum": 	255,
+      "membersNum": 	257,
       "groupUrl":   	"http://www.meetup.com/OpensourceBI/",
       "joinUrl":    	"http://www.meetup.com/OpensourceBI/join/"
    },
@@ -139,7 +131,7 @@
       "name":        "Open Source Data Consortium",
       "city":        "Morrisville, NC",
       "country":     "USA",
-      "membersNum":  96,
+      "membersNum":  95,
       "groupUrl":    "http://www.meetup.com/OSDCRTP/",
       "joinUrl":     "http://www.meetup.com/OSDCRTP/join/"
    },
@@ -147,7 +139,7 @@
       "name":        "São Paulo Pentaho User Group",
       "city":        "São Paulo",
       "country":     "Brazil",
-      "membersNum":  236,
+      "membersNum":  271,
       "groupUrl":    "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/",
       "joinUrl":     "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/join/"
    },
@@ -158,5 +150,13 @@
       "membersNum":  111,
       "groupUrl":    "https://atnd.org/events/search?q=pentaho&search%5Bevent%5D%5Bplace%5D=&search%5Bevent%5D%5Bstarted_date_from%5D=2014-01-01&search%5Bevent%5D%5Bstarted_date_to%5D=&search%5Bevent%5D%5Bmore_than_0_entry%5D=1",
       "joinUrl":     "http://groups.google.com/d/forum/pentaho-user-jp-ml"
+   },
+   {
+      "name":        "Pentaho Italia User Group",
+      "city":        "Milano",
+      "country":     "Italy",
+      "membersNum":  15,
+      "groupUrl":    "http://www.meetup.com/it/Pentaho-Italia-Users-Group",
+      "joinUrl":     "http://www.meetup.com/it/Pentaho-Italia-Users-Group/join"
    }
 ]
