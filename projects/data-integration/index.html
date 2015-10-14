@@ -11,68 +11,19 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
-        <style>
-            body {
-                padding: 30px 0px;
-            }
-        </style>
         <link rel="stylesheet" href="../../css/bootstrap-theme.css">
         <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/master.css">
         <link rel="stylesheet" href="../../css/cbpScroller.css">
 
         <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body class="pluginPage">
 
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://www.pentaho.com/"><img src="../../img/logo-pentaho.svg"></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Community <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../">Home</a></li>
-              <li><a href="../../user-groups">Pentaho User Groups</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Marketplace <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../marketplace/plugins">Plugins</a></li>
-              <li><a href="../../marketplace/language-packs">Language Packs</a></li>
-              <li><a href="../../marketplace/project-maturity-classification">Project Maturity Classification</a></li>
-            </ul>
-          </li>
-          <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../mondrian">Mondrian</a></li>
-              <li class="active"><a href="">Data Integration</a></li>
-              <li><a href="../reporting">Reporting</a></li>
-              <li><a href="../data-mining">Data Mining</a></li>
-              <li><a href="../sparkl">Sparkl</a></li>
-            </ul>
-          </li>
-          <li><a target="_blank" class="btn btn-default btn-blue" id="tryPentaho" href="http://www.pentaho.com/testdrive">Try Pentaho EE</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+    <div class="header-container"></div>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
-      <div class="container cbp-so-section" id="containerHeader">
+      <div class="site-container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
@@ -87,12 +38,11 @@
         </div>
       </div> <!-- /container -->
 
-      <div class="hr"></div>
-      <div class="lightContainerBack">
-        <div class="container lightContainer">
+      <div class="whiteContainerBack">
+        <div class="container whiteContainer">
           <div class="row" id="hiddenMobile">
-            <div id="myCarousel" class="carousel slide">
-              <ol class="carousel-indicators">
+            <div id="myCarousel" class="carousel slide site-container">
+              <ol class="carousel-indicators content">
                 <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
                 <li id="whats-new-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">What's new</li>
                 <li id="contribute-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Contribute</li>
@@ -101,8 +51,8 @@
               <div class="carousel-inner">
                 <div class="active item" id="plugin-description">
                   <div class="row">
-                    <div class="col-lg-8">
-                      <h5>Reliable Service Architecture</h5>
+                    <div class="col-md-7 col-sm-7">
+                      <h2>Reliable Service Architecture</h2>
                       <p>With an intuitive, graphical, drag and drop design environment and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
                       <br>
                       <div id="whats-new-images">
@@ -119,9 +69,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="info-bar">
-                        <h1>Quick Links</h1>
+                    <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                      <div class="info-bar" style="margin-top: 30px;">
+                        <h3>Quick Links</h3>
                         <a href="http://wiki.pentaho.com/display/EAI/Latest+Pentaho+Data+Integration+%28aka+Kettle%29+Documentation" target="_blank">Documentation</a><br>
                         <a href="http://wiki.pentaho.com/display/EAI/Frequently+Asked+Questions" target="_blank">FAQ</a><br>
                         <a href="http://forums.pentaho.com/forumdisplay.php?135-Pentaho-Data-Integration-Kettle" target="_blank">Forum</a><br>
@@ -133,55 +83,55 @@
                         <a href="http://wiki.pentaho.com/display/EAI/Pentaho+Data+Integration+Recorded+Demos" target="_blank">Recorded Demos</a>
                       </div>
                       <div class="info-bar">
-                        <h1>Training</h1>
+                        <h3>Training</h3>
                         <a href="http://www.pentaho.com/training-course/pentaho-data-integration" target="_blank">PDI Training Course</a><br>
                         <a href="http://www.pentaho.com/service/training" target="_blank">Pentaho Training &amp; Education</a><br>
                         <a href="http://www.pentaho.com/service/training/faq" target="_blank">Training FAQ</a>
                       </div>
                       <div class="info-bar info-bar-license">
-                        <h1>License</h1>
+                        <h3>License</h3>
                         <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>
                       </div>
                     </div>
                   </div>
-                  <div class="row secondRow greenRow">
-                    <div class="green-row-hr"></div>
+                  <div class="row secondRow">
+
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h5>Frequently Asked Questions</h5>
+                          <h2>Frequently Asked Questions</h2>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</p>
+                          <h3>When I start Spoon.bat in a Windows environment nothing happens. <br> How can I solve it?</h3>
                           <p>Edit the Spoon.bat file and:</p>
-                          <ol style="font-weight: 300; margin-left: -20px;">
-                            <li>Replace in the last line "start javaw" with only "java"</li>
-                            <li>Add a "pause" in the next line</li>
+                          <ul>
+                            <li>Replace in the last line "start javaw" with only "java".</li>
+                            <li>Add a "pause" in the next line.</li>
                             <li>Save and try it again.</li>
-                          </ol>
+                          </ul>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How to use JNDI?</p>
+                          <h3>How to use JNDI?</h3>
                           <p>If you look inside the PDI main directory you'll see a sub-directory called "simple-jndi", which contains a file named "jdbc.properties". You should change this file so the JNDI information matches the one you use in your application server.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">Can I sequence transformations?</p>
+                          <h3>Can I sequence transformations?</h3>
                           <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequence them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                         </div>
                       </div>
                       <div class="row secondRow">
                         <div class="col-lg-4">
-                          <p class="faq-title">What's the difference between transformations and jobs?</p>
+                          <h3>What's the difference between transformations and jobs?</h3>
                           <p>Transformations are about moving and transforming rows from source to target. Jobs are more about high level flow control: executing transformations, sending mails on failure, ftp'ing files, ...</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How to use database connections from repository?</p>
+                          <h3>How to use database connections from repository?</h3>
                           <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="faq-title">How to do a database join with PDI?</p>
+                          <h3>How to do a database join with PDI?</h3>
                           <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                         </div>
                       </div>
@@ -193,34 +143,34 @@
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h5>New Features</h5>
+                          <h2>New Features</h2>
                         </div>
                       </div>
                       <div class="row first-feature-row">
                         <div class="col-lg-4">
-                          <p class="feature-title">1. Improved system performance monitoring</p>
+                          <h3>1. Improved system performance monitoring</h3>
                           <p>Minor bug fixes to the PDI-specific portions of the Pentaho.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">2. Data profiling enhancements</p>
+                          <h3>2. Data profiling enhancements</h3>
                           <p>Data Profiling Perspective includes DataCleaner: Analyze Tables and Columns in preparation for ETL.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">3. Easily add new plugins</p>
+                          <h3>3. Easily add new plugins</h3>
                           <p>The PDI Marketplace makes it possible to share and download new plugins.</p>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="feature-title">4. Deliver data from multiple data sources</p>
+                          <h3>4. Deliver data from multiple data sources</h3>
                           <p>The Data Services and Kettle JDBC driver enable you to deliver data from multiple data sources, while enriching, cleansing, and transforming the data.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">5. Data movement load balancing</p>
+                          <h3>5. Data movement load balancing</h3>
                           <p>PDI provides load balancing of data within transformations and over multiple cluster nodes when using transformation clustering.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">6. Revert changes in job database transactions</p>
+                          <h3>6. Revert changes in job database transactions</h3>
                           <p>Database connections can be used with all jobs. This enables commits and rollbacks on a job level. Prior to this release, this was only possible with transformations.</p>
                         </div>
                       </div>
@@ -230,7 +180,7 @@
                 <div class="item plugin-contribute">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h5>How to contribute</h5>
+                      <h2>How to contribute</h2>
                     </div>
                   </div>
                   <div class="row first-feature-row">
@@ -244,34 +194,34 @@
                      <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                     </div>
                   </div>
-                  <div class="row secondRow greenRow">
-                    <div class="green-row-hr"></div>
+                  <div class="row secondRow">
+
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h5>Places to contribute</h5>
+                          <h2>Places to contribute</h2>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="faq-title">Forums and JIRA</p>
+                          <h3>Forums and JIRA</h3>
                           <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
 
-                          <p class="faq-title secondRow">Reporting a bug</p>
+                          <h3>Reporting a bug</h3>
                           <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
 
-                          <p class="faq-title secondRow">Internationalized contributions</p>
+                          <h3>Internationalized contributions</h3>
                           <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
                         </div>
 
                         <div class="col-lg-4">
-                          <p class="faq-title">Contributing code</p>
+                          <h3>Contributing code</h3>
                           <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.</p>
 
-                          <p class="faq-title secondRow">Submitting code</p>
+                          <h3>Submitting code</h3>
                           <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
 
-                          <p class="faq-title secondRow">Contributing documentation</p>
+                          <h3>Contributing documentation</h3>
                           <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
                         </div>
 
@@ -340,17 +290,17 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row secondRow greenRow">
-                        <div class="green-row-hr"></div>
+                      <div class="row secondRow">
+
                         <div class="col-lg-12">
                           <div class="row">
                             <div class="col-lg-12">
-                              <h5>Frequently Asked Questions</h5>
+                              <h2>Frequently Asked Questions</h2>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</p>
+                              <h3>When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</h3>
                               <p>Edit the Spoon.bat file and:</p>
                               <ol style="font-weight: 300; margin-left: -20px;">
                                 <li>Replace in the last line "start javaw" with only "java"</li>
@@ -359,25 +309,25 @@
                               </ol>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How to use JNDI?</p>
+                              <h3>How to use JNDI?</h3>
                               <p>If you look inside the PDI main directory you'll see a sub-directory called "simple-jndi", which contains a file named "jdbc.properties". You should change this file so the JNDI information matches the one you use in your application server.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">Can I sequence transformations?</p>
+                              <h3>Can I sequence transformations?</h3>
                               <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequence them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                             </div>
                           </div>
                           <div class="row secondRow">
                             <div class="col-lg-4">
-                              <p class="faq-title">What's the difference between transformations and jobs?</p>
+                              <h3>What's the difference between transformations and jobs?</h3>
                               <p>Transformations are about moving and transforming rows from source to target. Jobs are more about high level flow control: executing transformations, sending mails on failure, ftp'ing files, ...</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How to use database connections from repository?</p>
+                              <h3>How to use database connections from repository?</h3>
                               <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How to do a database join with PDI?</p>
+                              <h3>How to do a database join with PDI?</h3>
                               <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                             </div>
                           </div>
@@ -463,7 +413,7 @@
                         </div>
                       </div>
                       <div class="row secondRow greenRow">
-                        <div class="green-row-hr"></div>
+
                         <div class="col-lg-12">
                           <div class="row">
                             <div class="col-lg-12">
@@ -513,8 +463,6 @@
         </div>
       </div>
 
-      <div class="hr hr-lighter hr-lighter-reverse"></div>
-
       <div class="lightContainerBack">
         <div class="container lightContainer" id="downloadList">
           <div class="row">
@@ -523,15 +471,20 @@
             </div>
             <div class="col-lg-8"></div>
           </div>
-          <div class="row secondRow" id="plugin-downloads">
+          <!-- <div class="row secondRow" id="plugin-downloads">
             <div class="col-lg-12 main-plugin-download">
               <div class="row main-plugin-header">
-                <div class="col-lg-8 main-plugin-title">
+                <div class="col-lg-12 main-plugin-title">
                   <strong>Data Integration 5.4.0</strong> Stable
                 </div>
-                <div class="col-lg-4 text-right">
-                  <p class="large-button"><a class="btn btn-default btn-green plugin-download-button" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.4/pdi-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="../../img/download-icon.png"></a></p>
-                  <p class="small-button"><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.4/pdi-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="../../img/download-icon.png"></a></p>
+              </div>
+            </div>
+          </div> -->
+          <div class="row secondRow" id="plugin-downloads">
+            <div class="col-xs-12 main-plugin-download">
+              <div class="row main-plugin-header">
+                <div class="col-xs-12 main-plugin-title">
+                  <h3 style="margin-top: 30px;">Data Integration 5.4.0 Stable</h3>
                 </div>
               </div>
             </div>
@@ -539,16 +492,19 @@
           <div class="row">
             <div class="col-lg-12 main-plugin-content">
               <div class="row">
-                <div class="col-lg-4">
-                  <span class="contentContext">Description</span>
+                <div class="col-lg-12">
                   <p>Pentaho’s Data Integration, also known as Kettle, delivers powerful extraction, transformation, and loading (ETL) capabilities.</p>
+
+                  <!-- <div class="col-xs-6">
+                  <br>
+                    <a class="btn btn-default btn-green plugin-download-button" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.4/pdi-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="../../img/download-icon.png"></a>
+                  </div> -->
                 </div>
-                <div class="col-lg-4">
-                  <span class="contentContext"></span>
+                <div class="col-xs-6 col-sm-3">
+                  <br>
+                  <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.10.0/mondrian-3.10.0.1-130.jar/download" target="_blank">Download <img src="../../img/download-icon.png"></a>
                 </div>
-                <div class="col-lg-4"><br id="hiddenMobile">
-                  <span class="contentContext" id="hiddenMobile"> </span>
-                </div>
+                <div class="col-xs-6 col-sm-9"></div>
               </div>
               <div class="row main-plugin-footerNotes">
                 <div class="col-lg-4">
@@ -572,11 +528,14 @@
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
 
         <script src="../../js/main.js"></script>
+        <script src="../../js/master.js"></script>
         <script src="../../js/classie.js"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $('#tabs').tab();
+
+                $('.header-container').load('../../pentaho-templates/header.html');
             });
         </script>
 
@@ -586,5 +545,6 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
     </body>
 </html>

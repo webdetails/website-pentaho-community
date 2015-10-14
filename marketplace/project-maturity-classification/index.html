@@ -11,68 +11,20 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
-        <style>
-            body {
-                padding: 30px 0px;
-            }
-        </style>
+
         <link rel="stylesheet" href="../../css/bootstrap-theme.css">
         <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/master.css">
         <link rel="stylesheet" href="../../css/cbpScroller.css">
 
         <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body class="pluginPage" id="language-packs">
+    <body class="pluginPage project-maturity" id="language-packs">
 
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://www.pentaho.com/"><img src="../../img/logo-pentaho.svg"></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Community <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../">Home</a></li>
-              <li><a href="../../user-groups">Pentaho User Groups</a></li>
-            </ul>
-          </li>
-          <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Marketplace <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../plugins">Plugins</a></li>
-              <li><a href="../language-packs">Language Packs</a></li>
-              <li class="active"><a href="">Project Maturity Classification</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../projects/mondrian">Mondrian</a></li>
-              <li><a href="../../projects/data-integration">Data Integration</a></li>
-              <li><a href="../../projects/reporting">Reporting</a></li>
-              <li><a href="../../projects/data-mining">Data Mining</a></li>
-              <li><a href="../../projects/sparkl">Sparkl</a></li>
-            </ul>
-          </li>
-          <li><a target="_blank" class="btn btn-default btn-blue" id="tryPentaho" href="http://www.pentaho.com/testdrive">Try Pentaho EE</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+    <div class="header-container"></div>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
-      <div class="container cbp-so-section" id="containerHeader">
+      <div class="site-container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
@@ -85,34 +37,34 @@
         </div>
       </div> <!-- /container -->
 
-      <div class="hr"></div>
-      <div class="lightContainerBack">
+      <div class="whiteContainerBack">
         <div class="darkContainer clearfix">
-          <div class="container">
+          <div class="site-container">
             <div class="row">
               <div class="col-lg-9" >
                 <p class="txt-greyArea">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</p>
               </div>
               <div class="link-marketplacerow col-lg-3">
-                <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch<img src="../../img/arrow-right-green.svg" onerror="this.onerror=null; this.src='../../img/arrow-right-green.png'"></a>
+                <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a>
               </div>
             </div>
           </div>
         </div>
         <div class="clear"></div>
-        <div class="container">
+        <div class="site-container">
           <div class="row" style="margin-top: 30px;">
             <div class="col-lg-12">
-              <h5>Overview</h5>
+              <h2>Overview</h2>
               <p>The Project Maturity Classification is the central piece on a strategy that aims to use the Community as a vehicle to reach our goals faster.</p>
               <p>The two-lane approach aims to promote innovation, clear out what is and what isn't supported and which levels of support attached to them, and clarifying to prospects / customers/ community/ etc how Pentaho leverages it's Open Source roots and how that puts us to a huge advantage compared to the rest of the competition.</p>
             </div>
           </div>
         </div>
-        <div class="container lightContainer">
+        <div class="site-container whiteContainer">
           <div class="row" id="hiddenMobile">
+            <div class="col-xs-12">
             <div id="myCarousel" class="carousel slide">
-              <ol class="carousel-indicators">
+              <ol class="carousel-indicators tabs content">
                 <li id="community-lane-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Community Lane</li>
                 <li id="customer-lane-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Customer Lane</li>
               </ol>
@@ -121,7 +73,7 @@
                 <div class="active item" id="community-lane">
                   <div class="row">
                     <div class="col-lg-12">
-                        <h5 style="border-bottom: 1px solid #d4d4d4; padding-bottom: 15px;"><span class="text-green">Community Lane</span> Projects Classification</h5>
+                        <h2 style="padding-bottom: 15px;"><span class="text-green">Community Lane</span> Projects Classification</h2>
                     </div>
                     <div class="col-lg-6">
                       <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.</p>
@@ -172,17 +124,17 @@
                       <p class="txt-greyArea">Submit your Plugin Today.</p>
                     </div>
                     <div class="col-lg-3 text-right">
-                      <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more<img src="../../img/arrow-right-green.svg"></a>
+                      <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
                     </div>
                     <div class="col-lg-5">
-                      <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide<img src="../../img/arrow-right-green.svg"></a>
+                      <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide</a>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="row">
                     <div class="col-lg-12">
-                        <h5 style="border-bottom: 1px solid #d4d4d4; padding-bottom: 15px;"><span class="text-blue">Customer Lane</span> Projects Classification</h5>
+                        <h2 style="padding-bottom: 15px;"><span class="text-blue">Customer Lane</span> Projects Classification</h2>
                     </div>
                     <div class="col-lg-6">
                       <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.</p>
@@ -199,7 +151,7 @@
                       <span class="project-maturity-classification-item-title text-blue"><b>Development</b><br>Phase</span>
                     </div>
                     <div class="col-lg-4" style="color: #616161; padding-top: 15px;">Start up phase of an internal project. Usually a Labs experiment.</div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 15px;"><b style="color: #333;"><small>TEAMS INVOLVED</small></b><br><span style="color: #616161;">Labs</span></div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 15px;"><h3 style="margin-top: 4px;">TEAMS INVOLVED</h3><span style="color: #616161;">Labs</span></div>
                   </div>
                   <div class="row currentlyTranslated">
                     <div class="col-lg-1">
@@ -208,8 +160,8 @@
                     <div class="col-lg-3">
                       <span class="project-maturity-classification-item-title text-blue"><b>Snapshot</b><br>Release</span>
                     </div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;">Unstable and unsupported branch, not recommended for production use.</div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;"><b style="color: #333;"><small>TEAMS INVOLVED</small></b><br><span style="color: #616161;">Serv Dev.</span></div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 12px;">Unstable and unsupported branch, not recommended for production use.</div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 8px;"><h3 style="margin-top: 4px;">TEAMS INVOLVED</h3><span style="color: #616161;">Serv Dev.</span></div>
                   </div>
                   <div class="row currentlyTranslated">
                     <div class="col-lg-1">
@@ -218,8 +170,8 @@
                     <div class="col-lg-3">
                       <span class="project-maturity-classification-item-title text-blue"><b>Limited</b><br>Release</span>
                     </div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;">Assistence given by Services Development with no contractual support for production environments.</div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;"><b style="color: #333;"><small>TEAMS INVOLVED</small></b><br><span style="color: #616161;">Serv Dev. | Support</span></div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 6px;">Assistence given by Services Development with no contractual support for production environments.</div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 8px;"><h3 style="margin-top: 4px;">TEAMS INVOLVED</h3><span style="color: #616161;">Serv Dev. | Support</span></div>
                   </div>
                   <div class="row currentlyTranslated">
                     <div class="col-lg-1">
@@ -228,8 +180,8 @@
                     <div class="col-lg-3">
                       <span class="project-maturity-classification-item-title text-blue"><b>Production</b><br>Release</span>
                     </div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;">Production release with PM assigned, fully supported as part of the Pentaho release cycle.</div>
-                    <div class="col-lg-4" style="color: #616161; padding-top: 3px;"><b style="color: #333;"><small>TEAMS INVOLVED</small></b><br><span style="color: #616161;">Eng. | PM | Support | QA | DOC</span></div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 12px;">Production release with PM assigned, fully supported as part of the Pentaho release cycle.</div>
+                    <div class="col-lg-4" style="color: #616161; padding-top: 8px;"><h3 style="margin-top: 4px;">TEAMS INVOLVED</h3><span style="color: #616161;">Eng. | PM | Support | QA | DOC</span></div>
                   </div>
 
                   <div class="row text-center newLanguage background-grey" id="startNewLang">
@@ -237,14 +189,15 @@
                       <p class="txt-greyArea">Submit your Plugin Today.</p>
                     </div>
                     <div class="col-lg-3 text-right">
-                      <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more<img src="../../img/arrow-right-green.svg"></a>
+                      <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
                     </div>
                     <div class="col-lg-5">
-                      <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide<img src="../../img/arrow-right-green.svg"></a>
+                      <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide</a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
           <div class="row" id="showMobile">
@@ -263,9 +216,6 @@
                   <div id="collapseMainOne" class="panel-collapse collapse">
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row secondRow">
-                        <div class="col-lg-12">
-                          <h5 style="border-bottom: 1px solid #d4d4d4; padding-bottom: 15px; line-height: 40px;;"><span class="text-green">Community Lane</span> Projects Classification</h5>
-                        </div>
                         <div class="col-lg-6">
                           <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.</p>
                         </div>
@@ -315,10 +265,10 @@
                           <p class="txt-greyArea">Submit your Plugin Today.</p>
                         </div>
                         <div class="col-lg-3 text-right" style="margin-top: 20px; text-align: center;">
-                          <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more<img src="../../img/arrow-right-green.svg"></a>
+                          <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
                         </div>
                         <div class="col-lg-5" style="margin-top: 20px; text-align: center;">
-                          <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide<img src="../../img/arrow-right-green.svg"></a>
+                          <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide</a>
                         </div>
                       </div>
                     </div>
@@ -337,9 +287,6 @@
                   <div id="collapseMainTwo" class="panel-collapse collapse">
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row secondRow">
-                        <div class="col-lg-12">
-                          <h5 style="border-bottom: 1px solid #d4d4d4; padding-bottom: 15px; line-height: 40px;"><span class="text-blue">Customer Lane</span><br>Projects Classification</h5>
-                        </div>
                         <div class="col-lg-6">
                           <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.</p>
                         </div>
@@ -393,10 +340,10 @@
                           <p class="txt-greyArea">Submit your Plugin Today.</p>
                         </div>
                         <div class="col-lg-3 text-right" style="margin-top: 20px; text-align: center;">
-                          <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more<img src="../../img/arrow-right-green.svg"></a>
+                          <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
                         </div>
                         <div class="col-lg-5" style="margin-top: 20px; text-align: center;">
-                          <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide<img src="../../img/arrow-right-green.svg"></a>
+                          <a class="link-row" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide</a>
                         </div>
                       </div>
                     </div>
@@ -407,8 +354,6 @@
           </div>
         </div>
       </div>
-
-      <div class="hr hr-lighter hr-lighter-reverse"></div>
 
       <div class="lightContainerBack">
         <div class="container lightContainer" id="downloadList">
@@ -422,7 +367,7 @@
             <div class="col-lg-12 main-plugin-download">
               <div class="row main-plugin-header">
                 <div class="col-lg-12 main-plugin-title">
-                  <strong>Marketplace</strong>
+                  <h3 style="margin-top: 30px;">Marketplace</h3>
                 </div>
               </div>
             </div>
@@ -430,15 +375,10 @@
           <div class="row">
             <div class="col-lg-12 main-plugin-content">
               <div class="row">
-                <div class="col-lg-4">
-                  <span class="contentContext">Description</span>
-                  <p><b>Pentaho Marketplace</b> allows users to explore and test the plugins that are most relevant for them.</p>
-                </div>
-                <div class="col-lg-4">
-                  <span class="contentContext">&nbsp</span>
-                <p>Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
-                </div>
-                <div class="col-lg-4"><br id="hiddenMobile">
+                <div class="col-lg-12">
+                  <p><b>Pentaho Marketplace</b> allows users to explore and test the plugins that are most relevant for them.
+                    <br>
+                    Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
                 </div>
               </div>
               <div class="row download-row" id="downloadList">
@@ -466,8 +406,8 @@
             </div>
           </div>
         </div>
-        <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
       </div>
+      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -476,11 +416,15 @@
         <script src="../../js/vendor/bootstrap.min.js"></script>
 
         <script src="../../js/main.js"></script>
+        <script src="../../js/master.js"></script>
         <script src="../../js/classie.js"></script>
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
+
+                $('.header-container').load('../../pentaho-templates/header.html');
+
                 $('#tabs').tab();
             });
         </script>

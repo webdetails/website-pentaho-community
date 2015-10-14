@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -11,258 +11,213 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
-        <style>
-            body {
-                padding: 30px 0px;
-            }
-        </style>
+
         <link rel="stylesheet" href="../../css/bootstrap-theme.css">
         <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/master.css">
         <link rel="stylesheet" href="../../css/cbpScroller.css">
 
         <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body class="pluginPage">
+    <body class="pluginPage mondrian">
 
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://www.pentaho.com/"><img src="../../img/logo-pentaho.svg"></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Community <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../">Home</a></li>
-              <li><a href="../../user-groups">Pentaho User Groups</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Marketplace <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../marketplace/plugins">Plugins</a></li>
-              <li><a href="../../marketplace/language-packs">Language Packs</a></li>
-              <li><a href="../../marketplace/project-maturity-classification">Project Maturity Classification</a></li>
-            </ul>
-          </li>
-          <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="active"><a href="">Mondrian</a></li>
-              <li><a href="../data-integration">Data Integration</a></li>
-              <li><a href="../reporting">Reporting</a></li>
-              <li><a href="../data-mining">Data Mining</a></li>
-              <li><a href="../sparkl">Sparkl</a></li>
-            </ul>
-          </li>
-          <li><a target="_blank" class="btn btn-default btn-blue" id="tryPentaho" href="http://www.pentaho.com/testdrive">Try Pentaho EE</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+    <div class="header-container"></div>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
-      <div class="container cbp-so-section" id="containerHeader">
+      <div class="site-container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
             <h1>Mondrian</h1>
             <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
-            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section<img src="../../img/download-section.png"></span></p>
+            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span></p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
             <img src="../../img/mondrian-header-dashboard.png" alt="">
-                  <p class="small-button-green"><span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section<img src="../../img/download-section.png"></span></p>
+                  <p class="small-button-green"><span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section</span></p>
           </div>
         </div>
       </div> <!-- /container -->
 
-      <div class="hr"></div>
-      <div class="lightContainerBack">
-        <div class="container lightContainer">
+
+      <div class="whiteContainerBack">
+        <div class="site-container whiteContainer">
           <div class="row" id="hiddenMobile">
-            <div id="myCarousel" class="carousel slide">
-              <ol class="carousel-indicators">
-                <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
-                <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
-                <li id="contribute-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Contribute</li>
-              </ol>
-              <!-- Carousel items -->
-              <div class="carousel-inner">
-                <div class="active item" id="plugin-description">
-                  <div class="row">
-                    <div class="col-lg-8">
-                      <h5>Analyze all your data in real-time</h5>
-                      <p>Analyzing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
-                      <br>
-                      <div style="text-align: center;">
-                        <img src="../../img/cubo.png" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="info-bar">
-                        <h1>Quick Links</h1>
-                            <a href="http://mondrian.pentaho.com/documentation/" target="_blank">Online Documentation</a><br>
-                            <a href="http://mondrian.pentaho.com/documentation/faq.php" target="_blank">FAQ</a><br>
-                            <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forum</a><br>
-                            <a href="http://julianhyde.blogspot.pt/" target="_blank">Julian Hyde's Blog</a><br>
-                            <a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a><br>
-                            <a href="http://lists.pentaho.org/mailman/listinfo/mondrian" target="_blank">Developer Mailing List</a><br>
-                            <hr>
-                            <a href="http://sourceforge.net/projects/mondrian/" target="_blank">Mondrian on SourceForge</a><br>
-                            <a href="https://github.com/pentaho/mondrian/" target="_blank">Mondrian on GitHub</a><br>
-                            <a href="http://ci.pentaho.com/view/Mondrian/" target="_blank">Mondrian on Pentaho CI</a><br>
-                            <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">Mondrian on JIRA</a>
-                      </div>
-                      <div class="info-bar">
-                        <h1>Training and Education</h1>
-                        <a href="http://www.pentaho.com/service/training" target="_blank">Pentaho Training & Education</a><br>
-                        <a href="http://www.pentaho.com/service/training/faq" target="_blank">Training FAQ</a>
-                      </div>
-                      <div class="info-bar info-bar-license">
-                        <h1>License</h1>
-                        <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">Eclipse Public License v1.0 (EPL)</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row secondRow greenRow">
-                    <div class="green-row-hr"></div>
-                    <div class="col-lg-12">
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h5>Frequently asked questions</h5>
+            <div class="col-xs-12">
+              <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators content">
+                  <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
+                  <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
+                  <li id="contribute-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Contribute</li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="active item" id="plugin-description">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-7">
+                        <h2 style="padding-bottom: 15px;">Analyze all your data in real-time</h2>
+                        <p>Analyzing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
+                        <br>
+                        <div style="text-align: center;">
+                          <img src="../../img/cubo.png" alt="">
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <p class="faq-title">How do I use Mondrian in my application?</p>
-                          <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
+                      <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                        <div class="info-bar" style="margin-top: 30px;">
+                          <h3>Quick Links</h3>
+                              <a href="http://mondrian.pentaho.com/documentation/" target="_blank">Online Documentation</a><br>
+                              <a href="http://mondrian.pentaho.com/documentation/faq.php" target="_blank">FAQ</a><br>
+                              <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forum</a><br>
+                              <a href="http://julianhyde.blogspot.pt/" target="_blank">Julian Hyde's Blog</a><br>
+                              <a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a><br>
+                              <a href="http://lists.pentaho.org/mailman/listinfo/mondrian" target="_blank">Developer Mailing List</a><br>
+                              <hr>
+                              <a href="http://sourceforge.net/projects/mondrian/" target="_blank">Mondrian on SourceForge</a><br>
+                              <a href="https://github.com/pentaho/mondrian/" target="_blank">Mondrian on GitHub</a><br>
+                              <a href="http://ci.pentaho.com/view/Mondrian/" target="_blank">Mondrian on Pentaho CI</a><br>
+                              <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">Mondrian on JIRA</a>
                         </div>
-                        <div class="col-lg-4">
-                          <p class="faq-title">Can Mondrian handle large data sets?</p>
-                          <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                        <div class="info-bar">
+                          <h3>Training and Education</h3>
+                          <a href="http://www.pentaho.com/service/training" target="_blank">Pentaho Training & Education</a><br>
+                          <a href="http://www.pentaho.com/service/training/faq" target="_blank">Training FAQ</a>
                         </div>
-                        <div class="col-lg-4">
-                          <p class="faq-title">Which API does Mondrian use?</p>
-                          <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>, an extension to JDBC for OLAP applications. It also has a XML provider for Analysis.</p>
-                        </div>
-                      </div>
-                      <div class="row secondRow">
-                        <div class="col-lg-4">
-                          <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
-                          <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
-                        </div>
-                        <div class="col-lg-4">
-                          <p class="faq-title">How do I enable tracing?</p>
-                          <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
-                        </div>
-                        <div class="col-lg-4">
+                        <div class="info-bar info-bar-license">
+                          <h3>License</h3>
+                          <a href="http://www.eclipse.org/legal/epl-v10.html" target="_blank">Eclipse Public License v1.0 (EPL)</a>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="row" id="new-features" style="margin-top: 10px;">
-                    <div class="col-lg-12">
-                      <div class="row first-feature-row">
-                        <div class="col-lg-4">
-                          <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                    <div class="row secondRow">
+
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <h5>Frequently asked questions</h5>
+                          </div>
                         </div>
-                        <div class="col-lg-4">
-                          <p class="specialTitle">Partitioned Cubes</p>
-                          <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <h3>How do I use Mondrian in my application?</h3>
+                            <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
+                          </div>
+                          <div class="col-lg-4">
+                            <h3>Can Mondrian handle large data sets?</h3>
+                            <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
+                          </div>
+                          <div class="col-lg-4">
+                            <h3>Which API does Mondrian use?</h3>
+                            <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>, an extension to JDBC for OLAP applications. It also has a XML provider for Analysis.</p>
+                          </div>
                         </div>
-                        <div class="col-lg-4">
-                        </div>
-                      </div>
-                      <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-4">
-                          <div class="mainConceptOption active" id="presentationLayer">Presentation Layer</div>
-                          <div class="mainConceptOption" id="dimensionalLayer">Dimensional Layer</div>
-                          <div class="mainConceptOption" id="starLayer">Star Layer</div>
-                          <div class="mainConceptOption" id="storageLayer">Storage Layer</div>
-                        </div>
-                        <div class="col-lg-8">
-                          <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
-                          <div class="mainConceptContent" id="dimensionalLayerContent">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells within the axes.</div>
-                          <div class="mainConceptContent" id="starLayerContent">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
-                          <div class="mainConceptContent" id="storageLayerContent">The <strong>Storage Layer</strong> is a Relational Database Management System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                        <div class="row secondRow">
+                          <div class="col-lg-4">
+                            <h3>How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</h3>
+                            <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
+                          </div>
+                          <div class="col-lg-4">
+                            <h3>How do I enable tracing?</h3>
+                            <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
+                          </div>
+                          <div class="col-lg-4">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="item plugin-contribute">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <h5>How to contribute</h5>
-                    </div>
-                  </div>
-                  <div class="row first-feature-row">
-                    <div class="col-lg-4">
-                      <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
-                    </div>
-                    <div class="col-lg-4">
-                     <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
-                    </div>
-                    <div class="col-lg-4">
-                     <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
-                    </div>
-                  </div>
-                  <div class="row secondRow greenRow">
-                    <div class="green-row-hr"></div>
-                    <div class="col-lg-12">
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <h5>Places to contribute</h5>
+                  <div class="item">
+                    <div class="row" id="new-features" style="margin-top: 10px;">
+                      <div class="col-lg-12">
+                        <div class="row first-feature-row" style="padding-top: 20px;">
+                          <div class="col-lg-12">
+                            <p>The <strong>Mondrian OLAP System</strong> uses <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the <strong>Presentation Layer</strong>, the <strong>Dimensional Layer</strong>, the <strong>Star Layer</strong>, and the <strong>Storage Layer</strong>.</p>
+                          </div>
+                          <div class="col-lg-12">
+                            <h3>Partitioned Cubes</h3>
+                            <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
+                          </div>
+                          <div class="col-lg-4">
+                          </div>
+                        </div>
+                        <div class="row" id="mainConceptsRow">
+                          <div class="col-lg-4">
+                            <div class="mainConceptOption active" id="presentationLayer">Presentation Layer</div>
+                            <div class="mainConceptOption" id="dimensionalLayer">Dimensional Layer</div>
+                            <div class="mainConceptOption" id="starLayer">Star Layer</div>
+                            <div class="mainConceptOption" id="storageLayer">Storage Layer</div>
+                          </div>
+                          <div class="col-lg-8">
+                            <div class="mainConceptContent active" id="presentationLayerContent">The <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts and advanced visualization tools such as clickable maps and dynamic graphics.</div>
+                            <div class="mainConceptContent" id="dimensionalLayerContent">The <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells within the axes.</div>
+                            <div class="mainConceptContent" id="starLayerContent">The <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</div>
+                            <div class="mainConceptContent" id="storageLayerContent">The <strong>Storage Layer</strong> is a Relational Database Management System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</div>
+                          </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <p class="faq-title">Forums and JIRA</p>
-                          <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
+                    </div>
+                  </div>
+                  <div class="item plugin-contribute">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <h2>How to contribute</h2>
+                      </div>
+                    </div>
+                    <div class="row first-feature-row">
+                      <div class="col-lg-4">
+                        <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
+                      </div>
+                      <div class="col-lg-4">
+                       <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
+                      </div>
+                      <div class="col-lg-4">
+                       <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
+                      </div>
+                    </div>
+                    <div class="row secondRow">
 
-                          <p class="faq-title secondRow">Reporting a bug</p>
-                          <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
-
-                          <p class="faq-title secondRow">Internationalized contributions</p>
-                          <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <h2>Places to contribute</h2>
+                          </div>
                         </div>
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <h3>Forums and JIRA</h3>
+                            <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
 
-                        <div class="col-lg-4">
-                          <p class="faq-title">Contributing code</p>
-                          <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.<br><a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a></p>
+                            <h3>Reporting a bug</h3>
+                            <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
 
-                          <p class="faq-title secondRow">Submitting code</p>
-                          <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
+                            <h3>Internationalized contributions</h3>
+                            <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
+                          </div>
 
-                          <p class="faq-title secondRow">Contributing documentation</p>
-                          <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
-                        </div>
+                          <div class="col-lg-4">
+                            <h3>Contributing code</h3>
+                            <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.<br><a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a></p>
 
-                        <div class="col-lg-4">
-                          <p class="faq-title">Solutions</p>
-                          <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
+                            <h3>Submitting code</h3>
+                            <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
 
-                          <p class="faq-title secondRow">Submitting test results</p>
-                          <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                            <h3>Contributing documentation</h3>
+                            <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
+                          </div>
+
+                          <div class="col-lg-4">
+                            <h3>Solutions</h3>
+                            <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
+
+                            <h3>Submitting test results</h3>
+                            <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <div class="row" id="showMobile">
@@ -315,8 +270,8 @@
                           </div>
                         </div>
                       </div>
-                      <div class="row secondRow greenRow">
-                        <div class="green-row-hr"></div>
+                      <div class="row secondRow">
+
                         <div class="col-lg-12">
                           <div class="row">
                             <div class="col-lg-12">
@@ -325,25 +280,25 @@
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">How do I use Mondrian in my application?</p>
+                              <h3>How do I use Mondrian in my application?</h3>
                               <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">Can Mondrian handle large data sets?</p>
+                              <h3>Can Mondrian handle large data sets?</h3>
                               <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">Which API does Mondrian use?</p>
+                              <h3>Which API does Mondrian use?</h3>
                               <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>, an extension to JDBC for OLAP applications. It also has a XML provider for Analysis.</p>
                             </div>
                           </div>
                           <div class="row secondRow">
                             <div class="col-lg-4">
-                              <p class="faq-title">How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</p>
+                              <h3>How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</h3>
                               <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
                             </div>
                             <div class="col-lg-4">
-                              <p class="faq-title">How do I enable tracing?</p>
+                              <h3>How do I enable tracing?</h3>
                               <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
                             </div>
                             <div class="col-lg-4">
@@ -409,7 +364,7 @@
                     <div class="panel-body contribute-body">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h5>How to contribute</h5>
+                          <h2>How to contribute</h2>
                         </div>
                       </div>
                       <div class="row first-feature-row">
@@ -424,7 +379,7 @@
                         </div>
                       </div>
                       <div class="row secondRow greenRow">
-                        <div class="green-row-hr"></div>
+
                         <div class="col-lg-12">
                           <div class="row">
                             <div class="col-lg-12">
@@ -433,32 +388,32 @@
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">Forums and JIRA</p>
+                              <h3>Forums and JIRA</h3>
                               <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
 
-                              <p class="faq-title secondRow">Reporting a bug</p>
+                              <h3>Reporting a bug</h3>
                               <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
 
-                              <p class="faq-title secondRow">Internationalized contributions</p>
+                              <h3>Internationalized contributions</h3>
                               <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
                             </div>
 
                             <div class="col-lg-4">
-                              <p class="faq-title">Contributing code</p>
+                              <h3>Contributing code</h3>
                               <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.<br><a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a></p>
 
-                              <p class="faq-title secondRow">Submitting code</p>
+                              <h3>Submitting code</h3>
                               <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
 
-                              <p class="faq-title secondRow">Contributing documentation</p>
+                              <h3>Contributing documentation</h3>
                               <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
                             </div>
 
                             <div class="col-lg-4">
-                              <p class="faq-title">Solutions</p>
+                              <h3>Solutions</h3>
                               <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
 
-                              <p class="faq-title secondRow">Submitting test results</p>
+                              <h3>Submitting test results</h3>
                               <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
                             </div>
                           </div>
@@ -473,27 +428,18 @@
         </div>
       </div>
 
-
-
-      <div class="hr hr-lighter hr-lighter-reverse"></div>
-
       <div class="lightContainerBack">
-        <div class="container lightContainer" id="downloadList">
+        <div class="site-container lightContainer" id="downloadList">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-xs-12">
               <h2 class="h2-dark">Downloads</h2>
             </div>
-            <div class="col-lg-8"></div>
           </div>
           <div class="row secondRow" id="plugin-downloads">
-            <div class="col-lg-12 main-plugin-download">
+            <div class="col-xs-12 main-plugin-download">
               <div class="row main-plugin-header">
-                <div class="col-lg-8 main-plugin-title">
-                  <strong>Mondrian 3.10.0</strong> Stable
-                </div>
-                <div class="col-lg-4 text-right">
-                  <p class="large-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.10.0/mondrian-3.10.0.1-130.jar/download" target="_blank" class="btn btn-default btn-green plugin-download-button">Download <img src="../../img/download-icon.png"></a></p>
-                  <p class="small-button"><a href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.10.0/mondrian-3.10.0.1-130.jar/download" target="_blank" class="btn btn-default btn-green">Download <img src="../../img/download-icon.png"></a></p>
+                <div class="col-xs-12 main-plugin-title">
+                  <h3 style="margin-top: 30px;">Mondrian 3.10.0 Stable</h3>
                 </div>
               </div>
             </div>
@@ -501,16 +447,14 @@
           <div class="row">
             <div class="col-lg-12 main-plugin-content">
               <div class="row">
-                <div class="col-lg-4">
-                  <span class="contentContext">Description</span>
+                <div class="col-lg-12">
                   <p>Mondrian is an Open Source Business Analytics engine that enables organizations of any size to give business users access to their data for interactive analysis. You can build powerful Business Intelligence solutions with Mondrian as your Online Analytical Processing (OLAP) engine, enabling multidimensional queries against your business data, using the powerful MDX query language.</p>
                 </div>
-                <div class="col-lg-4">
-                  <span class="contentContext"></span>
+                <div class="col-xs-6">
+                  <br>
+                  <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/mondrian/mondrian-3.10.0/mondrian-3.10.0.1-130.jar/download" target="_blank">Download <img src="../../img/download-icon.png"></a>
                 </div>
-                <div class="col-lg-4"><br id="hiddenMobile">
-                  <span class="contentContext" id="hiddenMobile"></span>
-                </div>
+                <div class="col-xs-6"></div>
               </div>
               <div class="row main-plugin-footerNotes">
                 <div class="col-lg-4">
@@ -533,12 +477,16 @@
         <script src="../../js/vendor/bootstrap.min.js"></script>
 
         <script src="../../js/main.js"></script>
+        <script src="../../js/master.js"></script>
         <script src="../../js/classie.js"></script>
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
+        <link rel="stylesheet" href="../../css/master.css">
 
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $('#tabs').tab();
+
+                $('.header-container').load('../../pentaho-templates/header.html');
             });
         </script>
 

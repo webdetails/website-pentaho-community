@@ -11,68 +11,20 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
-        <style>
-            body {
-                padding: 30px 0px;
-            }
-        </style>
+
         <link rel="stylesheet" href="../../css/bootstrap-theme.css">
         <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/master.css">
         <link rel="stylesheet" href="../../css/cbpScroller.css">
 
         <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body class="pluginPage" id="language-packs">
 
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="http://www.pentaho.com/"><img src="../../img/logo-pentaho.svg"></a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Community <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../">Home</a></li>
-              <li><a href="../../user-groups">Pentaho User Groups</a></li>
-            </ul>
-          </li>
-          <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Marketplace <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../plugins">Plugins</a></li>
-              <li class="active"><a href="">Language Packs</a></li>
-              <li><a href="../project-maturity-classification">Project Maturity Classification</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Projects <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../projects/mondrian">Mondrian</a></li>
-              <li><a href="../../projects/data-integration">Data Integration</a></li>
-              <li><a href="../../projects/reporting">Reporting</a></li>
-              <li><a href="../../projects/data-mining">Data Mining</a></li>
-              <li><a href="../../projects/sparkl">Sparkl</a></li>
-            </ul>
-          </li>
-          <li><a target="_blank" class="btn btn-default btn-blue" id="tryPentaho" href="http://www.pentaho.com/testdrive">Try Pentaho EE</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+    <div class="header-container"></div>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
-      <div class="container cbp-so-section" id="containerHeader">
+      <div class="site-container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
@@ -85,38 +37,39 @@
         </div>
       </div> <!-- /container -->
 
-      <div class="hr"></div>
-      <div class="lightContainerBack">
+      <div class="whiteContainerBack">
         <div class="darkContainer clearfix">
-          <div class="container">
+          <div class="site-container">
             <div class="row">
               <div class="col-lg-9" >
                 <p class="txt-greyArea">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</p>
               </div>
               <div class="link-marketplacerow col-lg-3">
-                <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch<img src="../../img/arrow-right-green.svg" onerror="this.onerror=null; this.src='../../img/arrow-right-green.png'"></a>
+                <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a>
               </div>
             </div>
           </div>
         </div>
         <div class="clear"></div>
-        <div class="container lightContainer">
+        <div class="site-container whiteContainer">
           <div class="row" id="hiddenMobile">
+            <div class="col-xs-12">
             <div id="myCarousel" class="carousel slide">
-              <ol class="carousel-indicators">
+              <ol class="carousel-indicators" style="display: none;">
               </ol>
               <!-- Carousel items -->
               <div class="carousel-inner">
                 <div class="active item" id="plugin-description">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h5>Overview</h5>
+                      <h2>Overview</h2>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
-                      <p>Here you'll discover how easy and simple it is to create or update translations already in use. You can translate all resources from English to other languages, and propose new ones that aren't yet available.</p>
-                      <p>Check out what's already translated.</p>
+                      <p>Here you'll discover how easy and simple it is to create or update translations already in use. You can translate all resources from English to other languages, and propose new ones that aren't yet available.
+                        <br>
+                        Check out what's already translated.</p>
                       </div>
                     <div class="col-lg-6">
                       <p>Contributing to the translation process is as simple as forking the Webdetails repository created for that purpose, and propose a new language or change one of the available ones.</p>
@@ -124,59 +77,176 @@
                     </div>
                   </div>
                   <div class="row currentlyTranslated" id="currentlyTranslatedTitle">
-                    <div class="col-lg-12"><span class="currentlyTranslatedTitle">Current Translations <b>Pentaho BI Suite 5.0</b></span></div>
+                    <div class="col-lg-12"><h3>Current Translations <b>Pentaho BI Suite 5.0</b></h3></div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/us.png" alt=""><span class="langName">English <small>(United States)</small></div>
-                    <div class="col-lg-3 greenText" style="color: #888;">Source language</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/us.png" alt="">
+                        <span class="langName">English <small>(United States)</small>
+                      </div>
+                      </div>
+                    <div class="col-lg-3 greenText" style="color: #888;">
+                      <div class="available-market-label">
+                        Source language
+                      </div>
+                  </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/es.png" alt=""><span class="langName">Spanish</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/es.png" alt="">
+                        <span class="langName">Spanish</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/br.png" alt=""><span class="langName">Portuguese <small>(Brazil)</small></span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/br.png" alt="">
+                        <span class="langName">Portuguese <small>(Brazil)</small></span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/pt.png" alt=""><span class="langName">Portuguese <small>(Portugal)</small></span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/pt.png" alt="">
+                        <span class="langName">Portuguese <small>(Portugal)</small></span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/nl.png" alt=""><span class="langName">Dutch</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/nl.png" alt="">
+                        <span class="langName">Dutch</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/fr.png" alt=""><span class="langName">French</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/fr.png" alt="">
+                        <span class="langName">French</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/hi.png" alt=""><span class="langName">Hindi</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/hi.png" alt="">
+                        <span class="langName">Hindi</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/ko.png" alt=""><span class="langName">Korean</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/ko.png" alt="">
+                        <span class="langName">Korean</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/de.png" alt=""><span class="langName">German</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/de.png" alt="">
+                        <span class="langName">German</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/it.png" alt=""><span class="langName">Italian</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/it.png" alt="">
+                        <span class="langName">Italian</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/cat.png" alt=""><span class="langName">Catalan</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/cat.png" alt="">
+                        <span class="langName">Catalan</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/ja.png" alt=""><span class="langName">Japanese</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/ja.png" alt="">
+                        <span class="langName">Japanese</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
                   <div class="row currentlyTranslated">
-                    <div class="col-lg-9"><img class="flag" src="../../img/th.png" alt=""><span class="langName">Thai</span></div>
-                    <div class="col-lg-3 greenText">Available on Marketplace</div>
+                    <div class="col-lg-9">
+                      <div class="country-translation">
+                        <img class="flag" src="../../img/th.png" alt="">
+                        <span class="langName">Thai</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 greenText">
+                      <div class="available-market-label">
+                      Available on Marketplace
+                      </div>
+                    </div>
                   </div>
 
                    <div class="row text-center newLanguage background-grey" id="startNewLang">
@@ -184,12 +254,12 @@
                       <p class="txt-greyArea"><b>Can't find your language?</b> Propose a new translation now.</p>
                     </div>
                     <div class="col-lg-4">
-                      <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request<img src="../../img/arrow-right-green.svg" onerror="this.onerror=null; this.src='../../img/arrow-right-green.png'"></a>
+                      <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
                     </div>
                   </div>
                   <div class="row secondRow">
                     <div class="col-lg-12">
-                      <h5>Workflow <span class="smaller">(using GIT)</span></h5>
+                      <h2>Workflow <span class="smaller">(using GIT)</span></h2>
                     </div>
                   </div>
                   <div class="row">
@@ -226,6 +296,7 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
           <div class="row" id="showMobile">
             <div class="col-lg-12">
@@ -244,7 +315,7 @@
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row secondRow">
                         <div class="col-lg-12">
-                          <h5>Overview</h5>
+                          <h2>Overview</h2>
                         </div>
                       </div>
                       <div class="row">
@@ -256,7 +327,7 @@
                         </div>
                       </div>
                       <div class="row currentlyTranslated" id="currentlyTranslatedTitle">
-                        <div class="col-lg-12"><span class="currentlyTranslatedTitle">Current Translations <b>Pentaho BI Suite 5.0</b></span></div>
+                        <div class="col-lg-12"><h3>Current Translations <b>Pentaho BI Suite 5.0</b></h3></div>
                       </div>
                       <div class="row currentlyTranslated">
                         <div class="col-lg-9"><img class="flag" src="../../img/us.png" alt=""><span class="langName">English <small>(United States)</small></div>
@@ -311,12 +382,12 @@
                           <p class="txt-greyArea"><b>Can't find your language?</b> Propose a new translation now.</p>
                         </div>
                         <div class="col-lg-4">
-                          <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request<img src="../../img/arrow-right-green.svg" onerror="this.onerror=null; this.src='../../img/arrow-right-green.png'"></a>
+                          <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
                         </div>
                       </div>
                       <div class="row secondRow">
                         <div class="col-lg-12">
-                          <h5>Workflow <span class="smaller">(using GIT)</span></h5>
+                          <h2>Workflow <span class="smaller">(using GIT)</span></h2>
                         </div>
                       </div>
                       <div class="row">
@@ -349,10 +420,6 @@
         </div>
       </div>
 
-
-
-      <div class="hr hr-lighter hr-lighter-reverse"></div>
-
       <div class="lightContainerBack">
         <div class="container lightContainer" id="downloadList">
           <div class="row">
@@ -365,7 +432,7 @@
             <div class="col-lg-12 main-plugin-download">
               <div class="row main-plugin-header">
                 <div class="col-lg-12 main-plugin-title">
-                  <strong>Marketplace</strong>
+                  <h3>Marketplace</h3>
                 </div>
               </div>
             </div>
@@ -373,15 +440,10 @@
           <div class="row">
             <div class="col-lg-12 main-plugin-content">
               <div class="row">
-                <div class="col-lg-4">
-                  <span class="contentContext">Description</span>
-                  <p><b>Pentaho Marketplace</b> allows users to explore and test the plugins that are most relevant for them.</p>
-                </div>
-                <div class="col-lg-4">
-                  <span class="contentContext">&nbsp</span>
-                <p>Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
-                </div>
-                <div class="col-lg-4"><br id="hiddenMobile">
+                <div class="col-lg-12">
+                  <p><b>Pentaho Marketplace</b> allows users to explore and test the plugins that are most relevant for them.
+                    <br>
+                    Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
                 </div>
               </div>
               <div class="row download-row" id="downloadList">
@@ -419,12 +481,14 @@
         <script src="../../js/vendor/bootstrap.min.js"></script>
 
         <script src="../../js/main.js"></script>
+        <script src="../../js/master.js"></script>
         <script src="../../js/classie.js"></script>
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
-                $('#tabs').tab();
+              $('.header-container').load('../../pentaho-templates/header.html');
+              $('#tabs').tab();
             });
         </script>
 
