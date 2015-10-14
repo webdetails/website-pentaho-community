@@ -226,13 +226,13 @@ img {
 
 .whiteContainerBack {
   width: 100%;
-  background-color: #fefefe;
+  background-color: #F5F5F5;
   display: block; 
   position: relative;
 }
 
 .whiteContainer {
-  background: #fefefe;
+  background: #F5F5F5;
   margin: 0px auto;
   padding: 40px 0px;
   display: block; 
