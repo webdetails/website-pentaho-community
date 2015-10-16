@@ -27,13 +27,13 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Data Integration - <strong>Kettle</strong></h1>
+            <h2>Data Integration - <strong>Kettle</strong></h2>
             <p>Data Integration (or <strong>Kettle</strong>) delivers powerful Extraction, Transformation, and Loading (ETL) capabilities, using a groundbreaking, metadata-driven approach.</p>
-            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section<img src="../../img/download-section.png"></span></p>
+            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
             <img src="../../img/kettle-header-dashboard.png" alt="">
-            <p class="small-button-green"><span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section<img src="../../img/download-section.png"></span></p>
+            <p class="small-button-green"><span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section </span></p>
           </div>
         </div>
       </div> <!-- /container -->
@@ -52,7 +52,7 @@
                 <div class="active item" id="plugin-description">
                   <div class="row">
                     <div class="col-md-7 col-sm-7">
-                      <h2>Reliable Service Architecture</h2>
+                      <h3>Reliable Service Architecture</h3>
                       <p>With an intuitive, graphical, drag and drop design environment and a proven, scalable, standards-based architecture, Data Integration is increasingly the choice for organizations over traditional, proprietary ETL or data integration tools.</p>
                       <br>
                       <div id="whats-new-images">
@@ -99,12 +99,12 @@
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h2>Frequently Asked Questions</h2>
+                          <h3>Frequently Asked Questions</h3>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <h3>When I start Spoon.bat in a Windows environment nothing happens. <br> How can I solve it?</h3>
+                          <h4>When I start Spoon.bat in a Windows environment nothing happens. How can I solve it?</h4>
                           <p>Edit the Spoon.bat file and:</p>
                           <ul>
                             <li>Replace in the last line "start javaw" with only "java".</li>
@@ -113,25 +113,25 @@
                           </ul>
                         </div>
                         <div class="col-lg-4">
-                          <h3>How to use JNDI?</h3>
+                          <h4>How to use JNDI?</h4>
                           <p>If you look inside the PDI main directory you'll see a sub-directory called "simple-jndi", which contains a file named "jdbc.properties". You should change this file so the JNDI information matches the one you use in your application server.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>Can I sequence transformations?</h3>
+                          <h4>Can I sequence transformations?</h4>
                           <p>This is not possible, one of the basic things in PDI transformations is that all of the steps run in parallel. So you can't sequence them. This would require architectural changes to PDI and sequential processing would also result in very slow processing.</p>
                         </div>
                       </div>
-                      <div class="row secondRow">
+                      <div class="row">
                         <div class="col-lg-4">
-                          <h3>What's the difference between transformations and jobs?</h3>
+                          <h4>What's the difference between transformations and jobs?</h4>
                           <p>Transformations are about moving and transforming rows from source to target. Jobs are more about high level flow control: executing transformations, sending mails on failure, ftp'ing files, ...</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>How to use database connections from repository?</h3>
+                          <h4>How to use database connections from repository?</h4>
                           <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>How to do a database join with PDI?</h3>
+                          <h4>How to do a database join with PDI?</h4>
                           <p>Create a new transformation (or job) or close and re-open the ones you have loaded in Spoon.</p>
                         </div>
                       </div>
@@ -143,34 +143,34 @@
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h2>New Features</h2>
+                          <h3>New Features</h3>
                         </div>
                       </div>
                       <div class="row first-feature-row">
                         <div class="col-lg-4">
-                          <h3>1. Improved system performance monitoring</h3>
+                          <h4>Improved system performance monitoring</h4>
                           <p>Minor bug fixes to the PDI-specific portions of the Pentaho.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>2. Data profiling enhancements</h3>
+                          <h4>Data profiling enhancements</h4>
                           <p>Data Profiling Perspective includes DataCleaner: Analyze Tables and Columns in preparation for ETL.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>3. Easily add new plugins</h3>
+                          <h4>Easily add new plugins</h4>
                           <p>The PDI Marketplace makes it possible to share and download new plugins.</p>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <h3>4. Deliver data from multiple data sources</h3>
+                          <h4>Deliver data from multiple data sources</h4>
                           <p>The Data Services and Kettle JDBC driver enable you to deliver data from multiple data sources, while enriching, cleansing, and transforming the data.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>5. Data movement load balancing</h3>
+                          <h4>Data movement load balancing</h4>
                           <p>PDI provides load balancing of data within transformations and over multiple cluster nodes when using transformation clustering.</p>
                         </div>
                         <div class="col-lg-4">
-                          <h3>6. Revert changes in job database transactions</h3>
+                          <h4>Revert changes in job database transactions</h4>
                           <p>Database connections can be used with all jobs. This enables commits and rollbacks on a job level. Prior to this release, this was only possible with transformations.</p>
                         </div>
                       </div>
@@ -180,18 +180,13 @@
                 <div class="item plugin-contribute">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h2>How to contribute</h2>
+                      <h3>How to contribute</h3>
                     </div>
                   </div>
                   <div class="row first-feature-row">
-                    <div class="col-lg-4">
-                      <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
-                    </div>
-                    <div class="col-lg-4">
-                     <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
-                    </div>
-                    <div class="col-lg-4">
-                     <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
+                    <div class="col-lg-12">
+                      <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions. Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!
+                      <br>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                     </div>
                   </div>
                   <div class="row secondRow">
@@ -199,38 +194,50 @@
                     <div class="col-lg-12">
                       <div class="row">
                         <div class="col-lg-12">
-                          <h2>Places to contribute</h2>
+                          <h3>Places to contribute</h3>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-lg-4">
-                          <h3>Forums and JIRA</h3>
-                          <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
-
-                          <h3>Reporting a bug</h3>
-                          <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
-
-                          <h3>Internationalized contributions</h3>
-                          <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
-                        </div>
-
-                        <div class="col-lg-4">
-                          <h3>Contributing code</h3>
-                          <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.</p>
-
-                          <h3>Submitting code</h3>
-                          <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
-
-                          <h3>Contributing documentation</h3>
-                          <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
-                        </div>
-
-                        <div class="col-lg-4">
-                          <p class="faq-title">Solutions</p>
-                          <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
-
-                          <p class="faq-title secondRow">Submitting test results</p>
-                          <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <h4>Forums and JIRA</h4>
+                              <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
+                            </div>
+                            <div class="col-xs-4">
+                              <h4>Contributing code</h4>
+                              <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.</p>
+                            </div>
+                            <div class="col-xs-4">
+                              <h4>Solutions</h4>
+                              <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <h4>Reporting a bug</h4>
+                              <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
+                            </div>
+                            <div class="col-xs-4">
+                              <h4>Submitting code</h4>
+                              <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
+                            </div>
+                            <div class="col-xs-4">
+                              <h4>Contributing documentation</h4>
+                              <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <h4>Internationalized contributions</h4>
+                              <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
+                            </div>
+                            <div class="col-xs-4">
+                              <h4>Submitting test results</h4>
+                              <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                            </div>
+                            <div class="col-xs-4"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -291,7 +298,6 @@
                         </div>
                       </div>
                       <div class="row secondRow">
-
                         <div class="col-lg-12">
                           <div class="row">
                             <div class="col-lg-12">
@@ -355,29 +361,29 @@
                       </div>
                       <div class="row" style="margin-top: -25px;">
                         <div class="col-lg-4">
-                          <p class="feature-title">1. Improved system performance monitoring</p>
+                          <h3>Improved system performance monitoring</h3>
                           <p>Minor bug fixes to the PDI-specific portions of the Pentaho.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">2. Data profiling enhancements</p>
+                          <h3>Data profiling enhancements</h3>
                           <p>Data Profiling Perspective includes DataCleaner: Analyze Tables and Columns in preparation for ETL.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">3. Easily add new plugins</p>
+                          <h3>Easily add new plugins</h3>
                           <p>The PDI Marketplace makes it possible to share and download new plugins.</p>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-4">
-                          <p class="feature-title">4. Deliver data from multiple data sources</p>
+                          <h3>Deliver data from multiple data sources</h3>
                           <p>The Data Services and Kettle JDBC driver enable you to deliver data from multiple data sources, while enriching, cleansing, and transforming the data.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">5. Data movement load balancing</p>
+                          <h3>Data movement load balancing</h3>
                           <p>PDI provides load balancing of data within transformations and over multiple cluster nodes when using transformation clustering.</p>
                         </div>
                         <div class="col-lg-4">
-                          <p class="feature-title">6. Revert changes in job database transactions</p>
+                          <h3>Revert changes in job database transactions</h3>
                           <p>Database connections can be used with all jobs. This enables commits and rollbacks on a job level. Prior to this release, this was only possible with transformations.</p>
                         </div>
                       </div>
@@ -402,14 +408,9 @@
                         </div>
                       </div>
                       <div class="row first-feature-row">
-                        <div class="col-lg-4">
-                          <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
-                        </div>
-                        <div class="col-lg-4">
-                         <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
-                        </div>
-                        <div class="col-lg-4">
-                         <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
+                        <div class="col-lg-12">
+                          <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions. Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!
+                          <br>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                         </div>
                       </div>
                       <div class="row secondRow greenRow">
@@ -422,32 +423,32 @@
                           </div>
                           <div class="row">
                             <div class="col-lg-4">
-                              <p class="faq-title">Forums and JIRA</p>
+                              <h3>Forums and JIRA</h3>
                               <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
 
-                              <p class="faq-title secondRow">Reporting a bug</p>
+                              <h3>Reporting a bug</h3>
                               <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
 
-                              <p class="faq-title secondRow">Internationalized contributions</p>
+                              <h3>Internationalized contributions</h3>
                               <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
                             </div>
 
                             <div class="col-lg-4">
-                              <p class="faq-title">Contributing code</p>
+                              <h3>Contributing code</h3>
                               <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.</p>
 
-                              <p class="faq-title secondRow">Submitting code</p>
+                              <h3>Submitting code</h3>
                               <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
 
-                              <p class="faq-title secondRow">Contributing documentation</p>
+                              <h3>Contributing documentation</h3>
                               <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
                             </div>
 
                             <div class="col-lg-4">
-                              <p class="faq-title">Solutions</p>
+                              <h3>Solutions</h3>
                               <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
 
-                              <p class="faq-title secondRow">Submitting test results</p>
+                              <h3>Submitting test results</h3>
                               <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
                             </div>
                           </div>
@@ -518,7 +519,29 @@
           </div>
         </div>
       </div>
-      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
+      <div class="helpImproveWrapper">
+        <div class="helpImprove">
+          <div class="col-xs-6">
+            <p>
+              Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <section class="footer-social-wrapper">
+              <div class="region region-footer-social">
+                  <div class="content pull-right">
+                    <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
+                    <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
+                    <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
+                    <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
+                    <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
+                    <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
+                  </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

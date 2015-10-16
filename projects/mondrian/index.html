@@ -28,7 +28,7 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Mondrian</h1>
+            <h2>Mondrian</h2>
             <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
             <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span></p>
           </div>
@@ -55,7 +55,7 @@
                   <div class="active item" id="plugin-description">
                     <div class="row">
                       <div class="col-md-7 col-sm-7">
-                        <h2 style="padding-bottom: 15px;">Analyze all your data in real-time</h2>
+                        <h3 style="padding-bottom: 15px;">Analyze all your data in real-time</h3>
                         <p>Analyzing huge quantities of data has never been that easy. With <strong>Mondrian</strong>, an open source Online Analytical Processing server (OLAP) written in JAVA, the system responds to queries fast enough to allow an interactive exploration of the data - even if they have millions of records, occupying several gigabytes. It brings multidimensional analysis to the masses, allowing users to examine business data by drilling and cross-tabulating information.</p>
                         <br>
                         <div style="text-align: center;">
@@ -93,30 +93,30 @@
                       <div class="col-lg-12">
                         <div class="row">
                           <div class="col-lg-12">
-                            <h5>Frequently asked questions</h5>
+                            <h3>Frequently asked questions</h3>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-lg-4">
-                            <h3>How do I use Mondrian in my application?</h3>
+                            <h4>How do I use Mondrian in my application?</h4>
                             <p>There are several ways to do it. If you have a fixed set of queries which you'd like to display as HTML tables, use the tab library. <br>The <a href="http://jpivot.sourceforge.net/" target="_blank">JPivot</a> project is a JSP-based pivot table, and will allow you to dynamically explore a data set over the web.</p>
                           </div>
                           <div class="col-lg-4">
-                            <h3>Can Mondrian handle large data sets?</h3>
+                            <h4>Can Mondrian handle large data sets?</h4>
                             <p>Yes, if your RDBMS can. We delegate the aggregation to the RDBMS, and if your RDBMS happens to have materialized group by views created, your query will fly. And the next time you run the same or a similar query, that will really fly, because the results will be in the aggregation cache.</p>
                           </div>
                           <div class="col-lg-4">
-                            <h3>Which API does Mondrian use?</h3>
+                            <h4>Which API does Mondrian use?</h4>
                             <p>Mondrian's main API is <a href="http://www.olap4j.org/" target="_blank">olap4j</a>, an extension to JDBC for OLAP applications. It also has a XML provider for Analysis.</p>
                           </div>
                         </div>
-                        <div class="row secondRow">
+                        <div class="row">
                           <div class="col-lg-4">
-                            <h3>How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</h3>
+                            <h4>How does Mondrian's dialect of MDX differ from Microsoft Analysis Services?</h4>
                             <p>See <a href="http://mondrian.pentaho.com/documentation/mdx.php" target="_blank">MDX language specification</a>.</p>
                           </div>
                           <div class="col-lg-4">
-                            <h3>How do I enable tracing?</h3>
+                            <h4>How do I enable tracing?</h4>
                             <p>See <a href="http://mondrian.pentaho.com/documentation/configuration.php#Test_Logging" target="_blank">Configuring log4j within Mondrian's environment</a>.</p>
                           </div>
                           <div class="col-lg-4">
@@ -159,18 +159,13 @@
                   <div class="item plugin-contribute">
                     <div class="row">
                       <div class="col-lg-12">
-                        <h2>How to contribute</h2>
+                        <h3>How to contribute</h3>
                       </div>
                     </div>
                     <div class="row first-feature-row">
-                      <div class="col-lg-4">
-                        <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
-                      </div>
-                      <div class="col-lg-4">
-                       <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
-                      </div>
-                      <div class="col-lg-4">
-                       <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
+                      <div class="col-lg-12">
+                        <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.
+                          <br>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable! Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                       </div>
                     </div>
                     <div class="row secondRow">
@@ -178,38 +173,50 @@
                       <div class="col-lg-12">
                         <div class="row">
                           <div class="col-lg-12">
-                            <h2>Places to contribute</h2>
+                            <h3>Places to contribute</h3>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-lg-4">
-                            <h3>Forums and JIRA</h3>
-                            <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
-
-                            <h3>Reporting a bug</h3>
-                            <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
-
-                            <h3>Internationalized contributions</h3>
-                            <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
-                          </div>
-
-                          <div class="col-lg-4">
-                            <h3>Contributing code</h3>
-                            <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.<br><a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a></p>
-
-                            <h3>Submitting code</h3>
-                            <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
-
-                            <h3>Contributing documentation</h3>
-                            <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
-                          </div>
-
-                          <div class="col-lg-4">
-                            <h3>Solutions</h3>
-                            <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
-
-                            <h3>Submitting test results</h3>
-                            <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                          <div class="col-lg-12">
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <h4>Forums and JIRA</h4>
+                                <p>There are two primary ways to make sure that your contributions are recognized and reviewed in a timely fashion: through our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Discussion Forums</a> and through our issue and bug tracking system, <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a>.</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h4>Contributing code</h4>
+                                <p>We rely on time and code contributions from our community to keep our commitment of delivering a quality Business Intelligence platform in the open source scenario.<br><a href="http://mondrian.pentaho.com/documentation/developers_guide.php" target="_blank">Developer's Guide</a></p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h4>Solutions</h4>
+                                <p>Solutions should be submitted through the new feature type case in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system. Complete the case as described for other code contributions, then attach your solution as an additional file to the case.</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <h4>Reporting a bug</h4>
+                                <p>All bug reports are recorded and tracked through our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> issue and bug tracking system.</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h4>Submitting code</h4>
+                                <p>Both bug fixes, new features and improvements are types inputs in our <a href="http://jira.pentaho.com/browse/MONDRIAN" target="_blank">JIRA</a> system, allowing you to choose the type appropriated to your case.</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h4>Contributing documentation</h4>
+                                <p>If you'd like to contribute documentation improvements, or submit a technical article, you can do so in the <a href="http://wiki.pentaho.org/" target="_blank">Pentaho Documentation Wiki</a>.</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-4">
+                                <h4>Internationalized contributions</h4>
+                                <p>The place to start with a language specific contribution is to look under our <a href="http://forums.pentaho.com/forumdisplay.php?66-International" target="_blank">International Forums</a> for the language you're interested in. Internationalization efforts are coordinated within these forums among the community members that are most experienced with each language.</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h4>Submitting test results</h4>
+                                <p>The Pentaho team is building an automated platform test suite and submission protocol because, well, frankly, it's a damn good idea. Until that suite is completed, if you're willing to contribute with time and resources for quality assurance testing, please <a href="mailto:community@pentaho.com" target="_blank">contact us</a>. We will send you a matrix spreadsheet where you'll identify the environment, test variables in play and submit your results back to us.</p>
+                              </div>
+                              <div class="col-xs-4"></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -368,14 +375,9 @@
                         </div>
                       </div>
                       <div class="row first-feature-row">
-                        <div class="col-lg-4">
-                          <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.</p>
-                        </div>
-                        <div class="col-lg-4">
-                         <p>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable!</p>
-                        </div>
-                        <div class="col-lg-4">
-                         <p>Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
+                        <div class="col-lg-12">
+                          <p>Open Source delivers better, faster and reliable products, empowered by an active and wider community. Developers, testers, writers, implementers, and most of all users can make valuable contributions.
+                            <br>Whether you're a developer who's implementing the platform or a business analyst who needs to solve a particular problem while using it, your suggestions are valuable! Here’s our guide to submitting contributions to the Pentaho project. If you don’t find the answers you need here, please post your question to our <a href="http://forums.pentaho.com/forumdisplay.php?79-Mondrian-Pentaho-Analysis-Services" target="_blank">Forums</a>.</p>
                         </div>
                       </div>
                       <div class="row secondRow greenRow">
@@ -468,7 +470,29 @@
           </div>
         </div>
       </div>
-      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
+      <div class="helpImproveWrapper">
+        <div class="helpImprove">
+          <div class="col-xs-6">
+            <p>
+              Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <section class="footer-social-wrapper">
+              <div class="region region-footer-social">
+                  <div class="content pull-right">
+                    <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
+                    <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
+                    <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
+                    <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
+                    <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
+                    <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
+                  </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

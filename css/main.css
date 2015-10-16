@@ -83,13 +83,17 @@ body {
   background: #FFFFFF url(../img/training-bigdata-sparkl-banner.png) no-repeat top -5px right 140px;
 }
 
+.pentahoHome .site-container.whiteContainerBack{
+  padding-top: 50px;
+}
+
 .carousel-inner a,
 .carousel-inner a:link,
 .carousel-inner a:visited,
 .other-versions a,
 .other-versions a:link,
 .other-versions a:visited {
-  color: #39a74a;
+  color: #34913D;
 }
 
 .carousel-inner a:hover,
@@ -98,7 +102,7 @@ body {
 .other-versions a:hover,
 .other-versions a:active,
 .other-versions a:focus {
-  position: relative;
+  position: inherit;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -147,7 +151,7 @@ h2.h2-dark {
 
 h3 {
   font-size: 16px;
-  color: #333333;
+  color: #34913D;
   text-transform: uppercase;
   margin-bottom: 15px;
   margin-top: 35px;
@@ -156,6 +160,8 @@ h3 {
 h4{
   font-size: 14px;
   font-weight: 600;
+  line-height: 27px;
+  /*margin-top: 35px;*/
 }
 
 p{
@@ -177,7 +183,8 @@ span.semibold{
 
 .backPage ul li {
   list-style-type: none;
-  margin-top: 20px;
+  margin-top: 12px;
+  line-height: 27px;
 }
 
 .backPage ul li:before {
@@ -237,7 +244,7 @@ img {
 .whiteContainer {
   background: #fefefe;
   margin: 0px auto;
-  padding: 40px 0px 40px;
+  padding: 50px 0px 0px;
   display: block;
   position: relative;
 
@@ -245,6 +252,7 @@ img {
 
 #pentaho5-container {
   overflow: hidden;
+  border-top: 1px solid #CCC;
 }
 
 #pentaho5-container h2 {
@@ -316,7 +324,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     outline: none !important;
 }
 
-
+#containerHeader .cbp-so-side.cbp-so-side-left{
+  padding-top: 30px;
+}
 
 /* ==========================================================================
    Buttons
@@ -328,12 +338,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-shadow: none;
   font-family:'Open Sans', Helvetica, Arial, sans-serif;
   border: 0;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 20px;
   display: block;
   text-align: left;
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.5;
   padding: 8px 15px;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
@@ -341,6 +351,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-decoration: none;
 
   box-shadow: none !important;
+  text-transform: uppercase;
 }
 
 a.large-button {
@@ -366,7 +377,7 @@ a.large-button {
 .btn-green img {
   position: absolute;
   right: 10px;
-  margin-top: 3px;
+  margin-top: 1px;
 }
 
 .small-button-green {
@@ -526,7 +537,7 @@ header.site-header a.button:hover{
 
 .info-bar {
   border: 1px solid rgb(207, 207, 207);
-  padding: 10px 20px 20px;
+  padding: 0px 20px 20px;
   position: relative;
   border-radius: 0;
   margin-top: 30px;
@@ -538,10 +549,10 @@ header.site-header a.button:hover{
   display: inline-block;
   line-height: 20px;
   position: relative;
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
-.info-bar a:before {
+/*.info-bar a:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -550,9 +561,9 @@ header.site-header a.button:hover{
   margin: -2px 5px 0 -9px;
   border-radius: 50%;
   background-color: #39a74a;
-}
+}*/
 
-.info-bar:before {
+/*.info-bar:before {
   position: absolute;
   content: '';
   height: 12px;
@@ -560,7 +571,7 @@ header.site-header a.button:hover{
   background: #efefef;
   left: 0;
   top: 0px;
-}
+}*/
 
 .info-bar h1 {
   font-size: 12px;
@@ -972,7 +983,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   font-weight: 400;
   line-height: 15px;
   margin: 0;
-  color: #34913D;
+  color: #616161;
   width: auto !important;
   height: auto !important;
 
@@ -1079,6 +1090,7 @@ ol.carousel-indicators.content{
 
 }
 
+
 @media (min-width: 1024px){
 
   .pinched {
@@ -1116,7 +1128,7 @@ ol.carousel-indicators.content{
   }
 
   .item:not(.pworld){
-    padding: 25px 0;
+    padding: 45px 0;
   }
 }
 
@@ -1312,6 +1324,9 @@ ol.carousel-indicators.content{
 /* ===========================================================
 ========================== PLUGINS ===========================
 =========================================================== */
+/*
+
+old version - keep til the new one is approved
 
 .helpImprove {
   background: #d3d3d3;
@@ -1320,6 +1335,66 @@ ol.carousel-indicators.content{
   font-size: 12px;
   color: #333333;
   border-top: 1px solid #ccc;
+}*/
+.helpImproveWrapper{
+  background: #FFFFFF;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+
+.helpImprove {
+  height: 80px;
+  background: #FFFFFF;
+  padding: 25px 0px;
+  font-size: 12px;
+  color: #333333;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.helpImprove p{
+  font-size: 12px;
+}
+
+/*footer social icons*/
+
+
+.footer-social-item{
+  display: inline-block;
+  margin-left: 7px;
+  background-size: auto 50%;
+  background-color: #999999;
+  border-radius: 50%;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-social-item.youtube {
+    background-image: url(../img/social-youtube.svg);
+}
+.footer-social-item.gplus {
+    background-image: url(../img/social-gplus.svg);
+}
+.footer-social-item.twitter {
+    background-image: url(../img/social-twitter.svg);
+}
+.footer-social-item.facebook {
+    background-image: url(../img/social-facebook.svg);
+}
+.footer-social-item.linkedin {
+    background-image: url(../img/social-linkedin.svg);
+    background-position: 85% 50%;
+}
+.footer-social-item.rss-feed {
+    background-image: url(../img/social-rss-feed.svg);
+}
+
+.helpImprove .col-xs-6 {
+  padding: 0;
 }
 
 .helpImprove a,
@@ -1366,7 +1441,6 @@ ol.carousel-indicators.content{
   display: inline-block;
   line-height: 20px;
   position: relative;
-  padding-left: 10px;
 }
 
 .pluginPage .greenRow {
@@ -1424,13 +1498,38 @@ ol.carousel-indicators.content{
   padding-bottom: 5px;
 }
 
+.pluginPage .marketplaceLinks{
+  padding-bottom: 20px;
+  background: #f5f5f5;
+
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/*.pluginPage .marketplaceLinks:hover{
+  background: #34913D
+}
+
+.pluginPage .marketplaceLinks:hover h3,
+.pluginPage .marketplaceLinks:hover p,
+.pluginPage .marketplaceLinks:hover a{
+  color: #fff;
+}*/
+
+.pluginPage .plugin-cards{
+  margin-top: 30px;
+}
+
 .pluginPage .backPage,
 #sparkl .backPage{
   background: #f5f5f5;
 }
 
 #pdi5-info {
-  background: #F1F2F2;
+  background: #f5f5f5;
   padding: 10px 5px;
   margin-left: 0px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -1443,7 +1542,7 @@ ol.carousel-indicators.content{
 }
 
 .dev-item {
-  background: #F1F2F2;
+  background: #f5f5f5;
   padding: 10px 5px;
   margin-left: 0px;
   margin-top: 10px;
@@ -1510,7 +1609,7 @@ p.in-development-description {
 
 #search-dev-list {
   border: 0;
-  border-bottom: 1px solid #F1F2F2;
+  border-bottom: 1px solid #f5f5f5;
   background-image: url(../img/lupa.png);
   background-repeat: no-repeat;
   background-position: right center;
@@ -1816,10 +1915,14 @@ p.in-development-description {
   }
 
   .submit-item img {
-    margin-top:20px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+  }
+
+  .submit-item h3{
+    margin-top: 20px;
   }
 
   .submit-title {
@@ -1943,7 +2046,6 @@ a.btn-gray:active {
 }
 
 #currentlyTranslatedTitle {
-  padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 30px;
 }
@@ -2023,16 +2125,23 @@ a.btn-gray:active {
 .forkDetails {
   display: block;
   float: left;
-  width: 70%;
-  width: calc(100% - 45px);
-  margin-top: 2px;
+  width: calc( 100% - 60px);
+  margin-top: 7px;
   margin-left: 15px;
 }
 
 .forkIcon {
-  width: 30px;
+  width: 36px;
+  height: 36px;
   display: block;
   float: left;
+  background: #34913D;
+  color: #FFFFFF;
+  padding: 5px;
+  text-align: center;
+  line-height: 27px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .forkItem {
@@ -2168,6 +2277,11 @@ code {
   transition: all .2s linear;
   margin-bottom: 40px;
   border: 1px solid transparent;
+}
+
+/* hack to match pentaho's grid*/
+.col-lg-3.submit-item.text-center {
+    padding: 0 10px;
 }
 
 .marketplaceLinks:hover{
@@ -2410,15 +2524,12 @@ p.subHeadLine-pentaho5:after {
 
 
 .darkContainer {
-  background: #D3D3D3;
+  background: #ececec;
   padding: 20px 0;
   text-align: left;
   font-size: 16px;
   line-height:24px;
-  color: #616161;
   font-weight:400;
-  border-top: 1px solid #CCC;
-
 }
 
 .link-marketplacerow {
@@ -2431,13 +2542,6 @@ p.subHeadLine-pentaho5:after {
   font-size:16px;
   font-weight:400 !important;
   margin: 0;
-}
-
-a.link-row{
-  font-size:24px;
-  font-weight:300 !important;
-  color:#39A74A;
-  line-height: 24px;
 }
 
 a.link-row img {
@@ -2479,24 +2583,31 @@ margin-top: 4px;
   margin-top: 30px;
 }
 
-.btn.btn-header {
-  font-size:24px;
-  color:#39A74A;
+.btn.btn-header, a.btn-header.link-row,
+a.link-marketplacetab,
+a.link-row{
+  font-size: 13px;
+  background: #34913D;
+  padding: 12px 40px;
+  color: #FFF !important;
+  text-transform: uppercase;
   cursor:pointer;
-  background: none;
   border: none;
-  border-top: 11px solid #efefef;
   box-shadow: none;
-  padding: 0;
-  padding-top:12px;
-  font-weight: 300 !important;
+  font-weight: 400;
   display: inline-block;
   border-radius: 0;
   margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: none;
+  line-height: 18px;
 }
 
-.btn.btn-header:hover {
-  text-decoration: underline;
+.btn.btn-header:hover,
+a.link-row:hover,
+a.link-marketplacetab:hover{
+  background: #3BA749;
+  text-decoration: none;
 }
 
 .btn.btn-header img {
@@ -2515,7 +2626,7 @@ margin-top: 4px;
 }
 
 .marketplace-text {
-  padding: 15px 0px 5px;
+  padding: 10px 0px 5px;
   position: relative;
   color: #616161;
   font-size:16px;
@@ -2544,7 +2655,7 @@ margin-top: 4px;
   margin-top: 30px;
   }
 
-
+/*
 .info-bar-marketplace:before {
   position: absolute;
   content: '';
@@ -2553,7 +2664,7 @@ margin-top: 4px;
   background: #efefef;
   left: 0;
   top: 0px;
-}
+}*/
 
 .pworld-title{
   padding: 25px 0 30px;
@@ -2679,8 +2790,8 @@ margin-top: 4px;
 *	v1.23
 */
 
-.owl-theme .owl-controls{
-	margin-top: 10px;
+.pentahoHome .owl-theme .owl-controls{
+	margin-top: 0px;
 	text-align: center;
 }
 
@@ -2792,7 +2903,7 @@ margin-top: 4px;
 }
 
 .community-slide .cbp-so-side{
-  padding-top: 90px;
+  padding-top: 40px;
   padding-left: 90px;
 }
 
@@ -2800,8 +2911,13 @@ margin-top: 4px;
   padding-top: 50px;
 }
 
+.community-slide h1{
+  font-size: 66px;
+  line-height: 75px;
+}
+
 /* ===========================================================
-========================== SPARKL PAGE ============================
+========================== SPARKL PAGE =======================
 =========================================================== */
 
 .sparklPage{
@@ -2999,7 +3115,7 @@ a.userGroup-link {
   pointer-events: auto;
   margin: 0;
   line-height: 16px;
-  font-size: 13px;
+  font-size: 12px;
   padding: 3px 15px 5px;
 }
 
@@ -3107,6 +3223,11 @@ a.userGroup-link {
   .owl-buttons{
     display: none;
   }
+}
+
+@media (min-width: 992px)
+.site-container {
+    width: 970px;
 }
 
 

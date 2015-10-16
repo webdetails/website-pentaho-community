@@ -28,7 +28,7 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Pentaho <br> Language Packs</h1>
+            <h2>Pentaho <br> Language Packs</h2>
             <p>Translate Pentaho and improve existing translations.</p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
@@ -45,7 +45,7 @@
                 <p class="txt-greyArea">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</p>
               </div>
               <div class="link-marketplacerow col-lg-3">
-                <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a>
+                <a class="link-row btn-header" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a>
               </div>
             </div>
           </div>
@@ -59,22 +59,20 @@
               </ol>
               <!-- Carousel items -->
               <div class="carousel-inner">
-                <div class="active item" id="plugin-description">
+                <div class="active item" id="plugin-description" style="padding-top: 0;">
                   <div class="row">
                     <div class="col-lg-12">
                       <h2>Overview</h2>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                       <p>Here you'll discover how easy and simple it is to create or update translations already in use. You can translate all resources from English to other languages, and propose new ones that aren't yet available.
                         <br>
                         Check out what's already translated.</p>
+                        <p>Contributing to the translation process is as simple as forking the Webdetails repository created for that purpose, and propose a new language or change one of the available ones.</p>
+                        <p>The language packs apply to both Enterprise and Community Edition, and are maintained by community members. The packs are not officially supported by Pentaho.</p>
                       </div>
-                    <div class="col-lg-6">
-                      <p>Contributing to the translation process is as simple as forking the Webdetails repository created for that purpose, and propose a new language or change one of the available ones.</p>
-                      <p>The language packs apply to both Enterprise and Community Edition, and are maintained by community members. The packs are not officially supported by Pentaho.</p>
-                    </div>
                   </div>
                   <div class="row currentlyTranslated" id="currentlyTranslatedTitle">
                     <div class="col-lg-12"><h3>Current Translations <b>Pentaho BI Suite 5.0</b></h3></div>
@@ -254,7 +252,7 @@
                       <p class="txt-greyArea"><b>Can't find your language?</b> Propose a new translation now.</p>
                     </div>
                     <div class="col-lg-4">
-                      <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
+                      <a class="link-row btn-header" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
                     </div>
                   </div>
                   <div class="row secondRow">
@@ -265,30 +263,25 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="clearfix forkItem">
-                        <div class="forkIcon"><img src="../../img/01-green.svg" onerror="this.onerror=null; this.src='../../img/01-green.png'"></div>
-                        <div class="forkDetails">Fork the Webdetails' repository <a href="https://github.com/webdetails/pentahoLanguagePacks" target="_blank">PentahoLanguagePacks</a>. To merge your changes, please issue a pull request.</div>
+                        <div class="forkIcon">01</div> <div class="forkDetails">Fork the Webdetails' repository <a href="https://github.com/webdetails/pentahoLanguagePacks" target="_blank">PentahoLanguagePacks</a>. To merge your changes, please issue a pull request.</div>
                         <div class="clear"></div>
                       </div>
                       <div class="clearfix forkItem">
-                        <div class="forkIcon"><img src="../../img/02-green.svg" onerror="this.onerror=null; this.src='../../img/02-green.png'"></div>
-                        <div class="forkDetails">Save all files using UTF8 encoding.</div>
+                        <div class="forkIcon">02</div> <div class="forkDetails">Save all files using UTF8 encoding.</div>
                         <div class="clear"></div>
                       </div>
                       <div class="clearfix forkItem lastForkItem">
-                        <div class="forkIcon"><img src="../../img/03-green.svg" onerror="this.onerror=null; this.src='../../img/03-green.png'"></div>
-                        <div class="forkDetails">Do not bother to edit the <code>supported_languages.properties</code> files, their contents will be ignored by the language pack installer.</div>
+                        <div class="forkIcon">03</div> <div class="forkDetails">Do not bother to edit the <code>supported_languages.properties</code> files, their contents will be ignored by the language pack installer.</div>
                         <div class="clear"></div>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="clearfix forkItem">
-                        <div class="forkIcon"><img src="../../img/04-green.svg" onerror="this.onerror=null; this.src='../../img/04-green.png'"></div>
-                        <div class="forkDetails">The information in the file <code>data/${languageCode}/metadata.json</code> will be used by the installer to patch Pentaho with your translation, so please make sure the fields languageCode and language are consistent with your modifications.</div>
+                        <div class="forkIcon">04</div> <div class="forkDetails">The information in the file <code>data/${languageCode}/metadata.json</code> will be used by the installer to patch Pentaho with your translation, so please make sure the fields languageCode and language are consistent with your modifications.</div>
                         <div class="clear"></div>
                       </div>
                       <div class="clearfix forkItem lastForkItem">
-                        <div class="forkIcon"><img src="../../img/05-green.svg" onerror="this.onerror=null; this.src='../../img/05-green.png'"></div>
-                        <div class="forkDetails">You are now doing translation work for CE using Git. This is great, thanks! </div>
+                        <div class="forkIcon">05</div> <div class="forkDetails">You are now doing translation work for CE using Git. This is great, thanks! </div>
                         <div class="clear"></div>
                       </div>
                     </div>
@@ -382,7 +375,7 @@
                           <p class="txt-greyArea"><b>Can't find your language?</b> Propose a new translation now.</p>
                         </div>
                         <div class="col-lg-4">
-                          <a class="link-row" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
+                          <a class="link-row btn-header" href="http://redmine.webdetails.org/projects/lpi" id="getStartedPropose" target="_blank">Submit a request</a>
                         </div>
                       </div>
                       <div class="row secondRow">
@@ -392,23 +385,23 @@
                       </div>
                       <div class="row">
                         <div class="col-lg-6 forkItem clearfix">
-                          <div class="forkIcon"><img src="../../img/01-green.svg" onerror="this.onerror=null; this.src='../../img/01-green.png'"></div> <div class="forkDetails">Fork the Webdetails' repository <a href="https://github.com/webdetails/pentahoLanguagePacks" target="_blank">PentahoLanguagePacks</a>. To merge your changes, please issue a pull request.</div>
+                          <div class="forkIcon">01</div> <div class="forkDetails">Fork the Webdetails' repository <a href="https://github.com/webdetails/pentahoLanguagePacks" target="_blank">PentahoLanguagePacks</a>. To merge your changes, please issue a pull request.</div>
                         </div>
                         <div class="col-lg-6 forkItem clearfix">
-                          <div class="forkIcon"><img src="../../img/02-green.svg" onerror="this.onerror=null; this.src='../../img/02-green.png'"></div> <div class="forkDetails">Save all files using UTF8 encoding.</div>
+                          <div class="forkIcon">02</div> <div class="forkDetails">Save all files using UTF8 encoding.</div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-6 forkItem clearfix">
-                          <div class="forkIcon"><img src="../../img/03-green.svg" onerror="this.onerror=null; this.src='../../img/03-green.png'"></div> <div class="forkDetails">Do not bother to edit the <code>supported_languages.properties</code> files, their contents will be ignored by the language pack installer.</div>
+                          <div class="forkIcon">03</div> <div class="forkDetails">Do not bother to edit the <code>supported_languages.properties</code> files, their contents will be ignored by the language pack installer.</div>
                         </div>
                         <div class="col-lg-6 forkItem clearfix">
-                          <div class="forkIcon"><img src="../../img/04-green.svg" onerror="this.onerror=null; this.src='../../img/04-green.png'"></div> <div class="forkDetails">The information in the file <code>data/${languageCode}/metadata.json</code> will be used by the installer to patch Pentaho with your translation, so please make sure the fields languageCode and language are consistent with your modifications.</div>
+                          <div class="forkIcon">04</div> <div class="forkDetails">The information in the file <code>data/${languageCode}/metadata.json</code> will be used by the installer to patch Pentaho with your translation, so please make sure the fields languageCode and language are consistent with your modifications.</div>
                         </div>
                       </div>
                       <div class="row lastForkItem">
                         <div class="col-lg-6 forkItem clearfix">
-                          <div class="forkIcon"><img src="../../img/05-green.svg" onerror="this.onerror=null; this.src='../../img/05-green.png'"></div> <div class="forkDetails">You are now doing translation work for CE using Git. This is great, thanks! </div>
+                          <div class="forkIcon">05</div> <div class="forkDetails">You are now doing translation work for CE using Git. This is great, thanks! </div>
                         </div>
                       </div>
                     </div>
@@ -472,7 +465,29 @@
           </div>
         </div>
       </div>
-      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
+      <div class="helpImproveWrapper">
+        <div class="helpImprove">
+          <div class="col-xs-6">
+            <p>
+              Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <section class="footer-social-wrapper">
+              <div class="region region-footer-social">
+                  <div class="content pull-right">
+                    <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
+                    <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
+                    <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
+                    <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
+                    <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
+                    <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
+                  </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

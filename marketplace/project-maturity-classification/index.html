@@ -28,7 +28,7 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-            <h1>Project Maturity<br> Classification</h1>
+            <h2>Project Maturity<br> Classification</h2>
             <p><strong>The model consists of two parallel  lanes:</strong> one for Community and customer-sponsored projects and a second for projects which are part of the official Pentaho offering.</p>
           </div>
           <div class="col-lg-5 cbp-so-side cbp-so-side-right">
@@ -52,34 +52,42 @@
         </div>
         <div class="clear"></div>
         <div class="site-container">
-          <div class="row" style="margin-top: 30px;">
+          <!-- <div class="row" style="margin-top: 30px;">
             <div class="col-lg-12">
               <h2>Overview</h2>
               <p>The Project Maturity Classification is the central piece on a strategy that aims to use the Community as a vehicle to reach our goals faster.</p>
               <p>The two-lane approach aims to promote innovation, clear out what is and what isn't supported and which levels of support attached to them, and clarifying to prospects / customers/ community/ etc how Pentaho leverages it's Open Source roots and how that puts us to a huge advantage compared to the rest of the competition.</p>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="site-container whiteContainer">
           <div class="row" id="hiddenMobile">
             <div class="col-xs-12">
             <div id="myCarousel" class="carousel slide">
               <ol class="carousel-indicators tabs content">
-                <li id="community-lane-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Community Lane</li>
-                <li id="customer-lane-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Customer Lane</li>
+                <li id="overview-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Overview</li>
+                <li id="community-lane-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Community Lane</li>
+                <li id="customer-lane-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Customer Lane</li>
               </ol>
               <!-- Carousel items -->
               <div class="carousel-inner">
-                <div class="active item" id="community-lane">
+                <div class="active item" id="overview">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2>Overview</h2>
+                    <p>The Project Maturity Classification is the central piece on a strategy that aims to use the Community as a vehicle to reach our goals faster.
+                      <br>The two-lane approach aims to promote innovation, clear out what is and what isn't supported and which levels of support attached to them, and clarifying to prospects / customers/ community/ etc how Pentaho leverages it's Open Source roots and how that puts us to a huge advantage compared to the rest of the competition.</p>
+                  </div>
+                </div>
+                </div>
+                <div class="item" id="community-lane">
                   <div class="row">
                     <div class="col-lg-12">
                         <h2 style="padding-bottom: 15px;"><span class="text-green">Community Lane</span> Projects Classification</h2>
                     </div>
-                    <div class="col-lg-6">
-                      <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.</p>
-                    </div>
-                    <div class="col-lg-6">
-                      <p>The Community Lane will also be used for projects created by Pentaho Consulting or Engineering Services, in which case they will be managed so they do not conflict with the long-term architecture and functionality planned in the Pentaho product roadmap.</p>
+                    <div class="col-lg-12">
+                      <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.
+                        <br>The Community Lane will also be used for projects created by Pentaho Consulting or Engineering Services, in which case they will be managed so they do not conflict with the long-term architecture and functionality planned in the Pentaho product roadmap.</p>
                     </div>
                   </div>
                   <div class="row currentlyTranslated secondRow">
@@ -136,11 +144,9 @@
                     <div class="col-lg-12">
                         <h2 style="padding-bottom: 15px;"><span class="text-blue">Customer Lane</span> Projects Classification</h2>
                     </div>
-                    <div class="col-lg-6">
-                      <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.</p>
-                    </div>
-                    <div class="col-lg-6">
-                      <p>Pentaho will provide official support based on current support policies to projects on the Customer Lane.</p>
+                    <div class="col-lg-12">
+                      <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.
+                        <br>Pentaho will provide official support based on current support policies to projects on the Customer Lane.</p>
                     </div>
                   </div>
                   <div class="row currentlyTranslated secondRow">
@@ -216,11 +222,9 @@
                   <div id="collapseMainOne" class="panel-collapse collapse">
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row secondRow">
-                        <div class="col-lg-6">
-                          <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.</p>
-                        </div>
-                        <div class="col-lg-6">
-                          <p>The Community Lane will also be used for projects created by Pentaho Consulting or Engineering Services, in which case they will be managed so they do not conflict with the long-term architecture and functionality planned in the Pentaho product roadmap.</p>
+                        <div class="col-lg-12">
+                          <p>Projects in the Community Lane are created by contributors in the Community and exposed through the Pentaho Marketplace.
+                            <br>The Community Lane will also be used for projects created by Pentaho Consulting or Engineering Services, in which case they will be managed so they do not conflict with the long-term architecture and functionality planned in the Pentaho product roadmap.</p>
                         </div>
                       </div>
                       <div class="row currentlyTranslated secondRow">
@@ -287,11 +291,9 @@
                   <div id="collapseMainTwo" class="panel-collapse collapse">
                     <div class="panel-body" id="panel-body-with-green">
                       <div class="row secondRow">
-                        <div class="col-lg-6">
-                          <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.</p>
-                        </div>
-                        <div class="col-lg-6">
-                          <p>Pentaho will provide official support based on current support policies to projects on the Customer Lane.</p>
+                        <div class="col-lg-12">
+                          <p>Always overseen by PM and Engineering, projects in the Customer Lane can either start as customer-sponsored initiatives or as projects developed in the Community Lane that create value for Pentaho subscription customers.
+                            <br>Pentaho will provide official support based on current support policies to projects on the Customer Lane.</p>
                         </div>
                       </div>
                       <div class="row currentlyTranslated secondRow">
@@ -407,7 +409,29 @@
           </div>
         </div>
       </div>
-      <div class="helpImprove">Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a></div>
+      <div class="helpImproveWrapper">
+        <div class="helpImprove">
+          <div class="col-xs-6">
+            <p>
+              Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <section class="footer-social-wrapper">
+              <div class="region region-footer-social">
+                  <div class="content pull-right">
+                    <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
+                    <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
+                    <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
+                    <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
+                    <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
+                    <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
+                  </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
