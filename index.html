@@ -161,8 +161,8 @@
             <div id="myCarousel" class="carousel slide">
               <ol class="carousel-indicators">
                 <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
-                <!--<li id="whatsnew-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">What's new in 5.4</li>-->
-                <li id="marketplace-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Marketplace</li>
+                <li id="whatsnew-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">What's new in 6.0</li>
+                <li id="marketplace-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Marketplace</li>
               </ol>
               <!-- Carousel items -->
               <div class="carousel-inner">
@@ -223,22 +223,24 @@
                     </div>
                   </div>
                 </div>
-                <!--<div class="item">
+                <div class="item">
                   <div class="row">
                     <div class="col-lg-8">
-                      <h3>Pentaho 5.4 Release</h3>
+                      <h3>Pentaho 6.0 Release</h3>
                       <ul>
-                        <li><strong>New PDI look and feel: </strong>Our beloved PDI now has an amazing face to match it's amazing capabilities. It behaves great - now it also looks great. And it's much more than icons, we added SVG support to it. Just try it.</li>
-                        <li><strong>Submit your plugins: </strong>Plugin that enables PDI to communicate with the Pentaho Platform, gets the list of endpoints made available by it, and in a very simple way execute actions on the platform. <br>
-When published in the server, PDI transformations that use this step can do a local execution, bypassing the specified authentication and running with the permissions attached to the current user.</li>
-                        <li><strong>Ctools support for Require.js in CDF/CDE: </strong>We did a major refactor on the Ctools, restructuring CDF/CDE as an AMD-based framework by using Require.js.</li>
-                        <li><strong>Named Hadoop Clusters: </strong>Every Hadoop step has UI to specify the NameNode and port, JobTracker and port etc. We simplified the UI and now we have a single dialog where users can enter all the required information about the cluster. That info is saved as a named configuration and be selectable within each Hadoop step that needs it.</li>
-                        <li><strong>AWS EMR Shim Support: </strong>We now have full support for a shim that runs on amazon EMR, including S3 support. ETL at scale on this highly used platform.</li>
-                        <li><strong>Spark Integration: </strong>Spark is an in-memory processing engine that can be clustered/scaled using Hadoop. It’s original use case was for data scientists to issue statements that would load sets of data into memory, and then issue a series of queries against that data to investigate it. Spark can run on top of Hadoop using HDFS as its distributed file system. It is widely believed that Spark will replace MapReduce as the Hadoop distributed computing engine. <br>
-To improve the orchestration ability, we created a PDI Job Step to execute compiled java code that Spark developers create. Through labs we're working on a full shim support, but this is a great start.</li>
-                        <li><strong>Localization for Pentaho User Console: </strong>Professionally translated, tested and supported language packs developed by a contracted localization company for French, German and Japanese. It's a great extension to the work done by the community (and that still exists) around the <a href="http://community.pentaho.com/marketplace/language-packs/" target="_blank">community language packs.</a></li>
-                        <li><strong>MongoDB 3.0: </strong>Mongo launched a major version and some of the old apis were deprecated. We now support MongoDB 3.0.</li>
-                        <li><strong>Google Analytics step in PDI: </strong>Fixed Google Analytics step wich got broke after Google made changes to the authentication process.</li>
+                        <li><strong>Data Services: </strong>Ability to expose any point of a transformation as a virtual table that can be accessed from the outside through a JDBC interface - and this usage can be not only external but also internal. This feature comes with huge improvements on the concept, not only at a UI level, but also on global Caching abilities and Push Down Optimizations. </li>
+
+                        <li><strong>OSGi support: </strong>OSGi was included in the Pentaho stack, so now plugins can be built and deployed as OSGi bundles.</li>
+
+                        <li><strong>New PDI Marketplace: </strong>We were able to bring the BA Server Marketplace into PDI.</li>
+
+                        <li><strong>Named clusters testing framework: </strong>We built a set of test cases that will help you troubleshoot what happens within Hadoop, as well as guidelines on how to fix the open issues. Also, we built the beginning of a generic and pluggable test framework, which means that you'll be able to plug in your own test cases and you'll also see soon this "test framework" appear in other areas of the product.</li>
+
+                        <li><strong>Library upgrades: </strong>A bunch of libraries were upgraded, including Java 8, Tomcat 8, VFS2, etc.</li>
+
+                        <li><strong>Rest APIs for user management: </strong>Ability to use fully supported Rest APIs for automating user management.</li>
+
+                        <li><strong>Lineage in PDI: </strong>Organizations not only need to know which ETL and transformations they have, they need to know exactly what is happening at any point in time. What files, what parameters, when, by who, and so on. Now you can tell PDI to capture all that runtime information.</li>
                       </ul>
                     </div>
                     <div class="col-lg-4 info-bar-marketplace">
@@ -259,7 +261,7 @@ To improve the orchestration ability, we created a PDI Job Step to execute compi
                       <a target="_blank" href="https://github.com/pentaho/marketplace">Source Code</a><br>
                     </div>
                   </div>
-                </div>-->
+                </div>
                 <div class="item">
                   <div class="row">
                     <div class="col-lg-8">
@@ -383,12 +385,12 @@ To improve the orchestration ability, we created a PDI Job Step to execute compi
                     </div>
                   </div>
                 </div>
-                <!--<div class="panel panel-default">
+                <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
                       <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainTwo">
                         <div class="row">
-                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;What's new in 5.4</span>
+                          <span class="col-md-12">&nbsp;&nbsp;&nbsp;What's new in 6.0</span>
                         </div>
                       </a>
                     </h4>
@@ -397,19 +399,21 @@ To improve the orchestration ability, we created a PDI Job Step to execute compi
                     <div class="panel-body" id="new-features">
                       <div class="row">
                         <div class="col-lg-8">
-                          <h3>Pentaho 5.4 Release</h3>
+                          <h3>Pentaho 6.0 Release</h3>
                           <ul>
-                            <li><strong>New PDI look and feel: </strong>Our beloved PDI now has an amazing face to match it's amazing capabilities. It behaves great - now it also looks great. And it's much more than icons, we added SVG support to it. Just try it.</li>
-                            <li><strong>Submit your plugins: </strong>Plugin that enables PDI to communicate with the Pentaho Platform, gets the list of endpoints made available by it, and in a very simple way execute actions on the platform. <br>
-    When published in the server, PDI transformations that use this step can do a local execution, bypassing the specified authentication and running with the permissions attached to the current user.</li>
-                            <li><strong>Ctools support for Require.js in CDF/CDE: </strong>We did a major refactor on the Ctools, restructuring CDF/CDE as an AMD-based framework by using Require.js.</li>
-                            <li><strong>Named Hadoop Clusters: </strong>Every Hadoop step has UI to specify the NameNode and port, JobTracker and port etc. We simplified the UI and now we have a single dialog where users can enter all the required information about the cluster. That info is saved as a named configuration and be selectable within each Hadoop step that needs it.</li>
-                            <li><strong>AWS EMR Shim Support: </strong>We now have full support for a shim that runs on amazon EMR, including S3 support. ETL at scale on this highly used platform.</li>
-                            <li><strong>Spark Integration: </strong>Spark is an in-memory processing engine that can be clustered/scaled using Hadoop. It’s original use case was for data scientists to issue statements that would load sets of data into memory, and then issue a series of queries against that data to investigate it. Spark can run on top of Hadoop using HDFS as its distributed file system. It is widely believed that Spark will replace MapReduce as the Hadoop distributed computing engine. <br>
-    To improve the orchestration ability, we created a PDI Job Step to execute compiled java code that Spark developers create. Through labs we're working on a full shim support, but this is a great start.</li>
-                            <li><strong>Localization for Pentaho User Console: </strong>Professionally translated, tested and supported language packs developed by a contracted localization company for French, German and Japanese. It's a great extension to the work done by the community (and that still exists) around the <a href="http://community.pentaho.com/marketplace/language-packs/" target="_blank">community language packs.</a></li>
-                            <li><strong>MongoDB 3.0: </strong>Mongo launched a major version and some of the old apis were deprecated. We now support MongoDB 3.0.</li>
-                            <li><strong>Google Analytics step in PDI: </strong>Fixed Google Analytics step wich got broke after Google made changes to the authentication process.</li>
+                            <li><strong>Data Services: </strong>Ability to expose any point of a transformation as a virtual table that can be accessed from the outside through a JDBC interface - and this usage can be not only external but also internal. This feature comes with huge improvements on the concept, not only at a UI level, but also on global Caching abilities and Push Down Optimizations. </li>
+
+                            <li><strong>OSGi support: </strong>OSGi was included in the Pentaho stack, so now plugins can be built and deployed as OSGi bundles.</li>
+
+                            <li><strong>New PDI Marketplace: </strong>We were able to bring the BA Server Marketplace into PDI.</li>
+
+                            <li><strong>Named clusters testing framework: </strong>We built a set of test cases that will help you troubleshoot what happens within Hadoop, as well as guidelines on how to fix the open issues. Also, we built the beginning of a generic and pluggable test framework, which means that you'll be able to plug in your own test cases and you'll also see soon this "test framework" appear in other areas of the product.</li>
+
+                            <li><strong>Library upgrades: </strong>A bunch of libraries were upgraded, including Java 8, Tomcat 8, VFS2, etc.</li>
+
+                            <li><strong>Rest APIs for user management: </strong>Ability to use fully supported Rest APIs for automating user management.</li>
+
+                            <li><strong>Lineage in PDI: </strong>Organizations not only need to know which ETL and transformations they have, they need to know exactly what is happening at any point in time. What files, what parameters, when, by who, and so on. Now you can tell PDI to capture all that runtime information.</li>
                           </ul>
                         </div>
                         <div class="col-lg-4 info-bar-marketplace">
@@ -432,7 +436,7 @@ To improve the orchestration ability, we created a PDI Job Step to execute compi
                       </div>
                     </div>
                   </div>
-                </div>-->
+                </div>
                 <div class="panel panel-default">
                   <div class="panel-heading">
                     <h4 class="panel-title">
