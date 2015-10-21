@@ -2396,8 +2396,9 @@ margin-top: 4px;
   color:#39A74A;
   cursor:pointer;
   background: none;
-  border: none;
+  border: 0 none;
   border-top: 11px solid #efefef;
+  border-color: #efefef;
   box-shadow: none;
   padding: 0;
   padding-top:12px;
@@ -2405,6 +2406,15 @@ margin-top: 4px;
   display: inline-block;
   border-radius: 0;
   margin-top: 40px;
+}
+
+.btn.btn-header,
+.btn.btn-header:link,
+.btn.btn-header:visited,
+.btn.btn-header:hover,
+.btn.btn-header:active,
+.btn.btn-header:focus {
+  border-top: 11px solid #efefef;
 }
 
 .btn.btn-header:hover {
