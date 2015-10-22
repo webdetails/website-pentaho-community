@@ -2707,3 +2707,62 @@ a.userGroup-link {
     margin-bottom: 30px;
   }
 }
+
+/* ==========================================================================
+   Pentaho 6 Disclaimer
+   ========================================================================== */
+
+.pentaho-6-disclaimer {
+  margin: 50px 20px 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  background: #EFEFEF;
+}
+
+.pluginPage .pentaho-6-disclaimer {
+  margin: 30px 5px;
+}
+
+@media (max-width: 1199px) {
+  .pentaho-6-disclaimer {
+    margin: 50px 5px 30px;
+  }
+
+  .pluginPage .pentaho-6-disclaimer {
+    margin: 30px 5px;
+  }
+}
+
+.disclaimer-header {
+  background: #39A74A;
+  color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.disclaimer-title {
+  font-weight: 600;
+  margin: 0 22px;
+}
+
+.disclaimer-body {
+  padding: 20px 37px 16px;
+}
+
+.disclaimer-body pre {
+  border-radius: 0;
+  margin-top: 5px;
+}
+
+.disclaimer-body code {
+  padding: 3px 10px;
+  background: #F5F5F5;
+  border: 1px solid #CCC;
+  border-radius: 0;
+  line-height: 27px;
+  top: -2px;
+  position: relative;
+  font-size: 13px;
+  white-space: normal;
+}
