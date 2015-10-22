@@ -102,7 +102,9 @@ body {
 .other-versions a,
 .other-versions a:link,
 .other-versions a:visited,
-.main-plugin-footerNotes a{
+.main-plugin-footerNotes a,
+.disclaimer-body a,
+.disclaimer-body a:visited{
   color: #005da6;
 }
 
@@ -975,7 +977,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 .pluginPage .container,
 #sparkl .container.whiteContainer{
-  padding: 50px 15px 40px;
+  padding: 40px 15px 40px;
 }
 
 .carousel {
@@ -3542,4 +3544,64 @@ a.small-link-to-pentaho:active {
 
 .mainConceptOption p{
   margin: 0;
+}
+
+
+
+/*pentaho 6 disclamer*/
+
+/* ==========================================================================
+   Pentaho 6 Disclaimer
+   ========================================================================== */
+
+.pentaho-6-disclaimer {
+  margin: 50px 20px 30px;
+  background: #EFEFEF;
+}
+
+.pluginPage .pentaho-6-disclaimer {
+  margin: 30px 5px;
+}
+
+@media (max-width: 1199px) {
+  .pentaho-6-disclaimer {
+    margin: 50px 5px 30px;
+  }
+
+  .pluginPage .pentaho-6-disclaimer {
+    margin: 30px 5px;
+  }
+}
+
+.disclaimer-header {
+  background: #34913D;
+  color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.disclaimer-title {
+  font-weight: 600;
+  margin: 0 22px;
+}
+
+.disclaimer-body {
+  padding: 20px 37px 16px;
+}
+
+.disclaimer-body pre {
+  border-radius: 0;
+  margin-top: 5px;
+}
+
+.disclaimer-body code {
+  padding: 3px 10px;
+  background: #F5F5F5;
+  border: 1px solid #CCC;
+  border-radius: 0;
+  line-height: 27px;
+  top: -2px;
+  position: relative;
+  font-size: 13px;
+  white-space: normal;
 }
