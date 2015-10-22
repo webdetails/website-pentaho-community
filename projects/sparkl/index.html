@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/cbpScroller.css">
 
+  <link rel="stylesheet" href="../../css/owl.carousel.css">
+  <link rel="stylesheet" href="../../css/owl.theme.css">
+
   <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
@@ -46,7 +49,7 @@
 
     <div class="whiteContainerBack">
       <div class="darkContainer clearfix">
-        <div class="container">
+        <div class="site-container">
           <div class="row">
             <div class="col-lg-9">
               <p class="txt-greyArea">Visit the Pentaho Marketplace website and download Sparkl.</p>
@@ -60,9 +63,10 @@
       <div class="clear"></div>
       <div class="container whiteContainer">
         <div class="row" id="hiddenMobile">
+          <div class="col-xs-12">
           <div id="myCarousel" class="carousel slide">
             <ol class="carousel-indicators content">
-              <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">Description</li>
+              <li id="description-tab" data-target="#myCarousel" data-slide-to="0" class="active clicked col-xs-4 noSelect">Description</li>
               <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Main concepts</li>
               <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Get started</li>
               <li id="main-concepts-tab" data-target="#myCarousel" data-slide-to="3" class="col-xs-4 noSelect">Contribute</li>
@@ -81,30 +85,18 @@
                       <br>Being familiar with the <a href="http://www.webdetails.pt/ctools.html" target="_blank">CTools</a> and <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a>, they will have all the
                       required knowledge to create applications that will impress their customers.</p>
                     <br>
-                    <div id="whats-new-images">
-                      <div class="image-holder">
-                        <img src="../../img/sparkl-screen-01.png" alt="" id="image-set-display-1" class="image-set-display">
-                      </div>
-                      <div class="screen-previewer">
-                        <div class="preview-block active">
-                          <img src="../../img/sparkl-screen-01.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="../../img/sparkl-screen-05.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="../../img/sparkl-concepts-01.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="../../img/sparkl-concepts-03.png" alt="">
-                        </div>
-                        <div class="clear"></div>
-                      </div>
+
+                    <div class="gallery-wrapper sub-gallery text-center">
+                      <img src="../../img/sparkl-screen-01.png" alt="">
+                      <img src="../../img/sparkl-screen-05.png" alt="">
+                      <img src="../../img/sparkl-concepts-01.png" alt="">
+                      <img src="../../img/sparkl-concepts-03.png" alt="">
                     </div>
+
                   </div>
                   <div class="col-lg-3">
                     <div class="info-bar" style="margin-top: 5px;">
-                      <h3>Quick Links</h3>
+                      <h4>Quick Links</h4>
                       <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace</a>
                       <br>
                       <a href="http://www.webdetails.pt/ctools/" target="_blank">CTools</a>
@@ -117,7 +109,7 @@
                       <br>
                     </div>
                     <div class="info-bar info-bar-license">
-                      <h3>License</h3>
+                      <h4>License</h4>
                       <a href="https://www.mozilla.org/MPL/2.0/" target="_blank">Mozilla Public License Version 2.0</a>
                     </div>
                   </div>
@@ -151,21 +143,14 @@
                         </p>
                       </div>
                       <div class="col-lg-6">
-                        <div class="image-holder">
-                          <img src="../../img/sparkl-concepts-01.png" alt="" id="image-set-display-2" class="image-set-display">
+
+                        <div class="gallery-wrapper sub-gallery text-center">
+                          <img src="../../img/sparkl-concepts-01.png" alt="">
+                          <img src="../../img/sparkl-concepts-04.png" alt="">
+                          <img src="../../img/sparkl-concepts-05.png" alt="">
                         </div>
-                        <div class="screen-previewer" id="screen-previewer-2">
-                          <div class="preview-block active">
-                            <img src="../../img/sparkl-concepts-01.png" alt="">
-                          </div>
-                          <div class="preview-block">
-                            <img src="../../img/sparkl-concepts-04.png" alt="">
-                          </div>
-                          <div class="preview-block">
-                            <img src="../../img/sparkl-concepts-05.png" alt="">
-                          </div>
-                          <div class="clear"></div>
-                        </div>
+
+
                       </div>
                     </div>
                   </div>
@@ -325,6 +310,7 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
         <div class="row" id="showMobile">
           <div class="col-lg-12">
@@ -349,14 +335,17 @@
                           <br> These people usually lack the proper JAVA knowledge, but are commonly familiar with Pentaho implementations.
                           <br> Being familiar with the <a href="http://www.webdetails.pt/ctools.html" target="_blank">CTools</a> and <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a>, they will have all
                           the required knowledge to create applications that will impress their customers.</p>
-                        <img src="../../img/sparkl-screen-01.png" alt="">
-                        <img src="../../img/sparkl-screen-05.png" alt="">
-                        <img src="../../img/sparkl-concepts-01.png" alt="">
-                        <img src="../../img/sparkl-concepts-03.png" alt="">
+
+                        <div class="gallery-wrapper sub-gallery mobile text-center">
+                          <img src="../../img/sparkl-screen-01.png" alt="">
+                          <img src="../../img/sparkl-screen-05.png" alt="">
+                          <img src="../../img/sparkl-concepts-01.png" alt="">
+                          <img src="../../img/sparkl-concepts-03.png" alt="">
+                        </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="info-bar">
-                          <h1>Quick Links</h1>
+                          <h4>Quick Links</h4>
                           <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace</a>
                           <br>
                           <a href="http://www.webdetails.pt/ctools/" target="_blank">CTools</a>
@@ -367,7 +356,7 @@
                           <br>
                         </div>
                         <div class="info-bar info-bar-license">
-                          <h1>License</h1>
+                          <h4>License</h4>
                           <a href="https://www.mozilla.org/MPL/2.0/" target="_blank">Mozilla Public License Version 2.0</a>
                         </div>
                       </div>
@@ -405,25 +394,28 @@
                           <strong>Endpoints</strong>, for the back-end logic.</p>
                       </div>
                       <div class="col-lg-8">
-                        <img src="../../img/sparkl-concepts-01.png" alt="">
-                        <img src="../../img/sparkl-concepts-04.png" alt="">
-                        <img src="../../img/sparkl-concepts-05.png" alt="">
+
+                        <div class="gallery-wrapper sub-gallery mobile text-center">
+                          <img src="../../img/sparkl-concepts-01.png" alt="">
+                          <img src="../../img/sparkl-concepts-04.png" alt="">
+                          <img src="../../img/sparkl-concepts-05.png" alt="">
+                        </div>
                       </div>
                     </div>
 
                     <div class="row secondRow">
                       <div class="col-lg-4" id="screenshots-description">
-                        <strong>Dashboards</strong>
+                        <h4>Dashboards</h4>
                         <p>By filtering the Dashboard element types, we'll see how many screens our plugin has. The User Interfaces are generated through <a href="http://www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, and we can jump from
                           <strong>Sparkl</strong> to <a href="http://www.webdetails.pt/ctools/cde.html" target="_blank">CDE</a>, if we want to edit our dashboard. Exactly like if we were creating a dashboard.</p>
                       </div>
                       <div class="col-lg-4" id="screenshots-description">
-                        <strong>Endpoints</strong>
+                        <h4>Endpoints</h4>
                         <p>In the core of
                           <strong>Sparkl</strong>, we have pluggable support for several element types. The original idea was to support back-end logic in Javascript, JAVA and others, but <a href="http://www.pentaho.com/product/data-integration" target="_blank">Pentaho Data Integration</a>                          worked so well out of the box, that we didn't yet feel the need for anything else.</p>
                       </div>
                       <div class="col-lg-4" id="screenshots-description">
-                        <strong>Documentation</strong>
+                        <h4>Documentation</h4>
                         <p>You can access the <a href="#">Sparkl Documentation</a>, where we communicate what are the application's Dashboards and Endpoints, their goals, logic, actions and how all these are wrapped up to build a consistent plugin.</p>
                       </div>
                     </div>
@@ -577,15 +569,13 @@
     </div>
     <div class="helpImproveWrapper">
       <div class="helpImprove">
-        <div class="col-xs-6">
-          <p>
-            Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
-          </p>
+        <div class="col-md-6 col-sm-12">
+          <p>Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com" class="footer-link">community@pentaho.com</a></p>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6 col-sm-12">
           <section class="footer-social-wrapper">
             <div class="region region-footer-social">
-                <div class="content pull-right">
+                <div class="content text-right">
                   <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
                   <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
                   <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
@@ -609,6 +599,7 @@
 
     <script src="../../js/main.js"></script>
     <script src="../../js/master.js"></script>
+    <script src="../../js/vendor/owl.carousel.js"></script>
     <script src="../../js/classie.js"></script>
 
     <script type="text/javascript">
@@ -616,7 +607,24 @@
         $('#tabs').tab();
 
         $('.header-container').load('../../pentaho-templates/header.html');
+
+        $(".sub-gallery").owlCarousel({
+          slideSpeed: 600,
+          paginationSpeed: 600,
+          autoPlay: 10000,
+          pagination: true,
+          singleItem: true,
+          mouseDrag: false,
+          touchDrag: true
+        });
+
       });
+
+      $('.carousel-indicators.content li').click(function(){
+        $('.carousel-indicators.content li').removeClass('clicked');
+        $(this).addClass("clicked");
+      });
+
     </script>
 
     <script>

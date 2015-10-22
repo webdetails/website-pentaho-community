@@ -43,6 +43,11 @@ body {
   min-width: 320px;
 }
 
+.container small,
+.site-container small{
+  font-size: 12px;
+}
+
 .text-green {
   color: #39a74a;
 }
@@ -87,13 +92,18 @@ body {
   padding-top: 50px;
 }
 
-.carousel-inner a,
-.carousel-inner a:link,
+.pentahoHome .large-button{
+  margin-top: 18px;
+}
+
+.carousel-inner a:not(.link-marketplacetab),
+.carousel-inner a:link:not(.link-marketplacetab),
 .carousel-inner a:visited,
 .other-versions a,
 .other-versions a:link,
-.other-versions a:visited {
-  color: #34913D;
+.other-versions a:visited,
+.main-plugin-footerNotes a{
+  color: #005da6;
 }
 
 .carousel-inner a:hover,
@@ -207,6 +217,10 @@ span.semibold{
   min-width: 250px;
 }
 
+.backPageGrey{
+  background: #f5f5f5;
+}
+
 img {
 	max-width: 100%;
 }
@@ -248,6 +262,22 @@ img {
   display: block;
   position: relative;
 
+}
+
+.darkContainerBack{
+  background: #ececec;
+}
+
+.downloadsContainer{
+  padding: 60px 0;
+}
+
+.downloadsContainer .second{
+  margin-top: 20px;
+}
+
+.downloadsContainer h3:not(:first-child){
+  margin-top: 55px;
 }
 
 #pentaho5-container {
@@ -328,6 +358,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   padding-top: 30px;
 }
 
+body div a:hover,
+.container a:hover,
+.site-container a:hover{
+  text-decoration: none;
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -346,7 +382,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 12px;
   line-height: 1.5;
   padding: 8px 15px;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
   border-radius: 0px;
   text-decoration: none;
 
@@ -470,6 +505,11 @@ header.site-header a.button:hover{
   color: #FFF !important;
   text-decoration: none;
   background-color: #0f2b5b;
+}
+
+.gallery-side-description,
+.gallery-wrapper{
+  padding-top: 30px;
 }
 
 
@@ -735,7 +775,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
   width: 100%;
   outline: 0;
   line-height: 40px;
-  padding-left: 10px;
+
   position: relative;
   font-weight: 400;
   text-decoration:  none;
@@ -748,7 +788,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:be
   background-image: url(../img/arrow-right.png);
   position: absolute;
   top: 50%;
-  left: 15px;
+  right: 20px;
   margin-top: -8px;
 }
 
@@ -757,8 +797,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:ho
 }
 
 div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed) {
-  background: #fff;
-  font-weight: 600;
+  background: #34913D;
+  /*font-weight: 600;*/
 }
 
 div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed):before {
@@ -768,17 +808,32 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   background-image: url(../img/arrow-down.png);
   position: absolute;
   top: 50%;
-  left: 15px;
+  right: 20px;
   margin-top: -8px;
 }
 
+
 .panel-heading a.accordion-toggle span{
-  padding-left: 35px;
+  padding-left: 25px;
+  color: #616161;
 }
 
-.panel-group .panel{
+.panel-heading a.accordion-toggle:not(.collapsed) span{
+  color: #FFF;
+}
+
+.panel-group .panel.panel-default{
   border-radius: 0;
-  box-shadow: none !important;
+  border: none;
+  box-shadow: none;
+}
+
+.panel-group .panel.panel-default .panel-body {
+    padding: 15px 22px;
+}
+
+.panel-group .panel-default > .panel-heading + .panel-collapse .panel-body{
+  border-top: 2px solid #f5f5f5;
 }
 
 .panel-group .panel .panel-heading{
@@ -794,29 +849,34 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   margin-top: 20px;
   position: relative;
   /*padding-left: 10px;*/
+  margin-bottom: 15px;
 }
 
-#pentahoHome .download-row {
-  padding-left: 8px;
+.dl-item .os-title {
+  float: left;
+  width: 45%;
+  padding: 8px 14px;
+  background: #f5f5f5;
+}
+
+.download-row .dl-item a{
+  width: 55%;
+  float: right;
 }
 
 .other-versions {
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
-  margin-top: 35px;
+  margin-top: 7px;
   vertical-align: bottom;
 }
 
 .os-title {
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #333;
-  text-align:left;
-}
-
-.panel-body .col-md-12 {
-  padding-left: 22px;
+  font-weight: 400;
+  color: #34913D;
+  text-align: left;
 }
 
 #showMobile {
@@ -837,14 +897,13 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   }
 
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed) {
-    background: #fff;
     font-weight: 400;
   }
 }
 
 @media (max-width: 1199px) {
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
-    font-size: 16px;
+    font-size: 17px !important;
   }
 
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:before {
@@ -855,7 +914,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
     position: absolute;
     top: 50%;
     margin-top: -8px;
-    left: 15px;
+    right: 15px;
   }
 
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed):before {
@@ -866,9 +925,12 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
     position: absolute;
     top: 50%;
     margin-top: -8px;
-    left: 15px;
+    right: 15px;
   }
 
+}
+
+@media (max-width: 1023px){
   #showMobile {
     display: block;
   }
@@ -889,8 +951,32 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   #showMobile .secondRow .col-lg-4 {
       margin-top: 40px;
   }
+
+  .kettle .container.whiteContainer{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+  }
+
 }
 
+@media (min-width: 1024px) and (max-width: 1200px){
+  .kettle .container.whiteContainer,
+  .reporting #hiddenMobile .carousel{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pluginPage .container.whiteContainer{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.pluginPage .container,
+#sparkl .container.whiteContainer{
+  padding: 50px 15px 40px;
+}
 
 .carousel {
   position: relative;
@@ -901,7 +987,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 .panel-body a:visited,
 .panel-body a:hover,
 .panel-body a:active {
-  color: #39a74a;
+  color: #005da6;
   font-weight: 500;
 }
 
@@ -991,8 +1077,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  border-top: none;
-  border-radius: 0 !important;
+  border: none;
 }
 
 .content.carousel-indicators li{
@@ -1024,14 +1109,12 @@ ol.carousel-indicators.content{
   border-radius: 0 !important;
 }
 
-.carousel-indicators.content .active,
-.carousel-indicators.content .active:link,
-.carousel-indicators.content .active:visited,
-.carousel-indicators.content .active:hover,
-.carousel-indicators.content .active:active {
-  border: 0;
+.carousel-indicators.content .clicked,
+.carousel-indicators.content .clicked:link,
+.carousel-indicators.content .clicked:visited,
+.carousel-indicators.content .clicked:hover,
+.carousel-indicators.content .clicked:active {
   opacity: 1;
-  border: 0;
   position: relative;
   background: #34913D !important;
   color: #FFFFFF;
@@ -1050,7 +1133,6 @@ ol.carousel-indicators.content{
   padding-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption .btn {
@@ -1088,6 +1170,19 @@ ol.carousel-indicators.content{
     padding: 25px 0 30px;
   }
 
+  .downloadsContainer .second{
+    margin-top: 0;
+  }
+
+  .pentahoHome .item.community-slide{
+    text-align: center !important;
+  }
+
+  .mondrian .otherVersionDownloadRow p {
+    text-align: left;
+    margin-top: 10px;
+  }
+
 }
 
 
@@ -1103,7 +1198,7 @@ ol.carousel-indicators.content{
     background: #303843;
   }
 
-  .owl-pagination{
+  .wrapper-with-margin .owl-pagination{
     display: none;
   }
 
@@ -1231,6 +1326,11 @@ ol.carousel-indicators.content{
     padding-right: 10px;
   }
 
+  .user-groups .carousel-inner > .item {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
   .carousel-inner > .item .col-lg-8 {
     padding-left: 0px;
     padding-right: 0px;
@@ -1339,7 +1439,6 @@ old version - keep til the new one is approved
 .helpImproveWrapper{
   background: #FFFFFF;
   width: 100%;
-  border-top: 1px solid #ccc;
 }
 
 .helpImprove {
@@ -1402,7 +1501,7 @@ old version - keep til the new one is approved
 .helpImprove a:visited,
 .helpImprove a:hover,
 .helpImprove a:active {
-  color: #39a74a;
+  color: #005da6;
   font-weight: 600;
 }
 
@@ -1528,6 +1627,11 @@ old version - keep til the new one is approved
   background: #f5f5f5;
 }
 
+.pluginPage.plugins .site-container.whiteContainer{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 #pdi5-info {
   background: #f5f5f5;
   padding: 10px 5px;
@@ -1648,16 +1752,8 @@ p.in-development-description {
   font-size: 14px;
 }
 
-.main-plugin-download {
-  /*border: 1px solid #efefef;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
-}
-
 .main-plugin-header {
   padding-bottom: 10px;
-  background: #efefef;
 }
 
 .main-plugin-header p.large-button {
@@ -1671,24 +1767,27 @@ p.in-development-description {
 }
 
 .main-plugin-content {
-  background: #ffffff;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   padding-bottom: 20px;
-  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
 }
 
 .main-plugin-footerNotes {
   padding-top: 20px;
 }
 
+.main-plugin-footerNotesLabel{
+  padding-top: 6px;
+}
+
+.main-plugin-content .dl-item .os-title{
+  background: #FFFFFF;
+}
 
 .main-plugin-footerNotes .col-lg-4 {
   text-align: left;
 }
 
-.main-plugin-footerNotes * {
+.main-plugin-footerNotes {
   font-size: 13px;
 }
 
@@ -1737,30 +1836,34 @@ p.in-development-description {
   margin-left:-5px;
 }
 
+.main-plugin-content #downloadList a.btn.btn-default.btn-green{
+  margin-top: 20px;
+}
+
 #mainConceptsRow,
 #mainConceptsRow2 {
-  background: #efefef;
+  /*background: #efefef;*/
   margin-top: 30px;
 }
 
 .mainConceptOption {
-  background: #e7e7e7;
+  background: #f5f5f5;
   text-align: center;
-  margin: 12px 0px;
+  margin: 4px 0px;
   padding: 10px 0;
   color: #898989;
   position: relative;
-  margin-left: 12px;
+  /*margin-left: 12px;*/
 }
 
 .mainConceptOption:hover {
-  background: #39a34a;
-  color: #fefefe;
+  background: #ececec;
+  /*color: #fefefe;*/
   cursor: pointer;
 }
 
 .mainConceptOption.active {
-  background: #39a34a;
+  background: #34913D;
   color: #fefefe;
   position: relative;
 }
@@ -1785,7 +1888,7 @@ p.in-development-description {
 
 .mainConceptContent {
   display: none;
-  margin: 17px;
+  /*margin: 17px;*/
 }
 
 .mainConceptContent.active {
@@ -1805,12 +1908,14 @@ p.in-development-description {
 
 .main-plugin-footerNotes a,
 .otherVersionDownloadRow a {
-  color: #39A34A;
+
 }
 
 .otherVersionDownloadRow p {
   font-size: 12px;
   text-align: right;
+  margin: 0;
+  padding-top: 4px;
 }
 
 .otherVersionDownloadRow p a {
@@ -1864,11 +1969,6 @@ p.in-development-description {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #fefefe !important;
       background: #666 !important;
-  }
-
-  .otherVersionDownloadRow p {
-    text-align: left;
-    margin-top: 10px;
   }
 }
 
@@ -2026,12 +2126,21 @@ a.btn-gray:active {
 }
 
 .currentlyTranslated {
-  background: #ebebeb;
+  background: #f5f5f5;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 2px;
   margin-left: 0;
   margin-right: 0;
+
+}
+
+.currentlyTranslated#currentlyTranslatedTitle{
+  background: #FFFFFF;
+}
+
+.currentlyTranslated#currentlyTranslatedTitle h3{
+  margin-left: -15px;
 }
 
 .pluginPage .newLanguage{
@@ -2076,6 +2185,10 @@ a.btn-gray:active {
   margin-left: 5px;
 }
 
+.currentlyTranslated h4+span{
+  font-size: 14px;
+}
+
 .newLanguage {
     background: #39A34A;
     color: #fefefe;
@@ -2084,6 +2197,13 @@ a.btn-gray:active {
     font-size: 18px;
     text-align: left;
     margin-top: 30px;
+}
+
+.plugins .newLanguage{
+    padding: 20px 12px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 0px;
 }
 
 .newLanguage p {
@@ -2102,6 +2222,11 @@ a.btn-gray:active {
 .newLanguage.background-grey {
     background: #f1f2f2;
     color: #707880;
+    padding: 25px 15px;
+}
+
+#sparkl .newLanguage.background-grey {
+  padding: 25px;
 }
 
 .newLanguage b {
@@ -2215,7 +2340,7 @@ a.btn-gray:active {
 }
 
 #getStartedPropose {
-  margin-top: 0px;
+  margin-top: 3px;
 }
 
 .lastForkItem {
@@ -2275,7 +2400,7 @@ code {
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 
@@ -2373,17 +2498,17 @@ code {
 }
 
 #plugin-downloads {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 
 /* PROJECT MATURITY CLASSIFICATION */
 
 .project-maturity-classification-item-title {
-  font-size: 23px;
-  line-height: 30px;
-  margin-top: 8px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 15px;
   display: block;
-  color: #39a74a;
+  color: #34913D;
   font-weight: 300;
 }
 
@@ -2493,7 +2618,6 @@ p.subHeadLine-pentaho5:after {
   font-size: 15px;
   line-height: 1.5;
   padding: 8px 15px;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid #999;
@@ -2534,6 +2658,7 @@ p.subHeadLine-pentaho5:after {
 
 .link-marketplacerow {
   text-align: right;
+  padding-top: 4px;
 }
 
 .txt-greyArea {
@@ -2542,6 +2667,7 @@ p.subHeadLine-pentaho5:after {
   font-size:16px;
   font-weight:400 !important;
   margin: 0;
+  padding: 8px 0;
 }
 
 a.link-row img {
@@ -2587,6 +2713,7 @@ margin-top: 4px;
 a.link-marketplacetab,
 a.link-row{
   font-size: 13px;
+  letter-spacing: 0.15em;
   background: #34913D;
   padding: 12px 40px;
   color: #FFF !important;
@@ -2597,8 +2724,6 @@ a.link-row{
   font-weight: 400;
   display: inline-block;
   border-radius: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
   text-shadow: none;
   line-height: 18px;
 }
@@ -2886,20 +3011,23 @@ a.link-marketplacetab:hover{
   max-width: 1200px;
 }
 
+.owl-theme .owl-controls .owl-buttons div{
+  width: 20px;
+  height: 35px;
+}
+
 .owl-theme .owl-controls .owl-buttons .owl-prev{
   position: absolute;
   background: url(../img/arrows.png) no-repeat top center;
-  left: 0;
+  left: -10px;
   top: 41%;
-  height: 40px;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next{
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 41%;
   background: url(../img/arrows.png) no-repeat bottom center;
-  height: 40px;
 }
 
 .community-slide .cbp-so-side{
@@ -2941,8 +3069,6 @@ a.link-popup {
   font-size:24px;
   font-weight:300;
 }
-
-
 
 /* ===========================================================
 ======================== USER GROUPS =========================
@@ -3119,6 +3245,42 @@ a.userGroup-link {
   padding: 3px 15px 5px;
 }
 
+.user-groups h3{
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.user-groups .large-button{
+  margin-top: 18px;
+}
+
+
+/*---------------------------------------------*/
+
+
+/*testing */
+
+a.small-link-to-pentaho,
+a.small-link-to-pentaho:link,
+a.small-link-to-pentaho:visited
+{
+    color: #666666;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a.small-link-to-pentaho:hover,
+a.small-link-to-pentaho:active {
+    color: #333333;
+}
+
+.owl-carousel .owl-wrapper-outer{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+
+
 [ng\:cloak], [ng-cloak],[data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important; }
 
 @media (max-width: 991px) {
@@ -3140,6 +3302,21 @@ a.userGroup-link {
     margin-bottom: 30px;
   }
 
+  .helpImproveWrapper{
+    padding-bottom: 40px;
+  }
+
+  .helpImprove p,
+  .helpImprove a.footer-link{
+    text-align: center;
+    font-size: 12px !important;
+  }
+
+}
+
+.left-side-slide{
+  padding-left: 100px;
+  padding-top: 20px;
 }
 
 @media (max-width: 767px) {
@@ -3178,21 +3355,20 @@ a.userGroup-link {
 }
 
 @media (max-width: 1200px) {
-  .download-row,
-  .panel-group{
+  .download-row{
     padding: 0 20px;
-  }
-
-  body > div:not(.header-container){
-    padding: 0 10px;
   }
 
   .container.lightContainer{
     padding: 40px 10px;
   }
 
+  .container.lightContainer.downloadsContainer{
+    padding: 40px 15px;
+  }
+
   #myCarousel .carousel-inner{
-    padding: 0 10px;
+    padding: 0 12px;
   }
 
   .pworld-imgs{
@@ -3204,13 +3380,27 @@ a.userGroup-link {
     padding: 60px 10px;
   }
 
-  .owl-theme .owl-controls .owl-buttons .owl-next{
-    left: calc(100% - 85px);
+  .site-container.cbp-so-section,
+  .pentahoHome .backPage.cbp-so-scroller{
+    padding: 0 15px;
   }
 
-  .owl-theme .owl-controls .owl-buttons .owl-prev{
-    right: calc(100% - 85px);
+  .pluginPage.plugins .newLanguage .txt-greyArea{
+    text-align: center;
   }
+
+  .project-maturity .site-container.whiteContainer,
+  .mondrian .site-container.whiteContainer,
+  .mondrian .lightContainerBack{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mondrian .site-container.whiteContainer{
+    padding-bottom: 40px;
+  }
+
+
 }
 
 @media screen and (min-width:971px) and (max-width:1200px){
@@ -3220,23 +3410,136 @@ a.userGroup-link {
 }
 
 @media (max-width: 1024px) {
+  h1,h2{
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h3,h4{
+    font-size: 14px;
+  }
+
+  p,
+  ul li,
+  a:not(.accordion-toggle),
+  .marketplace-text,
+  .txt-greyArea{
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+
+  a.accordion-toggle{
+    font-size: 14px !important;
+  }
+
+  .btn.btn-header,
+  a.btn-header.link-row,
+  a.link-marketplacetab,
+  a.link-row,
+  a.btn-green{
+    font-size: 11px !important;
+  }
+
+  .userGroup-name{
+    font-size: 18px;
+  }
+
   .owl-buttons{
     display: none;
   }
+
+  .community-slide .cbp-so-side{
+    padding-left: 40px;
+  }
+
 }
 
-@media (min-width: 992px)
-.site-container {
-    width: 970px;
+
+@media (max-width: 1023px){
+  .community-slide h1{
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .left-side-slide{
+    padding: 15px 35px;
+  }
+
+  .btn.btn-header{
+    font-size: 11px !important;
+    padding: 5px 12px;
+  }
+
+  .small-link-to-pentaho{
+    display: none;
+  }
+
+  header.site-header .nav-container {
+    background-color: #303843;
+  }
+
+  header.site-header .nav-container ul li.expanded ul.menu{
+    background-color: #2a313a;
+  }
+
+  header.site-header .nav-container ul > li {
+    border-bottom: 1px solid #38434c;
+  }
+
+  .pluginPage .container,
+  #sparkl .container.whiteContainer{
+    padding: 20px 15px 20px;
+  }
+
 }
 
 
-.owl-pagination{
+
+@media (max-width: 1200px) and (min-width: 600px){
+
+  .community-slide h1{
+    font-size: 38px;
+  }
+
+  .left-side-slide{
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 992px){
+  .region-footer-social .content{
+    text-align: center;
+  }
+}
+
+.wrapper-with-margin.owl-pagination{
   position: absolute;
   bottom: 0;
   left: calc(50% - 40px);
 }
 
+:not(.wrapper-with-margin) .owl-pagination{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
 .wrapper-header-bg{
   background: #f5f5f5;
+  padding: 0;
+}
+
+.dev-guide-btn{
+  margin-left: 30px;
+}
+
+@media (max-width: 435px){
+  .dev-guide-btn{
+    margin-left: 0px;
+  }
+}
+
+
+.mainConceptOption p{
+  margin: 0;
 }

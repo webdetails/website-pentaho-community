@@ -28,102 +28,83 @@
 
   <div class="header-container"></div>
 
-  <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
+  <!-- carousel -->
+  <div class="wrapper-header-bg">
 
+    <div class="wrapper-with-margin">
+      <div id="owl" class="owl-carousel">
+        <!-- Wrapper for slides -->
 
-
-    <!-- carousel -->
-    <div class="wrapper-header-bg">
-
-      <div class="wrapper-with-margin">
-        <div id="owl-example" class="owl-carousel">
-          <!-- Wrapper for slides -->
-
-          <div class="item active pworld">
-            <div class="">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <div class="row">
-                    <div class="pworld-wrapper">
-                      <div class="col-xs-12 pworld-title">
-                        <h1>Pentaho World <span class="semibold">2015</span></h1>
-                        <h2>October 14 - 15, Orlando FL</h2>
-                        <a href="http://www.pentahoworld.com" class="btn" style="display:inline-block;" target="_blank">Early Bird Registration</a>
-                      </div>
-                      <div class="col-xs-6">
-                        <img src="img/pworld-panel-ro.jpg" alt="" style="float: right;">
-                      </div>
-                      <div class="col-xs-6">
-                        <img src="img/pworld-panel-two.jpg" alt="" style=" float: left;">
-                      </div>
+        <!-- <div class="item active pworld">
+          <div class="">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <div class="row">
+                  <div class="pworld-wrapper">
+                    <div class="col-xs-12 pworld-title">
+                      <h1>Pentaho World <span class="semibold">2015</span></h1>
+                      <h2>October 14 - 15, Orlando FL</h2>
+                      <a href="http://www.pentahoworld.com" class="btn" style="display:inline-block;" target="_blank">Early Bird Registration</a>
+                    </div>
+                    <div class="col-xs-6">
+                      <img src="img/pworld-panel-ro.jpg" alt="" style="float: right;">
+                    </div>
+                    <div class="col-xs-6">
+                      <img src="img/pworld-panel-two.jpg" alt="" style=" float: left;">
                     </div>
                   </div>
+                </div>
 
-                </div>
               </div>
             </div>
           </div>
-          <div class="item community-slide">
-            <div class="">
-              <!-- Example row of columns -->
-              <div class="row">
-                <div class="col-lg-6 cbp-so-side cbp-so-side-left">
-                  <h1 style="letter-spacing: -0.03em;">Pentaho
-                    <br>Community 5.4</h1>
-                  <p>The first release branded as Pentaho, a Hitachi Data Systems Company. And with it a totally restyled PDI amongst many other features.</p>
-                  <p class="large-button">
-                    <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
-                  </p>
-                </div>
-                <div class="col-lg-6 cbp-so-side cbp-so-side-right">
-                  <img src="img/pentaho-54-screen.png" alt="">
-                  <p class="small-button-green">
-                    <span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section</span>
-                  </p>
-                </div>
-              </div>
+        </div> -->
+        <div class="item active community-slide">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 left-side-slide">
+              <h1 style="letter-spacing: -0.03em;">Pentaho Community 5.4</h1>
+              <p>The first release branded as Pentaho, a Hitachi Data Systems Company. And with it a totally restyled PDI amongst many other features.</p>
+              <p class="">
+                <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
+              </p>
             </div>
-            <!-- /container -->
+            <div class="col-xs-12 col-sm-6 col-md-6 right-side-slide">
+              <!-- <img src="img/pentaho-54-screen.png" alt=""> -->
+              <img src="img/marketplace-screen.png" alt="">
+            </div>
           </div>
-          <div class="item community-slide">
-            <div class="">
-              <!-- Example row of columns -->
-              <div class="row">
-                <div class="col-lg-6 cbp-so-side cbp-so-side-left">
-                  <h1>Pentaho
-                    <br>Marketplace</h1>
-                  <p>Now you can browse through the BA Server and PDI Marketplace entries in the Pentaho Marketplace website.</p>
-                  <a class="large-button" href="http://www.pentaho.com/marketplace/" target="_blank" style="min-width: 0;">
-                    <span class="btn btn-default btn-header">Launch</span>
-                  </a>
-                </div>
-                <div class="col-lg-6 cbp-so-side cbp-so-side-right">
-                  <img src="img/marketplace-screen.png" alt="">
-                  <a class="small-button-green" href="http://www.pentaho.com/marketplace/" target="_blank">
-                    <span class="btn btn-default btn-header">Launch</span>
-                  </a>
-                </div>
-              </div>
+        </div>
+
+        <div class="item community-slide">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 left-side-slide">
+              <h1>Pentaho Marketplace</h1>
+              <p>Now you can browse through the BA Server and PDI Marketplace entries in the Pentaho Marketplace website.</p>
+              <a class="" href="http://www.pentaho.com/marketplace/" target="_blank" style="min-width: 0;">
+                <span class="btn btn-default btn-header">Launch</span>
+              </a>
             </div>
-            <!-- /container -->
+            <div class="col-xs-12 col-sm-6 col-md-6 right-side-slide">
+              <img src="img/marketplace-screen.png" alt="">
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- end carousel -->
+  <!-- end carousel -->
 
+  <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
 
-
-    <div class="site-container whiteContainerBack">
+    <div class="site-container whiteContainerBack" id="hiddenMobile">
       <!-- <div class="slider-tabs header"></div> -->
-
       <div class="whiteContainer site-container" style="padding-top: 0;">
         <div class="row">
           <div class="col-xs-12">
             <div id="myCarousel" class="carousel slide">
               <ol class="carousel-indicators content">
-                <li id="whatsnew-tab" data-target="#myCarousel" data-slide-to="0" class="active col-xs-4 noSelect">What's new in 5.4</li>
+                <li id="whatsnew-tab" data-target="#myCarousel" data-slide-to="0" class="active clicked col-xs-4 noSelect">What's new in 5.4</li>
                 <li id="description-tab" data-target="#myCarousel" data-slide-to="1" class="col-xs-4 noSelect">Description</li>
                 <li id="marketplace-tab" data-target="#myCarousel" data-slide-to="2" class="col-xs-4 noSelect">Marketplace</li>
               </ol>
@@ -186,7 +167,7 @@
                             </div>
                             <div class="col-lg-12">
                               <div class="info-bar">
-                                <h3>Quick Links</h3>
+                                <h4>Quick Links</h4>
                                 <a target="_blank" href="http://www.pentaho.com/marketplace/">Marketplace</a>
                                 <br>
                                 <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace Metadata Project</a>
@@ -230,7 +211,7 @@
 </div> -->
                 </div>
                 <div class="item">
-                  <div class="row">
+                  <div class="row" id="whats-new-images">
                     <div class="col-md-7 col-sm-7">
                       <h3>An Engagement Mechanism</h3>
                       <ul>
@@ -250,10 +231,18 @@
                         <li>
                           <strong>Build with CE:</strong> The flexibility of Pentaho CE enables you to jump-start your development, innovate, experiment, find a solution you like, and then upgrade to Pentaho EE when you are ready for production.</li>
                       </ul>
+
+                      <div class="gallery-wrapper sub-gallery text-center">
+                        <img src="img/screen1.png" alt="">
+                        <img src="img/screen2.png" alt="">
+                        <img src="img/screen3.png" alt="">
+                        <img src="img/screen4.png" alt="">
+                        <img src="img/screen5.png" alt="">
+                      </div>
                     </div>
                     <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
                       <div class="info-bar">
-                        <h3>Quick Links</h3>
+                        <h4>Quick Links</h4>
                         <a target="_blank" href="http://ci.pentaho.com/">CI Builds</a>
                         <br>
                         <a target="_blank" href="https://github.com/pentaho">Source Code</a>
@@ -274,45 +263,20 @@
                     </div>
                     <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
                       <div class="info-bar">
-                        <h3>Info</h3>
+                        <h4>Info</h4>
                         <a target="_blank" href="http://community.pentaho.com/contributors/contributor_agreement.php">Contributor Agreement</a>
                         <br>
                         <a target="_blank" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices">Development Guide</a>
                       </div>
                     </div>
-                  </div>
-                  <div class="row secondRow" id="whats-new-images">
-                    <div class="col-lg-8">
-                      <div class="image-holder">
-                        <img src="img/screen1.png" alt="" id="image-set-display-1" class="image-set-display">
-                      </div>
-                      <div class="screen-previewer">
-                        <div class="preview-block active">
-                          <img src="img/screen1.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/screen2.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/screen3.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/screen4.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/screen5.png" alt="">
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4" id="screenshots-description">
+                    <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 gallery-side-description" id="screenshots-description">
                       <p>The open source platform thrives on participation and cooperation. There are several communication channels available where you can get in contact with the community including blogs, <a target="_blank" href="http://forums.pentaho.com/">forums</a>,
                         <a target="_blank" href="http://webchat.freenode.net/?channels=pentaho">IRC</a> and the <a target="_blank" href="https://groups.google.com/forum/#!forum/pentaho-community">Pentaho Community Mailing List</a>.</p>
                     </div>
                   </div>
                 </div>
                 <div class="item">
-                  <div class="row">
+                  <div class="row" id="marketplace-images">
                     <div class="col-md-7 col-sm-7">
                       <p style="margin-top: 25px;">With
                         <strong>Pentaho Marketplace</strong> you can easily download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
@@ -323,6 +287,13 @@
                         <li>
                           <strong>Submit your plugins: </strong>You can contribute plugins and let everyone benefit from your work. This is a great way to get feedback and other community members involved in your work.</li>
                       </ul>
+                      <div class="gallery-wrapper sub-gallery text-center">
+                        <img src="img/market1.png" alt="">
+                        <img src="img/market2.png" alt="">
+                        <img src="img/market3.png" alt="">
+                        <img src="img/market4.png" alt="">
+                        <img src="img/market5.png" alt="">
+                      </div>
                     </div>
                     <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
                       <div class="info-bar-marketplace">
@@ -331,13 +302,13 @@
                           <div class="link-tab">
                             <a class="link-marketplacetab" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a></div>
                           <!--<div class="launch-button"><a href="http://www.pentaho.com/marketplace/" class="btn btn-default btn-grey" id="getStartedPropose" target="_blank">Launch <img src="img/launch-icon.png"></img></a>
-                  </div>-->
+                    </div>-->
                         </div>
                       </div>
                     </div>
                     <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
                       <div class="info-bar">
-                        <h3>Quick Links</h3>
+                        <h4>Quick Links</h4>
                         <a target="_blank" href="http://www.pentaho.com/marketplace/">Marketplace</a>
                         <br>
                         <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace Metadata Project</a>
@@ -355,35 +326,11 @@
                         <br>
                       </div>
                     </div>
-                  </div>
-                  <div class="row secondRow" id="marketplace-images">
-                    <div class="col-lg-8">
-                      <div class="image-holder">
-                        <img src="img/market1.png" alt="" id="image-set-display-2" class="image-set-display">
-                      </div>
-                      <div class="screen-previewer" id="screen-previewer-2">
-                        <div class="preview-block active">
-                          <img src="img/market1.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/market2.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/market3.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/market4.png" alt="">
-                        </div>
-                        <div class="preview-block">
-                          <img src="img/market5.png" alt="">
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4" id="screenshots-description">
+                    <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1 gallery-side-description" id="screenshots-description">
                       <p>See the instructions on Github for the <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace-metadata project</a>. As a side note, the Marketplace itself is a plugin, and the <a target="_blank" href="https://github.com/pentaho/marketplace">code is available at Github</a>.
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -391,276 +338,252 @@
         </div>
       </div>
     </div>
-    <div class="whiteContainerBack">
-      <div class="whiteContainer" id="pentaho5-container">
-        <div class="row">
-          <div class="col-lg-12 text-center" id="pentaho5-content">
-            <a href="http://www.pentaho.com/product/future-proofing-data-driven-enterprise" target="_blank">
-              <img src="img/pentaho-5.4-panel.jpg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="lightContainerBack pinched">
-      <div class="container lightContainer" id="downloadList">
+    <div class="site-container whiteContainerBack" id="showMobile">
+      <!-- <div class="slider-tabs header"></div> -->
+      <div class="whiteContainer site-container" style="padding-top: 0; padding-bottom: 40px;">
         <div class="row">
-          <div class="col-lg-4">
-            <h2 class="h2-dark">Download</h2>
-          </div>
-          <div class="col-lg-8"></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <h3>Main Downloads</h3>
-            <div class="panel-group" id="accordion">
+          <div class="col-xs-12">
+
+            <div class="panel-group" id="accordionMain">
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainOne">
                       <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Business Analytics Platform</span>
+                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;What's new in 5.4</span>
                       </div>
                     </a>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse">
-                  <div class="panel-body">
+                <div id="collapseMainOne" class="panel-collapse collapse">
+                  <div class="panel-body" id="panel-body-with-green">
                     <div class="row">
-                      <div class="col-md-12">
-                        <p>Pentaho's modern, simplified, and interactive approach empowers business users to access, discover and blend any data types regardless of their size. With a full spectrum of increasingly advanced analytics tools, from basic reports
-                          to predictive modeling, users can help themselves to analyze and visualize data across multiple measures and dimensions without being dependent on IT.</p>
+                      <div class="col-lg-12">
+                        <div class="row">
+                          <div class="col-md-7 col-sm-7">
+                            <h3>Pentaho 5.4 Release</h3>
+                            <ul>
+                              <li>
+                                <strong>New PDI look and feel: </strong>Our beloved PDI now has an amazing face to match it's amazing capabilities. It behaves great - now it also looks great. And it's much more than icons, we added SVG support to it. Just try
+                                it.
+                              </li>
+                              <li>
+                                <strong>Submit your plugins: </strong>Plugin that enables PDI to communicate with the Pentaho Platform, gets the list of endpoints made available by it, and in a very simple way execute actions on the platform.
+                                <br> When published in the server, PDI transformations that use this step can do a local execution, bypassing the specified authentication and running with the permissions attached to the current user.
+                              </li>
+                              <li>
+                                <strong>Ctools support for Require.js in CDF/CDE: </strong>We did a major refactor on the Ctools, restructuring CDF/CDE as an AMD-based framework by using Require.js.
+                              </li>
+                              <li>
+                                <strong>Named Hadoop Clusters: </strong>Every Hadoop step has UI to specify the NameNode and port, JobTracker and port etc. We simplified the UI and now we have a single dialog where users can enter all the required information
+                                about the cluster. That info is saved as a named configuration and be selectable within each Hadoop step that needs it.
+                              </li>
+                              <li>
+                                <strong>AWS EMR Shim Support: </strong>We now have full support for a shim that runs on amazon EMR, including S3 support. ETL at scale on this highly used platform.
+                              </li>
+                              <li>
+                                <strong>Spark Integration: </strong>Spark is an in-memory processing engine that can be clustered/scaled using Hadoop. It’s original use case was for data scientists to issue statements that would load sets of data into memory,
+                                and then issue a series of queries against that data to investigate it. Spark can run on top of Hadoop using HDFS as its distributed file system. It is widely believed that Spark will replace MapReduce as the Hadoop distributed
+                                computing engine.
+                                <br> To improve the orchestration ability, we created a PDI Job Step to execute compiled java code that Spark developers create. Through labs we're working on a full shim support, but this is a great start.
+                              </li>
+                              <li>
+                                <strong>Localization for Pentaho User Console: </strong>Professionally translated, tested and supported language packs developed by a contracted localization company for French, German and Japanese. It's a great extension to the
+                                work done by the community (and that still exists) around the <a href="http://community.pentaho.com/marketplace/language-packs/" target="_blank">community language packs.</a>
+                              </li>
+                              <li>
+                                <strong>MongoDB 3.0: </strong>Mongo launched a major version and some of the old apis were deprecated. We now support MongoDB 3.0.
+                              </li>
+                              <li>
+                                <strong>Google Analytics step in PDI: </strong>Fixed Google Analytics step wich got broke after Google made changes to the authentication process.
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <div class="info-bar-marketplace">
+                                  <div class="marketplace-text">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</div>
+                                  <div class="separador">
+                                    <div class="link-tab">
+                                      <a class="link-marketplacetab" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a></div>
+                                    <!--<div class="launch-button"><a href="http://www.pentaho.com/marketplace/" class="btn btn-default btn-grey" id="getStartedPropose" target="_blank">Launch <img src="img/launch-icon.png"></img></a>
+                                    </div>-->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="info-bar">
+                                  <h4>Quick Links</h4>
+                                  <a target="_blank" href="http://www.pentaho.com/marketplace/">Marketplace</a>
+                                  <br>
+                                  <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace Metadata Project</a>
+                                  <br>
+                                  <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" title="Marketplace for Pentaho 5.3">Download Marketplace 5.4</a>
+                                  <br>
+                                  <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" title="Marketplace for Pentaho 5.3">Download Marketplace 5.3</a>
+                                  <br>
+                                  <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" title="Marketplace for Pentaho 5.2">Download Marketplace 5.2</a>
+                                  <br>
+                                  <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" title="Marketplace for Pentaho 5.x" style="white-space: nowrap;">Download Marketplace 5.0 / 5.1</a>
+                                  <br>
+                                  <!-- <a target="_blank" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" title="Marketplace for Pentaho 4.8">Download Marketplace 4.8</a><br> -->
+                                  <a target="_blank" href="https://github.com/pentaho/marketplace">Source Code</a>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/5.4/biserver-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <!--div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/5.0.1-stable/" target="_blank">Other artifacts</a></div-->
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainTwo">
                       <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Data Integration</span>
+                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Description</span>
                       </div>
                     </a>
                   </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                  <div class="panel-body">
+                <div id="collapseMainTwo" class="panel-collapse collapse">
+                  <div class="panel-body" id="panel-body-with-green">
                     <div class="row">
-                      <div class="col-md-12">
-                        <p>Pentaho’s Data Integration, also known as Kettle, delivers powerful extraction, transformation, and loading (ETL) capabilities. You can use this stand-alone application to visually design transforms and jobs that extract your existing
-                          data and make it available for easy reporting and analysis.</p>analysis.
+                      <div class="col-lg-12">
+                        <div class="row" id="whats-new-images">
+                          <div class="col-md-7 col-sm-7">
+                            <h3>An Engagement Mechanism</h3>
+                            <ul>
+                              <li>
+                                <strong>Participate in the Pentaho Community:</strong> By using Pentaho CE, you become part of an active and engaging Community and benefit from its open source contributions.</li>
+                              <li>
+                                <strong>Make valuable contributions:</strong> The Pentaho open source projects deliver better, faster, and more reliable products that are time-tested by the community. Developers, testers, writers, implementers, and most of all
+                                users are directly involved as a team to make high-value software contributions.</li>
+                            </ul>
+                            <h3>A QA Environment</h3>
+                            <ul>
+                              <li>
+                                <strong>Test it:</strong> There are no better testers than people who actually use the Pentaho CE software, reporting bugs, making suggestions, and providing direction for the projects.</li>
+                            </ul>
+                            <h3>An Evaluation Platform</h3>
+                            <ul>
+                              <li>
+                                <strong>Build with CE:</strong> The flexibility of Pentaho CE enables you to jump-start your development, innovate, experiment, find a solution you like, and then upgrade to Pentaho EE when you are ready for production.</li>
+                            </ul>
+
+                            <div class="gallery-wrapper sub-gallery text-center">
+                              <img src="img/screen1.png" alt="">
+                              <img src="img/screen2.png" alt="">
+                              <img src="img/screen3.png" alt="">
+                              <img src="img/screen4.png" alt="">
+                              <img src="img/screen5.png" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                            <div class="info-bar">
+                              <h4>Quick Links</h4>
+                              <a target="_blank" href="http://ci.pentaho.com/">CI Builds</a>
+                              <br>
+                              <a target="_blank" href="https://github.com/pentaho">Source Code</a>
+                              <br>
+                              <a target="_blank" href="http://forums.pentaho.com/">Community Forums</a>
+                              <br>
+                              <a target="_blank" href="https://groups.google.com/forum/#!forum/pentaho-community">Pentaho Community Mailing List</a>
+                              <br>
+                              <a target="_blank" href="http://webchat.freenode.net/?channels=pentaho">IRC (##pentaho @ Freenode)</a>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+                            <div class="info-bar">
+                              <h4>Info</h4>
+                              <a target="_blank" href="http://community.pentaho.com/contributors/contributor_agreement.php">Contributor Agreement</a>
+                              <br>
+                              <a target="_blank" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices">Development Guide</a>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 gallery-side-description" id="screenshots-description">
+                            <p>The open source platform thrives on participation and cooperation. There are several communication channels available where you can get in contact with the community including blogs, <a target="_blank" href="http://forums.pentaho.com/">forums</a>,
+                              <a target="_blank" href="http://webchat.freenode.net/?channels=pentaho">IRC</a> and the <a target="_blank" href="https://groups.google.com/forum/#!forum/pentaho-community">Pentaho Community Mailing List</a>.</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.4/pdi-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <!--<div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Data%20Integration/" target="_blank">Other artifacts</a></div>-->
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                      <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Report Designer</span>
-                      </div>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>The Report Designer is a graphical tool that generates reports from data streamed through the Data Integration engine without the need for any intermediate staging tables. You can output your reports in several formats, including
-                          PDF, Excel, HTML, rich-text-file, XML. and CSV.</p>
-                      </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">Windows / Linux</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/prd-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-3">
-                        <span class="os-title">Mac OS X</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/prd-ce-mac-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/" target="_blank">Other artifacts</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseMainThree">
                       <div class="row">
                         <span class="col-md-12">&nbsp;&nbsp;&nbsp;Marketplace</span>
                       </div>
                     </a>
                   </h4>
                 </div>
-                <div id="collapseEight" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>Pentaho Marketplace allows users to explore and test the plugins that are most relevant for them. Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
-                      </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">Pentaho 5.4</span>
-                        <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-3">
-                        <span class="os-title">Pentaho 5.3</span>
-                        <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-3">
-                        <span class="os-title">Pentaho 5.2</span>
-                        <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-3">
-                        <span class="os-title">Pentaho 5.0 / 5.1</span>
-                        <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-3">
-                        <span class="os-title">Pentaho 4.8</span>
-                        <p><a class="btn btn-default btn-green" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <div id="collapseMainThree" class="panel-collapse collapse">
+                  <div class="panel-body" id="panel-body-with-green">
 
-            <h3>Design Tools</h3>
-            <div class="panel-group" id="accordion2">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                      <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Aggregation Designer</span>
+                    <div class="row" id="marketplace-images">
+                      <div class="col-md-7 col-sm-7">
+                        <p style="margin-top: 25px;">With
+                          <strong>Pentaho Marketplace</strong> you can easily download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
+                        <h3>Objectives</h3>
+                        <ul>
+                          <li>
+                            <strong>Discover plugins: </strong>In Pentaho Marketplace you can browse and install the latest plugins in a very simple way.</li>
+                          <li>
+                            <strong>Submit your plugins: </strong>You can contribute plugins and let everyone benefit from your work. This is a great way to get feedback and other community members involved in your work.</li>
+                        </ul>
+                        <div class="gallery-wrapper sub-gallery text-center">
+                          <img src="img/market1.png" alt="">
+                          <img src="img/market2.png" alt="">
+                          <img src="img/market3.png" alt="">
+                          <img src="img/market4.png" alt="">
+                          <img src="img/market5.png" alt="">
+                        </div>
                       </div>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>The Aggregation Designer provides a simple interface that allows you to create and deploy aggregate tables to improve the performance of your Pentaho Analysis (Mondrian) OLAP cubes.</p>
+                      <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                        <div class="info-bar-marketplace">
+                          <div class="marketplace-text">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</div>
+                          <div class="separador">
+                            <div class="link-tab">
+                              <a class="link-marketplacetab" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a></div>
+                            <!--<div class="launch-button"><a href="http://www.pentaho.com/marketplace/" class="btn btn-default btn-grey" id="getStartedPropose" target="_blank">Launch <img src="img/launch-icon.png"></img></a>
+                            </div>-->
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/aggregation%20designer/5.4/pad-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
+                      <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1">
+                        <div class="info-bar">
+                          <h4>Quick Links</h4>
+                          <a target="_blank" href="http://www.pentaho.com/marketplace/">Marketplace</a>
+                          <br>
+                          <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace Metadata Project</a>
+                          <br>
+                          <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" title="Marketplace for Pentaho 5.3">Download Marketplace 5.4</a>
+                          <br>
+                          <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" title="Marketplace for Pentaho 5.3">Download Marketplace 5.3</a>
+                          <br>
+                          <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" title="Marketplace for Pentaho 5.2">Download Marketplace 5.2</a>
+                          <br>
+                          <a target="_blank" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" title="Marketplace for Pentaho 5.x" style="white-space: nowrap;">Download Marketplace 5.0 / 5.1</a>
+                          <br>
+                          <!-- <a target="_blank" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" title="Marketplace for Pentaho 4.8">Download Marketplace 4.8</a><br> -->
+                          <a target="_blank" href="https://github.com/pentaho/marketplace">Source Code</a>
+                          <br>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                      <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Schema Workbench</span>
+                      <div class="col-md-4  col-md-offset-1 col-sm-4  col-sm-offset-1 gallery-side-description" id="screenshots-description">
+                        <p>See the instructions on Github for the <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace-metadata project</a>. As a side note, the Marketplace itself is a plugin, and the <a target="_blank" href="https://github.com/pentaho/marketplace">code is available at Github</a>.
                       </div>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFive" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>The Schema Workbench is a visual design interface that allows you to create and test Mondrian OLAP cube schemas. You can present your data multi-dimensionally and let users select which dimensions and measures to explore, interactively
-                          drilling into cross-tabulating data.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/schema%20workbench/3.10.0/psw-ce-3.10.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
-                      <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Metadata Editor</span>
-                      </div>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseSix" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>Metadata Editor is a tool that simplifies your experience when creating reports, and allows you to build metadata domains and relational data models.</p>
-                      </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Pentaho%20Metadata/5.4/pme-ce-5.4.0.1-130.zip/download" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h3>Big Data</h3>
-            <div class="panel-group" id="accordion3">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseSeven">
-                      <div class="row">
-                        <span class="col-md-12">&nbsp;&nbsp;&nbsp;Hadoop Shims</span>
-                      </div>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseSeven" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p>Pentaho uses an abstraction layer to facilitate supporting a broad set of Hadoop distributions and version updates. The plugins which enable compatibility with a specific distribution are called /shims/. Use the link below to get
-                          a list of the currently support distributions and versions.</p>
-                        <br>
-                        <br>
-                        <small>* Pentaho does not ship all available shims with the product and we generally do not have to update a shim for a minor or patch version change. Shims that support older distributions as well as new ones created after release are
-                          available for download <a href="https://pentaho.box.com/50Shims">here</a>. If the note says that a later version of a shim also supports your version, Pentaho recommends using the later version.</small>
-                      </div>
-                    </div>
-                    <div class="row download-row">
-                      <div class="col-md-3">
-                        <span class="os-title">All OS</span>
-                        <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Big%20Data%20Shims/5.4/" target="_blank">Download <img src="img/download-icon.png"></a></p>
-                      </div>
-                      <div class="col-md-2 other-versions"><a href="http://wiki.pentaho.com/display/BAD/Configuring+Pentaho+for+your+Hadoop+Distro+and+Version" target="_blank">More Info</a></div>
                     </div>
                   </div>
                 </div>
@@ -670,87 +593,365 @@
         </div>
       </div>
     </div>
-    <div class="helpImproveWrapper">
-      <div class="helpImprove">
-        <div class="col-xs-6">
-          <p>
-            Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com">community@pentaho.com</a>
-          </p>
-        </div>
-        <div class="col-xs-6">
-          <section class="footer-social-wrapper">
-            <div class="region region-footer-social">
-                <div class="content pull-right">
-                  <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
-                  <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
-                  <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
-                  <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
-                  <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
-                  <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
-                </div>
-            </div>
-          </section>
+  </div>
+  <div class="whiteContainerBack">
+    <div class="whiteContainer" id="pentaho5-container">
+      <div class="row">
+        <div class="col-lg-12 text-center" id="pentaho5-content">
+          <a href="http://www.pentaho.com/product/future-proofing-data-driven-enterprise" target="_blank">
+            <img src="img/pentaho-5.4-panel.jpg" alt="">
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
-    </script>
+  <div class="lightContainerBack">
+    <div class="container lightContainer downloadsContainer" id="downloadList">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 class="h2-dark">Download</h2>
+        </div>
+        <div class="col-lg-8"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Main Downloads</h3>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Business Analytics Platform</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p>Pentaho's modern, simplified, and interactive approach empowers business users to access, discover and blend any data types regardless of their size. With a full spectrum of increasingly advanced analytics tools, from basic reports
+                        to predictive modeling, users can help themselves to analyze and visualize data across multiple measures and dimensions without being dependent on IT.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/5.4/biserver-ce-5.4.0.1-130.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a>
+                    </div>
+                    <!--div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/5.0.1-stable/" target="_blank">Other artifacts</a></div-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Data Integration</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <p>Pentaho’s Data Integration, also known as Kettle, delivers powerful extraction, transformation, and loading (ETL) capabilities. You can use this stand-alone application to visually design transforms and jobs that extract your existingdata
+                        and make it available for easy reporting and analysis.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/5.4/pdi-ce-5.4.0.1-130.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <!--<div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Data%20Integration/" target="_blank">Other artifacts</a></div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Report Designer</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>The Report Designer is a graphical tool that generates reports from data streamed through the Data Integration engine without the need for any intermediate staging tables. You can output your reports in several formats, includingPDF,
+                        Excel, HTML, rich-text-file, XML. and CSV.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/prd-ce-5.4.0.1-130.zip/download" target="_blank">Windows / Linux <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/prd-ce-mac-5.4.0.1-130.zip/download" target="_blank">Mac OS X <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-md-2 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/" target="_blank">Other artifacts</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Marketplace</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Pentaho Marketplace allows users to explore and test the plugins that are most relevant for them. Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" target="_blank">Pentaho 5.4 <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" target="_blank">Pentaho 5.3 <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" target="_blank">Pentaho 5.2 <img src="img/download-icon.png"></a></p>
+                    </div>
+                  </div>
+                  <div class="row second">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" target="_blank">Pentaho 5.0 / 5.1 <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" target="_blank">Pentaho 4.8 <img src="img/download-icon.png"></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
+          <h3>Design Tools</h3>
+          <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Aggregation Designer</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>The Aggregation Designer provides a simple interface that allows you to create and deploy aggregate tables to improve the performance of your Pentaho Analysis (Mondrian) OLAP cubes.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/aggregation%20designer/5.4/pad-ce-5.4.0.1-130.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Schema Workbench</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>The Schema Workbench is a visual design interface that allows you to create and test Mondrian OLAP cube schemas. You can present your data multi-dimensionally and let users select which dimensions and measures to explore, interactively
+                        drilling into cross-tabulating data.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/mondrian/files/schema%20workbench/3.10.0/psw-ce-3.10.0.1-130.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Metadata Editor</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Metadata Editor is a tool that simplifies your experience when creating reports, and allows you to build metadata domains and relational data models.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p>
+                        <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Pentaho%20Metadata/5.4/pme-ce-5.4.0.1-130.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/twitter-bootstrap-hover-dropdown.js"></script>
-    <script src="js/master.js"></script>
-    <script src="js/vendor/owl.carousel.js"></script>
+          <h3>Big Data</h3>
+          <div class="panel-group" id="accordion3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseSeven">
+                    <div class="row">
+                      <span class="col-md-12">&nbsp;&nbsp;&nbsp;Hadoop Shims</span>
+                    </div>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>Pentaho uses an abstraction layer to facilitate supporting a broad set of Hadoop distributions and version updates. The plugins which enable compatibility with a specific distribution are called /shims/. Use the link below to get
+                        a list of the currently support distributions and versions.</p>
+                      <br>
+                      <small>Pentaho does not ship all available shims with the product and we generally do not have to update a shim for a minor or patch version change. Shims that support older distributions as well as new ones created after release are available
+                        for download <a href="https://pentaho.box.com/50Shims">here</a>. If the note says that a later version of a shim also supports your version, Pentaho recommends using the later version.</small>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Big%20Data%20Shims/5.4/" target="_blank">All OS <img src="img/download-icon.png"></a></p>
+                    </div>
+                    <div class="col-md-2 other-versions"><a href="http://wiki.pentaho.com/display/BAD/Configuring+Pentaho+for+your+Hadoop+Distro+and+Version" target="_blank">More Info</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="helpImproveWrapper">
+    <div class="helpImprove">
+      <div class="col-md-6 col-sm-12">
+        <p>Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com" class="footer-link">community@pentaho.com</a></p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <section class="footer-social-wrapper">
+          <div class="region region-footer-social">
+            <div class="content text-right">
+              <a class="footer-social-item youtube" href="https://www.youtube.com/user/pentaho" target="_blank"></a>
+              <a class="footer-social-item gplus" href="https://plus.google.com/+Pentahocorporation/posts" target="_blank"></a>
+              <a class="footer-social-item twitter" href="http://twitter.com/Pentaho" target="_blank"></a>
+              <a class="footer-social-item facebook" href="http://www.facebook.com/pentaho" target="_blank"></a>
+              <a class="footer-social-item linkedin" href="http://www.linkedin.com/company/pentaho" target="_blank"></a>
+              <a class="footer-social-item rss-feed" href="http://www.pentaho.com/blog"></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
-    <script type="text/javascript">
-      jQuery(document).ready(function($) {
-        $('#tabs').tab();
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+  </script>
 
-        $('.header-container').load('pentaho-templates/header.html');
+  <script src="js/vendor/bootstrap.min.js"></script>
 
-        $("#owl-example").owlCarousel({
+  <script src="js/main.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/twitter-bootstrap-hover-dropdown.js"></script>
+  <script src="js/vendor/owl.carousel.js"></script>
+  <script src="js/master.js"></script>
 
-          navigation: true, // Show next and prev buttons
-          slideSpeed: 600,
-          paginationSpeed: 600,
-          autoPlay: 10000,
-          pagination: true,
-          singleItem: true,
-          mouseDrag: false,
-          navigationText: [
-            "",
-            ""
-          ]
 
-          // "singleItem:true" is a shortcut for:
-          // items : 1,
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
 
-        });
+
+
+      $('#tabs').tab();
+
+      $('.header-container').load('pentaho-templates/header.html');
+
+      $("#owl").owlCarousel({
+
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 600,
+        paginationSpeed: 600,
+        autoPlay: 10000,
+        pagination: true,
+        singleItem: true,
+        mouseDrag: false,
+        navigationText: ["", ""]
       });
-    </script>
 
-    <script>
-      var _gaq = [
-        ['_setAccount', 'UA-1507503-9'],
-        ['_trackPageview']
-      ];
-      (function(d, t) {
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src = '//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s)
-      }(document, 'script'));
-    </script>
-    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+      $(".sub-gallery").owlCarousel({
+        slideSpeed: 600,
+        paginationSpeed: 600,
+        autoPlay: 10000,
+        pagination: true,
+        singleItem: true,
+        mouseDrag: false,
+        touchDrag: true
+      });
+
+      $('.carousel-indicators.content li').click(function() {
+        $('.carousel-indicators.content li').removeClass('clicked');
+        $(this).addClass("clicked");
+      });
+
+    });
+  </script>
+
+  <script>
+    var _gaq = [
+      ['_setAccount', 'UA-1507503-9'],
+      ['_trackPageview']
+    ];
+    (function(d, t) {
+      var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+      g.src = '//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+  </script>
 </body>
 
 </html>
