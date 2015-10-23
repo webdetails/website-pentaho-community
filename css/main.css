@@ -31,7 +31,9 @@
    Author's custom styles
    ========================================================================== */
 
-html { overflow-y: scroll;}
+html {
+  overflow-y: scroll;
+}
 
 body {
 	/*background: #f5f5f5;*/
@@ -770,6 +772,7 @@ header.site-header a.button:hover{
 
 div.panel-group div.panel div.panel-heading {
   padding: 0;
+  border-radius: 0;
 }
 
 div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
@@ -975,7 +978,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   }
 }
 
-.pluginPage .container,
+/*.pluginPage .container,*/
 #sparkl .container.whiteContainer{
   padding: 40px 15px 40px;
 }
@@ -990,7 +993,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 .panel-body a:hover,
 .panel-body a:active {
   color: #005da6;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .carousel-inner {
@@ -1076,9 +1079,9 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   height: auto !important;
 
   -moz-user-select: none;
-  -khtml-user-select: none;
   -webkit-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   border: none;
 }
 
@@ -1604,9 +1607,6 @@ old version - keep til the new one is approved
   background: #f5f5f5;
 
   -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
@@ -1771,6 +1771,10 @@ p.in-development-description {
 .main-plugin-content {
   /*padding-top: 20px;*/
   padding-bottom: 20px;
+}
+
+.plugins .main-plugin-content {
+  padding-top: 20px;
 }
 
 .main-plugin-footerNotes {
@@ -2008,9 +2012,6 @@ p.in-development-description {
     border: 1px solid #ebebeb;
     margin-bottom: 30px;
     -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
     transition: all .3s linear;
     padding-left: 10px;
     padding-right: 10px;
@@ -2095,26 +2096,17 @@ a.btn-gray:visited {
   font-size: 14px;
   line-height: 20px;
   border: 1px solid #3BA749;
-
-
-  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
-  -moz-box-shadow: 2px 2px 3px rgba(0,0,0,.1);
   box-shadow: 2px 2px 3px rgba(0,0,0,.1);
 }
 
 
 a.btn-gray:hover {
-  background: #dedede; /* Old browsers */
-  background: -moz-linear-gradient(top,  #dedede 0%, #cdcdcd 100%); /* FF3.6+ */
+  background: #dedede; /* Old browsers */ /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(100%,#cdcdcd)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* IE10+ */
+  background: -webkit-linear-gradient(top,  #dedede 0%,#cdcdcd 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+  background: -webkit-linear-gradient(top, #dedede 0%, #cdcdcd 100%);
   background: linear-gradient(to bottom,  #dedede 0%,#cdcdcd 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#cdcdcd',GradientType=0 ); /* IE6-9 */
-
-  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
-  -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
   box-shadow: 1px 1px 2px rgba(0,0,0,.1);
   transition: .3s background linear;
   -moz-transition: .3s background linear;
@@ -2122,8 +2114,6 @@ a.btn-gray:hover {
 }
 
 a.btn-gray:active {
-  -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
-  -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
 }
 
@@ -2307,11 +2297,9 @@ a.btn-gray:active {
 #grayRowButtonMarketplace:focus,
 #grayRowButtonMarketplace:active {
   color: #fff;
-  background-image: linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
-  background-image: -o-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
-  background-image: -moz-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  /*background-image: linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
   background-image: -webkit-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
-  background-image: -ms-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);
+  background-image: -ms-linear-gradient(bottom, #3BA749 49%, #7FB83F 88%);*/
 
   background-image: -webkit-gradient(
     linear,
@@ -2324,8 +2312,6 @@ a.btn-gray:active {
 }
 
 #grayRowButtonMarketplace:active {
-  -webkit-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
-  -moz-box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,.2);
 }
 
@@ -2398,9 +2384,6 @@ code {
   text-decoration: none;
   font-weight: 300;
   -webkit-transition: all .2s linear;
-  -moz-transition: all .2s linear;
-  -ms-transition: all .2s linear;
-  -o-transition: all .2s linear;
   transition: all .2s linear;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -2428,8 +2411,6 @@ code {
 
 #header-carousel .carousel-inner {
   background: #f5f5f5;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   top: 0;
 }
@@ -2445,12 +2426,8 @@ code {
   width: 13px;
   height: 13px !important;
   margin: 4px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   border: 1px solid #39a74a;
   padding: 0;
@@ -2623,8 +2600,6 @@ p.subHeadLine-pentaho5:after {
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid #999;
-
-  -webkit-box-shadow:inset 0px 3px 5px 0px #909090;
   box-shadow:inset 0px 3px 5px 0px #909090;
 }
 
@@ -2643,8 +2618,6 @@ p.subHeadLine-pentaho5:after {
   background: #666;
   color: #fff;
   border: 1px solid #666;
-
-  -webkit-box-shadow:inset 0px 3px 5px 0px #535353;
   box-shadow:inset 0px 3px 5px 0px #535353;
 }
 
@@ -2717,7 +2690,7 @@ a.link-row{
   font-size: 13px;
   letter-spacing: 0.15em;
   background: #34913D;
-  padding: 12px 40px;
+  padding: 12px 40px !important;
   color: #FFF !important;
   text-transform: uppercase;
   cursor:pointer;
@@ -2932,8 +2905,6 @@ a.link-marketplacetab:hover{
 	margin: 5px;
 	padding: 3px 10px;
 	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
 	border-radius: 30px;
 	background: #869791;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
@@ -2977,8 +2948,6 @@ a.link-marketplacetab:hover{
 	color: #FFF;
 	padding: 2px 10px;
 	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
 	border-radius: 30px;
 }
 
@@ -2992,8 +2961,6 @@ a.link-marketplacetab:hover{
     display: block;
     width: 100%;
     height: auto;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     margin-bottom:4px;
 }
@@ -3021,13 +2988,13 @@ a.link-marketplacetab:hover{
 .owl-theme .owl-controls .owl-buttons .owl-prev{
   position: absolute;
   background: url(../img/arrows.png) no-repeat top center;
-  left: -10px;
+  left: 0;
   top: 41%;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next{
   position: absolute;
-  right: -10px;
+  right: 0;
   top: 41%;
   background: url(../img/arrows.png) no-repeat bottom center;
 }
@@ -3128,11 +3095,9 @@ a.link-popup {
   min-width: 100%;
   margin-top: 0;
   border-radius: 0;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    -msie-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-       -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -msie-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+     -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   max-height: 269px;
   overflow-y: auto;
 }
@@ -3172,8 +3137,6 @@ a.link-popup {
   position: relative;
   -webkit-transition: all .3s linear;
     -msie-transition: all .3s linear;
-     -moz-transition: all .3s linear;
-       -o-transition: all .3s linear;
           transition: all .3s linear;
 }
 
@@ -3268,7 +3231,7 @@ a.small-link-to-pentaho:visited
 {
     color: #666666;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 12px !important;
 }
 
 a.small-link-to-pentaho:hover,
@@ -3446,10 +3409,6 @@ a.small-link-to-pentaho:active {
     font-size: 18px;
   }
 
-  .owl-buttons{
-    display: none;
-  }
-
   .community-slide .cbp-so-side{
     padding-left: 40px;
   }
@@ -3458,6 +3417,12 @@ a.small-link-to-pentaho:active {
 
 
 @media (max-width: 1023px){
+
+
+  .owl-buttons{
+    display: none;
+  }
+
   .community-slide h1{
     font-size: 24px;
     line-height: 1.35;
@@ -3571,6 +3536,17 @@ a.small-link-to-pentaho:active {
   .pluginPage .pentaho-6-disclaimer {
     margin: 30px 5px;
   }
+
+  .link-row.first-btn{
+    padding: 12px 70px !important;
+  }
+}
+
+@media (max-width: 527px){
+  .dev-guide-btn{
+    margin-left: 0;
+  }
+
 }
 
 .disclaimer-header {
