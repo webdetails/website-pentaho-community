@@ -168,6 +168,10 @@ h3 {
   color: #34913D;
   text-transform: uppercase;
   margin-bottom: 15px;
+  margin-top: 47px;
+}
+
+.carousel-inner .item h3:first-child{
   margin-top: 35px;
 }
 
@@ -240,7 +244,9 @@ img {
 .lightContainer {
   background-color: #f5f5f5;
   margin: 0px auto;
-  padding: 40px 0px;
+  /*padding: 40px 0px;*/
+  /*padding: 38px 0px 28px 0;*/
+  padding: 38px 0px 25px 0;
   display: block;
   position: relative;
 }
@@ -273,7 +279,7 @@ img {
 }
 
 .downloadsContainer{
-  padding: 60px 0;
+  padding-bottom: 47px;
 }
 
 .downloadsContainer .second{
@@ -295,6 +301,12 @@ img {
 
 #pentaho5-container img {
   margin-top: 0px;
+}
+
+@media (max-width: 970px){
+  #pentaho5-container img {
+    padding: 0 10px;
+  }
 }
 
 #pentaho5-content hr {
@@ -516,6 +528,20 @@ header.site-header a.button:hover{
   padding-top: 30px;
 }
 
+.col-lg-6 .owl-carousel.gallery-wrapper,
+.col-md-6 .owl-carousel.gallery-wrapper,
+.col-sm-6 .owl-carousel.gallery-wrapper,
+.col-xs-6 .owl-carousel.gallery-wrapper{
+  margin-top: -30px;
+}
+
+#hiddenMobile ul + .gallery-wrapper.owl-carousel,
+#hiddenMobile p + .gallery-wrapper.owl-carousel,
+#hiddenMobile h3 + .gallery-wrapper.owl-carousel,
+#hiddenMobile br + .gallery-wrapper.owl-carousel,
+#hiddenMobile p + .gallery-wrapper.owl-carousel{
+  padding-top: 40px;
+}
 
 /* ==========================================================================
    Tabs
@@ -761,7 +787,7 @@ header.site-header a.button:hover{
 
   .small-button-green {
     max-width: 250px;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     display: inline-block;
   }
 
@@ -851,10 +877,9 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 }
 
 .download-row {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   position: relative;
-  /*padding-left: 10px;*/
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .dl-item .os-title {
@@ -980,7 +1005,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 
 /*.pluginPage .container,*/
 #sparkl .container.whiteContainer{
-  padding: 40px 15px 40px;
+  padding: 50px 15px 0px;
 }
 
 .carousel {
@@ -1183,7 +1208,7 @@ ol.carousel-indicators.content{
     text-align: center !important;
   }
 
-  .mondrian .otherVersionDownloadRow p {
+  body .otherVersionDownloadRow p {
     text-align: left;
     margin-top: 10px;
   }
@@ -1229,6 +1254,10 @@ ol.carousel-indicators.content{
 
   .item:not(.pworld){
     padding: 45px 0;
+  }
+
+  .pentahoHome .item:not(.pworld){
+    padding: 45px 0 0 0;
   }
 }
 
@@ -1621,7 +1650,7 @@ old version - keep til the new one is approved
 }*/
 
 .pluginPage .plugin-cards{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .pluginPage .backPage,
@@ -1763,9 +1792,13 @@ p.in-development-description {
 }
 
 .main-plugin-title {
-  margin-top: 24px;
+  margin-top: 0px;
   color: #333;
   line-height: 38px;
+}
+
+.main-plugin-title h3{
+  margin-top: 0;
 }
 
 .main-plugin-content {
@@ -1782,7 +1815,7 @@ p.in-development-description {
 }
 
 .main-plugin-footerNotesLabel{
-  padding-top: 6px;
+  padding-top: 15px;
 }
 
 .main-plugin-content .dl-item .os-title{
@@ -1918,6 +1951,7 @@ p.in-development-description {
 }
 
 .otherVersionDownloadRow p {
+  padding-top: 10px;
   font-size: 12px;
   text-align: right;
   margin: 0;
@@ -1942,7 +1976,7 @@ p.in-development-description {
 .dropdown-menu > li > a:focus, .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-    background: #666;
+    background: #303843;
 }
 
 .pluginPage .carousel-inner{
@@ -2323,8 +2357,9 @@ a.btn-gray:active {
   padding-left: 10px;
 }
 
-.btn {
+body .btn:not(.dropdown-toggle) {
   font-weight: 400 !important;
+  letter-spacing: 0.1em !important;
 }
 
 #getStartedPropose {
@@ -2664,9 +2699,9 @@ a.link-row img {
 }
 
 .separador{
- border-top: 1px solid rgb(207, 207, 207);
- margin-top:10px
-
+ /*border-top: 1px solid rgb(207, 207, 207);*/
+  margin-top:10px;
+  padding-bottom: 10px;
  }
 
 .btn-grey img {
@@ -2701,6 +2736,10 @@ a.link-row{
   border-radius: 0;
   text-shadow: none;
   line-height: 18px;
+}
+
+.btn.btn-header{
+  margin-top: 10px;
 }
 
 .btn.btn-header:hover,
@@ -3070,8 +3109,8 @@ a.link-popup {
 
 .open .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #666;
-  border-color: #666;
+  background-color: #303843;
+  border-color: #303843;
   text-shadow: none;
 }
 
@@ -3129,8 +3168,7 @@ a.link-popup {
 }
 
 .userGroup-container {
-  background: #f1f2f2;
-  border: 1px solid #f1f2f2;
+  background: #f5f5f5;
   height: 210px;
   margin-bottom: 30px;
   display: block;
@@ -3141,8 +3179,7 @@ a.link-popup {
 }
 
 .userGroup-container:hover {
-  background: #e9e9e9;
-  border: 1px solid #cfcfcf;
+  background: #ececec;
 }
 
 a.userGroup-link {
@@ -3366,6 +3403,13 @@ a.small-link-to-pentaho:active {
   }
 
 
+    .col-lg-6 .owl-carousel.gallery-wrapper,
+    .col-md-6 .owl-carousel.gallery-wrapper,
+    .col-sm-6 .owl-carousel.gallery-wrapper,
+    .col-xs-6 .owl-carousel.gallery-wrapper{
+      margin-top: 0px;
+    }
+
 }
 
 @media screen and (min-width:971px) and (max-width:1200px){
@@ -3485,10 +3529,23 @@ a.small-link-to-pentaho:active {
   left: calc(50% - 40px);
 }
 
-:not(.wrapper-with-margin) .owl-pagination{
+.community-slide :not(.wrapper-with-margin) .owl-pagination{
   position: absolute;
   bottom: 10px;
   width: 100%;
+}
+
+
+:not(.wrapper-with-margin) .owl-pagination{
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.owl-carousel:not(.community-slide){
+  padding-bottom: 30px;
+  padding-top: 0;
+  margin-bottom: 20px;
 }
 
 .wrapper-header-bg{
@@ -3506,6 +3563,15 @@ a.small-link-to-pentaho:active {
   }
 }
 
+@media (min-width: 1199px){
+  .helpImprove p{
+    margin-left: -15px;
+  }
+
+  .region-footer-social{
+    margin-right: -15px;
+  }
+}
 
 .mainConceptOption p{
   margin: 0;
@@ -3580,4 +3646,8 @@ a.small-link-to-pentaho:active {
   position: relative;
   font-size: 13px;
   white-space: normal;
+}
+
+.downloadsContainer .panel-body p{
+  margin-bottom: 30px;
 }
