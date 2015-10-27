@@ -19,30 +19,51 @@
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/master.css">
   <link rel="stylesheet" href="../../css/cbpScroller.css">
+  <link rel="stylesheet" href="../../css/owl.carousel.css">
+  <link rel="stylesheet" href="../../css/owl.theme.css">
 
   <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
 <body class="mondrian pluginPage">
 
-  <div class="header-container container"></div>
+  <div class="header-container"></div>
 
   <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
     <div class="site-container cbp-so-section" id="containerHeader">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-lg-7 cbp-so-side cbp-so-side-left">
-          <h2>Mondrian</h2>
-          <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
-          <p class="large-button">
-            <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
-          </p>
-        </div>
-        <div class="col-lg-5 cbp-so-side cbp-so-side-right">
-          <img src="../../img/mondrian-header-dashboard.png" alt="">
-          <p class="small-button-green">
-            <span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section</span>
-          </p>
+        <div class="header-carousel">
+          <div class="slide">
+            <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+              <h2>Mondrian</h2>
+              <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
+              <p class="large-button">
+                <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
+              </p>
+            </div>
+            <div class="col-lg-5 cbp-so-side cbp-so-side-right">
+              <img src="../../img/mondrian-header-dashboard.png" alt="">
+              <p class="small-button-green">
+                <span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section</span>
+              </p>
+            </div>
+          </div>
+          <!-- <div class="slide">
+            <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+              <h2>Mondrian</h2>
+              <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
+              <p class="large-button">
+                <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
+              </p>
+            </div>
+            <div class="col-lg-5 cbp-so-side cbp-so-side-right">
+              <img src="../../img/mondrian-header-dashboard.png" alt="">
+              <p class="small-button-green">
+                <span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section</span>
+              </p>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -168,7 +189,7 @@
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                           <div class="mainConceptOption active" id="presentationLayer">
                             <p>Presentation Layer</p>
                           </div>
@@ -182,7 +203,7 @@
                             <p>Storage Layer</p>
                           </div>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-9">
                           <div class="mainConceptContent active" id="presentationLayerContent">
                             <p>The
                               <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts
@@ -422,7 +443,7 @@
                     <div class="row" id="mainConceptsRow">
                       <div class="col-lg-4">
                         <div class="mainConceptOption active" id="presentationLayer1">
-                          <p>Presentation Layer</p>
+                          Presentation Layer
                         </div>
                         <div class="mainConceptContent active" id="presentationLayer1Content">
                           <p>The
@@ -431,7 +452,7 @@
                         </div>
 
                         <div class="mainConceptOption" id="dimensionalLayer1">
-                          <p>Dimensional Layer</p>
+                          Dimensional Layer
                         </div>
                         <div class="mainConceptContent" id="dimensionalLayer1Content">
                           <p>The
@@ -440,7 +461,7 @@
                         </div>
 
                         <div class="mainConceptOption" id="starLayer1">
-                          <p>Star Layer</p>
+                          Star Layer
                         </div>
                         <div class="mainConceptContent" id="starLayer1Content">
                           <p>The
@@ -448,7 +469,7 @@
                         </div>
 
                         <div class="mainConceptOption" id="storageLayer1">
-                          <p>Storage Layer</p>
+                          Storage Layer
                         </div>
                         <div class="mainConceptContent" id="storageLayer1Content">
                           <p>The
@@ -587,10 +608,10 @@
   </div>
   <div class="helpImproveWrapper">
     <div class="helpImprove">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-7 col-sm-12">
         <p>Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com" class="footer-link">community@pentaho.com</a></p>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-5 col-sm-12">
         <section class="footer-social-wrapper">
           <div class="region region-footer-social">
             <div class="content text-right">
@@ -619,6 +640,7 @@
   <script src="../../js/master.js"></script>
   <script src="../../js/classie.js"></script>
   <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
+  <script src="../../js/vendor/owl.carousel.js"></script>
   <link rel="stylesheet" href="../../css/master.css">
 
   <script type="text/javascript">
@@ -630,6 +652,16 @@
       $('.carousel-indicators.content li').click(function() {
         $('.carousel-indicators.content li').removeClass('clicked');
         $(this).addClass("clicked");
+      });
+
+      $(".header-carousel").owlCarousel({
+        slideSpeed: 600,
+        paginationSpeed: 600,
+        autoPlay: 10000,
+        pagination: true,
+        singleItem: true,
+        mouseDrag: true,
+        touchDrag: true
       });
     });
   </script>

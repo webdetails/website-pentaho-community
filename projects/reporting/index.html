@@ -22,7 +22,7 @@
     </head>
     <body class="pluginPage reporting">
 
-    <div class="header-container container"></div>
+    <div class="header-container"></div>
 
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
       <div class="site-container cbp-so-section" id="containerHeader">
@@ -142,12 +142,12 @@
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                           <div class="mainConceptOption active" id="presentationLayer">Report Designer</div>
                           <div class="mainConceptOption" id="dimensionalLayer">Reporting Engine</div>
                           <div class="mainConceptOption" id="starLayer">Reporting SDK</div>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-9">
                           <div class="mainConceptContent active" id="presentationLayerContent">The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data-sources used.</div>
                           <div class="mainConceptContent" id="dimensionalLayerContent">The <b>Reporting Engine</b> is an embeddable JAVA reporting library that is used by the report designer to generate reports. The library can be used in both in server-side and client side scenarios. Originally known as JFreeReport, it was designed to follow the approach of banded reporting with absolutely positioned elements.</div>
                           <div class="mainConceptContent" id="starLayerContent">The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.</div>
@@ -284,26 +284,36 @@
                       <div class="row secondRow">
 
                         <div class="col-lg-12">
+                          <div class="row">
+                            <div class="col-xs-12">
                               <h3>Frequently Asked Questions</h3>
-
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>What does Pentaho use for its reporting engine?</h4>
                               <p>Reporting uses the JFreeReport engine. The JFreeReport project is owned and sponsored by Pentaho.</p>
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>What types of companies can use Reporting?</h4>
                               <p>The Reporting Project was built to serve production, operational and end-user reporting needs.</p>
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>What types of users can use Reporting?</h4>
                               <p>Anyone who can access a browser, email, or read a printout.</p>
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>Can I use Reporting out-of-the-box?</h4>
                               <p>Yes. It was designed to be used as an out-of-the-box reporting application and as a reporting component to be used in other applications. Some companies will simply want to download the project in a standalone manner and start building, scheduling and distributing reports, while others will want to embed and integrate the project into their own applications, using exclusively the components they need and customizing it to fit their application.</p>
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>Can I embed Reporting into my applications?</h4>
                               <p>Absolutely. The first step would be to create a report definition and add it to a solution definition (everything revolves around a "solution" in Pentaho). Then, the server-side components make that report available with the additional features of auditing, web services and so-on. You can then link to the solution from your own JSP, execute the report through web services, embed the report within your portal, or others.</p>
-
+                            </div>
+                            <div class="col-xs-12">
                               <h4>Can I customize how reports look?</h4>
                               <p style="margin-bottom:30px;">Yes. Reporting styling is flexible, and allows the report designer to choose the granularity at which they want to manipulate the look and feel, right down to font styling on individual characters. Of course images and logos can be added to reports.</p>
+                            </div>
+                          </div>
+
 
                         </div>
                       </div>
@@ -335,13 +345,25 @@
                       <div class="row" id="mainConceptsRow">
                         <div class="col-lg-4">
                           <div class="mainConceptOption active" id="presentationLayer1">Report Designer</div>
-                          <div class="mainConceptContent active" id="presentationLayer1Content">The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data-sources used.</div>
+                          <div class="mainConceptContent active" id="presentationLayer1Content">
+                            <p>
+                            The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data-sources used.
+                            </p>
+                          </div>
 
                           <div class="mainConceptOption" id="dimensionalLayer1">Reporting Engine</div>
-                          <div class="mainConceptContent" id="dimensionalLayer1Content">The <b>Reporting Engine</b> is an embeddable JAVA reporting library that is used by the report designer to generate reports. The library can be used in both in server-side and client side scenarios. Originally known as JFreeReport, it was designed to follow the approach of banded reporting with absolutely positioned elements.</div>
+                          <div class="mainConceptContent" id="dimensionalLayer1Content">
+                            <p>
+                            The <b>Reporting Engine</b> is an embeddable JAVA reporting library that is used by the report designer to generate reports. The library can be used in both in server-side and client side scenarios. Originally known as JFreeReport, it was designed to follow the approach of banded reporting with absolutely positioned elements.
+                            </p>
+                          </div>
 
                           <div class="mainConceptOption" id="starLayer1">Reporting SDK</div>
-                          <div class="mainConceptContent" id="starLayer1Content">The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.</div>
+                          <div class="mainConceptContent" id="starLayer1Content">
+                            <p>
+                            The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -465,10 +487,10 @@
       </div>
       <div class="helpImproveWrapper">
         <div class="helpImprove">
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-7 col-sm-12">
             <p>Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com" class="footer-link">community@pentaho.com</a></p>
           </div>
-          <div class="col-md-6 col-sm-12">
+          <div class="col-md-5 col-sm-12">
             <section class="footer-social-wrapper">
               <div class="region region-footer-social">
                   <div class="content text-right">
@@ -509,7 +531,7 @@
                   autoPlay: 10000,
                   pagination: true,
                   singleItem: true,
-                  mouseDrag: false,
+                  mouseDrag: true,
                   touchDrag: true
                 });
 

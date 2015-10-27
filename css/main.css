@@ -528,13 +528,6 @@ header.site-header a.button:hover{
   padding-top: 30px;
 }
 
-.col-lg-6 .owl-carousel.gallery-wrapper,
-.col-md-6 .owl-carousel.gallery-wrapper,
-.col-sm-6 .owl-carousel.gallery-wrapper,
-.col-xs-6 .owl-carousel.gallery-wrapper{
-  margin-top: -30px;
-}
-
 #hiddenMobile ul + .gallery-wrapper.owl-carousel,
 #hiddenMobile p + .gallery-wrapper.owl-carousel,
 #hiddenMobile h3 + .gallery-wrapper.owl-carousel,
@@ -805,7 +798,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
   display: block;
   width: 100%;
   outline: 0;
-  line-height: 40px;
+  line-height: 46px;
 
   position: relative;
   font-weight: 400;
@@ -1213,6 +1206,9 @@ ol.carousel-indicators.content{
     margin-top: 10px;
   }
 
+  .community-slide .right-side-slide{
+    padding-bottom: 40px;
+  }
 }
 
 
@@ -1257,8 +1253,9 @@ ol.carousel-indicators.content{
   }
 
   .pentahoHome .item:not(.pworld){
-    padding: 45px 0 0 0;
+    padding: 45px 0 45px 0;
   }
+
 }
 
 
@@ -1886,13 +1883,13 @@ p.in-development-description {
 }
 
 .mainConceptOption {
-  background: #f5f5f5;
-  text-align: center;
+  background: #eeeeee;
+  text-align: left;
   margin: 4px 0px;
-  padding: 10px 0;
-  color: #898989;
+  padding: 10px 20px;
+  color: #616161;
   position: relative;
-  /*margin-left: 12px;*/
+  /* margin-left: 12px; */
 }
 
 .mainConceptOption:hover {
@@ -1932,6 +1929,10 @@ p.in-development-description {
 
 .mainConceptContent.active {
   display: block;
+}
+
+#showMobile .mainConceptContent.active {
+  padding: 20px 0;
 }
 
 .mainConceptContent .row {
@@ -3305,7 +3306,11 @@ a.small-link-to-pentaho:active {
   }
 
   .helpImproveWrapper{
-    padding-bottom: 40px;
+    padding-bottom: 60px;
+  }
+
+  .footer-social-wrapper{
+    margin-bottom: 20px
   }
 
   .helpImprove p,
@@ -3318,7 +3323,7 @@ a.small-link-to-pentaho:active {
 
 .left-side-slide{
   padding-left: 100px;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 @media (max-width: 767px) {
@@ -3571,6 +3576,14 @@ a.small-link-to-pentaho:active {
   .region-footer-social{
     margin-right: -15px;
   }
+
+  .col-lg-6 .owl-carousel,
+  .col-md-6 .owl-carousel,
+  .col-sm-6 .owl-carousel,
+  .col-xs-6 .owl-carousel{
+    margin-top: -30px;
+  }
+
 }
 
 .mainConceptOption p{
@@ -3650,4 +3663,9 @@ a.small-link-to-pentaho:active {
 
 .downloadsContainer .panel-body p{
   margin-bottom: 30px;
+}
+
+
+h4 ~ p{
+  margin-bottom: 15px;
 }

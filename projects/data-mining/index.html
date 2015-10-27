@@ -25,7 +25,7 @@
 
 <body class="pluginPage">
 
-  <div class="header-container container"></div>
+  <div class="header-container"></div>
 
   <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
     <div class="site-container cbp-so-section" id="containerHeader">
@@ -151,7 +151,7 @@
                       </div>
                     </div>
                     <div class="row" id="mainConceptsRow">
-                      <div class="col-lg-4">
+                      <div class="col-lg-3">
                         <div class="mainConceptOption active" id="preprocessPanel">Preprocess Panel</div>
                         <div class="mainConceptOption" id="classifyPanel">Classify Panel</div>
                         <div class="mainConceptOption" id="associatePanel">Associate Panel</div>
@@ -159,7 +159,7 @@
                         <div class="mainConceptOption" id="selectAttributesPanel">Select Attributes Panel</div>
                         <div class="mainConceptOption" id="visualizePanel">Visualize Panel</div>
                       </div>
-                      <div class="col-lg-8">
+                      <div class="col-lg-9">
                         <div class="mainConceptContent active" id="preprocessPanelContent">The <b>Preprocess Panel</b> has facilities for importing data from a database, a CSV file, or other data file types, and for preprocessing this data using a so-called filtering algorithm. These filters can be used to transform
                           the data (e.g., turning numeric attributes into discrete ones) and make it possible to delete instances and attributes according to specific criteria.</div>
                         <div class="mainConceptContent" id="classifyPanelContent">The <b>Classify Panel</b> enables the user to apply classification and regression algorithms (indiscriminately called classifiers in Weka) allowing you to the resulting data set, to estimate the accuracy of the resulting predictive
@@ -176,15 +176,14 @@
                       </div>
                     </div>
                     <div class="row" id="mainConceptsRow2" style="margin-top: 0px;">
-                      <div class="col-lg-4">
+                      <div class="col-lg-3">
                         <div class="mainConceptOption active" id="wekaScoringPlugin">Weka Scoring Plugin</div>
                         <div class="mainConceptOption" id="ARFFOutputPlugin">ARFF Output Plugin</div>
                       </div>
-                      <div class="col-lg-8">
+                      <div class="col-lg-9">
                         <div class="mainConceptContent active" id="wekaScoringPluginContent">
                           <div class="row">
-                            <div class="col-lg-12">The
-                              <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
+                            <div class="col-lg-12">The <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
                               row of data. The Weka scoring plugin can handle all types of classifiers and clusterers that can be constructed in Weka.
                               <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+Weka+Scoring+Plugin" target="_blank">here</a>.</div>
                             <div class="col-lg-6"></div>
@@ -399,19 +398,30 @@
                     <div class="row" id="mainConceptsRow">
                       <div class="col-lg-4">
                         <div class="mainConceptOption active" id="preprocessPanel">Preprocess Panel</div>
-                        <div class="mainConceptContent active" id="preprocessPanelContent">The <b>Preprocess Panel</b> has facilities for importing data from a database, a CSV file, or other data file types, and for preprocessing this data using a so-called filtering algorithm. These filters can be used to transform
-                          the data (e.g., turning numeric attributes into discrete ones) and make it possible to delete instances and attributes according to specific criteria.</div>
+                        <div class="mainConceptContent active" id="preprocessPanelContent">
+                          <p>The <b>Preprocess Panel</b> has facilities for importing data from a database, a CSV file, or other data file types, and for preprocessing this data using a so-called filtering algorithm. These filters can be used to transform
+                          the data (e.g., turning numeric attributes into discrete ones) and make it possible to delete instances and attributes according to specific criteria. </p>
+                        </div>
                         <div class="mainConceptOption" id="classifyPanel">Classify Panel</div>
-                        <div class="mainConceptContent" id="classifyPanelContent">The <b>Classify Panel</b> enables the user to apply classification and regression algorithms (indiscriminately called classifiers in Weka) allowing you to the resulting data set, to estimate the accuracy of the resulting predictive
-                          model, and to visualize erroneous predictions, ROC curves, etc., or the model itself (if the model is amenable to visualization like, e.g., a decision tree).</div>
+                        <div class="mainConceptContent" id="classifyPanelContent">
+                          <p>The <b>Classify Panel</b> enables the user to apply classification and regression algorithms (indiscriminately called classifiers in Weka) allowing you to the resulting data set, to estimate the accuracy of the resulting predictive
+                          model, and to visualize erroneous predictions, ROC curves, etc., or the model itself (if the model is amenable to visualization like, e.g., a decision tree). </p>
+                        </div>
                         <div class="mainConceptOption" id="associatePanel">Associate Panel</div>
-                        <div class="mainConceptContent" id="associatePanelContent">The <b>Associate Panel</b> provides access to association rule learners that attempt to identify all important interrelationships between attributes in the data.</div>
+                        <div class="mainConceptContent" id="associatePanelContent">
+                          <p>The <b>Associate Panel</b> provides access to association rule learners that attempt to identify all important interrelationships between attributes in the data. </p>
+                          </div>
                         <div class="mainConceptOption" id="clusterPanel">Cluster Panel</div>
-                        <div class="mainConceptContent" id="clusterPanelContent">The <b>Cluster Panel</b> gives access to the clustering techniques in Weka, e.g., the simple k-means algorithm. There is also an implementation of the expectation maximization algorithm for learning a mixture of normal distributions.</div>
+                        <div class="mainConceptContent" id="clusterPanelContent">
+                          <p>The <b>Cluster Panel</b> gives access to the clustering techniques in Weka, e.g., the simple k-means algorithm. There is also an implementation of the expectation maximization algorithm for learning a mixture of normal distributions. </p>
+                          </div>
                         <div class="mainConceptOption" id="selectAttributesPanel">Select Attributes Panel</div>
-                        <div class="mainConceptContent" id="selectAttributesPanelContent">The <b>Select Attributes Panel</b> provides algorithms for identifying the most predictive attributes in a data set.</div>
+                        <div class="mainConceptContent" id="selectAttributesPanelContent">
+                          <p>The <b>Select Attributes Panel</b> provides algorithms for identifying the most predictive attributes in a data set.</div>
                         <div class="mainConceptOption" id="visualizePanel">Visualize Panel</div>
-                        <div class="mainConceptContent" id="visualizePanelContent">The <b>Visualize Panel</b> shows a scatter plot matrix, where individual scatter plots can be selected, enlarged and analyzed using various selection operators.</div>
+                        <div class="mainConceptContent" id="visualizePanelContent">
+                          <p>The <b>Visualize Panel</b> shows a scatter plot matrix, where individual scatter plots can be selected, enlarged and analyzed using various selection operators. </p>
+                          </div>
                       </div>
                     </div>
                     <div class="row secondRow">
@@ -422,15 +432,19 @@
                     <div class="row" id="mainConceptsRow2" style="margin-top: 0px;">
                       <div class="col-lg-12">
                         <div class="mainConceptOption active" id="wekaScoringPlugin">Weka Scoring Plugin</div>
-                        <div class="mainConceptContent active" id="wekaScoringPluginContent">The
-                          <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
-                          row of data. The Weka scoring plugin can handle all types of classifiers and clusterers that can be constructed in Weka.
-                          <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+Weka+Scoring+Plugin" target="_blank">here</a>.</div>
+                        <div class="mainConceptContent active" id="wekaScoringPluginContent">
+                          <p>
+                            The <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
+                            row of data. The Weka scoring plugin can handle all types of classifiers and clusterers that can be constructed in Weka.
+                            <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+Weka+Scoring+Plugin" target="_blank">here</a>.</div>
+                          </p>
                         <div class="mainConceptOption" id="ARFFOutputPlugin">ARFF Output Plugin</div>
-                        <div class="mainConceptContent" id="ARFFOutputPluginContent">The
-                          <strong>ARFF Output Plugin</strong> is a tool that allows you to output data from Kettle to a file in WEKA's Attribute Relation File Format (ARFF). ARFF format is essentially the same as comma separated values (CSV) format, except with
-                          the addition of meta data on the attributes (fields) in the form of a header.
-                          <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+ARFF+Output+Plugin" target="_blank">here</a>.</div>
+                        <div class="mainConceptContent" id="ARFFOutputPluginContent">
+                          <p>
+                            The <strong>ARFF Output Plugin</strong> is a tool that allows you to output data from Kettle to a file in WEKA's Attribute Relation File Format (ARFF). ARFF format is essentially the same as comma separated values (CSV) format, except with
+                            the addition of meta data on the attributes (fields) in the form of a header.
+                            <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+ARFF+Output+Plugin" target="_blank">here</a>.</div>
+                          </p>
                       </div>
                     </div>
                     <div class="row secondRow">
@@ -579,10 +593,10 @@
     </div>
     <div class="helpImproveWrapper">
       <div class="helpImprove">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-7 col-sm-12">
           <p>Help us improve this website. Send your feedback to <a href="mailto:community@pentaho.com" class="footer-link">community@pentaho.com</a></p>
         </div>
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-5 col-sm-12">
           <section class="footer-social-wrapper">
             <div class="region region-footer-social">
                 <div class="content text-right">
