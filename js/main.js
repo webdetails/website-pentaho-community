@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var current = $(this);
 		var link = $(this).attr('src');
 		var currentLink = $('#image-set-display-1').attr('src');
-		
+
 		if(link != currentLink) {
 			current.closest('.screen-previewer').find('.preview-block').removeClass('active');
 			current.parent().addClass('active');
@@ -14,7 +14,7 @@ $(document).ready(function(){
 		var current = $(this);
 		var link = $(this).attr('src');
 		var currentLink = $('#image-set-display-2').attr('src');
-		
+
 		if(link != currentLink) {
 			current.closest('.screen-previewer').find('.preview-block').removeClass('active');
 			current.parent().addClass('active');
@@ -54,13 +54,13 @@ $(document).ready(function(){
 	$("a.navbar-brand").attr("target", "_blank");
 });
 
-function removeOpen() {		
+function removeOpen() {
 	if((($('.dropdown-menu').is(":hover") == false) && ($('.dropdown').is(":hover") == false)) && ($(window).width() > 920)) {
 		$('.dropdown').removeClass('open');
 	}
 }
 
-function filterItems(input) {		
+function filterItems(input) {
 	$('.dev-item').hide();
 	searchingTitle = input.toUpperCase();
 
