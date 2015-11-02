@@ -130,7 +130,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6 col-xs-12 submit-item text-center">
                       <a >
-                        <div class="marketplaceLinks">
+                        <div class="marketplaceLinks inactive">
                           <div class="row">
                             <div class="col-sm-12 col-xs-4">
                               <div class="marketPlace-card-icon join"></div>
@@ -186,11 +186,11 @@
           </div>
           <div class="col-lg-8"></div>
         </div>
-        <div class="row secondRow" id="plugin-downloads">
+        <div class="row" id="plugin-downloads">
           <div class="col-lg-12 main-plugin-download">
             <div class="row main-plugin-header">
               <div class="col-lg-12 main-plugin-title">
-                <h3 style="margin-top: 30px;">Marketplace</h3>
+                <h3>Marketplace</h3>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@
             <p>If you have Pentaho 6.0 <strong>Enterprise Edition</strong> and go to <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace Public Site</a> to try to download the Marketplace plugin, you'll see it's not there.</p>
             <p>The reason for that? It's an OSGi plugin and you already have it, but it comes disabled by default. Here are the instructions on how to enable it:</p>
             <ol>
-              <li>Edit the file <pre>pentaho-solution/system/karaf/etc/org.apache.kara.features.cfg</pre></li>
+              <li>Edit the file <pre>pentaho-solutions/system/karaf/etc/org.apache.karaf.features.cfg</pre></li>
               <li>Find the key "featuresBoot" and add the feature "pentaho-marketplace". That line will then be something like:<br>
               <pre>featuresBoot=config,management,kar,cxf,camel,camel-blueprint,camel-stream,pentaho-server,mongolap,pentaho-metaverse,pdi-dataservice-client,pentaho-yarn-obf,pentaho-marketplace</pre></li>
             </ol>
@@ -220,19 +220,19 @@
               </div>
             </div>
             <div class="row" id="downloadList">
-              <div class="col-sm-4 col-xs-6">
+              <div class="col-sm-4 col-xs-12">
                 <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" target="_blank">Pentaho 5.4 <img src="../../img/download-icon.png"></a></p>
               </div>
-              <div class="col-sm-4 col-xs-6">
+              <div class="col-sm-4 col-xs-12">
                 <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" target="_blank">Pentaho 5.3 <img src="../../img/download-icon.png"></a></p>
               </div>
-              <div class="col-sm-4 col-xs-6">
+              <div class="col-sm-4 col-xs-12">
                 <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" target="_blank">Pentaho 5.2 <img src="../../img/download-icon.png"></a></p>
               </div>
-              <div class="col-sm-4 col-xs-6">
+              <div class="col-sm-4 col-xs-12">
                 <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" target="_blank">Pentaho 5.0 / 5.1 <img src="../../img/download-icon.png"></a></p>
               </div>
-              <div class="col-sm-4 col-xs-6">
+              <div class="col-sm-4 col-xs-12">
                 <p><a class="btn btn-default btn-green" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" target="_blank">Pentaho 4.8 <img src="../../img/download-icon.png"></a></p>
               </div>
             </div>

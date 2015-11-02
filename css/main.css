@@ -1029,7 +1029,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -webkit-transition: 0.6s ease-in-out left;
           transition: 0.6s ease-in-out left;
 
-  padding: 40px 45px;
+  /*padding: 40px 45px;*/
 }
 
 .carousel-inner > .active,
@@ -1222,6 +1222,23 @@ ol.carousel-indicators.content{
   .pluginPage .carousel .marketplaceLinks{
     padding-bottom: 0px;
   }
+
+  .panel h3{
+    margin-top: 30px;
+  }
+
+  .panel h3:first-child{
+    margin-top: 15px;
+  }
+
+  .user-groups .site-container.whiteContainer{
+    padding-top: 10px;
+  }
+
+  .user-groups .userGroups-list #myCarousel.carousel{
+    margin-top: 40px;
+  }
+
 }
 
 
@@ -1558,7 +1575,8 @@ old version - keep til the new one is approved
   font-weight: 500;
 }
 
-.pluginPage #containerHeader {
+.pluginPage #containerHeader,
+.user-groups #containerHeader {
   margin-bottom: 35px;
   margin-top: 40px;
 }
@@ -1669,8 +1687,8 @@ old version - keep til the new one is approved
 }
 
 .pluginPage.plugins .site-container.whiteContainer{
-  padding-left: 12px;
-  padding-right: 12px;
+  /*padding-left: 12px;
+  padding-right: 12px;*/
 }
 
 #pdi5-info {
@@ -1808,16 +1826,16 @@ p.in-development-description {
 }
 
 .main-plugin-title h3{
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .main-plugin-content {
-  /*padding-top: 20px;*/
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .plugins .main-plugin-content {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
 }
 
 .main-plugin-footerNotes {
@@ -2122,6 +2140,10 @@ p.in-development-description {
     color: #FFF;
   }
 
+  .pluginPage .marketplaceLinks.inactive:hover{
+    background: #f5f5f5;
+  }
+
   .pluginPage .marketplaceLinks p{
     color: #616161;
     text-decoration: none;
@@ -2129,6 +2151,10 @@ p.in-development-description {
 
   .pluginPage .marketplaceLinks:hover p{
     color: #FFF;
+  }
+
+  .pluginPage .marketplaceLinks.inactive:hover p{
+    color: #616161;
   }
 
   .pluginPage .marketplaceLinks h3,
@@ -2142,6 +2168,11 @@ p.in-development-description {
     color: #FFF;
   }
 
+  .pluginPage .marketplaceLinks.inactive:hover h3{
+    color: #34913D;
+  }
+
+
   .marketplaceLinks:hover .marketPlace-card-icon.dev{
     background-position: 0 bottom;
   }
@@ -2149,7 +2180,7 @@ p.in-development-description {
     background-position: -103px bottom;
   }
   .marketplaceLinks:hover .marketPlace-card-icon.join{
-    background-position: -203px bottom;
+    /*background-position: -203px bottom;*/
   }
   .marketplaceLinks:hover .marketPlace-card-icon.support{
     background-position: -300px bottom;
@@ -3547,6 +3578,20 @@ a.small-link-to-pentaho:active {
     padding-left: 40px;
   }
 
+
+  body.pluginPage #containerHeader,
+  body.user-groups #containerHeader {
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  .main-plugin-title h3{
+    margin-top: 20px;
+  }
+
+  .downloadsContainer .panel-body p{
+    margin-bottom: 10px !important;
+  }
 }
 
 
@@ -3746,10 +3791,16 @@ a.small-link-to-pentaho:active {
   white-space: normal;
 }
 
+
+.downloadsContainer .panel-body .row:last-child .col-sm-4 p,
+.downloadsContainer .panel-body .row:last-child .col-sm-4:last-child p
+{
+  margin-bottom: 10px;
+}
+
 .downloadsContainer .panel-body p{
   margin-bottom: 30px;
 }
-
 
 h4 ~ p{
   margin-bottom: 15px;
