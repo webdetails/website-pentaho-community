@@ -1213,6 +1213,15 @@ ol.carousel-indicators.content{
   .submit-item > a > div{
     min-height: inherit !important;
   }
+
+  .plugins .marketPlace-card-icon {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .pluginPage .carousel .marketplaceLinks{
+    padding-bottom: 0px;
+  }
 }
 
 
@@ -3251,7 +3260,12 @@ a.link-popup {
 }
 
 .userGroup-container:hover {
-  background: #ececec;
+  background: #34913D;
+}
+
+.userGroup-container:hover .userGroup-name,
+.userGroup-container:hover span{
+  color: #FFFFFF;
 }
 
 a.userGroup-link {
