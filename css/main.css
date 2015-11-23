@@ -43,7 +43,7 @@ body {
   line-height: none;
   color: #616161;
   min-width: 320px;
-  overflow-x: hidden;
+  
 }
 
 .container small,
@@ -785,7 +785,7 @@ header.site-header a.button:hover{
   }
 
   .secondRow {
-    margin-top: 0px;
+    margin-top: 30px;
   }
 }
 
@@ -972,14 +972,18 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   }
 
   #showMobile .secondRow .col-lg-4 {
-      margin-top: 40px;
+      /*margin-top: 40px;*/
   }
 
-  .kettle .container.whiteContainer{
+  #showMobile .panel-body.contribute-body .row .col-lg-12 h3.inside-title{
+    margin-top: 30px;
+  }
+
+/*  .kettle .container.whiteContainer{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 40px;
-  }
+  }*/
 
 }
 
@@ -995,6 +999,21 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
     padding-right: 30px;
   }
 }
+
+
+.pluginPage .row.secondRow.faq{
+  margin-top: 30px;
+}
+
+.pluginPage .row .col-lg-12 + .row .col-xs-12 h4{
+  margin-bottom: 0;
+}
+
+.sparkl #showMobile .row.text-center.newLanguage.background-grey{
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 
 /*.pluginPage .container,*/
 #sparkl .container.whiteContainer{
@@ -1221,6 +1240,7 @@ ol.carousel-indicators.content{
 
   .pluginPage .carousel .marketplaceLinks{
     padding-bottom: 0px;
+    text-align: left;
   }
 
   .panel h3{
@@ -1960,6 +1980,7 @@ p.in-development-description {
 
 .mainConceptContent.active {
   display: block;
+  padding: 10px 20px;
 }
 
 #showMobile .mainConceptContent.active {
@@ -2282,8 +2303,8 @@ a.btn-gray:active {
 }
 
 .pluginPage .newLanguage{
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .currentlyTranslated b small {
@@ -3407,6 +3428,10 @@ a.small-link-to-pentaho:active {
     height: auto;
   }
 
+  .user-groups .carousel-inner.pluginPage .ng-scope:not(:last-child) .userGroup-container{
+    margin-bottom: 20px;
+  }
+
   a.userGroup-link {
     height: auto;
   }
@@ -3422,7 +3447,7 @@ a.small-link-to-pentaho:active {
   }
 
   .helpImproveWrapper{
-    padding-bottom: 60px;
+    padding-bottom: 35px;
   }
 
   .footer-social-wrapper{
@@ -3513,14 +3538,13 @@ a.small-link-to-pentaho:active {
   }
 
   .project-maturity .site-container.whiteContainer,
-  .mondrian .site-container.whiteContainer,
-  .mondrian .lightContainerBack{
+  .mondrian .site-container.whiteContainer{
     padding-left: 15px;
     padding-right: 15px;
   }
 
   .mondrian .site-container.whiteContainer{
-    padding-bottom: 40px;
+    padding: 20px 15px 20px;
   }
 
 
@@ -3530,6 +3554,10 @@ a.small-link-to-pentaho:active {
     .col-xs-6 .owl-carousel.gallery-wrapper{
       margin-top: 0px;
     }
+
+  .item:not(.pworld){
+    padding: 45px 12px;
+  }
 
 }
 

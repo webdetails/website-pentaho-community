@@ -72,7 +72,7 @@
 	});
 
 	$('.main-nav ul.menu li').click(function() {
-		$('.main-nav ul.menu li').removeClass('open')
+		$('.main-nav ul.menu li').not(this).removeClass('open');
 		$( this ).toggleClass('open');
 	});
 </script>
