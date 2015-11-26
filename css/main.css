@@ -137,6 +137,10 @@ p {
   font-size: 16px;
 }
 
+.owl-item p{
+  font-size: 16px !important;
+}
+
 b, strong {
   font-weight: 600;
 }
@@ -1218,6 +1222,11 @@ ol.carousel-indicators.content{
 
   .pentahoHome .item.community-slide{
     text-align: center !important;
+    padding-top: 0;
+  }
+
+  .pentahoHome .item.community-slide h1{
+    margin-top: 0;
   }
 
   body .otherVersionDownloadRow p {
@@ -1226,7 +1235,7 @@ ol.carousel-indicators.content{
   }
 
   .community-slide .right-side-slide{
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
   }
 
   .submit-item > a > div{
@@ -1542,7 +1551,7 @@ old version - keep til the new one is approved
 
 .footer-social-item{
   display: inline-block;
-  margin-left: 7px;
+  margin-left: 10px;
   background-size: auto 50%;
   background-color: #999999;
   border-radius: 50%;
@@ -1662,6 +1671,8 @@ old version - keep til the new one is approved
 .pluginPage #plugin-description,
 .pluginPage .plugin-contribute {
   padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .pluginPage #new-features .first-feature-row .feature-title {
@@ -1670,6 +1681,7 @@ old version - keep til the new one is approved
 
 .pluginPage #new-features .feature-title {
   color: #39A34A;
+  
   font-weight: 300;
   border-bottom: 1px solid #D7D8DB;
   position: relative;
@@ -2658,6 +2670,43 @@ code {
   color: #34913D;
   font-weight: 300;
 }
+
+#showMobile .project-maturity-classification-item-title{
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1024px){
+  p.maturity-description{
+    padding-top: 38px;
+    text-align: left;
+  }
+
+  .lane-num{
+    float: left;
+    margin-left: 15px;
+    min-width: 170px;
+  }
+
+  .lane-desc{
+    margin-top: 24px;
+  }
+
+  .lane-desc h4{
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .lane-desc{
+    padding-bottom: 15px;
+  }
+
+  .lane-desc h4{
+    margin: 0px;
+  }
+}
+
 
 .project-maturity-classification-item-title b {
   font-weight: 600;
