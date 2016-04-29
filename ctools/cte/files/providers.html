@@ -1,0 +1,18 @@
+<h3 class="mainTitle">Providers</h3>
+
+<p>CTE is pluggable, you can define multiple providers, that's the list that appears in the accordion on the left of the UI;
+<br>Currently CTE supports 4 providers, as defined in the file <code>system/cte/plugin.spring.xml</code>, but anyone can develop a new provider and a new top level choice will appear in CTE.</p>
+
+<h4>Content repository provider</h4>
+<p>This provider allows users to browser and edit files that exist on the server's content repository.</p>
+
+<h4>Mondrian schema provider</h4>
+<p>Allows users to directly edit mondrian schema files. As soon as the schema changes, the cube will be refreshed and you can immediately see the results.
+<br>Please note that while ACE shows great feedback on your xml structure, it won't guarantee that it's a valid mondrian schema, so consider that and keep an eye on the logs.</p>
+
+<h4>Generic file system provider</h4>
+<p>A generic file system provider, this allows users to edit files present in the system folder;
+<br>By default, we have an instantiation of that provider for CTE plugin.</p>
+
+<h4>App Builder file system provider</h4>
+<p>Allows users to edit the resources in App Builder apps (except App Builder itself, for security purposes) - after all, App Builder is amazing, we all know that :)</p>

@@ -1,0 +1,37 @@
+<h3 class="mainTitle">Deploys</h3>
+
+<p> One of the best features about CBF is the ability to deploy a full configured server (or only the solution) to the production server. Usually, every developer wants to work locally on his sandbox and at a point in time transfer the work to test and production servers. </p>
+<p> CBF makes this task easy by using rsync over SSH to make the deploy. Use this feature carefully and at your own risk. </p>
+
+<p class="title"> Requirements </p>
+<ul>
+	<li>SSH access to the server (using an account with proper permissions);</li>
+	<li>Environment file describing the deploy properties.</li>
+</ul>
+
+<p class="title"> Build-server.properties </p>
+<p> Building an environment file for deploy is very similar to the one used for local sandbox but with some important differences: </p>
+<ul>
+	<li><code>deploy.mode</code> - Currently, the only supported value is rsync;</li>
+	<li><code>solution.deploy.path</code> - The solution path on the remote server. <code>solution.path</code> is still the solution directory in the local machine;</li>
+	<li><code>deploy.args</code> - The arguments to be passed to rsync. Typical arguments include:<br><br><pre>-avz --exclude '.svn/' --exclude '*.log' --exclude 'work/' --exclude 'temp_user/' --exclude 'temp/' --exclude 'tmp/' --delete</pre></li>
+	<li><code>deploy.dest.server</code> - Place where to copy the server to;</li>
+	<li><code>deploy.dest.solution</code> - Place where to copy the solution to.</li>
+</ul>
+
+<span class="example">DEPLOY FILE SAMPLE</span>
+<pre>javac.path = /usr/lib/java/bin/javac
+tomcat.path = /home/pedro/tex/pentaho/apache-tomcat-6.0.29/
+pentaho.dir = pentaho-3.8
+solution.path = /home/pedro/tex/pentaho/project-bare38/solution
+solution.deploy.path = /home/webdetails/pentaho/pentaho-solution
+######################################
+## DEPLOY OPTIONS
+######################################
+deploy.mode = rsync
+deploy.args = -avz --exclude '.svn/' --exclude '*.log' --exclude 'work/' --exclude 'temp_user/' --exclude 'temp/'
+--exclude 'tmp/' --delete
+deploy.dest.server = webdetails@myserver:pentaho/pentaho-server/
+deploy.dest.solution = webdetails@myserver:pentaho/pentaho-solution/</pre>
+
+<p>One important thing to note in this example is the <code>'--delete'</code> option in <code>deploy.args</code>. If this option is in place, every file that exists in the remote location will be wiped. While very useful if you want to make sure the version you deploy is exactly the same as the one you work with locally, it can delete unwanted information from the remote server, like saved content from users. </p>

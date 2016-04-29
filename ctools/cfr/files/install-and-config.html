@@ -1,0 +1,25 @@
+<h3 class="mainTitle">Install &amp; Config</h3>
+<p>This is a Pentaho plugin, so you can install it as as you would do it with any other plugin (unzip the contents into your pentaho-solutions/system folder). It will soon be available to download and install from within the <b>Pentaho Marketplace</b>.</p>
+
+<h4>Build and install the plugin</h4>
+<p>Here are the instructions if you want to manually build the plugin:</p>
+<ul>
+	<li>Clone public Git repository available <a class="spacialink" href="https://github.com/webdetails/cfr">here</a>;</li>
+	<li>To build the plugin, you can run use the command line: <code>ant dist-plugin</code>. This will create a <i>.zip</i> file inside the <code>/dist</code> folder;</li>
+	<li>Unzip the file and copy the entire CFR folder to your <code>system</code> folder, located inside your <code>pentaho-solutions</code> folder.</li>
+</ul>
+
+<h4>Settings</h4>
+<p>Inside your plugin folder there is a file named <code>cfr.spring.xml</code> where you can define how the plugin behaves.</p>
+<p>Files and folders are by default stored in <code>system/.cfr</code>. You can also configure some other root folder by editing the configuration file <code>cfr.spring.xml</code> and adding an attribute for your file repository with the full name of the starting folder.</p>
+
+<span class="example">CHANGE STARTING FOLDER</span>
+<pre>&lt;property name="basePath"&gt;&lt;value&gt;path/to/cfr/uploads&lt;/value&gt;&lt;/property&gt;</pre>
+
+<p>You can define another class, changing the value of <code>repositoryClass</code>. Right now, you can choose <code>pt.webdetails.cfr.repository.PentahoRepositoryFileRepository</code> for the Pentaho Solution Repository or <code>pt.webdetails.cfr.repository.DefaultFileRepository</code> for a file system based repository.</p>
+<p>You can roll up your own version of a repository or develop a wrapper to whatever you're using to manage your files. Just implement the <code>pt.webdetails.cfr.repository.IFileRepository</code>, drop the resulting class or jar in the <code>system/cfr/lib</code> folder and reference the class from <code>cfr.spring.xml</code>.</p>
+
+<span class="example">DEFINE REPOSITORY CLASS</span>
+<pre>&lt;repositoryClass&gt;
+    pt.webdetails.cfr.repository.IFileRepository
+&lt;/repositoryClass&gt;</pre>

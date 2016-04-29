@@ -1,0 +1,71 @@
+<h3 class="mainTitle">Targets</h3>
+
+<p>There's an easy way to check which targets are supported by CBF: </p>
+
+<span class="example">VERIFY TARGETS COMMAND</span>
+<pre>$ ant -Dproject=bare38 -Denv=pedro -p</pre>
+
+
+<span class="example">RESPONSE</span>
+<pre>Buildfile: /Users/pedro/tex/pentaho/build.xml
+     [echo] --------------------------------------------------------------
+     [echo] --------------------------------------------------------------
+     [echo] ------       CBF - Community Build Framework
+           -------
+     [echo] ------                 Version: 3.7
+                    -------
+     [echo] ------ Author: Pedro Alves (pedro.alves@webdetails.pt) -------
+     [echo] --------------------------------------------------------------
+     [echo] --------------------------------------------------------------
+     [echo]
+     [echo]                          SETTINGS:
+     [echo]
+     [echo]    Project:        bare38
+     [echo]    Environment:    build-pedro.properties
+     [echo]    Config File:    project-bare38/config/build-pedro.properties
+     [echo]    Server:        tomcat
+     [echo] --------------------------------------------------------------
+     [echo] --------------------------------------------------------------
+Pentaho BI Platform build helper..
+Main targets:
+ all                 Compiles and builds the entire project
+ clean               Cleans the solution
+ copy-finish         Copy target files
+ copy-init           Copy project files
+ deploy-all          Deploys both the solution and the server to the specified destinations
+ deploy-ee-all       Deploys both the solution and the server to the specified destinations
+ deploy-ee-server    Deploys the entire server to the specified destination
+ deploy-ee-solution  Deploys the solution to the specified destination
+ deploy-repository   Deploys the solution repository to the specified destination
+ deploy-server       Deploys the entire server to the specified destination
+ deploy-solution     Deploys the solution to the specified destination
+ deploy-war          Deploys the pentaho.war and pentaho-style.war to the specified destination
+ dev-setup           Compiles and builds the entire project
+ dist-clean          Deletes the target preconfigured install dir
+ run                 Runs the solution
+ stage-ee            Setup Enterprise Edition staging directory
+Default target: all</pre>
+<p> Even though there are a lot of targets here, some of them are internal only and on a daily basis only some of them will be used. I'll divide this section in the operations mostly used. </p>
+
+<p class="title"> Doing a full compile </p>
+<p> When we want to "start from scratch", with a clean system, this is the command to use: </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro dist-clean all</pre>
+
+<p class="title"> Start the project after compiled </p>
+<p> This will simply start tomcat </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro run</pre>
+
+<p class="title"> Full compile and start server </p>
+<p> You can guess this one: </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro dist-clean all run</pre>
+
+<p class="title"> Deploy to a remote server, solutions only </p>
+<pre>$ ant -Dproject=bare38 -Denv=stagedeploy dist-clean deploy-solutions</pre>
+
+<p class="title"> Apply the patches only without a full compile </p>
+<p> No need to do the dist-clean here. </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro copy-init run</pre>
+
+<p class="title"> Full deploy to a remote server </p>
+<p> This will transfer both server and solutions. </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro dist-clean deploy-all</pre>

@@ -1,0 +1,86 @@
+<h3 class="mainTitle">Configuration File</h3>
+
+<h4>Setting up totals</h4>
+<p>Inside the <code>Dimension Info</code> step you'll find a mention to the total.</p>
+
+<span class="example">DIMENSION INFO TOTALS</span>
+<pre>/* SET THE APPROXIMATE TOTAL FOR THE VALUES */
+var total = 5000;</pre>
+
+<h4>Setting up dimensions</h4>
+<p>This is done within the same file you setup the dimensions. You can have as much as you want, but you must pay attention to the fact that if you use lots of dimensions / high cardinality we can quickly end up with a huge database.</p>
+<p>While there's nothing particularly wrong with that, it's up to you doing specific optimizations like indexes or even aggregate tables. That's outside the scope of CDG.</p>
+
+<span class="example">DIMENSION DEFINITION SAMPLE</span>
+<pre>var countries = [
+   {countryName: "Italianos", proportion: 30},
+   {countryName: "Portugueses", proportion: 18},
+   {countryName: "Alemães", proportion: 12},
+   {countryName: "Espanhóis", proportion: 10},
+   {countryName: "Japoneses", proportion: 15},
+   {countryName: "Coreanos", proportion: 8},
+   {countryName: "Chineses", proportion: 3},
+   {countryName: "Outros", proportion: 5}
+];</pre>
+
+<p>The sample provided in CDG is written in Portuguese, in order to specifically test character encoding support. The generated files are encoded in UTF-8 and we always recommend using this standard in databases too.</p>
+<p>By defining this object, CDG will create a dimension with 8 members and one level called <code>countryName</code>. You can have other properties in there and CDG will create a Mondrian schema with different levels. The provided example has only one.</p>
+<p>There's a special property in there called <code>proportion</code> - it will be used by CDG to do the breakdown of the total. In the example, roughly 30% of the total will be assigned to Italians and so on. In every aspects of the code there's a random factor in place.</p>
+
+<h4>Configuring Date Dimension</h4>
+<p>The date dimension is always a specific case, since it usually acts as a snapshot dimension.</p>
+<p>Since configuring all possible members of this dimension would take too much time, we provide an utility function that generates all the dates between 2000 and 2012 down to the month.</p>
+<p>This is standard JavaScript, so feel free to change this function in order to change the date range, month names or even adding the day level (be aware that adding the day level will substantially increase the number of values in the fact table).</p>
+
+<span class="example">DATE DIMENSION SAMPLE</span>
+<pre>/* CONFIGURE THE DATE DIMENSION. */
+var dateDim = [];
+
+var months = [
+   [1,"Jan","Janeiro"], [2,"Fev","Fevereiro"], [3,"Mar","Março"], [4,"Abr","Abril"],
+   [5,"Mai","Maio"], [6,"Jun","Junho"], [7,"Jul","Julho"], [8,"Ago","Agosto"],
+   [9,"Set","Setembro"], [10,"Out","Outubro"], [11,"Nov","Novembro"],
+   [12,"Dec","Dezembro"]
+];
+
+range(2000,2012).map(function(year){
+   range(0,12).map(function(month){
+      var m = months[month];
+      dateDim.push(
+         {"year":year ,"monthNo": m[0], "monthAbbrev":m[1], "monthDesc": m[2]}
+      );
+   });
+});</pre>
+
+<h4>Final Configuration</h4>
+<p>In the end of the script there's the final configuration that will be used by CDG:</p>
+
+<span class="example">FINAL CONFIGURATION SAMPLE</span>
+<pre>/* MAKE THE FINAL CONFIGURATION. DIMENSIONS CAN EITHER BE SNAPSHOT OR REGULAR BREAKDOWNS */
+var outputArray = [
+   {name: "Date", dimension: dateDim, toBreakdown: false, increment: 0.05 },
+   {name: "Provices", dimension: provinces, toBreakdown: true },
+   {name: "Countries", dimension: countries, toBreakdown: true },
+   {name: "Dates", dimension: gender, toBreakdown: true }
+]</pre>
+
+<p>There we define the names and types of the dimension. The property <code>toBreakdown</code> should be true for normal dimensions and false for snapshot dimensions.</p>
+<p>If it's a snapshot dimension, you need to specify the increment property. The value 0.05 basically means that we'll have roughly 5% increase each month.</p>
+<p>After that, you can run the transformation.</p>
+
+<h4>Output</h4>
+<p>After running the transformation, we get this output:</p>
+<ul>
+	<li>A .ddl file to create the database and the table;</li>
+	<li>A file with SQL inserts to populate the Data Warehouse;</li>
+	<li>A Mondrian schema file to use within Mondrian or to import to Pentaho.</li>
+</ul>
+
+<span class="example">CDG OUTPUT STRUCTURE</span>
+<pre>cdg/kettle/output
+	├── cdgsample.ddl
+	├── cdgsample.mondrian.xml
+	└── cdgsample.sql</pre>
+
+<h4>Result</h4>
+<p>The result, after declaring this new datasource and registering the cube in Mondrian, is a new cube free to use.</p>

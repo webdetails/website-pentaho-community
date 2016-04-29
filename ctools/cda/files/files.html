@@ -1,0 +1,12 @@
+<h3 class="mainTitle">Files</h3>
+
+<p>A CDA file is a XML file which defines the database connections and the queries over them. All its content must be enclosed in a <code>CDADescriptor</code> block.</p>
+
+<span class="example">CDA FILE STRUCTURE</span>
+<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;CDADescriptor&gt;
+   (...)
+&lt;/CDADescriptor&gt;</pre>
+
+<p>Inside the main block we define datasources (the database connections), data accesses (the queries themselves) and compound data accesses (joins and unions of queries).</p>
+<p>The CDA file can also be written from inside the CDE, just by defining all the <code>datasources</code>, <code>data accesses</code> and <code>compound data accesses</code>, which is simpler than writing all the code.</p>

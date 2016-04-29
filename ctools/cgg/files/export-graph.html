@@ -1,0 +1,6 @@
+<h3 class="mainTitle">Export Graph</h3>
+
+<p>Call the URL: <code>http://&lt;pentaho server url&gt;/pentaho/content/cgg/draw?script=&lt;path to the script&gt;</code>, where <code>&lt;path to the script&gt;</code> is, e.g., <code>/steel-wheels/dashboards/Test.js</code>. It means that you want to export the chart called <em>Test</em>, from a Dashboard saved inside the folder <em>dashboards</em>, in your <em>steel-wheels</em> solution.</p>
+<p>Don't forget to export the chart before saving the Dashboard. Otherwise, it will not work.</p> <br>
+<p>Optionally, you can add some extra parameters to the request. If your chart definition expects a <code>customerNumber</code> as a parameter, simply append <code>paramcustomerNumber=</code> to the query string.</p>
+<p>You can also change the output to return either PNG or SVG files (using <code>outputType=png</code> or <code>outputType=svg</code> in the query string.</p>

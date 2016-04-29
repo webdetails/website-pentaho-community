@@ -1,0 +1,38 @@
+<h3 class="mainTitle">Configuration File</h3>
+
+<p>All rules are defined within a configuration file (cst-config.xml).</p>
+
+<span class="example">Configuration file syntax</span>
+<pre>&lt;?xml version="1.0" ?&gt;
+&lt;cstConfig&gt;
+   &lt;rule&gt;
+      &lt;tab&gt;
+      &lt;/tab&gt;
+      &lt;tab&gt;
+      &lt;/tab&gt;
+      ...
+   &lt;/rule&gt;
+   &lt;rule&gt;
+      &lt;tab&gt;
+      &lt;/tab&gt;
+      ...
+   &lt;/rule&gt;
+   ...
+&lt;/cstConfig&gt;</pre>
+
+<h4>Rule Block</h4>
+<p>Each rule block defines a new rule, so there will be as many rule blocks as the rules you have.</p>
+<span class="example">RULE TAG SYNTAX</span>
+<pre> &lt;rule match="USER|ROLE|DEFAULT" pattern="false|true" value="..."&gt; </pre>
+<span class="example">RULE SAMPLE</span>
+<pre> &lt;rule match="USER" pattern="false" value="joe"&gt; </pre>
+<p><code>match</code> tells which kind of rule you are defining: a user-based rule, a role-based rule or the default rule. </p>
+<p><code>pattern</code> tells if are providing a regular expression for a user or for a role. </p>
+<p><code>value</code> is a fixed name or a regular expression for the user/role. </p>
+
+<h4>Tab Block</h4>
+<p>Each tab block declares a tab to be opened. Inside each rule block, you can specify as many tabs as you want.</p>
+<span class="example">TAB TAG SYNTAX</span>
+<pre> &lt;tab title="..."&gt;url&lt;/tab&gt; </pre>
+<span class="example">TAB SAMPLE</span>
+<pre> &lt;tab title="Pivot"&gt;/pentaho/Pivot?solution=steel-wheels&path=analysis&action=analysis_customers.analysisview.xaction&lt;/tab&gt; </pre>

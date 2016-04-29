@@ -1,0 +1,88 @@
+<h3 class="mainTitle">Patches</h3>
+
+<p> Patches are a good way to change the stock Pentaho install, either by adding content (like jars or plugins) or by changing configuration files through what we call tokens. </p>
+<span class="example">PATCHES STRUCTURE SAMPLE</span>
+<pre>patches
+├── project-client
+│   └── solution
+│       └── system
+│           ├── applicationContext-security-ldap.properties
+│           ├── applicationContext-spring-security-hibernate.properties
+│           ├── applicationContext-spring-security-ldap.xml
+│           ├── applicationContext-spring-security.xml
+│           ├── hibernate
+│           │   ├── hibernate-settings.xml
+│           │   ├── hsql.hibernate.cfg.xml
+│           │   └── mysql5.hibernate.cfg.xml
+│           ├── mondrian
+│           │   └── mondrian.properties
+│           ├── olap
+│           │   └── datasources.xml
+│           ├── pentaho-spring-beans.xml
+│           ├── pentaho.xml
+│           ├── pentahoObjects.spring.xml
+│           ├── publisher_config.xml
+│           ├── sessionStartupActions.xml
+│           └── smtp-email
+│               ├── email_config.xml
+│               └── email_config_gmail.xml
+└── target-dist
+    ├── administration-console
+    │   ├── jdbc
+    │   │   ├── LucidDbClient.jar
+    │   │   ├── c3p0-0.9.1.2.jar
+    │   │   ├── commons-dbcp-1.2.1.jar
+    │   │   └── commons-pool-1.2.jar
+    │   └── resource
+    │       └── config
+    │           └── console.xml
+    └── server
+        ├── conf
+        │   └── server.xml
+        ├── lib
+        │   ├── LucidDbClient.jar
+        │   ├── c3p0-0.9.1.2.jar
+        │   ├── commons-dbcp-1.2.1.jar
+        │   └── commons-pool-1.2.jar
+        └── webapps
+            └── pentaho
+                ├── META-INF
+                │   └── context.xml
+                └── WEB-INF
+                    ├── classes
+                    │   └── log4j.xml
+                    └── web.xml</pre>
+<p> There are 2 different kinds of files in the above structure: </p>
+<ul>
+  <li><strong>Adding new files</strong>: like the LucidDB jar file and other jars;</li>
+  <li><strong>Changing existing files</strong>: usually to parametrize a configuration option.</li>
+</ul>
+
+<p> There's not much to it when it comes to adding new files, they will end up in the desired location. For parameterizing configuration files, we need to use tokens. </p>
+
+<h4>Tokens</h4>
+<p> The principle behind tokens is very simple; when CBF finds a file in the patches directory that contains a token - a string enclosed within @ (example: @DB.HIBERNATE.DRIVER@) it will copy it to the appropriate location with the token replaced by the actual value. That way we can build our configured Pentaho installation directly from a set of property files. </p>
+
+<span class="example">CONFIGURATION FILE PATH</span>
+<pre>project-client/patches/project-client/solution/system/hibernate/hibernate-settings.xml</pre>
+
+
+<span class="example">TOKEN SAMPLE</span>
+<pre>&lt; ?xml version='1.0' encoding='utf-8'? &gt;
+&lt; settings &gt;
+   &lt; !--
+   * This setting allows the deployment to specify where to find the
+   * database-specific hibernate configuration. The samples supplied
+   * include the following:
+   *
+   * system/hibernate/hsql.hibernate.cfg.xml
+   * system/hibernate/mysql5.hibernate.cfg.xml
+   * system/hibernate/postgresql.hibernate.cfg.xml
+   * system/hibernate/oracle10g.hibernate.cfg.xml
+   *
+   -->
+
+   &lt; config-file>system/hibernate/@DB.HIBERNATE@.hibernate.cfg.xml&lt;/config-file &gt;
+   &lt; managed&gt;false&lt;/managed &gt;
+&lt; /settings &gt;</pre>
+<p>Using this method, depending on the value of the DB.HIBERNATE property, we can easily switch from hypersonic to MySQL or others. </p>

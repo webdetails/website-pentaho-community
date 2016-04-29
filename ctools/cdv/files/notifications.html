@@ -1,0 +1,12 @@
+<h3 class="mainTitle">Notifications</h3>
+
+<h4>External Interfaces Supported</h4>
+<ul>
+	<li>E-mail;</li>
+	<li>HTTP;</li>
+	<li>Nagios integration;</li>
+	<li>Server up check.</li>
+</ul>
+<p>The last one is a very specific check. All the other integrations will fail if the server suddenly hangs, and we must be notified of that. On HTTP and Nagios integration, we'll be able to get reports not only on the individual tests, but also on the test groups. This will not rerun the tests, but get the report on the last status of a test.</p>
+<p>On the HTTP case, we can pass a flat to force a test to be rerun. </p>
+<p>For Nagios, we can have an export of test rules. </p>

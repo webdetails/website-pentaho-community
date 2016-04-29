@@ -1,0 +1,57 @@
+<h3 class="mainTitle">Advanced Concepts</h3>
+
+<h4 class="firsth2">Metalayer</h4>
+<p>MetaLayer is a concept introduced by <a class="spacialink" href="http://daniele.livejournal.com/" target="_blank" title="Metalayer Author: Daniel Einspanjer">Daniel Einspanjer</a> that allows you to:</p>
+
+<ul>
+	<li>Separate presentation and logic;</li>
+	<li>Reuse logic.</li>
+</ul>
+
+<p>Metalayers are simply JavaScript files that live in the solution folder, which can be imported from the template files using a simple HTML script tag.</p>
+
+<span class="example">EXAMPLE OF METALAYER INCLUSION</span>
+<pre>&lt;script type="text/javascript"
+   src="GetCDFResource?resource=/solution/path/MyMetaLayer.js"&gt;
+&lt;/script&gt;</pre>
+
+ <p>More than one file can be included. Using this method, a developer can leave only HTML design in the template.html file and put all the components definition in the MetaLayers.</p>
+<p>This same method can be used to include other types of files from the solution directory, like images, CSS resources, etc.</p>
+
+<h4>Storage</h4>
+<p>It is possible to maintain parameter states between different sessions. Instead of using simple parameters, objects inside the special namespace Dashboards.storage can be saved and restored using the functions described here.</p>
+<p>This works on a per user base, and the developer needs to be aware that everything saved will be loaded for every Dashboard, so if too much is stored it may cause performance penalty.</p>
+
+<h4>Example</h4>
+<p>Suppose that you have a selector that fires the change of a parameter named region. In order to make this selector persistent, all you need is to do the following:</p>
+<ul>
+	<li>As parameter replace region with Dashboards.storage.region;</li>
+	<li>Save the storage in the postChange function. The function may look like this:</li>
+</ul>
+
+<span class="example">EXAMPLE CODE</span>
+<pre>function() {
+   Dashboards.saveStorage();
+   alert("You chose: " + Dashboards.storage.region);
+}</pre>
+
+
+<h4>Extending CDF</h4>
+<p>Thanks to the collaboration of <a class="spacialink" href="http://www.willgorman.com/" target="_blank" title="CDF Collaborator: Will Gorman">Will Gorman</a>, CDF has a modular and extensible library of components that can be extended by users.</p>
+<p>Using an object oriented approach, the key is to extend the <code>BaseComponent</code> class. The simplest component of them all is the <code>TextComponent</code>, which you can see in the example below.</p>
+
+<span class="example">TEXTCOMPONENT SAMPLE</span>
+<pre>var TextComponent = BaseComponent.extend({
+   update : function() {
+      $("#"+this.htmlObject).html(this.expression());
+   }
+});</pre>
+
+<p>Having this defined, when CDF reads a component with <code>type="textComponent"</code> it will automatically use the supplied definition.</p>
+
+<h4>The best resource for additional information on this subject is CDF source.</h4>
+<ul>
+	<li><code>vDashboards.saveStorage()</code>: Saves the contents of the object;</li>
+	<li><code>vDashboards.loadStorage()</code>: Reloads the object (this is done automatically at Dashboard render time, only useful when undoing certain operations);</li>
+	<li><code>Dashboards.cleanStorage()</code>: Empties the entire storage of that user.</li>
+</ul>

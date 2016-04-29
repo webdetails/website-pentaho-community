@@ -1,0 +1,29 @@
+<h3 class="mainTitle">Overview</h3>
+
+<h4>Motivation</h4>
+<p>Frequently, we come across several file management needs in the context of the Pentaho platform:</p>
+<ul>
+	<li>A user that wishes to let the users browse and download some documents when viewing a dashboard;</li>
+	<li>An easy way for a user to upload some files to the BA Server (maybe to be used by an ETL job);</li>
+	<li>The ability to explore, create and delete items in the Solution Repository when in a dashboard.</li>
+</ul>
+<p>As always, when we're faced with the same kind of task more than two times, we start wondering if there’s a new CTool that can help us (and everyone who uses our stuff) automate that task. In this scenario, we came up with CFR - Community File Repository.</p>
+
+<h4>Requirements and Compatibility</h4>
+<p>This plugin was built and tested against Pentaho 5.3, but should be compatible with earlier releases up to Pentaho 4.8.</p>
+<p>As most of the other ctools, it also requires <a class="spacialink" href="../cde">CDE</a>, <a class="spacialink" href="../cda">CDA</a> and <a class="spacialink" href="../cdf">CDF</a>. Make sure that you have updated versions of these plugins when you install CFR.</p>
+
+<h4>Main Features</h4>
+<ul>
+	<li>Ability to upload and download files from the repository;</li>
+	<li>Ability to create folders and delete items from the repository;</li>
+	<li>Small audit database lets you track who changed the repository and when;</li>
+	<li>Provides a FileBrowser component for CDE that lets you browse the repository;</li>
+	<li>Provides a FileUploader component for CDE that lets you upload files for the repository;</li>
+	<li>Two distinct repositories available (just change a configuration setting):
+		<ol>
+			<li>Pentaho Solution Repository (whether DB or File based);</li>
+			<li>Filesystem based repository (based on a folder on your BA Server machine or some other accessible machine).</li>
+		</ol>
+	</li>
+</ul>

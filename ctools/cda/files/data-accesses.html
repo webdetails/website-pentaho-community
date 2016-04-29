@@ -1,0 +1,378 @@
+<h3 class="mainTitle">Data Accesses</h3>
+
+<h4>Simple Data Accesses</h4>
+<p>A simple data access is a query over a connection. It's defined by a <code>DataAccess</code> block. CDA supports the following types of data accesses:</p>
+<ul>
+	<li>SQL;</li>
+	<li>MDX;</li>
+	<li>Metadata;</li>
+	<li>Kettle;</li>
+	<li>etc.;</li>
+	<li>Compositions of the above.</li>
+</ul>
+
+<p>Inside a <code>DataAccess</code> block the query is defined inside a <code>Query</code> block, containing the query code.The following attributes must be defined:</p>
+
+<ul>
+	<li><code>Access Level</code>: public or private; public data accesses are available from outside calls, while private data accesses can only be called from other data accesses (e.g. compound data accesses);</li>
+	<li><code>Parameters</code>: lists the parameter's name, default value (the default value if the parameter value isn't specified when the data access is called) and type (String, Integer, Numeric, Date, StringArray, IntegerArray, NumericArray and DateArray);</li>
+	<li><code>Output</code>: which columns to output and by which order;</li>
+	<li><code>Output Mode</code>: the column's output mode, include or exclude the columns set above;</li>
+	<li><code>Columns</code>: names of the columns;</li>
+	<li><code>Calculated Columns</code>: the columns to be calculated by a given formula;</li>
+	<li><code>Query</code>: the query itself;</li>
+	<li><code>Cache</code>: the possibility to cache the results, either true or false (optional, defaults to true);</li>
+	<li><code>Cache Duration</code>: time to keep the results in cache, in seconds (optional, defaults to 3600).</li>
+</ul>
+
+<h4>Reference information about the different query types</h4>
+<ul>
+	<li><code>mdx</code>, <code>denormalizedMdx</code> and <code>olap4j</code>: <a class="spacialink" href="http://mondrian.pentaho.org/documentation/mdx.php" target="_blank" title="Mondrian Specification Reference Guide">Mondrian Specification</a> reference guide;</li>
+	<li><code>scriptable</code>: <a class="spacialink" href="http://www.beanshell.org/" target="_blank" title="Beamshell Homepage">Beanshell</a> homepage;</li>
+	<li><code>xPath</code>: <a class="spacialink" href="http://www.w3schools.com/XPath/xpath_syntax.asp" target="_blank" title="xPath tutorial on W3Schools">xPath tutorial</a> on W3Schools;</li>
+	<li><code>metadata</code>: <a class="spacialink" href="http://wiki.pentaho.com/display/COM/The+Pentaho+Metadata+Project" target="_blank" title="Pentaho Metadata Project Homepage">Pentaho Metadata Project</a> homepage;</li>
+	<li><code>kettle</code>: <a class="spacialink" href="http://wiki.pentaho.com/display/EAI/Latest+Pentaho+Data+Integration+%28aka+Kettle%29+Documentation" target="_blank" title="Pentaho Data Integration Homepage">Pentaho Data Integration</a> homepage.</li>
+</ul>
+
+<h4>Banded Mode</h4>
+<p>When setting a Mondrian connection there is the possibility to choose between <code>compact</code> or <code>classic</code> Banded Mode. This option can make a lot of difference in the output of the results.</p>
+
+<span class="example">QUERY SAMPLE</span>
+<pre>select NON EMPTY {[Measures].[Sales]} ON COLUMNS,
+NON EMPTY ({[Markets].[EMEA].Children}) ON ROWS
+from [SteelWheelsSales]
+WHERE [Time].[2005]</pre>
+
+<p>This query will show the <code>Sales</code> from a given <code>Market</code> at a given <code>Time</code>:</p>
+<p>In <code>compact</code> mode this query will output one column for <code>Sales</code> and one column for the selected <code>Market</code>, as shown below:</p>
+
+<div class="table-container">
+	<table class="table table-hover table-responsive">
+		<thead>
+			<tr>
+				<th>Markets</th>
+				<th>Sales</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>Austria</td>
+		<td>68250.26</td>
+		</tr>
+			<tr>
+				<td>Belgium</td>
+				<td>25040.11</td>
+			</tr>
+			<tr>
+				<td>Denmark</td>
+				<td>26012.87</td>
+			</tr>
+			<tr>
+				<td>Finland</td>
+				<td>126851.71</td>
+			</tr>
+			<tr>
+				<td>France</td>
+				<td>242956.40</td>
+			</tr>
+			<tr>
+				<td>Italy</td>
+				<td>41509.94</td>
+			</tr>
+			<tr>
+				<td>Spain</td>
+				<td>326798.17</td>
+			</tr>
+			<tr>
+				<td>Sweden</td>
+				<td>31606.72</td>
+			</tr>
+			<tr>
+				<td>UK</td>
+				<td>40802.81</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>However, if you choose the <code>classic</code> mode, the same query returns the full mondrian hierarchy:</p>
+
+<div class="table-container">
+	<table class="table table-hover table-responsive">
+		<thead>
+			<tr>
+				<th>[Markets].[(All)]</th>
+				<th>[Markets].[Territory]</th>
+				<th>[Markets].[Country]</th>
+				<th>[Measures].[Sales]</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Austria</td>
+				<td>68250.26</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Belgium</td>
+				<td>25040.11</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Denmark</td>
+				<td>26012.87</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Finland</td>
+				<td>126851.71</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>France</td>
+				<td>242956.40</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Italy</td>
+				<td>41509.94</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Spain</td>
+				<td>326798.17</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>Sweden</td>
+				<td>31606.72</td>
+			</tr>
+			<tr>
+				<td>All Markets</td>
+				<td>EMEA</td>
+				<td>UK</td>
+				<td>40802.81</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Normalized vs. Denormalized MDX</h4>
+<p>CDA allows two different types of MDX queries: <strong>standard</strong> (normalized) or <strong>denormalized</strong>. It's not within the scope of this document to elaborate over the details of data normalization/denormalization, but the following example can shed some light over the differences between the two:</p>
+
+<span class="example">MDX QUERY SAMPLE</span>
+<pre>select {[Measures].[Sales], [Measures].[Quantity]} ON COLUMNS,
+NON EMPTY [Time].Children ON ROWS
+from [SteelWheelsSales]
+where ([Order Status].[${status}])</pre>
+
+<p>This query will generate one column for each measure in normalized form and have only one row for each child of the Time dimension. In denormalized form there will be only two columns added for measures, one indicating the name of the measure and another for its value, regardless of the number of measures queried.</p>
+<p>The resulting dataset will have one row for each combination of measure and child of the Time dimension.</p>
+<p>In a very loose way one can say that normalized minimizes row redundancy at the expense of the number of columns whereas denormalized form limits the number of columns at the expense of row redundancy.</p>
+<p>So, in <code>normalized</code> form, the result of the above query is:</p>
+
+<div class="table-container">
+	<table class="table table-hover table-responsive">
+		<thead>
+			<tr>
+				<th>[Time].[(All)]</th>
+				<th>[Time].[Years]</th>
+				<th>[Measures].[Sales]</th>
+				<th>[Measures].[Quantity]</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>All Years</td>
+				<td>2004</td>
+				<td>4750205.89</td>
+				<td>47151</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2005</td>
+				<td>1513074.46</td>
+				<td>14607</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2003</td>
+				<td>3573701.25</td>
+				<td>35313</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>In <code>denormalized</code> form, the same query returns:</p>
+
+<div class="table-container">
+	<table class="table table-hover table-responsive">
+		<colgroup>
+			<col width="25%">
+			<col width="25%">
+			<col width="25%">
+			<col width="25%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>[Time].[(All)]</th>
+				<th>[Time].[Years]</th>
+				<th>[Measures].[MeasuresLevel]</th>
+				<th>Measure</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>All Years</td>
+				<td>2003</td>
+				<td>Quantity</td>
+				<td>35313</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2004</td>
+				<td>Quantity</td>
+				<td>47151</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2005</td>
+				<td>Quantity</td>
+				<td>14607</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2005</td>
+				<td>Sales</td>
+				<td>1513074.46</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2004</td>
+				<td>Sales</td>
+				<td>4750205.89</td>
+			</tr>
+			<tr>
+				<td>All Years</td>
+				<td>2003</td>
+				<td>Sales</td>
+				<td>3573701.25</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h4>Parameters</h4>
+<p>Parameters are variables that can be passed on to the query, for example to create dynamic queries depending on user input.</p>
+
+<span class="example">QUERY SAMPLE USING PARAMETERS</span>
+<pre>select o.YEAR_ID, o.STATUS, sum(o.TOTALPRICE) as price from orderfact o
+where o.STATUS = ${status} and o.ORDERDATE &gt; ${orderDate}
+group by o.YEAR_ID, o.STATUS</pre>
+
+<p>This query uses two parameters: <code>status</code> and <code>orderDate</code>. Parameters are always passed to the query as <code>${parameterName}</code>.</p>
+<p>The definition of parameters is done inside a <code>Parameters</code> block, where the various parameters are defined. For each parameter the <code>type</code> and <code>default</code> attributes must be specified. A third attribute, <code>pattern</code> must be specified for parameters of the <code>date type</code>.</p>
+
+<ul>
+	<li><code>type</code>: String, Integer, Numeric (double), Date, StringArray, IntegerArray, NumericArray and DateArray;</li>
+	<li><code>default</code>: the default value if the parameter value isn't specified when the data access is called;</li>
+	<li><code>pattern</code>: date format. All formats accepted by the <a class="spacialink" href="http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html" target="_blank">SimpleDateFormat</a> Java class are valid.</li>
+</ul>
+
+<span class="example">PARAMETERS DEFINITION SAMPLE</span>
+<pre> &lt;Parameters&gt;
+   &lt;Parameter name="status" type="String" default="Shipped"/&gt;
+   &lt;Parameter name="orderDate" type="Date" pattern="yyyy-MM-dd" default="2003-03-01"/&gt;
+&lt;/Parameters&gt;</pre>
+
+<h4>Columns</h4>
+<p>The Columns block supports renaming of columns and defining of new columns, using formulas.</p>
+<p>Each column may be renamed using a Column block, by specifying its name:</p>
+
+<span class="example">COLUMN BLOCK SAMPLE</span>
+<pre>&lt;Column idx="1"&gt;
+   &lt;Name&gt;Year&lt;/Name&gt;
+&lt;/Column&gt;</pre>
+
+<br>
+<p>Calculated columns are added by a <code>CalculatedColumn</code> block, where the new column's name and the formula to use are defined.</p>
+<p>Each calculated column requires two properties: <code>Name</code> (the name that will be output by CDA), and <code>Formula</code> (the column's definition itself).</p>
+<p>Formulas are written in <a class="spacialink" href="http://wiki.pentaho.com/display/Reporting/Formula+Expressions" target="_blank">Open Formula</a> format.</p>
+
+<span class="example">CALCULATED COLUMN SAMPLE</span>
+<pre>&lt;CalculatedColumn&gt;
+   &lt;Name&gt;PriceInM&lt;/Name&gt;
+   &lt;Formula&gt;=[price]/1000000&lt;/Formula&gt;
+&lt;/CalculatedColumn&gt;</pre>
+
+<h4>Output</h4>
+<p>The Output tag define which columns to output and by which order. If not specified, all columns from the query will be returned in the same order as defined on the query.</p>
+<p>Output requires only one attribute, the indexes to be returned. The order of the output columns is defined by the order in which the indexes are specified.</p>
+
+<span class="example">OUTPUT SAMPLE</span>
+<pre>&lt;Output indexes="1,0,3"/&gt;</pre>
+
+<h4>Compound Data Accesses</h4>
+<p>Compound data accesses combine the results of two queries. They're defined by a <code>CompoundDataAccess</code> block.</p>
+<p>There are two types of compound data accesses supported: <code>union</code> and <code>join</code>.</p>
+
+<h4>Union</h4>
+<p>Unions take the results of two queries with the same number of columns and return the rows from both data accesses on top of each other.</p>
+<p>A union compound data access requires only these attributes:</p>
+
+<ul>
+	<li><code>Name</code>: the name of the compound query;</li>
+	<li><code>Top</code>: the id of the query that will stay on top;</li>
+	<li><code>Bottom</code>:the id of the query that will stay on the bottom;</li>
+	<li><code>Parameters</code>: lists the parameter's name, default value (the default value if the parameter value isn't specified when the data access is called) and type (String, Integer, Numeric, Date, StringArray, IntegerArray, NumericArray and DateArray) that are passed on to the compound query.</li>
+</ul>
+
+<p>If the columns from both queries have different names, it will prevail the names of the query that is on top.</p>
+
+<span class="example">UNION DATA ACCESS SAMPLE</span>
+<pre>&lt;CompoundDataAccess id="3" type="union"&gt;
+   &lt;Top id="2"/&gt;
+   &lt;Bottom id="1"/&gt;
+   &lt;Parameters&gt;
+      &lt;Parameter name="year" type="Numeric" default="2004"/&gt;
+   &lt;/Parameters&gt;
+&lt;/CompoundDataAccess&gt;</pre>
+
+<h4>Join</h4>
+<p>Joins take the results of two queries and join them by a specified set of keys. The result has the columns of both queries. The join performed is full outer.</p>
+<p>Join compound data accesses require that both the <code>Left</code> and <code>Right</code> data accesses be specified (by id) as well as the <code>keys</code> (column ids on the source queries) by which to join.</p>
+<p>A join compound data access requires the following attributes:</p>
+
+<ul>
+	<li><code>Name</code>: the name of the compound query;</li>
+	<li><code>Left</code>:  the first query;</li>
+	<li><code>Left Keys</code>: the id or ids of the columns from the first query that are common to the second query;</li>
+	<li><code>Right</code>: the second query;</li>
+	<li><code>Right Keys</code>:  the id or ids of the columns from the second query that are common to the first query;</li>
+	<li><code>Parameters</code>: lists the parameter's name, default value (the default value if the parameter value isn't specified when the data access is called) and type (String, Integer, Numeric, Date, StringArray, IntegerArray, NumericArray and DateArray) that are passed on to the compound query;</li>
+	<li><code>Output Options</code>: the ids of the columns to output from both queries by order, starting with the columns from the left query and them the ones from the right query;</li>
+	<li><code>Output Mode</code>: the column's output mode, include or exclude the columns set above.</li>
+</ul>
+
+<span class="example">JOIN DATA ACCESS SAMPLE</span>
+<pre>&lt;CompoundDataAccess id="3" type="join"&gt;
+   &lt;Left id="1" keys="0,1"/&gt;
+   &lt;Right id="2" keys="0,1"/&gt;
+   &lt;Parameters&gt;
+      &lt;Parameter name="status" type="String" default="Shipped"/&gt;
+      &lt;Parameter name="orderDate" type="Date" pattern="yyyy-MM-dd" default="2003-03-01"/&gt;
+   &lt;/Parameters&gt;
+   &lt;Output indexes="0,1,2,5,6"/&gt;
+&lt;/CompoundDataAccess&gt;</pre>
+
+<p>The columns that are common in both queries must be of the same type.</p>

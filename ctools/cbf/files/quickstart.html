@@ -1,0 +1,59 @@
+<h3 class="mainTitle">Quickstart</h3>
+
+<p>One of the most difficult things in CBF is to get it up and running. In order to make things simpler, we prepared a quickstart bundle.</p>
+<p>Download the quickstart bundle <a class="spacialink" href="http://www.webdetails.pt/ficheiros/cbf-quickstart-3.7.tgz"target="_blank" title="Download Quickstart Bundle">here</a> and unzip it.</p>
+
+<span class="example">CBF QUICKSTART STRUCTURE</span>
+<pre>cbf-quickstart
+├── build.xml
+├── pentaho-3.8
+│   └── SVN_CHECKOUT_PENTAHO_HERE
+└── project-client
+    ├── config
+    │   ├── build-pedro.properties
+    │   └── build.properties
+    ├── patches
+    │   └── target-dist
+    │       └── server
+    │           └── webapps
+    │               └── pentaho
+    │                   └── WEB-INF
+    │                       ├── classes
+    │                       │   └── log4j.xml
+    │                       └── web.xml
+    └── solution
+        ├── ClientSolution
+        ├── cdf
+        │   ├── components
+        │   │   ├── jfreechart.xaction
+        │   │   ├── jfreechart.xaction.sql
+        │   │   ├── jfreechartdial.xaction
+        │   │   ├── jfreechartdial.xaction.sql
+        │   │   ├── jpivot.xaction
+        │   │   ├── jtable.xaction
+        │   │   ├── jtable.xaction.sql
+        │   │   ├── kettletransformation.xaction
+        │   │   ├── openflashchart.xaction
+        │   │   ├── openflashchart.xml
+        │   │   ├── timelineeventfeeder.xaction
+        │   │   ├── timelinefeeder.xaction
+        │   │   ├── timelinefeeder.xaction.sql
+        │   │   ├── tmp_jfreechart.xaction
+        │   │   └── traffic.xaction
+        │   └── index.xml
+        ├── index.properties
+        └── index.xml</pre>
+
+<p class="title">Create your environment's configuration file</p>
+<p> Copy build-pedro.properties to build-yourname.properties and edit it according to your computer.</p>
+
+<p class="title">Download apache tomcat</p>
+<p>Download the .zip or .tgz file from <a class="spacialink" href="http://tomcat.apache.org/" title="Tomcat on Apache page" target="_blank">Apache</a> page and uncompress it into the CBF Quickstart directory.</p>
+
+<p class="title">Checkout Pentaho from SVN</p>
+<p>After checking this out, checkout Pentaho from SVN:</p>
+<pre>svn co svn://source.pentaho.org/svnroot/bi-platform-v2/tags/3.8.0-stable pentaho-3.8</pre>
+
+<p class="title">Run CBF </p>
+<p>Use the command: </p>
+<pre>ant -Dproject=client -Denv=yourname dist-clean all run</pre>

@@ -1,0 +1,136 @@
+<h3 class="mainTitle">Creating New Validations</h3>
+
+<h4>Creating Validations</h4>
+<p>All the validations created will be stored in <code>solution/cdv/tests/</code>.</p>
+<p>The files will have the format <code>Name.cdv</code> and will internally be a JSON file with a specific structure.</p>
+
+<span class="example">CDV File Structure</span>
+<pre>cdv.registerTest({
+   id: 1,
+   type: "query",
+   name: 'test',
+   group: "",
+   path: 'cdv/test/test.cdv',
+   createdBy: '',
+   createdAt: 1339430893246,
+   queries: [{
+      cdaFile: "",
+      dataAccessId: "",
+      parameters: {
+      }
+   }],
+   validations: [{
+      validationName: "",
+      validationType: "",
+      validationFunction: function(rs, conf) {
+      }
+   }],
+   executionTimeValidation: {
+      expected: 100,
+      warnPercentage: 0.30,
+      errorPercentage: 0.70,
+      errorOnLow: true
+   },
+   cron: "0 0 10 * ? *"
+}),</pre>
+
+<p>Each test must have an unique ID.</p>
+<p>You can set different datasources by selecting different CDA files, and set the respective tests.</p>
+
+<span class="example">MULTIPLE DATASOURCES VALIDATION</span>
+<pre>validation: [
+   { cdaFile: "/solution/cda/test.cda", dataAccessId: "1" , parameters: [...] },
+   { cdaFile: "/solution/cda/test2.cda", dataAccessId: "2" , parameters: [...] }
+],
+tests:[{
+   validationType: "custom",
+   validationFunction: function(rs, conf) {
+      var exists = rs.map(function(r){return r.length > 0}).reduce(function(prev, curr){
+         return conf.testAll ? (curr && prev) : (curr || prev);
+      });
+      return exists ? Alarm.ERROR : Alarm.OK;
+   }
+}],</pre>
+
+<p>We'll be using the Steel-Wheels Sample Data solution to create some examples of the validations that can be done. </p>
+<p>As an example, the following MDX query returns the # of Quantity and Sales for a specific year. </p>
+
+<span class="example">MDX Query Sample</span>
+<pre>select NON EMPTY {[Measures].[Quantity], [Measures].[Sales]} ON COLUMNS,
+   {Descendants
+      ( [Time].[${yearParameter}],
+      [Time].[${yearParameter}], AFTER
+      )
+   } ON ROWS
+   from [SteelWheelsSales]</pre>
+
+<span class="example">EXAMPLE - Resultset for 2003</span>
+<pre>["QTR1", 4561, 445094.69], ["Jan", 1357, 129753.6], ["Feb", 1449, 140836.19000000006], ["Mar", 1755, 174504.89999999997],
+
+["QTR2", 5695, 564842.02], ["Apr", 1993, 201609.55], ["May", 2017, 192673.11000000002], ["Jun", 1685, 170559.36000000004],
+
+["QTR3", 6629, 687268.8699999998], ["Jul", 2145, 225486.21000000002], ["Aug", 1974, 197809.30000000002], ["Sep", 2510, 263973.36],
+
+["QTR4", 19554, 1980178.4199999995], ["Oct", 5731, 589963.9], ["Nov", 10862, 1086720.4000000001], ["Dec", 2961, 303494.11999999994]</pre>
+
+<p>We can test if the resultset has data for all months and quarters as expected, and test the variations between months and quarters to detect peaks or valleys in the data due to double process or no process. For this, we can perform the test below, using the CDA file with the MDX query shown above.</p>
+
+<span class="example">TEST SAMPLE</span>
+<pre>cdv.registerTest({
+   id: 99999,
+   type: "query",
+   name: 'Existence of data',
+   group: "Steel-Wheels",
+   path: 'cdv/tests/steelwheels-existence.cdv',
+   createdBy: 'Webdetails',
+   createdAt: 1339430893246,
+   queries: [{
+      cdaFile: "/plugin-samples/cdv/steelwheels-tests.cda",
+      dataAccessId: "monthlyQuery" ,
+      parameters: {
+         yearParameter: "2003"
+      }
+   }],
+   validations:[{
+      validationName: "Steel-Wheels Data Validation",
+      validationType: "custom",
+      validationFunction: function(rs, conf) {
+         var success = true,
+         dif1 = [], dif2 = [];
+         //Test existence of data
+         var i = rs[0].resultset.length;
+         if ( i &lt; 16 ) {
+            return {type: "ERROR", description: "Missing data in Steels-Wheels!"};
+         }
+         return success ? "OK" : {type: "ERROR", description: "Missing data in Steels-Wheels!"};
+      }
+   }],
+   executionTimeValidation: {
+      expected: 100,
+      warnPercentage: 0.30,
+      errorPercentage: 0.70,
+      errorOnLow: false
+   },
+   cron: "0 0 10 * ? *"
+});</pre>
+
+<p>Since the resultset is supposed to show all quarters and months of a year, we expect that it has 16 rows, so we can use that to check if we have all the data for the year we want. As alternative we can also check if there are values on the resultset.</p>
+<p>If the test fails, the message is shown settled in the return command.</p>
+
+<span class="example">FAIL MESSAGE</span>
+<pre>Steel-Wheels: Existence of data and variation - 1 ERROR [Missing data in Steels-Wheels!]</pre>
+
+<p>If the previous test passes, then it will do the variations tests. It uses a trigger of lower than 10% per quarter variation and greater than 200% per month variation, but you're free to change it as you will, and watch the results.</p>
+<p>At the bottom, in <code>executionTimeValidation</code>, you can set the expected time for the query to run and set the <code>warnPercentage</code> and <code>errorPercentage</code> margin to receive alerts when a certain query takes too long to run. Also if the query runs too fast you and you set the <code>errorOnLow</code> to true, you should receive an alert.</p>
+<p>For last, you can schedule a time for the test to run automatically on the <code>cron</code> line, using the cron predefined scheduling definitions.</p>
+<p>If we're using another CDA file or had another <code>dataAccessId</code> returning a new resultset, it can be called with <code>rs[1].resultset</code>, where the value <code>1</code> is in agreement with the order settled in the queries section, from top to bottom. </p>
+<p>The tests will be sorted by groups, defined within the creation of each test. In each group, each line corresponds to a test, where we can see the name of this test, the path to the CDA file used as Datasource, the Validation name, the Expected Duration of the query, the Status of the test and an Options button.</p>
+<p>If the test returned a WARN last time it was run, the font color will change to orange, and in case of an ERROR, will change to red. </p>
+
+<h4>Invocation and Scheduling</h4>
+<p>There are 2 ways to call the validations:</p>
+<ul>
+	<li>By URL Request;</li>
+	<li>Scheduled Calls.</li>
+</ul>
+<p>The URL will be based on the ID / query name (tbd). The schedule calls are cron based. </p>

@@ -1,0 +1,143 @@
+<h3 class="mainTitle">Build RPMs Automatically</h3>
+
+<h4>Motivation</h4>
+<p>CBF - Community Build Framework - is an amazing tool to maintain several projects, compile Pentaho and even doing remote deploys using rsync.</p>
+<p>However, there are cases where rsync is not the best way to maintain a server installation. At Mozilla, IT uses Puppet to maintain everything related to automated server maintenance. The way CBF is structured allows us to define rules to automate solution checkouts, but we need to automate the installation of 3 extra bits:</p>
+
+<ul>
+	<li>Pentaho webapp</li>
+	<li>Pentaho solution (the system/ and admin/ directories)</li>
+	<li>Administration / Enterprise console</li>
+</ul>
+
+<h4>Approach</h4>
+<p>The cluster uses <a class="spacialink" href="http://www.redhat.com/promo/Red_Hat_Enterprise_Linux6/" target="_blank" title="RHEL6">RHEL6</a> distribution, so we chose to pack the distributions using <a class="spacialink" href="http://en.wikipedia.org/wiki/RPM_Package_Manager" target="_blank" title="RPM format">rpm</a> format. This should work for any rpm-based distribution. If someone wants to do the same for <a class="spacialink" href="http://en.wikipedia.org/wiki/Deb_%28file_format%29" target="_blank" title="Deb File Format">deb</a> or something else, just get in touch or simply fork CBF on <a class="spacialink" href="https://github.com/webdetails/cbf" target="_blank">github</a> and send a pull request.</p>
+
+<h4>Building RPMs through CBF</h4>
+<p>CBF has now two extra options (be sure to grab the latest version from <a class="spacialink" href="https://github.com/webdetails/cbf" target="_blank">github</a>):</p>
+
+<p><code>create-rpm-dist</code> - Creates a tgz file with Pentaho, Pentaho-style and ROOT folders - to be used with a puppet script</p>
+<p><code>create-rpms</code> - Creates rpms based on the specs found on the config/rpm folder for the solution</p>
+
+<p> In order to make it usable, we need to create a directory called rpm under config, and place there the .spec files for the rpm's we're creating. We will also need a specific makefile. </p>
+<p>This is the structure:</p>
+
+<span class="example">PROJECT STRUCTURE WITH RPM</span>
+<pre>project-metrics
+├── config
+│   ├── build-ee-pedro.properties
+│   ├── build-pedro.properties
+│   ├── build.properties
+│   └── rpm
+│       ├── makefile
+│       ├── webdetails-pentaho-adminconsole.spec
+│       ├── webdetails-pentaho-adminconsole-stage.spec
+│       ├── webdetails-pentaho-solution.spec
+│       ├── webdetails-pentaho-solution-stage.spec
+│       ├── webdetails-pentaho-webapp.spec
+│       └── webdetails-pentaho-webapp-stage.spec
+├── etl
+├── patches
+│   ├── project-metrics
+│   ├── target-build
+│   └── target-dist
+├── patches-ee
+│   ├── enterprise-console
+│   ├── server
+│   └── solution
+└── solution -> ../project-metrics-solution</pre>
+
+<p>You'll see that I'm building here 6 RPMs, for a production and stage environment.</p>
+<p>You can download the entire set of files from <a class="spacialink" href="http://www.webdetails.pt/ficheiros/rpm-sample.zip">here</a>.</p>
+
+<span class="example">WEBDETAILS-PENTAHO-SOLUTION.SPEC SAMPLE</span>
+<pre>Name:  Webdetails-Pentaho-Webapp
+Version: @VERSION@
+Release: 1%{?dist}
+Summary: Pentaho webapp customized for Mozilla metrics
+Group:  Applications/Engineering
+License: MPL-1.0
+Source:     webdetails-pentaho.tgz
+
+%description
+
+%prep
+rm -rf %{buildroot}
+%build
+tar zxvf ../SOURCES/webdetails-pentaho.tgz
+
+%install
+mkdir %{buildroot}
+make DESTDIR=%{buildroot} install
+
+%clean
+rm -rf %{buildroot}
+
+%files
+%defattr(-,root,root,-)
+%doc
+
+/opt/pentaho/pentaho-server/server/webapps/pentaho
+/opt/pentaho/pentaho-server/server/webapps/pentaho-style
+/opt/pentaho/pentaho-server/server/webapps/ROOT
+
+%changelog</pre>
+
+<p>And here's the makefile that is called by the specs. I chose to install the Pentaho server under /opt/pentaho/, but this can be changed to any desired path. </p>
+
+<span class="example">MAKEFILE SAMPLE</span>
+<pre>all: install
+
+install:
+ mkdir $(DESTDIR)/opt
+ mkdir $(DESTDIR)/opt/pentaho
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server/server/
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server/server/webapps
+ cp -r pentaho $(DESTDIR)/opt/pentaho/pentaho-server/server/webapps/pentaho
+ cp -r pentaho-style $(DESTDIR)/opt/pentaho/pentaho-server/server/webapps/pentaho-style
+ cp -r ROOT $(DESTDIR)/opt/pentaho/pentaho-server/server/webapps/ROOT
+
+install-solution:
+ mkdir $(DESTDIR)/opt
+ mkdir $(DESTDIR)/opt/pentaho
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-solution
+ cp *.* $(DESTDIR)/opt/pentaho/pentaho-solution/
+ cp -r system $(DESTDIR)/opt/pentaho/pentaho-solution/system
+ cp -r admin $(DESTDIR)/opt/pentaho/pentaho-solution/admin
+
+
+install-stage:
+ mkdir $(DESTDIR)/opt
+ mkdir $(DESTDIR)/opt/pentaho
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server-stage
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server-stage/server
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-server-stage/server/webapps
+ cp -r pentaho $(DESTDIR)/opt/pentaho/pentaho-server-stage/server/webapps/pentaho
+ cp -r pentaho-style $(DESTDIR)/opt/pentaho/pentaho-server-stage/server/webapps/pentaho-style
+ cp -r ROOT $(DESTDIR)/opt/pentaho/pentaho-server-stage/server/webapps/ROOT
+
+install-solution-stage:
+ mkdir $(DESTDIR)/opt
+ mkdir $(DESTDIR)/opt/pentaho
+ mkdir $(DESTDIR)/opt/pentaho/pentaho-solution-stage
+ cp *.* $(DESTDIR)/opt/pentaho/pentaho-solution-stage/
+ cp -r system $(DESTDIR)/opt/pentaho/pentaho-solution-stage/system
+ cp -r admin $(DESTDIR)/opt/pentaho/pentaho-solution-stage/admin</pre>
+
+<h4>Dependencies</h4>
+<p>Note that it depends on having rpmbuild installed on your system. Would work on Linux and OSx, and even eventually on Windows with Cygwin. </p>
+<p>After running the create-rpms ant target, you should get the RPMs in the dist/rpm/RPMS/ directory. </p>
+
+<h4>Next Steps</h4>
+<p>You probably know what you want to do with the RPMs. You can either install them directly, or if you're using Puppet you may want to set up a yum repository. There are lots of tutorials on how to do this, <a class="spacialink" href="http://www.techrepublic.com/blog/opensource/create-your-own-yum-repository/609" target="_blank">here's one</a> of them. </p>
+<h4>Packaging Enterprise Edition</h4>
+<p>By default, this targets know how to handle the CE version. We can change a few options and tell it to pack the Enterprise Edition, just by setting some extra options, pointing to a different location where we unpacked the EE version:</p>
+
+<pre>######################################
+## EE BASED RPM BUILD
+######################################
+
+rpm.source.webapp = /home/pedro/tex/pentaho/ee/4.8/biserver-ee/tomcat/webapps/
+rpm.source.solution = /home/pedro/tex/pentaho/ee/4.8/biserver-ee/pentaho-solutions/
+rpm.source.administration-console = /home/pedro/tex/pentaho/ee/4.8/enterprise-console</pre>

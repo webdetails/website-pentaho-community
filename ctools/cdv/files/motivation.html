@@ -1,0 +1,20 @@
+<h3 class="mainTitle">Motivation</h3>
+
+<p>Very often, we want that several questions related to the data could be answered before we noticed it:</p>
+<ul>
+	<li>Do we have up to date data?</li>
+	<li>Can we trust the data?</li>
+	<li>How long did the queries take to run?</li>
+	<li>Do we have wrong data? (duplicated users in community)</li>
+	<li>Be able to validate big chunks of reprocessing</li>
+	<li>Did the data format change?</li>
+	<li>Is the data stalled? (eg: number of twitter followers not updating)</li>
+	<li>Do we have peaks or valleys in the data? (due to double process or no process)</li>
+	<li>We need a way to handle known effects. (eg: Christmas dip)</li>
+	<li>We need to correlate independent data sources.</li>
+	<li>Do we have a big number of 'unknowns'? (tk=1 in DW)</li>
+	<li>Do we have clearly wrong rows in resultset? (e.g.: a line there)</li>
+</ul>
+
+<p><strong>So we decided to build CDV</strong> - a data validator that periodically does a set of tests that answer all the above questions.</p>
+<p>You can see the original <a class="spacialink" href="http://pedroalves-bi.blogspot.pt/2012/05/cdv-request-for-comments.html" target="_blank" title="Request For Comments for Community Data Validation">RFC for CDV</a>. Note that not every feature has been implemented.</p>

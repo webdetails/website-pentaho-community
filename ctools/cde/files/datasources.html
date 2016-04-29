@@ -1,0 +1,29 @@
+<h3 class="mainTitle">Datasources</h3>
+
+<p>Dashboards can be populated by a variety of sources, including:</p>
+<ul>
+	<li>Databases;</li>
+	<li>Mondrian cubes;</li>
+	<li>Pentaho Metadata;</li>
+	<li>XML files;</li>
+	<li>Scripting - you can define an ad-hoc datasource (for example a small table), just by typing a piece of code;</li>
+	<li>Kettle transformations - Kettle allows you to get data from other sources, as for example Excel sheets or Web services.</li>
+</ul>
+<p>The datasources can be parametrized, which makes your data totally versatile.</p>
+
+<h4>Adding Datasources to a Dashboard</h4>
+<p>In the Datasources perspective you can set up the origin of the data that will be used to populate your dashboard.</p>
+<p>Basically, you have to specify where the data comes from and how it looks like.</p>
+<p>This is how you do it:</p>
+<ul>
+	<li>From the left menu, expand the category where your data belongs. For example, if you have to query a Mondrian cube, expand the category MDX Queries;</li>
+	<li>From the list of datasource types, click the one that fits your needs, for example MDX over mondrianJndi. A new datasource will be added in the pane located in the middle of the screen. When you select a datasource the right pane displays its properties - it's where you define the datasource.</li>
+</ul>
+<p>Below is the list of properties available in the datasource setup:</p>
+<ul>
+	<li><strong>Name of the data source</strong>: The name must be descriptive because you will need it when defining a component that uses it;</li>
+	<li><strong>Query</strong>: This is where you type the query (SQL, MDX, etc. depending on the kind of datasource);</li>
+	<li><strong>JNDI name or JDBC parameters</strong>: host, user, etc.;</li>
+	<li><strong>Column configuration</strong>: This property allows you to rename columns returned by the query, or create new calculated columns;</li>
+	<li><strong>Output options</strong>: This property allows you to reorder or keep a subset of the columns returned by the query.</li>
+</ul>

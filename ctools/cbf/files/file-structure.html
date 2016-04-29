@@ -1,0 +1,139 @@
+<h3 class="mainTitle">File Structure</h3>
+
+<p>We need to create a directory where our CBF structure will live. This directory, which I'll call cbf, will have:</p>
+
+<ul>
+	<li>The CBF script;</li>
+	<li>Pentaho source code;</li>
+	<li>Your project directory.</li>
+</ul>
+
+<p>The CBF build script is a tweaked <code>build.xml</code> file (download it from the download section). Specific project directories have the format <code>project-&lt;something&gt;</code>. In this example we'll use <code>project-client</code>. So the structure looks like:</p>
+
+<span class="example">CBF DIRECTORY STRUCTURE</span>
+<pre>cbf
+├── pentaho-1.6
+├── pentaho-1.7
+├── pentaho-2.0
+├── pentaho-3.0
+├── pentaho-3.5
+├── pentaho-3.5.2
+├── pentaho-3.6
+├── pentaho-3.7
+├── pentaho-3.8
+├── project-bare17
+├── project-bare20
+├── project-bare30
+├── project-bare30-training
+├── project-bare35
+├── project-bare352
+├── project-bare36
+├── project-bare37
+├── project-bare38
+└── build.xml</pre>
+
+<h4>Pentaho Source</h4>
+<p>Pentaho source can be downloaded using a SVN client. I use command line tool, so it would be something like this:</p>
+<pre>svn co svn://source.pentaho.org/svnroot/bi-platform-v2/tags/3.8.0-stable pentaho-3.8</pre>
+<p>Alternatively, <code>http</code> instead of <code>svn</code> can be used if you're behind a firewall. You can browse the SVN tree to get other versions, though sometimes it isn't easy to find the correct one.</p>
+
+<h4>Project Client Directory</h4>
+<p>This is where we'll put our files. If you're starting a new project, create this from scratch.</p>
+<p>You can also start from the Quickstart section for a pre-built structure. You'll end up with something like this:</p>
+
+<span class="example">PROJECT DIRECTORY STRUCTURE</span>
+<pre>project-client
+├── config
+│   ├── build-nelson.properties
+│   ├── build-neraka.properties
+│   ├── build-paula.properties
+│   ├── build-pdpi.properties
+│   ├── build-pedro.properties
+│   ├── build-tgf.properties
+│   └── build.properties
+├── patches
+│   ├── project-client
+│   ├── target-build
+│   └── target-dist
+└── solution
+    ├── MySolution
+    ├── admin
+    ├── bi-developers
+    ├── cdf
+    ├── index.properties
+    ├── index.xml
+    ├── steel-wheels
+    └── system</pre>
+<p>The directories in italic are generated during the build process. There are 3 main blocks:</p>
+
+<p class="title">Config</p>
+<p>Here lives the different configuration files that will control the build process. When executing CBF, we'll pass an option that defines which environment will be used, like <code>-Denv=pedro</code>. In all cases, the <code>build.properties</code> will be read first for common properties and then the specific file will override this values. In this example, the <code>build.properties</code> file will be read followed by <code>build-pedro.properties</code>.</p>
+<p>This example was taken from a Webdetails project, so you'll see several files for each person that has worked with it. We could also have separate environment configuration files for deploying to server.</p>
+
+<p class="title">Patches</p>
+<p>The patches directory will be used for three purposes:</p>
+<ul>
+	<li>Making changes to the solution/system configuration;</li>
+	<li>Patching the server dir (such as adding jars or changing log4j.xml);</li>
+	<li>Patching the source (advanced - for changing java files).</li>
+</ul>
+<p>Inside the patches dir you'll often see 3 main directories:</p>
+<ul>
+	<li>project-client;</li>
+	<li>target-build;</li>
+	<li>target-dist.</li>
+</ul>
+
+<p class="title">Solution</p>
+<p>This is our proper solution implementation. Use as many as needed, but take care to avoid changing the <code>admin</code>, <code>bi-developers</code>, <code>steel-wheels</code> and <code>system directories</code>, as they are wiped and copied again during the build process. For changes in these specific directories, use the patches directory.</p>
+<p>The directory structure has to obey the CBF structure. <code>project-client</code> has to match your project name. This is an important detail for the patches to be applied correctly. <code>target-build</code> and <code>target-dist</code> are two CBF specific directories. The first one holds the Pentaho source to be compiled and the second is where the server will be installed into. </p>
+<p>Here's a real world example that should be easy enough to understand and extend: </p>
+
+<span class="example">SOLUTION DIRECTORY STRUCTURE</span>
+<pre>patches
+├── project-client
+│   └── solution
+│       └── system
+│           ├── applicationContext-security-ldap.properties
+│           ├── applicationContext-spring-security-hibernate.properties
+│           ├── applicationContext-spring-security-ldap.xml
+│           ├── applicationContext-spring-security.xml
+│           ├── hibernate
+│           │   ├── hibernate-settings.xml
+│           │   ├── hsql.hibernate.cfg.xml
+│           │   └── mysql5.hibernate.cfg.xml
+│           ├── mondrian
+│           │   └── mondrian.properties
+│           ├── olap
+│           │   └── datasources.xml
+│           ├── pentaho-spring-beans.xml
+│           ├── pentaho.xml
+│           ├── pentahoObjects.spring.xml
+│           ├── publisher_config.xml
+│           ├── sessionStartupActions.xml
+│           └── smtp-email
+│               ├── email_config.xml
+│               └── email_config_gmail.xml
+└── target-dist
+    └── server
+        ├── conf
+        │   └── server.xml
+        ├── lib
+        │   ├── LucidDbClient.jar
+        │   ├── c3p0-0.9.1.2.jar
+        │   ├── commons-dbcp-1.2.1.jar
+        │   └── commons-pool-1.2.jar
+        └── webapps
+            ├── ROOT
+            │   └── favicon.ico
+            └── pentaho
+                ├── META-INF
+                │   └── context.xml
+                ├── WEB-INF
+                │   ├── classes
+                │   │   └── log4j.xml
+                │   └── web.xml
+                ├── index.jsp
+                └── jsp
+                    └── PUCLogin.jsp</pre>
+<p>By respecting this structure we'll be able to keep our changes to the pentaho installation in a single place. This can then be placed in a VCS and shared with the team. </p>

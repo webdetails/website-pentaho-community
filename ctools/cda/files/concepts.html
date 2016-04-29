@@ -1,0 +1,7 @@
+<h3 class="mainTitle">Concepts</h3>
+
+<p>CDA uses two different components: the <code>connection</code> (a database or Pentaho datasource to use) and the <code>dataAccess</code> (a query over that connection).</p>
+<p>Connections and queries are defined in a XML file (the CDA file) lying in the solution repository. Data access is done by a call to a specific dataAccess ID in the CDA file.</p>
+<p>Each data access may have parameters and calculated columns added to the results. It's also possible to have compoundDataAccess elements, which represent joins or unions on different queries.</p>
+<p>CDA features an API to fetch query results, an editor to modify CDA files and a previewer to visualize the results of a query in table form.</p>
+<p>Finally, export: query results can be returned from the API in various formats. Currently supported formats are JSON, XML, CSV, XLS and HTML visual mode.</p>

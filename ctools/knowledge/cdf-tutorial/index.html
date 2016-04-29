@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
+  </script>
+  <meta charset="utf-8">
+  <title>CDF Tutorial | Pentaho Community</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <link rel="shortcut icon" href="../../../img/favicon.png" type="image/png">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../../css/master.css">
+  <link rel="stylesheet" href="../../../css/main.css">
+
+  <link rel="stylesheet" href="../../../ctools/knowledge/style.css">
+
+  <!-- JS -->
+  <script src="../../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="../../../js/vendor/bootstrap.min.js"></script>
+
+  <script src="../../../js/master.js"></script>
+
+  <!-- SEO -->
+  <meta name="author" content="Pentaho">
+  <meta name="description" content="The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server.">
+  <link rel="canonical" href="http://www.webdetails.pt/ctools/knowledge/cdf-tutorial/">
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pentaho">
+  <meta name="twitter:title" content="CDF Tutorial | Webdetails • Business Analytics">
+  <meta name="twitter:description" content="The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server.">
+  <meta name="twitter:image:src" content="http://www.webdetails.pt/img/share/webdetails-cdf-tutorial.png">
+
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://www.webdetails.pt/ctools/knowledge/cdf-tutorial/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CDF Tutorial | Webdetails • Business Analytics">
+  <meta property="og:image" content="http://www.webdetails.pt/img/share/webdetails-cdf-tutorial.png" />
+  <meta property="og:description" content="The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server.">
+  <meta property="og:site_name" content="Pentaho">
+
+  <!-- Social: Google+ / Schema.org  -->
+  <meta itemprop="name" content="CDF Tutorial | Webdetails • Business Analytics">
+  <meta itemprop="description" content="The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server.">
+  <meta itemprop="image" content="http://www.webdetails.pt/img/share/webdetails-cdf-tutorial.png">
+</head>
+
+<body class="ctools training cdf-tutorial">
+  <div class="header-container"></div>
+  <div class="mainContainer backPage">
+    <div class="fullWidthCtoolIntro ctool-header">
+      <div class="row">
+        <div class="col-md-12 col-xs-12 product-header">
+          <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 left-header">
+            <div class="header-content">
+              <div class="row">
+                <div class="col-xs-12 header-txt-block">
+                  <div>
+                    <h1 class="product">CDF TUTORIAL</h1>
+                    <p>Learn Dashboards Framework</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="fullWidthCtoolIntro mainContainer" style="border-bottom: none; ">
+      <div class="site-container product">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <p>The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server. As the main developers of this community project, we understand that sometimes is not easy to achieve exactly what we want. To allow users to get the full benefit of CDF we've prepared a set of documentation -
+a step by step tutorial from "how to start" to the hidden features of this framework.</p>
+                <div class="showcaseDisclamer subjectDescription">
+                  <p>CDF Tutorial is supported by Pentaho versions 5.0 and above. If you are running an older version please consider upgrading before purchasing CDF Tutorial.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row content">
+              <div class="col-sm-8 product-description">
+                <p class="product-title">
+                  <span class="product-bullets">01</span> How to Start</p>
+                <ul>
+                  <li>What files to create and what their contents should be.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">02</span> First Dashboard</p>
+                <ul>
+                  <li>How to select values and how to return them - use them as parameters.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">03</span> Parametrization</p>
+                <ul>
+                  <li>Make your reports look good.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">04</span> Permissions</p>
+                <ul>
+                  <li>How to segregate the data being viewed by collaborators with different profiles.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">05</span> Charts</p>
+                <ul>
+                  <li>Present your data in several formats.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">06</span> Templates</p>
+                <ul>
+                  <li>Change the way your dashboards look.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">07</span> Time Series</p>
+                <ul>
+                  <li>Interact with time based charts.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">08</span> Geo-based Dashboards</p>
+                <ul>
+                  <li>How to use maps to make your information richer.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">09</span> Gauges and traffic lights</p>
+                <ul>
+                  <li>Real time view over your business.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">10</span> Tables and Sparklines</p>
+                <ul>
+                  <li>Build visually pleasing tables.</li>
+                </ul>
+
+                <p class="product-title">
+                  <span class="product-bullets">11</span> Interactive Dashboards</p>
+                <ul>
+                  <li>Freely explore your data.</li>
+                </ul>
+              </div>
+              <div class="col-sm-4 buy-options">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="buy-box">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="buy-box-container clearfix">
+                                <div class="buy-box-header-content">
+                                  CDF TUTORIAL
+                                </div>
+                                <div class="cdf-icon"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="buy-box-container clearfix buy-now">
+                                <a href="http://store.kagi.com/cgi-bin/store.cgi?storeID=6FHAR_LIVE&time=1429090341&lang=en&page=First%20Sales%20Page" target="_blank" class="btn btn-green btn-default text-left">
+                                  <p class="buy-label">Buy Now</p>
+                                  <p class="buyPrice">40
+                                    <span class="euro">€</span>
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="buy-box">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="buy-box-container clearfix">
+                                <div class="buy-box-header-content">
+                                  BUNDLES
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <div class="buy-box-container clearfix buy-now">
+                                <p>CDF Tutorial + Open Demos + CDE Tutorial.</p>
+                                <a href="http://store.kagi.com/cgi-bin/store.cgi?storeID=6FHAR_LIVE&time=1429090341&lang=en&page=First%20Sales%20Page" target="_blank" class="btn btn-green btn-default">
+                                  <p class="buy-label">Buy Now</p>
+                                  <p class="buyPrice">170
+                                    <span class="euro">€</span>
+                                  </p>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="bgGray product-screens">
+          <div class="site-container">
+            <div class="row">
+              <div class="col-sm-12 product-snaps">
+                <div class="row">
+                  <!--<div class="col-sm-4 col-xs-0 dlpdf">
+                    <h2>Learn Dashboard Framework.</h2>
+                    <a href="#" target="_blank" class="btn product-header-buy gray-btn">
+                    CDF Tutorial PDF
+                    </a>
+                  </div>-->
+                  <!-- to remove when the above gets uncommented -->
+                  <div class="col-sm-2 col-xs-0"></div>
+                  <!-- end of to remove when the above gets uncommented -->
+                  <div class="col-sm-8 col-sm-offset-0 col-xs-12  col-xs-offset-1">
+                    <div class="row screenshots">
+                      <div class="col-sm-4 col-xs-12">
+                        <div class="showcase-demo-box" data-toggle="modal" data-target="#cde-tutorial-interface1">
+                          <div class="showcase-demo-box-header text-center">
+                            <img src="../../../img/cdf-tutorial1.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+                          </div>
+                          <span class="magnifier-ico"></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 col-xs-12">
+                        <div class="showcase-demo-box" data-toggle="modal" data-target="#cde-tutorial-interface2">
+                          <div class="showcase-demo-box-header text-center">
+                            <img src="../../../img/cdf-tutorial2.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+                          </div>
+                          <span class="magnifier-ico"></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 col-xs-12">
+                        <div class="showcase-demo-box" data-toggle="modal" data-target="#cde-tutorial-interface3">
+                          <div class="showcase-demo-box-header text-center">
+                            <img src="../../../img/cdf-tutorial3.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+                          </div>
+                          <span class="magnifier-ico"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lightContainerBack purchase-terms">
+        <div class="site-container product terms">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="requirements">
+                <h3>Requirements</h3>
+                <ul>
+                  <li>Pentaho 5.0 or above.</li>
+                  <li>Latest stable Ctools (CDA, CDE and CDF).</li>
+                  <li>Requires <code>Sample Data</code> as a datasource so make sure you have it available in your Pentaho server.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <h3>Purchase Terms</h3>
+              <ul>
+                <li>Receive the installer by email in the following business day.</li>
+                <li>Have the source, so that you can see how everything is built. </li>
+                <li>Get free updates made to the tutorial for the period of 1 year from the date of purchase.</li>
+                <li>Contribute to open-source development effort.</li>
+                <li>Full refund guarantee if you're not happy with the purchased item.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="modal fade dashboard-design-modal" id="cde-tutorial-interface1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header clearfix">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../../../img/cdf-tutorial1.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade dashboard-design-modal" id="cde-tutorial-interface2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header clearfix">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../../../img/cdf-tutorial2.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade dashboard-design-modal" id="cde-tutorial-interface3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header clearfix">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../../../img/cdf-tutorial3.png"  alt="Pentaho CTools: CDF Tutorial screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="community-footer"></div>
+
+  <script type="text/javascript">
+    /* load header */
+    $(function() {
+      $(".header-container").load("../../../pentaho-templates/header.html");
+      $(".community-footer").load("../../../pentaho-templates/footer.html");
+    });
+  </script>
+  
+  <script src="../../../js/main.js"></script>
+  <script>
+    var _gaq = [
+      ['_setAccount', 'UA-40336231-1'],
+      ['_trackPageview']
+    ];
+    (function(d, t) {
+      var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+      g.src = '//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+  </script>
+
+  <script type="text/javascript" src="//munchkin.marketo.net/munchkin.js"></script>
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    mktoMunchkin("680-ONC-130");
+    //--><!]]>
+  </script>
+
+</body>
+
+</html>

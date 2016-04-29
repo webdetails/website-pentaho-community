@@ -1,0 +1,103 @@
+<h3 class="mainTitle">Connections</h3>
+
+<p>Connections are defined inside a <code>Datasources</code> block. Each connection is defined by a <code>Connection</code> block, which contains all the necessary information. For each connection, an (unique) <code>ID</code> and <code>type</code> must be provided.</p>
+
+<h4>Supported Connection Types</h4>
+<ul>
+	<li><code>metadata.metadata</code></li>
+	<li><code>sql.jdbc</code></li>
+	<li><code>sql.jndi</code></li>
+	<li><code>mondrian.jdbc</code></li>
+	<li><code>mondrian.jndi</code></li>
+	<li><code>olap4j.jdbc</code></li>
+	<li><code>olap4j.jndi</code></li>
+	<li><code>scripting.scripting</code></li>
+	<li><code>kettle.TransFromFile</code></li>
+	<li><code>xpath.xPath</code></li>
+</ul>
+
+<p><code>olap4j</code>, <code>scripting</code>, <code>xpath</code> and <code>kettle</code> connections are available only on CDA for Pentaho 3.6 onwards.</p>
+
+<p>A connection defines the datasource and the way the connection is established and each connection type requires a different set of properties to be defined.</p>
+
+<h4>metadata.metadata</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>XmiFile</code>: the file containing the metadata definitions, exported from the Metadata repository.</li>
+	<li><code>DomainId</code>: the Metadata domain as defined on the Pentaho metadata layer.</li>
+</ul>
+
+<h4>sql.jdbc</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Driver</code>: the Java classname of the driver (e.g. <code>com.mysql.jdbc.Driver</code>).</li>
+	<li><code>URL</code>: the URL to connect to (e.g. <code>jdbc:mysql://localhost:3306/database</code>).</li>
+	<li><code>User Name</code>: the username to use</li>
+	<li><code>Password</code>: the user's password</li>
+</ul>
+
+<h4>sql.jndi</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Jndi</code>: the connection's parameters as defined in the context.xml file.</li>
+</ul>
+
+<h4>mondrian.jdbc</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Mondrian schema</code>: mondrian schema file.</li>
+	<li><code>Driver</code>: the Java classname of the driver (e.g. <code>com.mysql.jdbc.Driver</code>).</li>
+	<li><code>URL</code>: the URL to connect to (e.g. <code>jdbc:mysql://localhost:3306/database</code>).</li>
+	<li><code>User Name</code>: the username to use.</li>
+	<li><code>Password</code>: the user's password.</li>
+	<li><code>Banded Mode</code>: compact or classic.</li>
+</ul>
+
+<h4>mondrian.jndi</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Mondrian schema</code>: mondrian schema file</li>
+	<li><code>Jndi</code>: the connection's parameters as defined in the context.xml file.</li>
+	<li><code>Banded Mode</code>: compact or classic. There is also the possibility of a denormalized <code>mondrian.jdbc</code> and a denormalized <code>mondrian.jndi</code> MDX queries that have the same options as the standard (normalized) queries. The differences between denormalized and standard (normalized) queries are explained on data accesses. The differences between compact and classic on Banded Mode are also explained on data accesses.</li>
+</ul>
+
+<h4>olap4j.jdbc</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Driver</code>: the olap4j driver to use (typically <code>mondrian.olap4j.MondrianOlap4jDriver</code> ).</li>
+	<li><code>Url</code>: the connection url, typically <code>jdbc:mondrian:</code>.</li>
+	<li><code>User name for the underlying database</code>: the username to use.</li>
+	<li><code>Password for the underlying database</code> : the user's password.</li>
+	<li><code>Driver for the underlying database</code>: the Java classname of driver (e.g. org.hsqldb.jdbcDriver).</li>
+	<li><code>URL pointing at the underlying database</code>: the database url (e.g. <code>jdbc:hsqldb:hsql://localhost:9001/sampledata</code>).</li>
+	<li><code>Catalog to apply to the underlying database</code>: path to the the Mondrian schema file (e.g. <code>solution:/steel-wheels/analysis/steelwheels.mondrian.xml</code>).</li>
+</ul>
+
+<h4>olap4j.jndi</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Jndi</code>: the connection's parameters as defined in the context.xml file. There is also the possibility of a denormalized <code>olap4j.jdbc</code> and a denormalized <code>olap4j.jndi</code> MDX queries that have the same options as the standard (normalized) queries.</li>
+</ul>
+
+<h4>scripting.scripting</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Language</code>: the scripting language used; only beanshell is currently supported.</li>
+	<li><code>InitScript</code>: the initialization script to be run before the query.</li>
+</ul>
+
+<h4>kettle.TransFromFile</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>Kettle Transformation File</code>: the kettle transformation file to use.</li>
+	<li><code>Variable</code>: the value of a variable to be used in the transformation; multiple variable properties may be defined, one for each variable to use.</li>
+</ul>
+
+<h4>xpath.xpath</h4>
+<ul>
+	<li><code>ID</code>: the identifier of the connection.</li>
+	<li><code>DataFile</code>: a XML file with the data to query.</li>
+</ul>
+
+<h4>Examples</h4>
+<p>You can find examples of all these types of connection in your solution repository, under <code>public/plugin-samples/cda/cdafiles</code>.</p>

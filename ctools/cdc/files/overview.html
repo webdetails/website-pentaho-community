@@ -1,0 +1,23 @@
+<h3 class="mainTitle">Overview</h3>
+
+<p>Performance is a key point, not only in Business Intelligence software but in user interfaces in general. The goal of CDC is to provide a Pentaho implementation based on Mondrian/CDA and a distributed caching layer which prevents the database to be hit, as much as possible.</p>
+<p>One of the functionalities added is the ability to clear from cache only specific Mondrian cubes. Even though Mondrian has a very complete API to control the member's cache, Pentaho only provides a functionality to clean all the cache, that ends up being very limited in production environments.</p>
+<p>The cache ability to survive server restarts is a design bonus, and it's supported by CDA out-of-the-box. This is now supported in Mondrian, since CDC 13.02.07 update.</p>
+
+<h4>CDC Requirements</h4>
+<ul>
+	<li>Mondrian 3.4 or later (in Pentaho 4.5);</li>
+	<li>CDA 12.05.15.</li>
+</ul>
+
+<h4>CDC Usage</h4>
+<ul>
+	<li>Install CDC using either the cdc-installer or ctools-installer. If you do a manual install, be sure to copy the contents of solution/system/cdc/pentaho/lib to server's WEB-INF/lib;</li>
+	<li>Download the standalone cache node;</li>
+	<li>Execute the standalone cache node in the same machine as Pentaho or in the same internal network (launch-hazelcast.sh), optionally editing the file and changing the memory settings (defaults to 1Gb, increase at will). You can launch as many nodes as you want;</li>
+	<li>Launch Pentaho and click on the CDC button;</li>
+	<li>Enable cache usage on CDA and Mondrian;</li>
+	<li>Restart Pentaho Server;</li>
+	<li>Check if the settings screen are satisfactory. Usually the defaults work fine;</li>
+	<li>Open analyzer, jpivot or a CDE Dashboard that uses CDA and you should see the cache being populated.</li>
+</ul>

@@ -1,0 +1,13 @@
+<h3 class="mainTitle">FAQ</h3>
+
+<h4 class="title">How do I change the type of repository?</h4>
+<p>Edit <code>settings.xml</code> and change the value of <code>repositoryClass</code>. Right now, you can choose <code>pt.webdetails.cfr.repository.PentahoRepositoryFileRepository</code> for the Pentaho Solution Repository or <code>pt.webdetails.cfr.repository.DefaultFileRepository</code> for a file system based repository.</p>
+
+<h4>How can I use another repository?</h4>
+<p>You can roll up your own version of a repository or develop a wrapper to whatever you're using to manage your files. Just implement the <code>pt.webdetails.cfr.repository.IFileRepository</code>, drop the resulting class or jar in the <code>system/cfr/lib</code> folder and reference the class from <code>settings.xml</code>.</p>
+
+<h4>Where are the files stored in the DefaultFileRepository?</h4>
+<p>They are stored in <code>system/.cfr</code>. You can also configure some other root folder by editing <code>settings.xml</code> and adding an attribute <code>defaultFileRepositoryRoot</code> with the full name of the starting folder for your repository.</p>
+
+<h4>Can I upload a file over a web request?</h4>
+<p>Yes, we can build and execute a POST request specifying the correct options. For more details on this, please <a class="spacialink" href="mailto:lead@webdetails.pt">contact us</a>.</p>

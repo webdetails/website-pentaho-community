@@ -1,0 +1,74 @@
+<h3 class="mainTitle">Configuration File</h3>
+
+<p>Configuration files play a key role in CBF. It's where all the information needed for runtime will be specified. When we run CBF script, we specify not only which project we're running: <code>(-Dproject=client)</code>, but also which configuration (from now on we'll use the word environment) we want to use <code>(-Denv=pedro)</code>. Here's a sample of calling CBF: <code>ant -Dproject = client -Denv=pedro dist-clean all</code>.</p>
+<p>In this case, CBF will look for a configuration file under <code>project-client/config/build-pedro.properties</code>. That file contains Pedro's specific configuration and inherits all the properties defined in <code>build.properties</code></p>
+
+<h4>Build.Properties</h4>
+<pre class="prettyprint linenums">######################################
+## GENERIC PROPERTIES
+######################################
+javac.path = NOT SET
+#jre.dir = NOT SET
+#project revision. May need to change according to project
+project.revision=3.8.0-stable
+dependency.pentaho-reporting.revision=3.8.0-stable
+# Solution path. Required for compile time
+solution.path = NOT SET
+# Solution path required for runtime. Defaults to the above value but can be different if we're
+# deploying to another place. Should be used in WEB-INF/web.xml in the solution-path parameter
+solution.deploy.path = NOT SET
+# Copy pentaho samples (bi-developers and steelwheels) to target-dist at runtime?
+copy.pentaho.samples = true
+# Tomcat 6 path:
+tomcat.path = NOT SET
+# Uncomment to use latest CDF from trunk
+dependency.pentaho-cdf-plugin.revision=TRUNK-SNAPSHOT
+# Java options for the run command
+java.opts = -Dfile.encoding=utf-8 -Xmx512m -XX:MaxPermSize=512m -Xrunjdwp:transport=dt_socket,address=8765,server=y,suspend=n
+######################################
+## PROJECT DIRECTORIES - The defaults usually work fine
+######################################
+pentaho.dir = pentaho-3.8/
+pentaho.build.dir = target-build/
+######################################
+## DEPLOY OPTIONS
+######################################
+deploy.mode = rsync
+deploy.args = -avz --exclude '.svn/' --exclude '*.log' --exclude 'work/' --exclude 'temp_user/' --exclude 'temp/
+' --exclude 'tmp/'
+deploy.dest.server = user@host:path
+deploy.dest.solution = user@host:path
+######################################
+## DYNAMIC TOKENS TO BE USED AS FILTERS
+######################################
+DB_LOCATION = 127.0.0.1
+DB_USER = pedro
+DB_PASSWORD = bar
+BASE_URL = http://127.0.0.1:8080/pentaho/
+######################################
+## LOGS
+######################################
+PENTAHO.LOG.FILE = pentaho.log
+MONDRIAN.LOG.FILE = mondrian.log
+PENTAHO.LOG.LEVEL = INFO
+MONDRIAN.LOG.LEVEL = DEBUG
+MONDRIAN.SQL.LOG.LEVEL = DEBUG</pre>
+<p> This is a fairly complete example of a build file. </p>
+<p> Some of the properties are mandatory for the build process while others are defined to be replaced as tokens (more information regarding tokens elsewhere in this document). </p>
+<p> The values that are defined act as default values for the build. </p>
+<p> While everything can be overridden in the environment-specific file, they usually can be left untouched. The ones marked as "NOT SET" have to be overridden for each environment. </p>
+<p> Explanation of some important property names: </p>
+<ul>
+	<li><code>pentaho.dir</code>: source code of the server we're building;</li>
+	<li><code>project.revision</code>: version specific property;</li>
+	<li><code>dependency.pentaho-reporting.revision</code>: This is specific to Pentaho 3.8.0, usually not needed for other versions;</li>
+	<li><code>tomcat.path</code>: path to a unmodified version of Tomcat. Pentaho 3.8 requires version 6.0.x while older versions work against version 5.5.x.</li>
+</ul>
+
+<h4>Build.Pedro.Properties</h4>
+<p> Here's a sample of Pedro's sandbox file: </p>
+<pre>javac.path = /usr/bin/javac
+tomcat.path = /Users/pedro/tex/pentaho/apache-tomcat-6.0.32/
+pentaho.dir = pentaho-3.8
+solution.path = /Users/pedro/tex/pentaho/project-client/solution
+solution.deploy.path = /Users/pedro/tex/pentaho/project-client/solution</pre>

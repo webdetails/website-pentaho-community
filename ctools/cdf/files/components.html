@@ -1,0 +1,41 @@
+<h3 class="mainTitle">Components</h3>
+
+<p>The Component concept was born simply for building Dashboard objects. Therefore a Component is just a simple JavaScript object that encapsulate all the object properties and behavior.</p>
+<p>But how much effort is necessary to make a component like this:</p>
+<ul>
+	<li>Have a different behavior before and after execution;</li>
+	<li>Interact with other Dashboard components;</li>
+	<li>At startup it's just a simple bar chart but that can be changed dynamically to a dial chart or even to a table;</li>
+	<li>Present results that change dynamically according to one or more parameter values?</li>
+</ul>
+
+<p>The answer is: all of those can be accomplished with <strong>very little effort</strong>.</p>
+<p>All components have a set of properties that are common to almost all of them. Those properties are the key for controlling their life cycle and behavior. </p>
+
+<h4>Component Properties</h4>
+<p class="title">type</p>
+<p>This property accepts a variety of values like timeplot, datepicker, etc.</p>
+
+<p class="title">name</p>
+<p>This is the identifier of the component.</p>
+
+<p class="title">parameters</p>
+<p>An array of parameters that are passed to this component.</p>
+
+<p class="title">parameter</p>
+<p>For components where user input is required, this is where the input is stored for later use.</p>
+
+<p class="title">preChange / postChange</p>
+<p>For selectors, before/after the input value is updated, this functions are executed. Useful for validating user input, for instance.</p>
+
+<p class="title">preExecution / postExecution</p>
+<p>These functions are executed before/after the component is initialized or updated or presented to the user. If the preExecution returns false, the component is not updated.</p>
+
+<p class="title">listeners</p>
+<p>An array that holds the variables that trigger the component update. This array is crucial in the iteration between components, because they can communicate using this together with their parameters. For example, if the selected value (parameter) of one selector changes, all the components that are "listening" on this parameter will react.</p>
+
+<p class="title">htmlObject</p>
+<p>This is the id of the HTML object that will be replaced by the component's content result.</p>
+
+<p class="title">executeAtStart</p>
+<p>This is a flag. If set to false, the component will not execute at start. It will be updated as soon as one of his listeners has changed.</p>

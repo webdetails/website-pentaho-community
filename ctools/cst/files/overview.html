@@ -1,0 +1,19 @@
+<h3 class="mainTitle">Overview</h3>
+
+<p>CST allows you to set which tabs will automatically load when a particular user logs into the PUC. This is done by defining specific rules.</p>
+<br>
+<p class="title">Rule Types:</p>
+
+<h4 style="margin-top: 15px;">User-based rules</h4>
+<p>You can specify which tabs will be opened when a particular user logs in. For example: "When Joe logs in, you want that the Steel Wheels cube opened in one tab, and the Pentaho Homepage in a second tab."</p>
+
+<h4>Role-based rules</h4>
+<p>You can specify which tabs will be opened when any user with a particular role logs in. For example: when the users with MANAGER role log in, you want a nightly report in one tab, a monthly sales report in a second tab and the company homepage in a third tab.</p>
+
+<h4>Default rule</h4>
+<p>The default rule tells which tab will be open when a user that doesn't match any of the other rules logs in.</p>
+
+<h4>Regular Expressions</h4>
+<p>When you create a role-based rule, you may provide the exact name of the role, but also a regular expression for the role.</p>
+<p>For example: suppose that the managers have roles as MANAGER_EUROPE, MANAGER_ASIA, and so on. If you want all managers to share the same startup tabs, you can create a rule using a regular expression like <code>MANAGER.+</code> that will match all those roles.</p>
+<p>The same applies for the user-based rules.</p>

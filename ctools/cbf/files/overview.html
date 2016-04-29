@@ -1,0 +1,31 @@
+<h3 class="mainTitle">Overview</h3>
+
+<p>Using Pentaho's distribution packages may be a very fast way to get a quick up and running server. However, one can easily get lost to which changes were made to build the project.</p>
+<p>This will be specially painful when we want to upgrade. Also, for collaboration between distinct team members, just sharing the solution's folder isn't enough, as lots of settings get lost.</p>
+<p>CBF targets this and other requirements that come from a real world need. By using a predefined directory structure and building Pentaho from source, we have full control over our installation.</p>
+
+<h4>Main Features</h4>
+<ul>
+	<li>Ability to switch from totally different projects on the fly;</li>
+	<li>Supports multiple environments (eg: development, production, worker1, worker2...);</li>
+	<li>No changes to the original files that could get overwritten in a upgrade;</li>
+	<li>Supports multiple platform versions;</li>
+	<li>Simplifies version upgrades;</li>
+	<li>Debug-friendly;</li>
+	<li>VCS (Version Control System)-friendly;</li>
+	<li>Supports deploy to local/remote machines.</li>
+	<li>Supports all kind of different customization in different projects, from using different databases to different security types;</li>
+	<li>Supports patches to the source code for fine-grain customization;</li>
+	<li>OS independent.</li>
+</ul>
+
+<h4>CBF Requirements</h4>
+<ul>
+	<li>A shell (if on Windows, Cygwin or equivalent is required);</li>
+	<li>Clean directory to host your CBF installation;</li>
+	<li><a class="spacialink" href="http://www.java.com/en/"target="_blank" title="Download JDK 1.6">Jdk 1.6.</a>;</li>
+	<li><a class="spacialink" href="http://ant.apache.org/" target="_blank" title?"Download Ant 1.7">Ant 1.7.</a>;</li>
+	<li>SVN client.</li>
+	<li>Tomcat 6.0.x (for pentaho 3.7 or before, tomcat 5.5 is required);</li>
+	<li>RSync / SSH to do remote deploy.</li>
+</ul>

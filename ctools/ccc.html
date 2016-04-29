@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            var href = window.location.href;
+            var hash = href.split('#')[1];
+            var newHref = 'http://www.webdetails.pt/ctools/ccc/';
+
+            if(hash) {
+                var href = newHref + '#' +  hash;
+                window.location.href = href;
+            } else {
+                window.location.href = newHref;
+            }
+        </script>
+        <title>Community Chart Components | Pentaho Community</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='http://www.webdetails.pt/ctools/ccc/'>link to example</a>
+    </body>
+</html>

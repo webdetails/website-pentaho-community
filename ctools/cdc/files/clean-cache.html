@@ -1,0 +1,13 @@
+<h3 class="mainTitle">Clean Cache</h3>
+
+<p>With CDC you can selectively control the contents of the cache, allowing you to clean either specific Dashboards or cubes.</p>
+<p>The business case around this is simple: We need to clear the cache after new data is available (usually as a result of an ETL job).</p>
+<p>CDC allows you not only to do that but also to do it from within the ETL process.</p>
+
+<h4>CDA</h4>
+<p>CDC offers a solution navigator, so we can select a Dashboard. When we select the dashboard, all the CDA queries used by that Dashboard will be cleaned.</p>
+<p>Clicking on the URL button, we'll get a url that we can call externally (from an ETL job). Be aware that you need to add the user credentials when calling from the outside (e.g.: <code>&userid=joe&password=password</code>).</p>
+
+<h4>Mondrian</h4>
+<p>This one is very similar to the previous one, but navigates through the available cubes.</p>
+<p>You can then either clean the entire schema, a specific cube or even the individual cell cache for a specific dimension (use this latest one with care).</p>

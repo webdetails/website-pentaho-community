@@ -1,0 +1,9 @@
+<h3 class="mainTitle">Overview</h3>
+
+<p>Version 1 of CDG is called by editing a kettle transformation. In the source you'll find a <code>src</code> directory, but this one is our "development area". The code you need to use is inside kettle.</p>
+<p>There are only 2 things that need to be changed:</p>
+<ul>
+	<li>In <code>Transformation Properties</code> you can define the name of the database and fact table;</li>
+	<li>In <code>Dimension Info</code> you configure the transformation parameters.</li>
+</ul>
+<p>Change the parameters you want (or just run with the default), run the transformation, and 3 files will appear in the output directory: database and table ddl file, insert scripts and the <a class="spacialink" href="http://mondrian.pentaho.com/" target="_blank">Mondrian</a> schema file.</p>

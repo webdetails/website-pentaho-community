@@ -1,0 +1,41 @@
+<h3 class="mainTitle">Enterprise Edition</h3>
+
+<p>CBF stands for Community Build Framework — but it still fit Pentaho Enterprise Edition. If you already have a CBF environment configured, there's only a few extra steps necessary to make it work with Enterprise Edition.</p>
+<p> In fact, all you need is to add a <code>patches-ee</code> folder to your <code>project-client</code> root, and add the deployment variables to your environment file.</p>
+<p>This particular setup deploys to the local host via rsync, and points deploys in the localhost: </p>
+
+<pre>deploy.mode = rsync
+deploy.args = -avz --exclude '.svn/' --exclude '*.log' --exclude 'work/' --exclude 'Catalina/' --exclude
+'temp_user/' --exclude 'temp/' --exclude 'tmp/'
+deploy.dest.server = 127.0.0.1:/Volumes/Projects/biserver-ee
+deploy.dest.solution = 127.0.0.1:/Volumes/Projects/biserver-ee/pentaho-solutions</pre>
+
+<p>Since these options are not required to run a local instance of the CE server, and because it's predictable that there will be differences between the local and remote environments (including database setups, JAVA location, etc), we recommend that, instead of adding all these settings to your environment file, you add a new environment file for your EE deployments.</p>
+<p>For example, if your usual environment file is <code>build-pedro.properties</code>, consider <code>build-pedro-ee.properties</code>.</p>
+
+<h4>Patching</h4>
+<p>Patching for the EE server is mostly the same as patching in a CE deployment. </p>
+<p>Naturally, we don't support building the EE server from source, so the finer-grained source level patching is unavailable. </p>
+<p>However, as there is a clear need for separate patches for Enterprise and Community deployments, we do support a separate patches-ee hierarchy.</p>
+<span class="example">PATCHES-EE HIERARCHY</span>
+
+<pre>project-client
+ ├── patches-ee
+ │ ├── server
+ │ └── solution
+ └── ...</pre>
+<p>When patching, the contents of patches-ee/server will be applied on top of the contents of the folder set in deploy.dest.server. Similarly, the patches in patches-ee/solution will apply to <code>deploy.dest.solution</code>.</p>
+
+<h4>Targets <small>The following ee-specific targets are available</small></h4>
+
+<p class="title">Deploy the full system (deploy-ee-all) </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro deploy-ee-all</pre>
+<p>This will deploy <strong>both the server patches and the solution</strong>. See the targets below for details. </p>
+
+<p class="title">Deploy the solution (deploy-ee-solution) </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro deploy-ee-solution</pre>
+<p>This will deploy <strong>just the solution</strong>. Although the exception of applying the patches-ee patches, this is identical to the deploy-solution target.</p>
+
+<p class="title"> Deploy the server (deploy-ee-server) </p>
+<pre>$ ant -Dproject=bare38 -Denv=pedro deploy-ee-server</pre>
+<p> This will just deploy the server patches to an existing EE installation. Note that, unlike the deploy-server target, this doesn't deploy the complete server, <strong>only the patches</strong>! </p>

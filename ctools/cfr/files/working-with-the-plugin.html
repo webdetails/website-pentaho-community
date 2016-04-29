@@ -1,0 +1,133 @@
+<h3 class="mainTitle">Working with the plugin</h3>
+<p>The plugin can be accessed via a user interface UI or using web requests.</p>
+
+<h4>User Interface</h4>
+<p>You can manage the plugin via a friendly user interface:</p>
+<p><b>User Interface URL:</b> <code>http://&lt;pentaho-ba-server-host&gt;:&lt;port&gt;/pentaho/plugin/cfr/api/home</code></p>
+<p>It will be presented a page where you can upload or download files (choosing a folder outside the pentaho repository allows you to manage the files with traditional file operations "copy/move").</p>
+
+<h4>Web Requests</h4>
+<p class="title">Files and folders operations</p>
+<p>To create, delete, list or get files and folders there are some exposed interfaces you can use.</p>
+
+<p><b>Exposed Interfaces</b></p>
+<p>Base URL: <code>http://&lt;pentaho-ba-server-host&gt;:&lt;port&gt;/pentaho/plugin/cfr/api/</code></p>
+<ul>
+	<li><code>/createFolder</code> - creates a folder</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>path</code> - specifies the folder we want to create <i>Examples</i>:</li>
+			<li><code>/createFolder?path=/folder/subfolder</code> - creates the specified folder</li>
+		</ul>
+	</ul>
+
+	<li><code>/remove</code> - removes a file from a folder</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>fileName</code> - specifies the file or folder to delete</li>
+		</ul>
+		<li>Examples:</li>
+		<ul>
+			<li><code>/remove?fileName=/folder/subfolder/file.txt</code> - removes the file with name <i>file.txt</i> located inside <i>subfolder</i></li>
+			<li><code>/remove?fileName=/folder/subfolder</code>- removes folder with name <i>subfolder</i></li>
+		</ul>
+	</ul>
+
+	<li><code>/listFilesJSON</code> - returns a JSON object with all the files and folder. Gets the root folder if no parameter is specified</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>dir</code> - (optional) specifies which folder we want to list content from</li>
+		</ul>
+		<li>Examples:</li>
+		<ul>
+			<li><code>/listFilesJSON</code> - returns a JSON object with all files and folders in the root dir</li>
+			<li><code>/listFilesJSON?dir=/folder/subfolder</code> - returns a JSON object with all the file elements inside the specified folder</li>
+		</ul>
+	</ul>
+
+	<li><code>/createFolder</code> - creates a folder</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>path</code> - specifies the folder we want to create</li>
+		</ul>
+		<li>Example:</li>
+		<ul>
+			<li><code>/createFolder?path=/folder/subfolder</code> - creates the specified folder</li>
+		</ul>
+	</ul>
+
+	<li><code>/getFile</code> - returns the specified file only if the user has read permissions on it</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>fileName</code> - specifies the file we want to retrieve, with the path relative to the repository root</li>
+		</ul>
+		<li>Example:</li>
+		<ul>
+			<li><code>/getFile?fileName=/example.txt</code> - retrieves the <i>example.txt</i> file stored in the root folder of the repository</li>
+		</ul>
+	</ul>
+
+	<li><code>/viewFile</code> - if called in a browser and supported by the browser itself, the specified file is previewed in it, but only if the user has read permissions</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>fileName</code>specifies the file we want to preview/retrieve, with the path relative to the repository root</li>
+		</ul>
+		<li>Example:</li>
+		<ul>
+			<li><code>/viewFile?fileName=/example.txt</code> - retrieves the <i>example.txt</i> file stored in the root folder and it is called in a browser. The file is rendered directly inside the browser (if supported)</li>
+		</ul>
+	</ul>
+</ul>
+
+<p class="title">Permissions management</p>
+<p>The access to the files repository is granted by default to the files owner and to all the user administrators. If granting access to files to other users is needed it must be set using the interfaces exposed below.</p>
+
+<p><b>Exposed Interfaces</b></p>
+<p>Base URL:</p>
+<p>For Pentaho 5.x: <code>http://&lt;pentaho-ba-server-host&gt;:&lt;port&gt;/pentaho/plugin/cfr/api</code></p>
+<p>For Pentaho 4.x: <code>http://&lt;pentaho-ba-server-host&gt;:&lt;port&gt;/pentaho/content/cfr</code></p>
+<ul>
+	<li><code>/setPermissions </code> - setting permissions is only allowed to the folder/file owner to which we want to set permissions or to any system administrator</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>path</code> - specifies the folder or file in which we want to set the permissions;</li>
+			<li><code>id</code> - specifies the role or username to which we want to grant the permissions;</li>
+			<li><code>permission</code> - this is an optional parameter, by default it assumes the "read only" value. It is used to specify the permissions to be granted ([)for now only the "read" permissions are handled).</li>
+		</ul>
+		<li>Examples:</li>
+		<ul>
+			<li><code>/setPermissions?path=/test/&id=suzy</code> - sets read permissions for user <i>suzy</i> on repository folder <i>test/</i> (this allows access to all the files contained in the folder);</li>
+			<li><code>/setPermissions?path=test.txt&id=joe</code> - sets read permissions for user <i>joe</i> on file <i>test.txt</i>;</li>
+			<li><code>/setPermissions?path=/&id=suzy&permission=read&permission=write</code> - sets read and write permissions for user <i>suzy</i> on repository root folder (this functionality isn't yet totally implemented).</li>
+		</ul>
+	</ul>
+
+	<li><code>/getPermissions</code> - removes a file from a folder</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>path</code> - specifies the folder or file in which we want to check the permissions;</li>
+			<li><code>id</code> - specifies the role or username to which we want to check the permissions;</li>
+		</ul>
+	</ul>
+
+	<li><code>/deletePermissions</code> - deleting permissions is only allowed to the folder/file owner or to any system administrator.</li>
+	<ul>
+		<li>Query Parameters:</li>
+		<ul>
+			<li><code>path</code> - specifies the folder or file in which we want to revoke permissions;</li>
+			<li><code>id</code> - specifies the role or username to which we want to revoke the permissions;</li>
+		</ul>
+		<li>Examples:</li>
+		<ul>
+			<li><code>deletePermissions?path=test.txt&id=suzy</code> - revokes permission to file <i>test.txt</i> to user <i>suzy</i></li>
+		</ul>
+	</ul>
+</ul>
