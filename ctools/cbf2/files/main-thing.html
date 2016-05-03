@@ -1,0 +1,56 @@
+<h3 class="mainTitle">CBF2: The main thing</h3>
+
+<p>CBF1 was an ant script but CBF2 is a bash script. So, you want <code>cbf2.sh</code>. If you are on windows you should be able to just use cygwin.</p>
+<br/>
+<p>Here's what you'll see when you run <code>./cbf2.sh</code> :</p>
+
+<pre>--------------------------------------------------------------
+--------------------------------------------------------------
+------       CBF2 - Community Build Framework 2        -------
+------                 Version: 0.9                    -------
+------ Author: Pedro Alves (pedro.alves@webdetails.pt) -------
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+Core Images available:
+----------------------
+
+ [0] baserver-ee-5.4.1.0-169
+ [1] baserver-ee-6.0.1.0-386
+ [2] baserver-merged-ce-6.1-qat-153
+ [3] baserver-merged-ee-6.1.0.0-192
+
+Core containers available:
+--------------------------
+
+ [4] (Stopped): baserver-ee-5.4.1.0-169-debug
+
+Project images available:
+-------------------------
+
+ [5] pdu-project-nasa-samples-baserver-ee-5.4.1.0-169
+ [6] pdu-project-nasa-samples-baserver-merged-ee-6.1.0.0-192
+
+Project containers available:
+-----------------------------
+
+ [7] (Running): pdu-project-nasa-samples-baserver-ee-5.4.1.0-169-debug
+ [8] (Stopped): pdu-project-nasa-samples-baserver-merged-ee-6.1.0.0-192-debug
+
+> Select an entry number, [A] to add new image or [C] to create new project:
+</pre>
+
+<br/>
+
+<p>There are 4 main concepts here:</p>
+
+<ul>
+    <li>Core images;</li>
+    <li>Core containers;</li>
+    <li>Project images;</li>
+    <li>Project containers.</li>
+</ul>
+
+<p>These should be straightforward to understand if you're familiar with <a href="https://www.docker.com" target="_blank">Docker</a> , but in a nutshell there are two fundamental concepts: images and containers. An image is an inert, immutable file.</p>
+<p>The container is an instance of an image, and it's a container that will run and allow us to access the Pentaho platform</p>
+

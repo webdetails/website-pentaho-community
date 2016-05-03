@@ -7,7 +7,7 @@
     window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
     </script>
     <meta charset="utf-8">
-    <title>Community Build Framework | Pentaho Community</title>
+    <title>Community Build Framework 2 | Pentaho Community</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
@@ -25,7 +25,7 @@
     <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <!-- SEO -->
     <meta name="author" content="Pentaho">
-    <meta name="description" content="Community Build Framework (CBF) is one of the members of the CTools family. Focused on a multi-project/multi-environment scenario, CBF is the way to setup and deploy Pentaho based applications.">
+    <meta name="description" content="Community Build Framework 2(CBF2) is one of the members of the CTools family. Focused on a multi-project/multi-environment scenario, CBF is the way to setup and deploy Pentaho based applications.">
     <link rel="canonical" href="http://www.webdetails.pt/ctools/cbf/">
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -46,7 +46,7 @@
     <meta itemprop="image" content="http://www.webdetails.pt/img/share/webdetails-ctools.png">
 </head>
 
-<body class="development ctools cbf">
+<body class="development ctools cbf cbf2">
     <div class="header-container"></div>
     <div class="mainContainer">
         <div class="fullWidthCtoolIntro lightGreyBg backPage">
@@ -55,7 +55,7 @@
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-md-4 col-sm-12 col-xs-12">
-                                <h1 class="ctool-name gray-text">CBF</h1>
+                                <h1 class="ctool-name gray-text">CBF2</h1>
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
                                 <div class="row features-tabs ctool-info">
@@ -63,12 +63,6 @@
                                     <span>License: <a class="spacialink ctool-info-link" href="http://www.mozilla.org/MPL/2.0/" target="_blank">MPLv2</a></span>
                                   </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="ctoolDiscontinued">This project is discontinued. You will be redirected shortly.</div>
-
                             </div>
                         </div>
                         <div class="row">
@@ -87,17 +81,39 @@
                 </div>
             </div>
         </div>
-<!--        <div class="fullWidthCtoolInfo">
+        <div class="fullWidthCtoolInfo">
             <div class="site-container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="documentationTabs" class="row backPage">
-
+                            <ul class="resp-tabs-list col-sm-3">
+                                <li id="overview">Overview</li>
+                                <li id="requirements">Requirements</li>
+                                <li id="how-to">How to use</li>
+                                <li id="software-dir">The software directory</li>
+                                <li id="licences-dir">The licences directory</li>
+                                <li id="main-thing">CBF2: The main thing</li>
+                                <li id="access-platform">Accessing the platform</li>
+                                <li id="projects">Projects</li>
+                                <li id="client-tools">Client tools</li>
+                            </ul>
+                            <div class="resp-tabs-container col-sm-9">
+                                <div id="overview"></div>
+                                <div id="requirements"></div>
+                                <div id="how-to"></div>
+                                <div id="software-dir"></div>
+                                <div id="licences-dir"></div>
+                                <div id="main-thing"></div>
+                                <div id="access-platform"></div>
+                                <div id="projects"></div>
+                                <div id="client-tools"></div>
+                            </div>
+                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
 
     <div class="sub-header lightGreyBg">
@@ -109,27 +125,19 @@
                             </div>
                             <div class="col-xs-12 col-sm-9 col-md-10">
                                 <ul>
-                                    <li><a class="spacialink" href="https://github.com/webdetails/cbf" target="_blank">Fork on Github</a></li>
+                                    <li><a class="spacialink" href="https://github.com/webdetails/cbf2" target="_blank">Fork on Github</a></li>
                                     <li><a class="spacialink" href="http://forums.pentaho.com/forumdisplay.php?80-Community-Tools-CTools" target="_blank">Pentaho Forums</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+    </div>
 
     <div class="community-footer"></div>
     <script src="../../js/main.js"></script>
     <script src="../../js/vendor/bootstrap-hover-dropdown.min.js"></script>
     <script type="text/javascript">
-
-        //redirect to CBF2
-        window.setTimeout(function() {
-            window.location.href = '/ctools/cbf2';
-        }, 5000);
-
-
-
     /* load header */
     $(function() {
         $(".header-container").load("../../pentaho-templates/header.html");

@@ -1,0 +1,68 @@
+<h3 class="mainTitle">Accessing the platform</h3>
+
+<p>When we run the container, it exposes a few ports, most importantly 8080.</p>
+<p>
+    So in order to see Pentaho running all we need to do is to access the machine where docker is running.
+    This part may vary depending on the operating system so be sure to check your container's ip address, you should be able to access the platform by using the following URL:
+</p>
+
+<pre>http://your-container-ip:8080/pentaho/Home</pre>
+
+
+<h4>Core images</h4>
+
+<p>These are the core images - a clean install out of one of the available artifacts that are provided on the software directory. So the first thing we should do is add a core image. The option [A] allows us to select which image to add from an official distribution archive.</p>
+
+<br/>
+
+<p>When we select this option, we are prompted to choose the version we want to build:</p>
+
+<pre>> Select an entry number, [A] to add new image or [C] to create new project: A
+
+Servers found on the software dir:
+ [0]: biserver-ee-5.2.1.0-148-dist.zip
+ [1]: biserver-ce-5.4.0.0-128.zip
+ [2]: biserver-ee-5.4.1.0-169-dist.zip
+ [3]: biserver-ce-6.0.1.0-386.zip
+ [4]: biserver-ee-6.0.1.0-386-dist.zip
+ [5]: biserver-ee-6.1-qat-153-dist.zip
+ [6]: biserver-merged-ce-6.1-qat-153.zip
+ [7]: biserver-merged-ee-7.0-QAT-76-dist.zip</pre>
+
+
+<p>CBF2 will correctly know how to handle EE dist files, you'll be presented with the EULA, patches will be automatically processed and licenses will be installed.</p>
+
+<p>Once an image is built, if we select that core image number you'll have the option to launch a new container or delete the image:</p>
+
+<pre>
+> Select an entry number, [A] to add new image or [C] to create new project: 0
+You selected the image baserver-ee-6.0.1.0-386
+> What do you want to do? (L)aunch a new container or (D)elete the image? [L]:</pre>
+
+
+<h4>Core containers</h4>
+
+<p>You can launch a container from a core image. This will allow us to explore a completely clean version of the image you selected. This is useful for some tests, but I'd say the big value would come out of the project images. Here are the options available over containers:</p>
+
+<pre>> Select an entry number, [A] to add new image or [C] to create new project: 3
+
+You selected the container baserver-merged-ce-6.1-qat-153-debug
+The container is running; Possible operations:
+
+ S: Stop it
+ R: Restart it
+ A: Attach to it
+ L: See the Logs
+
+What do you want to do? [A]:</pre>
+
+<br/>
+
+<p>Briefly, here are the options mean - even though they should be relatively straightforward:</p>
+
+<ul>
+    <li><strong>Stop it</strong>: Stops the container. When the container is stopped you'll be able to delete the container or start it again;</li>
+    <li><strong>Restart it</strong>: Simply restarts the container;</li>
+    <li><strong>Attach to it</strong>: Attaches to the docker container. You'll then have a bash shell and you'll be able to play with the server;</li>
+    <li><strong>See the Logs</strong>: Gets the logs from the server.</li>
+</ul>

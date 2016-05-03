@@ -1,0 +1,76 @@
+<h3 class="mainTitle">Projects</h3>
+
+
+<h4>Definition and structure</h4>
+
+<p>A project is built on top of a core image. Instead of being a clean install it's meant to replicate a real project's environment.
+    As a best practice, it should also have a well defined structure that can be stored on a VCS repository.</p>
+
+<p>Projects should be cloned / checked out in to the projects directory. It's recommend for every project to be versioned in a different git or svn repository. Here's a project structure example:</p>
+
+<pre>pedro@orion:~/tex/pentaho/cbf2 (master *) $ tree  -l ./projects/
+./projects/
+└── project-nasa-samples -> ../../project-nasa-samples/
+        ├── _dockerfiles
+        └── solution
+                └── public
+                        ├── Mars_Photo_Project
+                        │   ├── Mars_Photo_Project.cda
+                        │   ├── Mars_Photo_Project.cdfde
+                        │   ├── Mars_Photo_Project.wcdf
+                        │   ├── css
+                        │   │   └── styles.css
+                        │   ├── img
+                        │   │   └── nasaicon.png
+                        │   └── js
+                        │       └── functions.js
+                        └── ktr
+                                ├── NASA\ API\ KEY.txt
+                                ├── curiosity.ktr
+                                ├── getPages.ktr
+                                └── mars.ktr</pre>
+<p>All the solution files are going to be automatically imported, including metadata for datasources creation.</p>
+
+<p>The directory _dockerfiles is a special one, you can override the default Dockerfile that's used to build a project image (<code>dockerfiles/buildProject/Dockerfile</code>) and just drop a project specific Dockerfile in that directory.</p>
+<p>Note that you should not change the <code>FROM</code> line, as it will be dynamically replaced. This is what you want for project level configurations, like installing / restoring a specific database, an apache server on front or any fine tuned configurations.</p>
+
+<h4>Project images</h4>
+
+<p>
+    The first thing that we need to do is to create a project.
+    To do that is very simple: select one of the projects on our projects directory and a core image to install it against. This separations aims at really simplifying upgrades / tests / etc.
+</p>
+
+<pre>> Select an entry number, [A] to add new image or [C] to create new project: C
+
+Choose a project to build an image for:
+
+ [0] project-nasa-samples
+
+> Choose project: 0
+
+Select the image to use for the project
+
+ [0] baserver-ee-6.0.1.0-386
+ [1] baserver-merged-ce-6.1-qat-153
+ [2] baserver-merged-ee-6.1.0.0-192
+
+> Choose image: 2</pre>
+
+<p>
+    Once the project image created, you have access to the same options you had for the core images, which is basically launching a container or deleting the image.
+</p>
+
+
+<h4>Project containers</h4>
+
+<p>Like the images, project containers work very similarly to core containers, but also have two extra options available:</p>
+
+<ul>
+    <li>Export the solution: Exports the solution to your project folder;</li>
+    <li>Import the solution: Imports the solution from your project folder into the running containers. This would be equivalent to rebuilding the image.</li>
+</ul>
+
+<p>Note that by design CBF2 only exports the folders in public that are already part of the project. You'll need to manually create the directory if you add a top level one.</p>
+
+
