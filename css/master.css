@@ -300,15 +300,20 @@ Header Wrapper
   .menu-name-main-menu > .menu > li.children--3 > ul {
     width: 672px;
     left: -100px; }
+  /*custom selector - added by PG */
+  .menu-name-main-menu > .menu > li.children--4 > ul {
+    width: 555px;
+    left: -100px;
+    padding: 12px 0px 12px 30px; }
   /* line 198, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li.last > ul {
     left: auto;
     right: -70px; }
   /* line 202, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul > li {
-    width: 190px;
+    width: 255px;
     float: left;
-    margin-right: 20px; }
+    /*margin-right: 20px*/; }
     /* line 206, ../_sass/components/header/_nav.scss */
     .menu-name-main-menu > .menu > li > ul > li:last-child {
       margin-right: 0; }
@@ -330,7 +335,10 @@ Header Wrapper
   .menu-name-main-menu > .menu > li > ul > li > .nolink {
     font-size: 0.875em;
     padding: 0.6em 1.7em;
-    display: block; }
+    display: block;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 15px;}
   /* line 230, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul > li > ul > li > a {
     font-size: .8125em; }
@@ -487,10 +495,15 @@ Header Wrapper
         /* line 127, ../_sass/components/header/_resp_nav.scss */
         .nav-container ul li.expanded ul.menu li ul.menu {
           padding-top: 0;
-          border-top: 1px solid #b5c2d3; }
+          /*border-top: 1px solid #b5c2d3;*/ 
+        }
       /* line 132, ../_sass/components/header/_resp_nav.scss */
       .nav-container ul li.expanded ul.menu span.nolink {
-        display: none !important; }
+        /*display: none !important;*/ 
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 15px 0 0 10px;
+      }
       /* line 135, ../_sass/components/header/_resp_nav.scss */
       .nav-container ul li.expanded ul.menu li.first {
         padding-top: 0; }
@@ -504,7 +517,9 @@ Header Wrapper
     .nav-container ul li.expanded.open span.nolink:after {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
+      transform: rotate(45deg); 
+      display: none;
+    }
     /* line 154, ../_sass/components/header/_resp_nav.scss */
     .nav-container ul li.expanded.open ul.menu {
       display: block; }

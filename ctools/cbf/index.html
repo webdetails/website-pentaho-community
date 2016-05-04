@@ -59,15 +59,17 @@
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
                                 <div class="row features-tabs ctool-info">
-                                  <div class="col-md-4 col-xs-12 text-center">
+                                    <div class="col-md-4 col-xs-12"></div>
+                                    <div class="col-md-4 col-xs-12"></div>
+                                    <div class="col-md-4 col-xs-12 text-center">
                                     <span>License: <a class="spacialink ctool-info-link" href="http://www.mozilla.org/MPL/2.0/" target="_blank">MPLv2</a></span>
-                                  </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="ctoolDiscontinued">This project is discontinued. You will be redirected shortly.</div>
+                                <div class="ctoolDiscontinued" style="cursor: pointer;">This project is discontinued. Click here to go to CBF 2.</div>
 
                             </div>
                         </div>
@@ -124,9 +126,9 @@
     <script type="text/javascript">
 
         //redirect to CBF2
-        window.setTimeout(function() {
+        $('.ctoolDiscontinued').click(function() {
             window.location.href = '/ctools/cbf2';
-        }, 5000);
+        });
 
 
 

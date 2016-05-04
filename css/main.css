@@ -780,7 +780,7 @@ ul.slick-dots li,
   }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1023px){
   .nav-container ul li.expanded ul.menu li.dropdown-header{
       border-bottom: 0;
       padding: 15px 0 0 10px;
@@ -4247,8 +4247,8 @@ a.small-link-to-pentaho:active {
   a:not(.accordion-toggle),
   .marketplace-text,
   .txt-greyArea{
-    font-size: 14px !important;
-    line-height: 22px !important;
+    /*font-size: 14px !important;
+    line-height: 22px !important;*/
   }
 
   a.accordion-toggle{
@@ -4546,4 +4546,20 @@ h4 ~ p{
 
 body.open-demos .product-title{
   margin-top: 0;
+}
+
+@media (max-width: 1024px){
+  .nav-container ul > li.menu-item-wrapper.ctools-menu-hidden-item
+  {
+    display: none !important;
+  }
+
+}
+
+@media (min-width: 1024px){
+  .nav-container ul > li.menu-item-wrapper.ctools-menu-hidden-item
+  {
+    visibility: hidden !important;
+  }
+
 }
