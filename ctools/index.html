@@ -111,16 +111,34 @@
         </div>
         <div class="backPage fullWidthCtoolIntro whiteGreyBg">
             <div class="site-container">
-                <p class="ctool-description">A set of tools and components, working on top of Pentaho, created and maintained by Webdetails to allow the creation of Advanced Dashboards.</p>
-                <ul>
-                    <li>Open Source and free to use cross-platform tools for Business Intelligence solutions creation;</li>
-                    <li>Focused on Pentaho and its community, the CTools work on both Pentaho Enterprise and Community Editions;</li>
-                    <li>CTools Dashboards render perfectly on traditional desktop devices, mobile and large formats;</li>
-                    <li>All CTools plugins are provided with extensive high quality documentation, making the learning process easier;</li>
-                    <li>The whole interface and environment are fully customizable, so you can optimize it to fit your personal taste;</li>
-                    <li>The open source platform thrives on participation and cooperation, meaning all the users can give their own contribute;</li>
-                    <li>CTools are under a rapid release cycle, being updated and revised every six weeks.</li>
-                </ul>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <p class="ctool-description">A set of tools and components, working on top of Pentaho, created and maintained by Webdetails to allow the creation of Advanced Dashboards.</p>
+                        <ul>
+                            <li>Open Source and free to use cross-platform tools for Business Intelligence solutions creation;</li>
+                            <li>Focused on Pentaho and its community, the CTools work on both Pentaho Enterprise and Community Editions;</li>
+                            <li>CTools Dashboards render perfectly on traditional desktop devices, mobile and large formats;</li>
+                            <li>All CTools plugins are provided with extensive high quality documentation, making the learning process easier;</li>
+                            <li>The whole interface and environment are fully customizable, so you can optimize it to fit your personal taste;</li>
+                            <li>The open source platform thrives on participation and cooperation, meaning all the users can give their own contribute;</li>
+                            <li>CTools are under a rapid release cycle, being updated and revised every six weeks.</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <div class="info-bar">
+                            <h4>CTools Tutorials</h4>
+                            <a href="knowledge/cde-tutorial/" title="CDE Tutorial">CDE Tutorial</a>
+                            <br>
+                            <a href="knowledge/cde-open-demos/" title="CDE Open Demos">CDE Open Demos</a>
+                            <br>
+                            <a href="knowledge/cdf-tutorial/" title="CDF Tutorial">CDF Tutorial</a>
+                        </div>
+                        <div class="info-bar">
+                            <h4>Training</h4>
+                            <a target="_blank" href="http://training.pentaho.com/instructor-led-training/ctools-fundamentals" title="CTools Fundamentals">CTools Fundamentals</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="fullWidthContainerMainBottom lightGreyBg">
@@ -165,7 +183,7 @@
             <div class="fullWidthContainer highlightsRow slideshow">
                 <div id="highlights-carousel">
                     <div class="highlightItem">
-                        <div class="container">
+                        <div class="site-container">
                             <div class="row">
                                 <div class="col-xs-12 pentaho-customization">
                                     <div class="row">
@@ -184,7 +202,7 @@
                         </div>
                     </div>
                     <div class="highlightItem">
-                        <div class="container">
+                        <div class="site-container">
                             <div class="row">
                                 <div class="col-xs-12 pentaho-customization">
                                     <div class="row">
@@ -203,7 +221,7 @@
                         </div>
                     </div>
                     <!-- <div class="highlightItem">
-                        <div class="container">
+                        <div class="site-container">
                             <div class="row">
                                 <div class="col-xs-12 pentaho-customization">
                                     <div class="row">
@@ -288,7 +306,7 @@
         $('.highlightsRow .background-column').each(function() {
             var column = $(this),
                 imageSrc = column.find('img').attr('src');
-            column.closest('.highlightItem').find('.container').append('<div class="highlightCoverImg" style="background-image: url(' + imageSrc + ');"></div>')
+            column.closest('.highlightItem').find('.site-container').append('<div class="highlightCoverImg" style="background-image: url(' + imageSrc + ');"></div>')
         })
     });
 

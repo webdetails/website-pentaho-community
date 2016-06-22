@@ -320,7 +320,7 @@ Header Wrapper
   /* line 211, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul a {
     font-size: 0.8125em;
-    padding: 0.6em 1.7em; }
+    padding: 7px 10px; }
   /* line 215, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul a:hover {
     background: #005da6;
@@ -334,7 +334,7 @@ Header Wrapper
   /* line 225, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul > li > .nolink {
     font-size: 0.875em;
-    padding: 0.6em 1.7em;
+    padding: 7px 10px;
     display: block;
     font-size: 12px;
     margin-bottom: 0;

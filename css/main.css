@@ -385,6 +385,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   padding-top: 30px;
 }
 
+body div a,
+.container a,
+.site-container a,
 body div a:hover,
 .container a:hover,
 .site-container a:hover{
@@ -585,6 +588,10 @@ span.example {
     color: #FFF;
 }
 
+.highlightItem .site-container {
+    position: relative;
+}
+
 .highlightCoverImg {
     width: 50%;
     position: absolute;
@@ -725,11 +732,6 @@ ul.slick-dots li,
     background: url(../img/ctools-logo.png) no-repeat center center;
 }
 
-
-.ctools.home .site-container{
-  padding: 20px 15px 20px;
-}
-
 .ctools.home .slideshow{
   padding-top: 30px;
 }
@@ -783,10 +785,11 @@ ul.slick-dots li,
 @media (max-width: 1023px){
   .nav-container ul li.expanded ul.menu li.dropdown-header{
       border-bottom: 0;
-      padding: 15px 0 0 10px;
+      padding: 18px 0 3px 10px;
       color: #FFFFFF;
       font-size: 12px !important;
       font-weight: 300;
+      margin-left: 0;
   }
 
 }
@@ -816,7 +819,8 @@ ul.menu li.no-link > a{
   text-transform: uppercase;
   font-weight: bold;
   color: #343e47;
-  padding: 0.6em 1.7em;
+  padding: 7px 10px;
+  margin-left: -4px;
   /*margin-bottom: 0.4em;*/
 }
 
