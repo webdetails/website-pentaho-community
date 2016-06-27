@@ -52,9 +52,9 @@ Header Wrapper
     @media (min-width: 1024px) {
       /* line 30, ../_sass/components/header/_header.scss */
       .site-header .logo {
-        height: 65px;
-        top: 30px;
-        width: 268px; } }
+        height: 71px;
+        top: 20px;
+        width: 275px; } }
     /* line 42, ../_sass/components/header/_header.scss */
     .no-svg .site-header .logo {
       background: url(../_media/logo-pentaho-new.png) 0 0 no-repeat; }
