@@ -601,12 +601,16 @@ span.example {
     background-repeat: no-repeat;
 }
 
+.slick-slider ul.slick-dots {
+  margin-top: 5px;
+}
+
 .slick-dots li button {
     border: 0;
     background: transparent;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
     outline: none;
     line-height: 0;
     font-size: 0;
@@ -619,20 +623,20 @@ span.example {
     content: "";
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    background: #dadada;
-    border-radius: 0;
-    width: 42px;
-    height: 4px;
+    background: #FFF;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
     margin: 4px;
-    border: none;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    border: 2px solid #3BA749;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
     position: absolute;
     top: 0;
     bottom: 0;
-    margin: auto 4px;
+    margin: 5px;
 }
 
 .slick-dots li:hover button:before {
@@ -647,10 +651,6 @@ span.example {
 .slick-dots li.slick-active button:before {
     background: #34913D;
     opacity: 1;
-    border-radius: 0;
-    width: 42px;
-    height: 4px;
-    margin: auto 4px;
     border: none;
     -webkit-animation: none;
     -moz-animation: none;
@@ -659,7 +659,7 @@ span.example {
 }
 
 .slick-dots li, .slick-dots li button {
-    width: 50px;
+    /*width: 50px;*/
 }
 
 
