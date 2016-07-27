@@ -1209,6 +1209,11 @@ header.site-header a.button:hover{
   padding-left: 0px;
 }
 
+
+.info-bar.ctools-custom-dashboards:hover span.btn{
+  background-color: #3BA749;
+}
+
 /*.info-bar a:before {
   content: "";
   display: inline-block;
@@ -3590,7 +3595,31 @@ a.link-marketplacetab:hover{
   position: relative;
   border-radius: 0;
   margin-top: 30px;
-  }
+}
+
+.info-bar.ctools-custom-dashboards .info-bar-header{
+    width: calc( 100% + 40px);
+    height: 120px;
+    background: url(../img/steelwheels-showcase.jpg) center center no-repeat;
+    
+    background-size: cover;
+    margin-right: -20px;
+    margin-left: -20px;
+    display: block;
+}
+
+.info-bar.ctools-custom-dashboards p{
+    padding: 15px 0;
+    margin: 0;
+    color: #616161;
+}
+
+.info-bar.ctools-custom-dashboards a.btn{
+    margin: 0 auto;
+    padding: 8px 15px;
+    display: block;
+    text-align: center;
+}
 
 /*
 .info-bar-marketplace:before {
