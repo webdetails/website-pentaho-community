@@ -4581,6 +4581,24 @@ body.open-demos .product-title{
   margin-top: 0;
 }
 
+.buy-disclaimer{
+  font-size: 12px;
+  margin-top: 20px;
+  color: #d9534f;
+}
+
+.mainContainer .buy-box a.btn.btn-default.offline,
+.mainContainer .buy-box a.btn.btn-default.offline:hover,
+.mainContainer .buy-box a.btn.btn-default.offline:hover:active{
+  background: #e0e0e0;
+}
+
+/*temporary, to be removed once the buy links are working*/
+.mainContainer .buy-box a.btn.btn-default{
+  cursor: not-allowed;
+}
+
+
 @media (max-width: 1024px){
   .nav-container ul > li.menu-item-wrapper.ctools-menu-hidden-item
   {
