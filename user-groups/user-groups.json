@@ -134,5 +134,13 @@
       "membersNum":  57,
       "groupUrl":    "http://www.meetup.com/it/Pentaho-Italia-Users-Group",
       "joinUrl":     "http://www.meetup.com/it/Pentaho-Italia-Users-Group/join"
+   },
+   {
+      "name":        "Recife Pentaho User Group",
+      "city":        "Recife",
+      "country":     "Brazil",
+      "membersNum":  100,
+      "groupUrl":    "https://www.meetup.com/pt-BR/Recife-Pentaho-User-Group/",
+      "joinUrl":     "https://www.meetup.com/pt-BR/Recife-Pentaho-User-Group//join"
    }
 ]
