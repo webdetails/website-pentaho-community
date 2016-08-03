@@ -3,7 +3,7 @@
       "name":       	"The Data Warehousing Community",
       "city":       	"Brisbane",
       "country":    	"Australia",
-      "membersNum": 	100,
+      "membersNum": 	99,
       "groupUrl":   	"http://www.meetup.com/DataWarehouseExperts/",
       "joinUrl":    	"http://www.meetup.com/DataWarehouseExperts/join/"
    },
@@ -11,7 +11,7 @@
       "name":       	"Pentaho London User Group",
       "city":       	"London",
       "country":    	"UK",
-      "membersNum": 	504,
+      "membersNum": 	525,
       "groupUrl":   	"http://www.meetup.com/Pentaho-London-User-Group/",
       "joinUrl":    	"http://www.meetup.com/Pentaho-London-User-Group/join/"
    },
@@ -27,7 +27,7 @@
       "name":       	"Chicago Pentaho User Group",
       "city":       	"Chicago, IL",
       "country":    	"USA",
-      "membersNum": 	45,
+      "membersNum": 	46,
       "groupUrl":   	"http://www.meetup.com/Chicago-Pentaho/",
       "joinUrl":    	"http://www.meetup.com/Chicago-Pentaho/join/"
    },
@@ -35,7 +35,7 @@
       "name":       	"Grupo de usuarios de Pentaho y Saiku de Madrid",
       "city":       	"Madrid",
       "country":    	"Spain",
-      "membersNum": 	303,
+      "membersNum": 	312,
       "groupUrl":   	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/",
       "joinUrl":    	"http://www.meetup.com/Grupo-de-usuarios-de-Pentaho-y-Saiku-de-Madrid/join/"
    },
@@ -51,7 +51,7 @@
       "name":       	"New Zealand Big Data and Business Intelligence Meetup",
       "city":       	"Auckland",
       "country":    	"New Zealand",
-      "membersNum": 	1596,
+      "membersNum": 	1629,
       "groupUrl":   	"http://www.meetup.com/NZ-Big-Data/",
       "joinUrl":    	"http://www.meetup.com/NZ-Big-Data/join/"
    },
@@ -59,7 +59,7 @@
       "name":       	"Information Management Melbourne",
       "city":       	"Melbourne",
       "country":    	"Australia",
-      "membersNum": 	159,
+      "membersNum": 	162,
       "groupUrl":   	"http://www.meetup.com/Information-Management-Melbourne/",
       "joinUrl":    	"http://www.meetup.com/Information-Management-Melbourne/join/"
    },
@@ -67,7 +67,7 @@
       "name":       	"Business Intelligence Big Data Integration ETL Analysts",
       "city":       	"New York, NY",
       "country":    	"USA",
-      "membersNum": 	400,
+      "membersNum": 	411,
       "groupUrl":   	"http://www.meetup.com/Business-Intelligence-Big-Data-Integration-ETL-Analysts/",
       "joinUrl":    	"http://www.meetup.com/Business-Intelligence-Big-Data-Integration-ETL-Analysts/join/"
    },
@@ -83,7 +83,7 @@
       "name":       	"SF Data",
       "city":       	"San Francisco, CA",
       "country":    	"USA",
-      "membersNum": 	967,
+      "membersNum": 	975,
       "groupUrl":   	"http://www.meetup.com/SF-Data-Warehouse-Group/",
       "joinUrl":    	"http://www.meetup.com/SF-Data-Warehouse-Group/join/"
    },
@@ -91,7 +91,7 @@
       "name":       	"Data Experts #BigDataBx, de la théorie aux bonnes pratiques",
       "city":       	"Bordeaux",
       "country":    	"France",
-      "membersNum": 	234,
+      "membersNum": 	238,
       "groupUrl":   	"http://www.meetup.com/BigDataBx-de-la-theorie-aux-bonnes-pratiques/",
       "joinUrl":    	"http://www.meetup.com/BigDataBx-de-la-theorie-aux-bonnes-pratiques/join/"
    },
@@ -99,7 +99,7 @@
       "name":       	"Silicon Valley Open Source Business Intelligence",
       "city":       	"Mountain View, CA",
       "country":    	"USA",
-      "membersNum": 	504,
+      "membersNum": 	531,
       "groupUrl":   	"http://www.meetup.com/OpensourceBI/",
       "joinUrl":    	"http://www.meetup.com/OpensourceBI/join/"
    },
@@ -115,7 +115,7 @@
       "name":        "São Paulo Pentaho User Group",
       "city":        "São Paulo",
       "country":     "Brazil",
-      "membersNum":  712,
+      "membersNum":  723,
       "groupUrl":    "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/",
       "joinUrl":     "http://www.meetup.com/Sao-Paulo-Pentaho-User-Group/join/"
    },
@@ -123,7 +123,7 @@
       "name":        "Open Source BI Meetup in Tokyo",
       "city":        "Tokyo",
       "country":     "Japan",
-      "membersNum":  141,
+      "membersNum":  142,
       "groupUrl":    "https://groups.google.com/forum/#!forum/pentaho-user-jp-ml",
       "joinUrl":     "http://groups.google.com/d/forum/pentaho-user-jp-ml"
    },
@@ -131,7 +131,7 @@
       "name":        "Pentaho Italia User Group",
       "city":        "Milano",
       "country":     "Italy",
-      "membersNum":  57,
+      "membersNum":  58,
       "groupUrl":    "http://www.meetup.com/it/Pentaho-Italia-Users-Group",
       "joinUrl":     "http://www.meetup.com/it/Pentaho-Italia-Users-Group/join"
    },
@@ -139,7 +139,7 @@
       "name":        "Recife Pentaho User Group",
       "city":        "Recife",
       "country":     "Brazil",
-      "membersNum":  100,
+      "membersNum":  101,
       "groupUrl":    "https://www.meetup.com/pt-BR/Recife-Pentaho-User-Group/",
       "joinUrl":     "https://www.meetup.com/pt-BR/Recife-Pentaho-User-Group//join"
    }
