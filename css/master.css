@@ -52,9 +52,9 @@ Header Wrapper
     @media (min-width: 1024px) {
       /* line 30, ../_sass/components/header/_header.scss */
       .site-header .logo {
-        height: 71px;
-        top: 20px;
-        width: 275px; } }
+        height: 65px;
+        top: 30px;
+        width: 268px; } }
     /* line 42, ../_sass/components/header/_header.scss */
     .no-svg .site-header .logo {
       background: url(../_media/logo-pentaho-new.png) 0 0 no-repeat; }
@@ -248,7 +248,8 @@ Header Wrapper
     /* line 140, ../_sass/components/header/_nav.scss */
     .main-nav .button, .main-nav .form-submit,
     .main-nav .mktoButton, .main-nav .main-footer-item-cta .content > a, .main-footer-item-cta .main-nav .content > a {
-      margin-left: 0.75em; } }
+      margin-left: 0.75em;
+      line-height: 25px; } }
 
 @media (min-width: 1024px) {
   /* line 147, ../_sass/components/header/_nav.scss */

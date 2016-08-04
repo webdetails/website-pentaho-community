@@ -9,50 +9,18 @@ body.ctools.cdf-tutorial .fullWidthCtoolIntro{
   font-weight: 600;
 }
 
+.ctools .header-txt-block div{
+  padding: 50px 12px 55px;
+}
+
 h1.product{
-  font-size: 45px;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 75px;
   color: #FFF;
-  text-transform: uppercase;
-  font-weight: 400;
-  padding-right: 65px;
   background-repeat: no-repeat;
   background-position: right center;
-}
-
-.cde-tutorial h1:after,
-.open-demos h1:after,
-.cdf-tutorial h1:after{
-    position: absolute;
-    content: " ";
-    right: 20px;
-    top: 2px;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-}
-
-.cde-tutorial h1.product:after {
-  background-image: url(../../img/buy_cde_header_icon.svg);
-}
-
-.cdf-tutorial h1.product:after {
-  background-image: url(../../img/buy_cdf_header.svg);
-}
-
-.open-demos h1.product:after {
-  background-image: url(../../img/opendemos_icon.svg);
-}
-
-.no-svg .cde-tutorial h1.product:after {
-  background-image: url(../../img/buy_cde_header_icon.png);
-}
-
-.no-svg .cdf-tutorial h1.product:after {
-  background-image: url(../../img/buy_cdf_header.png);
-}
-
-.no-svg .open-demos h1.product:after {
-  background-image: url(../../img/opendemos_icon.png);
+  margin: 0;
 }
 
 h2.product{
@@ -96,14 +64,6 @@ h2.product{
   max-width: 370px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.open-demos .header-content,
-.cde-tutorial .header-content,
-.cdf-tutorial .header-content{
-  max-width: none;
-  display: inline-block;
-  padding-bottom: 40px;
 }
 
 .header-content p {
@@ -620,7 +580,7 @@ span.magnifier-ico{
   }
 
   h1.product{
-    font-size: 38px;
+    font-size: 30px;
   }
 
 

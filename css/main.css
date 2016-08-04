@@ -32,7 +32,7 @@
    ========================================================================== */
 
 html {
-  overflow-y: scroll;
+
 }
 
 body {
@@ -205,6 +205,10 @@ span.semibold{
 
 .backPage ul {
   padding-left: 20px;
+}
+
+.container h2 + h3{
+  margin: 20px 0px 15px;
 }
 
 .backPage ul li {
@@ -2485,7 +2489,8 @@ p.in-development-description {
 }
 
 .main-plugin-footerNotes {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 0;
 }
 
 .main-plugin-footerNotesLabel{
@@ -2550,7 +2555,7 @@ p.in-development-description {
 }
 
 .main-plugin-content #downloadList a.btn.btn-default.btn-green{
-  margin-top: 20px;
+  
 }
 
 #mainConceptsRow,
@@ -4166,14 +4171,6 @@ a.small-link-to-pentaho:active {
     margin-bottom: 30px;
   }
 
-  a.btn-green > img{
-    display: none;
-  }
-
-  a.btn-green{
-    text-align: center;
-  }
-
   .buy-box-container a.btn{
     text-align: left;
   }
@@ -4280,8 +4277,8 @@ a.small-link-to-pentaho:active {
   a:not(.accordion-toggle),
   .marketplace-text,
   .txt-greyArea{
-    /*font-size: 14px !important;
-    line-height: 22px !important;*/
+    font-size: 14px !important;
+    line-height: 22px !important;
   }
 
   a.accordion-toggle{
@@ -4317,6 +4314,10 @@ a.small-link-to-pentaho:active {
 
   .downloadsContainer .panel-body p{
     margin-bottom: 10px !important;
+  }
+
+  .main-plugin-footerNotes {
+    padding-top: 20px;
   }
 }
 
@@ -4550,12 +4551,109 @@ a.small-link-to-pentaho:active {
   margin-bottom: 10px;
 }
 
-.downloadsContainer .panel-body p{
+.downloadsContainer .panel-body p:last-child{
   margin-bottom: 30px;
 }
 
 h4 ~ p{
   margin-bottom: 15px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.instructions-block > p,
+.instructions-block > a,
+.instructions-block {
+  display: block;
+  float: left;
+}
+
+.instructions-block{
+
+}
+
+.instructions-block .instruction-title{
+  margin: 0;
+}
+
+.instructions-block .instruction-title a{
+}
+
+.instructions-block > a.active{
+  font-weight: 600;
+}
+
+.instructions-block .instructions{
+  display: block;
+  float: left;
+  text-align: left;
+  width: 100%;
+  left: 0;
+}
+
+.instructions-block .instructions div{
+  display: none;
+  /*padding: 0 15px;*/
+  margin: 10px 0;
+  line-height: 27px;
+}
+
+.instructions-block .instructions ul{
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.modal-dialog.instructions{
+  width: 60% !important;
+}
+
+.modal-body .instructions{
+  line-height: 27px;
+  background-color: #FFFFFF;
+}
+
+.modal-body .instructions > div:not(:first-child){
+  margin-top: 30px;
+}
+
+.modal-body .instructions h3{
+  
+}
+
+.modal-body .instructions h4{
+  /*padding-left: 20px;*/
+  margin-top: 20px;
+}
+
+.modal-body .instruction-text{
+  /*padding: 0 15px;*/
+}
+
+.modal .modal-body{
+  padding: 30px;
+}
+
+.modal code{
+  white-space: normal;
+}
+
+.modal ul li{
+  display: inline-block;
+}
+
+@media (max-width: 1024px){
+
+  .modal-dialog.instructions{
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 767px) {
+    .text-sm-left { text-align:left; }
+    .text-sm-right { text-align:right; }
+    .text-sm-center { text-align:center; }
 }
 
 /* ==========================================================================

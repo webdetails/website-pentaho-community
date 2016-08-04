@@ -458,27 +458,9 @@
       <div class="lightContainerBack">
         <div class="container lightContainer" id="downloadList">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-12">
               <h2 class="h2-dark">Download</h2>
-            </div>
-            <div class="col-lg-8"></div>
-          </div>
-          <!-- <div class="row secondRow" id="plugin-downloads">
-            <div class="col-lg-12 main-plugin-download">
-              <div class="row main-plugin-header">
-                <div class="col-lg-12 main-plugin-title">
-                  <strong>Data Integration 5.4.0</strong> Stable
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <div class="row" id="plugin-downloads">
-            <div class="col-xs-12 main-plugin-download">
-              <div class="row main-plugin-header">
-                <div class="col-xs-12 main-plugin-title">
-                  <h3>Data Integration 6.1 Stable</h3>
-                </div>
-              </div>
+              <h3>Data Integration 6.1 Stable</h3>
             </div>
           </div>
           <div class="row">
@@ -494,13 +476,25 @@
                 </div>
               </div>
               <div class="row main-plugin-footerNotes" >
-                <div class="col-sm-6 text-left">
-                  <div class="main-plugin-footerNotesLabel">
-                    <a href="http://jira.pentaho.com/browse/PDI#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank">Change Log <img src="../../img/changelog.png"></a>
+                <div class="col-xs-12 col-sm-4 clearfix">
+                  <div class="instructions-block">
+                    <div class="instruction-title">
+                      <div class="showcase-demo-box" data-toggle="modal" data-target="#instructions-popup">
+                        <div class="showcase-demo-box-header text-center cursor-pointer">
+                          <p style="color:#005da6;">How to get PDI up and running</p>
+                        </div>
+                        <span class="magnifier-ico"></span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6 otherVersionDownloadRow">
-                  <p>Looking for a different version? Find it <a href="http://sourceforge.net/projects/pentaho/files/Data Integration" target="_blank">here</a>.</p>
+                <div class="col-xs-12 col-sm-4 text-center text-sm-left clearfix">
+                  <p>
+                    <a href="http://jira.pentaho.com/browse/PDI#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank" class="external-link">Change Log</a>
+                  </p>
+                </div>                
+                <div class="col-xs-12 col-sm-4 text-right text-sm-left clearfix">
+                  <p><a href="http://sourceforge.net/projects/pentaho/files/Data Integration" target="_blank" class="external-link">Older versions</a></p>
                 </div>
               </div>
             </div>
@@ -529,6 +523,65 @@
         </div>
       </div>
     </div>
+    
+      <div class="modal fade dashboard-design-modal" id="instructions-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog instructions">
+      <div class="modal-content">
+        <div class="modal-header clearfix">
+          How to get PDI up and running.
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="backPage instructions clearfix">
+            <div class="tux">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h3 style="margin-top: 0;">Linux</h3>
+                </div>
+              </div>
+              <div class="instruction-text">
+                <h4 style="margin-top: 10px;">Ubuntu 12.04 and later:</h4>
+                <ul>
+                  <li>The libwebkitgtk package needs to be installed.  This can be done by running <code>apt-get install libwebkitgtk-1.0.0</code></li>
+                  <li>Unzip the downloaded file.</li>
+                  <li>Run spoon.sh file, it should be under /data-integration.</li>
+                  <li>On some installations of Ubuntu 14.04, Unity doesn't display the menu bar. In order to fix that, spoon.sh has a setting to disable this integration, <code>export UBUNTU_MENUPROXY=0</code>. You can try to remove that setting if you wish to see if it works propery on your machine</li>
+                </ul>
+                  
+                <h4>CentOS 6 Desktop:</h4>
+                  <ul>
+                    <li>The libwebkitgtk package needs to be installed. This can be done by running <code>yum install libwebkitgtk</code></li>
+                    <li>Unzip the downloaded file and run spoon.sh, it should be under /data-integration.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="win">
+              <h3>Windows</h3>
+              <div class="instruction-text">
+                <p>After unzipping the downloaded file, you can launch Spoon by navigating to the folder /data-integration and double clicking Spoon.bat
+                <br>br
+                If you are using Infobright, make sure to copy the following files to your Windows system path (for example %WINDIR%/System32/): </p>
+              <ul>
+                <li><code>libswt/win32/infobright_jni_64bit.dll</code> (Windows 64-bit)</li>
+                <li><code>libswt/win32/infobright_jni.dll</code>  (Windows 32-bit)</li>
+              </ul>
+              <p>Rename the file to: infobright_jni.dll, then run Spoon.bat to launch Spoon.</p>
+              </div>
+            </div>
+            <div class="osx">
+              <h3>Mac OS</h3>
+              <div class="instruction-text">
+                <p>After unzipping the downloaded file, you can launch Spoon by navigating to the folder /data-integration and double clicking on the "Data Integration" application icon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

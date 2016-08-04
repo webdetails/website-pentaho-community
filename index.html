@@ -640,8 +640,20 @@
                   <div class="row">
                     <div class="col-md-12">
                       <p>Pentaho’s Data Integration, also known as Kettle, delivers powerful extraction, transformation, and loading (ETL) capabilities. You can use this stand-alone application to visually design transformations and jobs that extract your existing data and make them available for easy reporting and analysis.</p>
+
+                      <div class="instructions-block">
+                        <div class="instruction-title">
+                          <div class="showcase-demo-box" data-toggle="modal" data-target="#instructions-popup">
+                            <div class="showcase-demo-box-header text-center cursor-pointer">
+                              <p style="color:#005da6;">How to get PDI up and running</p>
+                            </div>
+                            <span class="magnifier-ico"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  
                   <div class="row">
                     <div class="col-sm-4">
                       <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/6.1/pdi-ce-6.1.0.1-196.zip/download" target="_blank">All OS <img src="img/download-icon.png"></a></p>
@@ -676,7 +688,9 @@
                     <div class="col-sm-4">
                       <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Report%20Designer/6.1/prd-ce-mac-6.1.0.1-196.zip/download" target="_blank">Mac OS X <img src="img/download-icon.png"></a></p>
                     </div>
-                    <div class="col-sm-4 other-versions"><a href="https://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/" target="_blank">Other artifacts</a></div>
+                    <div class="col-sm-4 other-versions">
+                      <p style="line-height: 18px;"><a href="https://sourceforge.net/projects/pentaho/files/Report%20Designer/5.4/" target="_blank">Other artifacts</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -823,9 +837,8 @@
                     <div class="col-md-12">
                       <p>Pentaho uses an abstraction layer to facilitate supporting a broad set of Hadoop distributions and version updates. The plugins which enable compatibility with a specific distribution are called /shims/. Use the link below to get
                         a list of the currently support distributions and versions.</p>
-                      <br>
-                      <small>Pentaho does not ship all available shims with the product and we generally do not have to update a shim for a minor or patch version change. Shims that support older distributions as well as new ones created after release are available
-                        for download <a href="https://pentaho.box.com/50Shims">here</a>. If the note says that a later version of a shim also supports your version, Pentaho recommends using the later version.</small>
+                      <p>Pentaho does not ship all available shims with the product and we generally do not have to update a shim for a minor or patch version change. Shims that support older distributions as well as new ones created after release are available
+                        for download <a href="https://pentaho.box.com/50Shims">here</a>. If the note says that a later version of a shim also supports your version, Pentaho recommends using the later version.</p>
                       <br>
                       <br>
                     </div>
@@ -834,7 +847,11 @@
                     <div class="col-sm-4">
                       <p><a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Big%20Data%20Shims/6.1/" target="_blank">All OS <img src="img/download-icon.png"></a></p>
                     </div>
-                    <div class="col-md-2 other-versions"><a href="http://wiki.pentaho.com/display/BAD/Configuring+Pentaho+for+your+Hadoop+Distro+and+Version" target="_blank">More Info</a></div>
+                    <div class="col-md-2 other-versions">
+                      <p style="line-height: 18px;">
+                        <a href="http://wiki.pentaho.com/display/BAD/Configuring+Pentaho+for+your+Hadoop+Distro+and+Version" target="_blank">More Info</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -862,6 +879,65 @@
             </div>
           </div>
         </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade dashboard-design-modal" id="instructions-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog instructions">
+      <div class="modal-content">
+        <div class="modal-header clearfix">
+          How to get PDI up and running.
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="backPage instructions clearfix">
+            <div class="tux">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h3 style="margin-top: 0;">Linux</h3>
+                </div>
+              </div>
+              <div class="instruction-text">
+                <h4 style="margin-top: 10px;">Ubuntu 12.04 and later:</h4>
+                <ul>
+                  <li>The libwebkitgtk package needs to be installed.  This can be done by running <code>apt-get install libwebkitgtk-1.0.0</code></li>
+                  <li>Unzip the downloaded file.</li>
+                  <li>Run spoon.sh file, it should be under /data-integration.</li>
+                  <li>On some installations of Ubuntu 14.04, Unity doesn't display the menu bar. In order to fix that, spoon.sh has a setting to disable this integration, <code>export UBUNTU_MENUPROXY=0</code>. You can try to remove that setting if you wish to see if it works propery on your machine</li>
+                </ul>
+                  
+                <h4>CentOS 6 Desktop:</h4>
+                  <ul>
+                    <li>The libwebkitgtk package needs to be installed. This can be done by running <code>yum install libwebkitgtk</code></li>
+                    <li>Unzip the downloaded file and run spoon.sh, it should be under /data-integration.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="win">
+              <h3>Windows</h3>
+              <div class="instruction-text">
+                <p>After unzipping the downloaded file, you can launch Spoon by navigating to the folder /data-integration and double clicking Spoon.bat
+                <br>br
+                If you are using Infobright, make sure to copy the following files to your Windows system path (for example %WINDIR%/System32/): </p>
+              <ul>
+                <li><code>libswt/win32/infobright_jni_64bit.dll</code> (Windows 64-bit)</li>
+                <li><code>libswt/win32/infobright_jni.dll</code>  (Windows 32-bit)</li>
+              </ul>
+              <p>Rename the file to: infobright_jni.dll, then run Spoon.bat to launch Spoon.</p>
+              </div>
+            </div>
+            <div class="osx">
+              <h3>Mac OS</h3>
+              <div class="instruction-text">
+                <p>After unzipping the downloaded file, you can launch Spoon by navigating to the folder /data-integration and double clicking on the "Data Integration" application icon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
