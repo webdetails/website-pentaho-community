@@ -192,7 +192,7 @@ h4{
 
 p{
   font-size: 16px;
-  font-height: 27px;
+  line-height: 27px;
 }
 
 ul {
@@ -973,8 +973,8 @@ body h1.ctool-name{
 }
 
 .ctools.home .fullWidthCtoolIntro + .fullWidthCtoolIntro{
-  padding-top: 10px;
   padding-bottom: 30px;
+  padding-top: 35px;
 }
 
 /* ==========================================================================
@@ -1526,6 +1526,10 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   padding-bottom: 0px;
 }
 
+#showMobile .panel-collapse h3:nth-of-type(1){
+  margin-top: 20px;
+}
+
 @media (max-width: 480px) {
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
   }
@@ -1533,6 +1537,15 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:not(.collapsed) {
     font-weight: 400;
   }
+}
+
+@media screen and (max-width: 993px) {
+
+  h1.product,
+  .carousel.slide h1.product{
+    font-size: 30px;
+  }
+
 }
 
 @media (max-width: 1199px) {
@@ -3941,8 +3954,8 @@ a.link-popup {
 
 .open .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #303843;
-  border-color: #303843;
+  background-color: #34913D;
+  border-color: #34913D;
   text-shadow: none;
 }
 
@@ -3973,17 +3986,17 @@ a.link-popup {
   overflow-y: auto;
 }
 
-.userGroups-list .dropdown-menu a,
-.userGroups-list .dropdown-menu a:link,
-.userGroups-list .dropdown-menu a:visited {
-  color: #333;
+body .userGroups-list .dropdown-menu a,
+body .userGroups-list .dropdown-menu a:link,
+body .userGroups-list .dropdown-menu a:visited {
+  color: #333333 ;
   cursor: pointer;
 }
 
-.userGroups-list .dropdown-menu a:hover,
-.userGroups-list .dropdown-menu a:active,
-.userGroups-list .dropdown-menu a:focus {
-  color: #fff;
+body .userGroups-list .dropdown-menu a:hover,
+body .userGroups-list .dropdown-menu a:active,
+body .userGroups-list .dropdown-menu a:focus {
+  color: #ffffff;
   outline: 0;
 }
 
@@ -4032,11 +4045,11 @@ a.userGroup-link {
 }
 
 .userGroup-name {
-  color: #333333;
-  font-size: 20px;
+  color: #616161;
+  font-size: 16px;
   line-height: 25px;
   font-weight: 600;
-  height: 100px
+  height: 110px;
 }
 
 .userGroup-location {
@@ -4291,10 +4304,6 @@ a.small-link-to-pentaho:active {
   a.link-row,
   a.btn-green{
     font-size: 11px !important;
-  }
-
-  .userGroup-name{
-    font-size: 18px;
   }
 
   .community-slide .cbp-so-side{
@@ -4612,6 +4621,7 @@ h4 ~ p{
 .modal-body .instructions{
   line-height: 27px;
   background-color: #FFFFFF;
+  min-width: initial;
 }
 
 .modal-body .instructions > div:not(:first-child){
@@ -4646,8 +4656,13 @@ h4 ~ p{
 @media (max-width: 1024px){
 
   .modal-dialog.instructions{
-    width: 80% !important;
+    width: 90% !important;
   }
+
+  .modal-header{
+    font-size: 14px;
+  }
+
 }
 
 @media (max-width: 767px) {

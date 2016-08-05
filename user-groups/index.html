@@ -41,7 +41,7 @@
             <!-- Example row of columns -->
             <div class="row">
               <div class="col-xs-6 col-lg-6 cbp-so-side cbp-so-side-left">
-                <h2>Pentaho User Groups</h2>
+                <h1 class="product">Pentaho User Groups</h1>
                 <p>This is the place to find information about Pentaho User Groups. Check the list below to see if there is a PUG near you. Get in touch to add your PUG here.</p>
                 <p class="large-button"><a class="btn btn-default btn-header" href="mailto:community@pentaho.com">Contact us</a></p>
               </div>
@@ -129,7 +129,7 @@
                   </div>
                 </div>
                 <div class="row" ng-cloak>
-                  <div class="col-md-4" ng-repeat="group in userGroups | filter:customCountriesFilter | orderBy:'membersNum':true">
+                  <div class="col-md-3" ng-repeat="group in userGroups | filter:customCountriesFilter | orderBy:'membersNum':true">
                     <div class="userGroup-container">
                       <a ng-href="{{ group.groupUrl }}" class="userGroup-link" target="_blank" title="{{ group.name }}">
                         <div class="userGroup">
