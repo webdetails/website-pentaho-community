@@ -4107,6 +4107,54 @@ a.userGroup-link {
 }
 
 
+/* ===========================================================
+======================== LIBRARY =========================
+=========================================================== */
+
+.library-bookTitle{
+  color: #616161;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 600;
+  min-height: 50px;
+}
+
+.library-link{
+  height: 100%;
+  max-height: 340px;
+}
+
+.userGroup-container.books{
+  height: auto;
+}
+
+.userGroup.book{
+  height: 100%;
+  max-height: 200px;
+  padding: 15px 20px;
+}
+
+.library .library-bookCover{
+  display: block;
+  min-height: 340px;
+}
+
+.library div.authors{
+  font-size: 13px;
+  color: #616161;
+  margin-top: 20px;
+  min-height: 36px;
+}
+
+.userGroup-container:hover .library-bookTitle,
+.userGroup-container:hover div.authors{
+  color: #ffffff;
+}
+
+.library .libraryHeader{
+  background: url(../img/books/learningCtools.png) no-repeat center center;
+}
+
 /*---------------------------------------------*/
 
 
@@ -4693,24 +4741,6 @@ h4 ~ p{
 body.open-demos .product-title{
   margin-top: 0;
 }
-
-.buy-disclaimer{
-  font-size: 12px;
-  margin-top: 20px;
-  color: #d9534f;
-}
-
-.mainContainer .buy-box a.btn.btn-default.offline,
-.mainContainer .buy-box a.btn.btn-default.offline:hover,
-.mainContainer .buy-box a.btn.btn-default.offline:hover:active{
-  background: #e0e0e0;
-}
-
-/*temporary, to be removed once the buy links are working*/
-.mainContainer .buy-box a.btn.btn-default{
-  cursor: not-allowed;
-}
-
 
 @media (max-width: 1024px){
   .nav-container ul > li.menu-item-wrapper.ctools-menu-hidden-item

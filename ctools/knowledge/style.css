@@ -165,7 +165,7 @@ a.btn.product-header-buy:hover:active{
   display: inline;
 }
 
-.buy-header-value .euro{
+.buy-header-value .monies{
   font-size: 12px;
   margin-top: 1px;
 }
@@ -412,7 +412,7 @@ a.btn.product-header-buy:hover:active{
   margin-top: 30px;
 }
 
-.buy-box .euro{
+.buy-box .monies{
   font-size: 13px;
   margin-top: -2px;
   position: absolute;
