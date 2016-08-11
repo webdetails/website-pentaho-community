@@ -4,7 +4,7 @@
       "authors": 	   "Sergio Ramazzina",
       "published":   "2014-06",
       "subject":     "Analytics",
-      "cover":   	   "Pentaho-Business-Analytics-Cookbook.png",
+      "cover":   	   "Pentaho-Business-Analytics-Cookbook.jpg",
       "url":    	   "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-business-analytics-cookbook"
    },
    {
@@ -12,7 +12,7 @@
       "authors": 	   "Sergio Ramazzina",
       "published":   "2013-07",
       "subject":     "PDI",
-      "cover":       "Pentaho-Data-Integration-Kitchen.png",
+      "cover":       "Pentaho-Data-Integration-Kitchen.jpg",
       "url":    	   "https://www.packtpub.com/big-data-and-business-intelligence/instant-pentaho-data-integration-kitchen-instant"
    },
    {
@@ -20,7 +20,7 @@
       "authors":     "Manoj R Patil, Feris Thia",
       "published":   "2013-11",
       "subject":     "Analytics",
-      "cover":       "Pentaho-for-BigData-Analytics.png",
+      "cover":       "Pentaho-for-BigData-Analytics.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-big-data-analytics" 
    },
    {
@@ -28,7 +28,7 @@
       "authors":     "María Carina Roldán",
       "published":   "2013-10",
       "subject":     "PDI",
-      "cover":       "Pentaho-Data-Integration.png",
+      "cover":       "Pentaho-Data-Integration.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-beginners-guide-second-edition" 
    },
    {
@@ -36,7 +36,7 @@
       "authors":     "Mariano García Mattío, Dario R. Bernabeu",
       "published":   "2013-08",
       "subject":     "PRD",
-      "cover":       "Pentaho-6.0-Reporting-by-Example.png",
+      "cover":       "Pentaho-6.0-Reporting-by-Example.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-50-reporting-example-beginner%E2%80%99s-guide" 
    },
    {
@@ -44,7 +44,7 @@
       "authors":     "Diethard Steiner",
       "published":   "2013-12",
       "subject":     "PDI",
-      "cover":       "Building-a-Data-Mart-with-Pentaho.png",
+      "cover":       "Building-a-Data-Mart-with-Pentaho.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/building-data-mart-pentaho-data-integration-video" 
    },
    {
@@ -52,7 +52,7 @@
       "authors":     "Alex Meadows, Adrián Sergio Pulvirenti, María Carina Roldán",
       "published":   "2013-12",
       "subject":     "PDI",
-      "cover":       "Pentaho-Data-Integration-Cookbook.png",
+      "cover":       "Pentaho-Data-Integration-Cookbook.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-cookbook-second-edition"
    },
    {
@@ -60,7 +60,7 @@
       "authors":     "Francesco Corti",
       "published":   "2014-01",
       "subject":     "PRD",
-      "cover":       "Pentaho-Reporting.png",
+      "cover":       "Pentaho-Reporting.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-reporting-video" 
    },
    {
@@ -68,7 +68,7 @@
       "authors":     "Adrián Sergio Pulvirenti, María Carina Roldán",
       "published":   "2011-06",
       "subject":     "PDI",
-      "cover":       "Pentaho-Data-Integration-4-Cookbook.png",
+      "cover":       "Pentaho-Data-Integration-4-Cookbook.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-4-cookbook" 
    },
    {
@@ -76,7 +76,7 @@
       "authors":     "Joel Latino, Harris Ward",
       "published":   "2015-12",
       "subject":     "Analytics",
-      "cover":       "Pentaho-Analytics-for-MongoDB-Cookbook.png",
+      "cover":       "Pentaho-Analytics-for-MongoDB-Cookbook.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-analytics-mongodb-cookbook" 
    },
    {
@@ -84,7 +84,7 @@
       "authors":     "Miguel Gaspar",
       "published":   "2016-05",
       "subject":     "Ctools",
-      "cover":       "Learning-Pentaho-CTools.png",
+      "cover":       "Learning-Pentaho-CTools.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/learning-pentaho-ctools" 
    },
    {
@@ -92,7 +92,7 @@
       "authors":     "Bo Borland",
       "published":   "2014-02",
       "subject":     "Analytics",
-      "cover":       "Pentaho-Analytics-for-MongoDB.png",
+      "cover":       "Pentaho-Analytics-for-MongoDB.jpg",
       "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-analytics-mongodb" 
    }
 ]
