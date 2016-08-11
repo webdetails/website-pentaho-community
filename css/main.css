@@ -456,7 +456,7 @@ body div a:hover,
 
 #documentationTabs ul.resp-tabs-list li {
     display: block;
-    padding: 10px 25px !important;
+    padding: 8px 25px !important;
     color: #616161;
     border: none !important;
     border-bottom: #edece4 1px solid !important;
@@ -632,7 +632,7 @@ span.example {
     width: 12px;
     height: 12px;
     margin: 4px;
-    border: 2px solid #3BA749;
+    border: 1px solid #3BA749;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
@@ -994,7 +994,7 @@ body h1.ctool-name{
   position: relative;
   font-size: 12px;
   line-height: 1.5;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border-radius: 0px;
   text-decoration: none;
 
@@ -1021,6 +1021,10 @@ a.large-button {
 .btn-green:hover:active {
   background-color: #34913D;
   color: #fff;
+}
+
+.buy-now .btn-green{
+  padding: 4px 15px;
 }
 
 .btn-green img {
@@ -1286,7 +1290,6 @@ header.site-header a.button:hover{
 
   .link-marketplacerow {
     text-align: center !important;
-    margin-top: 20px;
   }
 
   .pluginPage .greenRow {
@@ -1915,8 +1918,8 @@ ol.carousel-indicators.content{
     background: #303843;
   }
 
-  .wrapper-with-margin .owl-pagination{
-    display: none;
+  .wrapper-with-margin .owl-buttons{
+    
   }
 
 }
@@ -1949,6 +1952,10 @@ ol.carousel-indicators.content{
 
 }
 
+.owl-buttons .owl-prev,
+.owl-buttons .owl-next{
+    display: none !important;
+}
 
 
 /* ==========================================================================
@@ -2581,7 +2588,7 @@ p.in-development-description {
   background: #eeeeee;
   text-align: left;
   margin: 4px 0px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   color: #616161;
   position: relative;
   /* margin-left: 12px; */
@@ -3174,7 +3181,6 @@ body .btn:not(.dropdown-toggle) {
 
   .newLanguage .col-lg-4 {
     text-align: center !important;
-    margin-top: 20px;
   }
 
 }
@@ -3545,7 +3551,7 @@ a.link-row{
   font-size: 13px;
   letter-spacing: 0.15em;
   background: #34913D;
-  padding: 12px 40px !important;
+  padding: 10px 40px !important;
   color: #FFF !important;
   text-transform: uppercase;
   cursor:pointer;
@@ -3809,11 +3815,13 @@ a.link-marketplacetab:hover{
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
 }
-.owl-theme .owl-controls .owl-page span{
-  width: 8px;
-      height: 8px;
+
+body .owl-theme .owl-controls .owl-page span{
+      width: 12px;
+      height: 12px;
+      margin: 5px;
       opacity: 1 !important;
-      border: 2px solid #34913D;
+      border: 1px solid #34913D;
       background: #ffffff !important;
 }
 
@@ -4136,7 +4144,10 @@ a.userGroup-link {
 
 .library .library-bookCover{
   display: block;
-  min-height: 340px;
+}
+
+.library .library-bookCover img{
+  min-width: 100%;
 }
 
 .library div.authors{
@@ -4152,13 +4163,101 @@ a.userGroup-link {
 }
 
 .library .libraryHeader{
-  background: url(../img/books/learningCtools.png) no-repeat center center;
+  background: url(../img/books/Header.png) no-repeat center center;
+  height: 400px;
+  background-size: cover;
+}
+
+.library .cbp-so-side-left > div{
+  padding: 70px 15px 70px 30px;
+}
+
+.hide-desktop{
+    display: none;
+}
+
+.library a.btn,
+a.link-row{
+  padding: 8px 40px !important;
+}
+
+@media (max-width: 991px){
+  .library-bookCover{
+    max-width: 130px;
+    float: left;
+  }
+
+  .userGroup.book{
+    padding-left: 150px;
+  }
+
+  .userGroup .library-bookTitle{
+    font-size: 14px;
+    min-height: initial;
+    margin-bottom: 10px;
+  }
+  
+  .library div.authors{
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .hide-desktop{
+    display: block;
+  }
+
+  .hide-mobile{
+    display: none;
+  }  
+
+  .library .libraryHeader{
+    height: 220px;
+    background-position: right center;
+  }
+
+  .library .carousel .site-container .hide-desktop p.btn{
+    margin: 0;
+    padding: 0;
+  }
+
+  .library .carousel .site-container .title-mobile{
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  .library .carousel .site-container .hide-desktop a.btn{
+    margin: 24px 0;
+    padding: 8px 30px !important;
+  }
+
+  .library .hide-desktop h1{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+
+  .library .hide-desktop p{
+    font-size: 16px;
+    margin: 0;
+  }
+
+}
+
+
+@media (max-width: 1110px) and (min-width:992px) {
+  
+  .library div.authors{
+    min-height: 66px;
+  }
+
+  .library-bookTitle{
+    min-height: 75px;
+  }
+
 }
 
 /*---------------------------------------------*/
-
-
-/*testing */
 
 a.small-link-to-pentaho,
 a.small-link-to-pentaho:link,
@@ -4456,8 +4555,10 @@ a.small-link-to-pentaho:active {
 
 .community-slide :not(.wrapper-with-margin) .owl-pagination{
   position: absolute;
-  bottom: 10px;
   width: 100%;
+  bottom: 0;
+  margin-bottom: -35px;
+  z-index: 99;
 }
 
 
@@ -4524,7 +4625,7 @@ a.small-link-to-pentaho:active {
 }
 
 .pluginPage .pentaho-6-disclaimer {
-  margin: 30px 5px;
+  margin: 10px 0px;
 }
 
 @media (max-width: 1199px) {

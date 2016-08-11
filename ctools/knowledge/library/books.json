@@ -1,0 +1,98 @@
+[
+   {
+      "name":       	"Pentaho Business Analytics Cookbook",
+      "authors": 	   "Sergio Ramazzina",
+      "published":   "2014-06",
+      "subject":     "Analytics",
+      "cover":   	   "Pentaho-Business-Analytics-Cookbook.png",
+      "url":    	   "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-business-analytics-cookbook"
+   },
+   {
+      "name":       	"Instant Pentaho Data Integration Kitchen",
+      "authors": 	   "Sergio Ramazzina",
+      "published":   "2013-07",
+      "subject":     "PDI",
+      "cover":       "Pentaho-Data-Integration-Kitchen.png",
+      "url":    	   "https://www.packtpub.com/big-data-and-business-intelligence/instant-pentaho-data-integration-kitchen-instant"
+   },
+   {
+      "name":        "Pentaho for Big Data Analytics",
+      "authors":     "Manoj R Patil, Feris Thia",
+      "published":   "2013-11",
+      "subject":     "Analytics",
+      "cover":       "Pentaho-for-BigData-Analytics.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-big-data-analytics" 
+   },
+   {
+      "name":        "Pentaho Data Integration Beginner's Guide",
+      "authors":     "María Carina Roldán",
+      "published":   "2013-10",
+      "subject":     "PDI",
+      "cover":       "Pentaho-Data-Integration.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-beginners-guide-second-edition" 
+   },
+   {
+      "name":        "Pentaho 5.0 Reporting by Example: Beginner's Guide",
+      "authors":     "Mariano García Mattío, Dario R. Bernabeu",
+      "published":   "2013-08",
+      "subject":     "PRD",
+      "cover":       "Pentaho-6.0-Reporting-by-Example.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-50-reporting-example-beginner%E2%80%99s-guide" 
+   },
+   {
+      "name":        "Building a Data Mart with Pentaho Data Integration",
+      "authors":     "Diethard Steiner",
+      "published":   "2013-12",
+      "subject":     "PDI",
+      "cover":       "Building-a-Data-Mart-with-Pentaho.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/building-data-mart-pentaho-data-integration-video" 
+   },
+   {
+      "name":        "Pentaho Data Integration Cookbook",
+      "authors":     "Alex Meadows, Adrián Sergio Pulvirenti, María Carina Roldán",
+      "published":   "2013-12",
+      "subject":     "PDI",
+      "cover":       "Pentaho-Data-Integration-Cookbook.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-cookbook-second-edition"
+   },
+   {
+      "name":        "Pentaho Reporting",
+      "authors":     "Francesco Corti",
+      "published":   "2014-01",
+      "subject":     "PRD",
+      "cover":       "Pentaho-Reporting.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-reporting-video" 
+   },
+   {
+      "name":        "Pentaho Data Integration 4 Cookbook",
+      "authors":     "Adrián Sergio Pulvirenti, María Carina Roldán",
+      "published":   "2011-06",
+      "subject":     "PDI",
+      "cover":       "Pentaho-Data-Integration-4-Cookbook.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-data-integration-4-cookbook" 
+   },
+   {
+      "name":        "Pentaho Analytics for MongoDB Cookbook",
+      "authors":     "Joel Latino, Harris Ward",
+      "published":   "2015-12",
+      "subject":     "Analytics",
+      "cover":       "Pentaho-Analytics-for-MongoDB-Cookbook.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-analytics-mongodb-cookbook" 
+   },
+   {
+      "name":        "Learning Pentaho CTools",
+      "authors":     "Miguel Gaspar",
+      "published":   "2016-05",
+      "subject":     "Ctools",
+      "cover":       "Learning-Pentaho-CTools.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/learning-pentaho-ctools" 
+   },
+   {
+      "name":        "Pentaho Analytics for MongoDB",
+      "authors":     "Bo Borland",
+      "published":   "2014-02",
+      "subject":     "Analytics",
+      "cover":       "Pentaho-Analytics-for-MongoDB.png",
+      "url":         "https://www.packtpub.com/big-data-and-business-intelligence/pentaho-analytics-mongodb" 
+   }
+]
