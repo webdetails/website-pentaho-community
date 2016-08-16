@@ -4158,6 +4158,7 @@ a.userGroup-link {
   color: #616161;
   margin-top: 20px;
   min-height: 36px;
+  line-height: 18px;
 }
 
 .userGroup-container:hover .library-bookTitle,
@@ -4248,16 +4249,16 @@ a.link-row{
 }
 
 
-@media (max-width: 1110px) and (min-width:992px) {
+@media (max-width: 1155px) and (min-width:992px) {
   
   .library div.authors{
     min-height: 66px;
   }
 
   .library-bookTitle{
-    min-height: 75px;
+    min-height: 100px;
   }
-
+  
 }
 
 /*---------------------------------------------*/
