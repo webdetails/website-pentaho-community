@@ -134,12 +134,8 @@
                       <a ng-href="{{ group.groupUrl }}" class="userGroup-link" target="_blank" title="{{ group.name }}">
                         <div class="userGroup">
                           <div class="userGroup-name">{{ group.name }}</div>
-                          <div class="userGroup-location clearfix">
-                            <div class="userGroup-flag pull-left"></div>
-                            <div class="userGroup-address pull-left">
-                              <img ng-src="../img/flags/{{group.country}}.svg" fall-back-src="../img/flags/{{group.country}}.png" alt="USA">
-                              <span>{{ group.city }}, {{ group.country }}</span>
-                            </div>
+                          <div class="userGroup-location">
+                            <div class="userGroup-address" style="background-image: url('../img/flags/{{group.country}}.svg');">{{ group.city }}, {{ group.country }}</div>
                           </div>
                         </div>
                       </a>

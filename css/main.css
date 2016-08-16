@@ -4036,7 +4036,8 @@ body .userGroups-list .dropdown-menu a:focus {
 }
 
 .userGroup-container:hover .userGroup-name,
-.userGroup-container:hover span{
+.userGroup-container:hover span,
+.userGroup-container:hover .userGroup-location{
   color: #FFFFFF;
 }
 
@@ -4065,15 +4066,17 @@ a.userGroup-link {
   color: #8c8c8c;
   line-height: 16px;
   border-bottom: 1px solid #cfcfcf;
-  padding-bottom: 13px;
+  padding-bottom: 14px;
 }
 
-.userGroup-location img {
-  width: 26px;
-  height: 16px;
-  margin-right: 5px;
-  position: relative;
-  top: -1px;
+.userGroup-address {
+  padding-left: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: 26px 16px;
+  background-position: left center;
 }
 
 .userGroup-memberArea {
