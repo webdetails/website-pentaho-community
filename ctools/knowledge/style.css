@@ -434,6 +434,8 @@ a.btn.product-header-buy:hover:active{
   text-align: right;
   line-height: 28px;
   padding-right: 10px;
+  position: relative;
+  top: -1px;
 }
 
 
