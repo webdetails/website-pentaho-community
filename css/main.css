@@ -1347,6 +1347,12 @@ header.site-header a.button:hover{
     margin-top: 30px;
   }
 
+  .user-groups #containerHeader .col-lg-6:last-child,
+  .user-groups #containerHeader .col-lg-5:last-child,
+  .user-groups #containerHeader .event-banner {
+    margin-top: 0px;
+  }
+
   #containerHeader .event-banner {
     height: auto;
   }
@@ -1679,7 +1685,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -webkit-transition: 0.6s ease-in-out left;
           transition: 0.6s ease-in-out left;
 
-  /*padding: 40px 45px;*/
+  padding: 40px 45px;
 }
 
 .carousel-inner > .active,
@@ -1942,21 +1948,42 @@ ol.carousel-indicators.content{
     bottom: 20px;
   }
 
-  .item:not(.pworld){
-    padding: 45px 0;
-  }
-
-  .pentahoHome .item:not(.pworld){
-    padding: 45px 0 45px 0;
+  .pentahoHome .item .left-side-slide {
+    padding-bottom: 40px;
+    padding-top: 40px;
   }
 
 }
+
+@media (max-width: 1023px) {
+  .pentahoHome .item .left-side-slide {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .hidden-btn{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pentahoHome .item .left-side-slide {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+}
+
+p.pcm2016{
+
+}
+
 
 .owl-buttons .owl-prev,
 .owl-buttons .owl-next{
     display: none !important;
 }
-
 
 /* ==========================================================================
    Navbar
@@ -3622,20 +3649,29 @@ a.link-marketplacetab:hover{
 }
 
 .info-bar.ctools-custom-dashboards .info-bar-header{
-    width: calc( 100% + 40px);
-    height: 120px;
-    background: url(../img/steelwheels-showcase.jpg) center center no-repeat;
-    
+    width: calc(100% + 40px);
+    height: 180px;
+    background: url(../img/CustomDashboards.png) center center no-repeat;
     background-size: cover;
-    margin-right: -20px;
     margin-left: -20px;
     display: block;
+    float: left;
 }
 
 .info-bar.ctools-custom-dashboards p{
-    padding: 15px 0;
+    padding-bottom: 15px;
     margin: 0;
     color: #616161;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.info-bar.ctools-custom-dashboards .info-bar-description{
+  padding-left: 10px;
+}
+
+.info-bar.ctools-custom-dashboards{
+  padding: 0 20px 0px;
 }
 
 .info-bar.ctools-custom-dashboards a.btn{
@@ -3643,6 +3679,58 @@ a.link-marketplacetab:hover{
     padding: 8px 15px;
     display: block;
     text-align: center;
+}
+
+.info-bar.ctools-custom-dashboards .info-bar-description span {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ctools.home .darkContainer{
+  padding-top: 0;
+}
+
+@media screen and (max-width: 992px){
+
+  .info-bar.ctools-custom-dashboards .info-bar-description {
+    padding-left: 0;
+  }
+
+  .info-bar.ctools-custom-dashboards .info-bar-description span {
+    margin-bottom: 20px
+  }
+
+  .darkContainer .site-container{
+    padding-top: 0;
+  }
+
+}
+
+@media (max-width: 1200px){
+
+  .info-bar.ctools-custom-dashboards .info-bar-header{
+    margin-bottom: 20px;    
+  }
+
+  .info-bar.ctools-custom-dashboards .info-bar-description span{
+    margin-bottom: 20px;
+  }
+
+  .info-bar.ctools-custom-dashboards .info-bar-description{
+    padding-left: 0;
+  }
+
+  .ctools.home .backPage.fullWidthCtoolIntro.whiteGreyBg{
+    padding-top: 0;
+  }
+
+}
+
+
+
+.ctools.home .darkContainer,
+.ctools.home .darkContainer *{
+  text-align: left;
 }
 
 /*
@@ -3655,6 +3743,44 @@ a.link-marketplacetab:hover{
   left: 0;
   top: 0px;
 }*/
+
+.ctools.home .backPage ul {
+    padding-left: 10px;
+}
+
+.ctools.home .mainContainer .site-container .header-txt-block
+{
+  margin-top: 18%;
+}
+
+.user-groups .slide .cbp-so-side-left .header-txt-block
+{
+  margin-top: 13%;
+}
+
+@media screen and (max-width : 992px) {
+  
+  .user-groups .slide .cbp-so-side-left .header-txt-block
+  {
+    margin-top: 5%;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  .ctools.home .mainContainer .site-container .header-txt-block{
+    margin-top: 2em;
+    margin-bottom: 1.8em;
+  }
+
+  .user-groups .slide .cbp-so-side-left .header-txt-block{
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+}
+
 
 .pworld-title{
   padding: 25px 0 30px;
@@ -4414,10 +4540,6 @@ a.small-link-to-pentaho:active {
       margin-top: 0px;
     }
 
-  .item:not(.pworld){
-    padding: 45px 12px;
-  }
-
 }
 
 @media screen and (min-width:971px) and (max-width:1200px){
@@ -4533,7 +4655,7 @@ a.small-link-to-pentaho:active {
 @media (max-width: 1200px) and (min-width: 600px){
 
   .community-slide h1{
-    font-size: 38px;
+    font-size: 30px;
   }
 
   .left-side-slide{
