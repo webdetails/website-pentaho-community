@@ -506,8 +506,13 @@ body div a:hover,
 
 
 @media (max-width: 1200px){
-  .ctools .site-container{
+  .ctools .site-container:not(.disclaimer){
       padding: 20px 15px 20px;
+  }
+
+  .training .site-container.subjectDescription{
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .mainContainer .ctool-header{
@@ -1853,7 +1858,8 @@ ol.carousel-indicators.content{
     margin-top: 0;
   }
 
-  .pentahoHome .item.community-slide{
+  .pentahoHome .item.community-slide,
+  .user-groups .item.community-slide{
     text-align: center !important;
     padding-top: 0;
   }
@@ -1898,7 +1904,7 @@ ol.carousel-indicators.content{
   }
 
   .user-groups .userGroups-list #myCarousel.carousel{
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   body h2.resp-accordion{
@@ -3726,7 +3732,13 @@ a.link-marketplacetab:hover{
 
 }
 
+.user-groups .community-slide.cbp-so-side {
+    padding-top: 0 !important;
+}
 
+.user-groups .community-slide .cbp-so-side.cbp-so-side-right{
+  padding-top: 0;
+}
 
 .ctools.home .darkContainer,
 .ctools.home .darkContainer *{
@@ -3779,8 +3791,27 @@ a.link-marketplacetab:hover{
     margin-bottom: 1em;
   }
 
+  .hidden-mobile{
+    display: none;
+  }
+
+  .user-groups #containerHeader .cbp-so-side.cbp-so-side-left{
+    padding-top: 0;
+  }
+
 }
 
+@media screen and (min-width: 768px){
+  
+  .hidden-desktop{
+    display: none;
+  }  
+
+}
+
+.user-groups .owl-theme .owl-controls{
+  margin-top: 0px;
+}
 
 .pworld-title{
   padding: 25px 0 30px;
@@ -4018,7 +4049,7 @@ body .owl-theme .owl-controls .owl-page span{
 }
 
 .community-slide .cbp-so-side{
-  padding-top: 40px;
+  padding-top: 0px !important;
   padding-left: 90px;
 }
 
@@ -4642,8 +4673,7 @@ a.small-link-to-pentaho:active {
   }
 
   .pluginPage .container,
-  #sparkl .container.whiteContainer,
-  .cde-tutorial .site-container
+  #sparkl .container.whiteContainer
   {
     padding: 20px 15px 20px;
   }
@@ -4812,7 +4842,7 @@ a.small-link-to-pentaho:active {
 
 .subjectDescription {
   padding: 10px 15px;
-  background: rgba(0, 92, 167, .05);
+  background: #ececec;
   /* margin-bottom: 20px; */
   position: relative;
   height: 219px;
@@ -4821,6 +4851,7 @@ a.small-link-to-pentaho:active {
 
 .showcaseDisclamer.subjectDescription p {
     line-height: 22px;
+    text-align: left;
 }
 
 .subjectDescription p {

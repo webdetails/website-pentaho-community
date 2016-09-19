@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/cbpScroller.css">
   <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/owl.theme.css">
 
   <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
@@ -32,91 +34,66 @@
 
   <div class="backPageGrey cbp-so-scroller user-groups" id="cbp-so-scroller">
 
-    <!-- carousel -->
-    <div id="header-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
-      <!-- Wrapper for slides -->
-      <div class="">
-<!--         <div class=" active">
-          <div class="site-container cbp-so-section" id="containerHeader">
-            <div class="row">
-              <div class="col-xs-6 col-lg-6 cbp-so-side cbp-so-side-left">
-                <h1 class="product">Pentaho User Groups</h1>
-                <p>This is the place to find information about Pentaho User Groups. Check the list below to see if there is a PUG near you. Get in touch to add your PUG here.</p>
-                <p class="large-button"><a class="btn btn-default btn-header" href="mailto:community@pentaho.com">Contact us</a></p>
-              </div>
-              <div class="col-xs-6 col-lg-6 cbp-so-side cbp-so-side-right">
-                <img src="../img/user-groups-header.png" alt="">
-                <p class="small-button-green">
-                  <a class="btn btn-default btn-header" href="mailto:community@pentaho.com">Contact us</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <div class=" active">
-          <div class="site-container cbp-so-section" id="containerHeader" style="margin-top: 0; margin-bottom: 0;">
-            <!-- Example row of columns -->
-            <div class="row">
-              <div class="col-sm-6 col-xs-12 cbp-so-side cbp-so-side-left">
-                <div class="header-txt-block">
-                  <h1 class="product">Community Meeting</h1>
-                  <p>Join us at the next PCM event in Antwerp, Belgium. <br class="hidden-xs"> Nov 11-13, 2016.</p>
-                  <a class="" href="https://www.eventbrite.com/e/pcm16-tickets-26473010487?aff=es2" target="_blank">
-                    <span class="btn btn-default btn-header">Register</span>
-                  </a>                  
-                </div>
-              </div>
-              <div class="col-sm-6 cbp-so-side cbp-so-side-right">
-                <div class="text-center">
-                  <img src="../img/Community_UserGroups_cropped.png" alt="">
+    <div class="wrapper-header-bg">
+      <div class="wrapper-with-margin">
+        <div id="owl" class="owl-carousel community-slide">
+            <div class="item community-slide active">
+              <div class="  ">
+                <div class="site-container cbp-so-section" id="containerHeader" style="margin-top: 0; margin-bottom: 0;">
+                  <!-- Example row of columns -->
+                  <div class="row">
+                    <div class="col-sm-6 cbp-so-side cbp-so-side-right hidden-desktop">
+                      <div class="text-center">
+                        <img src="../img/PentahoCommunityUserGroups_pcm2016.png" alt="" style="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 cbp-so-side cbp-so-side-left">
+                      <div class="header-txt-block">
+                        <h1 class="product">Community Meeting</h1>
+                        <p>Join us at the next PCM event in Antwerp, Belgium. <br class="hidden-xs"> Nov 11-13, 2016.</p>
+                        <a class="" href="https://www.eventbrite.com/e/pcm16-tickets-26473010487?aff=es2" target="_blank">
+                          <span class="btn btn-default btn-header">Register</span>
+                        </a>                  
+                      </div>
+                    </div>
+                    <div class="col-sm-6 cbp-so-side cbp-so-side-right hidden-mobile">
+                      <div class="text-center">
+                        <img src="../img/PentahoCommunityUserGroups_pcm2016.png" alt="" style="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+
+            <div class="item community-slide active">
+              <div class="  ">
+                <div class="site-container cbp-so-section" id="containerHeader" style="margin-top: 0; margin-bottom: 0;">
+                  <!-- Example row of columns -->
+                  <div class="row">
+                    <div class="col-sm-6 cbp-so-side cbp-so-side-right hidden-desktop">
+                      <div class="text-center">
+                        <img src="../img/Community_UserGroups_cropped.png" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 cbp-so-side cbp-so-side-left">
+                      <div class="header-txt-block">
+                        <h1 class="product">Pentaho User Groups</h1>
+                        <p>This is the place to find information about Pentaho User Groups. <br> Check the list below to see if thers a PUG near you.</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 cbp-so-side cbp-so-side-right hidden-mobile">
+                      <div class="text-center">
+                        <img src="../img/Community_UserGroups_cropped.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-        <!--<div class="item" id="pentaho-day-2015-item">
-            <div class="container cbp-so-section" id="containerHeader">
-              <div class="row">
-                <div class="col-lg-6 cbp-so-side cbp-so-side-left">
-                  <h1>2015<br>Pentaho Day<br>Brasil</h1>
-                  <a class="large-button" href="http://www.pentahobrasil.com.br/eventos/pentahoday2015/" target="_blank" style="min-width: 0;"><span class="btn btn-default btn-header">Learn More<img src="../img/arrow-right-green.png"></span></a>
-                </div>
-                <div class="col-lg-6 cbp-so-side cbp-so-side-right event-banner">
-                  <img class="hidden-lg" src="../img/pentaho-day-2015-banner.png" alt="">
-                  <a class="small-button-green" href="http://www.pentahobrasil.com.br/eventos/pentahoday2015/" target="_blank"><span class="btn btn-default btn-header">Learn More<img src="../img/arrow-right-green.png"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>-->
-        <!--<div class="item" id="training-bigdata-sparkl-item">
-            <div class="container cbp-so-section" id="containerHeader">
-              <div class="row">
-                <div class="col-lg-6 cbp-so-side cbp-so-side-left">
-                  <h1>Training<br>Big Data + Sparkl</h1>
-                  <p>By Pedro Alves</p>
-                  <a class="large-button" href="http://www.webdetails.pt/treinamento-big-data-sparkl/" target="_blank" style="min-width: 0;"><span class="btn btn-default btn-header">Learn More<img src="../img/arrow-right-green.png"></span></a>
-                </div>
-                <div class="col-lg-6 cbp-so-side cbp-so-side-right event-banner">
-                  <img class="hidden-lg" src="../img/training-bigdata-sparkl-banner.png" alt="">
-                  <a class="small-button-green" href="http://www.webdetails.pt/treinamento-big-data-sparkl/" target="_blank"><span class="btn btn-default btn-header">Learn More<img src="../img/arrow-right-green.png"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>-->
-        <!-- SPECIAL HEADER
-          <div class="item" style="background-color: #fff; padding-top: 0; padding-bottom: 32px;" id="item-highlight-header-pcm14" onclick="window.open('http://pcm14.know.bi/');" title="Pentaho Community Meeting">
-            <img src="../img/pcm14-banner.svg" alt="">
-          </div> -->
       </div>
-
-      <!-- Indicators -->
-      <ol class="carousel-indicators" style="display: none;">
-        <!--<li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#header-carousel" data-slide-to="1"></li>
-          <li data-target="#header-carousel" data-slide-to="2"></li>-->
-      </ol>
     </div>
-
 
     <div class="whiteContainerBack">
 
@@ -218,10 +195,23 @@
   <script src="../js/main.js"></script>
   <script src="../js/classie.js"></script>
   <script src="../js/twitter-bootstrap-hover-dropdown.js"></script>
+  <script src="../js/vendor/owl.carousel.js"></script>
   <script src="../js/master.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
       $('#tabs').tab();
+
+      $("#owl").owlCarousel({
+
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 600,
+        paginationSpeed: 600,
+        autoPlay: 10000,
+        pagination: true,
+        singleItem: true,
+        mouseDrag: true,
+        navigationText: ["", ""]
+      });
 
       $('.header-container').load('../pentaho-templates/header.html');
     });
