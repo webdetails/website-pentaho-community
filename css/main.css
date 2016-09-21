@@ -1420,7 +1420,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle {
   display: block;
   width: 100%;
   outline: 0;
-  line-height: 46px;
+  line-height: 38px;
 
   position: relative;
   font-weight: 400;
@@ -1762,21 +1762,23 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   -ms-user-select: none;
       user-select: none;
   border: none;
+  background: #f5f5f5;
 }
 
 .content.carousel-indicators li{
   border-right: 1px solid #C1C1C1 !important;
   border-bottom: none;
-  padding: 10px 40px;
-  line-height: 27px !important;
+  padding: 12px 40px;
+  line-height: 13px !important;
 }
 
 .content.carousel-indicators li:hover{
-  background: #EEE;
+  background: #3BA749;
+  color: #fff;
 }
 
 ol.carousel-indicators.content{
-  height: 48px;
+  height: 38px;
   border-bottom: 1px solid #CFCFCF;
 }
 
@@ -1800,8 +1802,8 @@ ol.carousel-indicators.content{
 .carousel-indicators.content .clicked:active {
   opacity: 1;
   position: relative;
-  background: #34913D !important;
-  color: #FFFFFF;
+  background: #fff !important;
+  color: #34913D;
   width: auto;
   font-weight: 400;
 }
@@ -1821,6 +1823,10 @@ ol.carousel-indicators.content{
 
 .carousel-caption .btn {
   text-shadow: none;
+}
+
+.pentahoHome #myCarousel{
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 768px) {
