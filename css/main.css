@@ -1772,6 +1772,10 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   line-height: 13px !important;
 }
 
+.content.carousel-indicators li:first-child{
+  border-left: 1px solid #C1C1C1 !important;
+}
+
 .content.carousel-indicators li:hover{
   background: #3BA749;
   color: #fff;
@@ -1780,6 +1784,7 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 ol.carousel-indicators.content{
   height: 38px;
   border-bottom: 1px solid #CFCFCF;
+  padding: 0 calc( 50% - 265px );
 }
 
 .carousel-indicators li:hover,
@@ -1806,6 +1811,7 @@ ol.carousel-indicators.content{
   color: #34913D;
   width: auto;
   font-weight: 400;
+  border-bottom: 1px solid #fff;
 }
 
 
@@ -1826,7 +1832,7 @@ ol.carousel-indicators.content{
 }
 
 .pentahoHome #myCarousel{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 768px) {
