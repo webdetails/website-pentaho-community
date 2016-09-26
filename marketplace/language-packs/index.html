@@ -27,12 +27,15 @@
       <div class="site-container cbp-so-section" id="containerHeader">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-lg-7 cbp-so-side cbp-so-side-left">
+          <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
+            <img src="../../img/CommunityLanguagePacks.gif" alt="" style="margin: 0;">
+          </div>
+          <div class="col-sm-7 cbp-so-side cbp-so-side-left">
             <h2>Pentaho Language Packs</h2>
             <p>Translate Pentaho and improve existing translations.</p>
           </div>
-          <div class="col-lg-5 cbp-so-side cbp-so-side-right">
-            <img src="../../img/language-pack-header.png" alt="">
+          <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
+            <img src="../../img/CommunityLanguagePacks.gif" alt="" style="margin: 0;">
           </div>
         </div>
       </div> <!-- /container -->
@@ -59,7 +62,7 @@
               </ol>
               <!-- Carousel items -->
               <div class="carousel-inner">
-                <div class="active item" id="">
+                <div class="active item" id="" style="padding-top: 0; padding-bottom: 0;">
                   <div class="row">
                     <div class="col-lg-12">
                       <h3>Overview</h3>
@@ -318,9 +321,9 @@
               <h4 class="disclaimer-title">Marketplace in Pentaho 6.1</h4>
             </div>
             <div class="col-xs-12 disclaimer-body">
-              <p>If you're using the <strong>Community Edition</strong> of Pentaho 6.1 you don't have to worry about this - Marketplace comes with it and it's ready to be used.</p>
-              <p>If you have Pentaho 6.1 <strong>Enterprise Edition</strong> and go to <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace Public Site</a> to try to download the Marketplace plugin, you'll see it's not there.</p>
-              <p>The reason for that? It's an OSGi plugin and you already have it, but it comes disabled by default. Here are the instructions on how to enable it:</p>
+              <p>If you're using the <strong>Community Edition</strong> of Pentaho 6.1 you don't have to worry about this - Marketplace comes with it and it's ready to be used. <br>
+              If you have Pentaho 6.1 <strong>Enterprise Edition</strong> and go to <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace Public Site</a> to try to download the Marketplace plugin, you'll see it's not there. <br>
+              The reason for that? It's an OSGi plugin and you already have it, but it comes disabled by default. Here are the instructions on how to enable it: </p>
               <ol>
                 <li>Edit the file <pre>pentaho-solutions/system/karaf/etc/org.apache.karaf.features.cfg</pre></li>
                 <li>Find the key "featuresBoot" and add the feature "pentaho-marketplace". That line will then be something like:<br>

@@ -412,6 +412,10 @@ body div a:hover,
   padding-top: 30px;
 }
 
+.ctools .fullWidthCtoolIntro{
+  padding-top: 10px;
+}
+
 .lightGreyBg {
     background: #f5f5f5;
 }
@@ -739,10 +743,6 @@ ul.slick-dots li,
 
 .no-svg .ctools-main-title span{
     background: url(../img/ctools-logo.png) no-repeat center center;
-}
-
-.ctools.home .slideshow{
-  padding-top: 30px;
 }
 
 .ctools.home .highlight-info-column h1{
@@ -1693,6 +1693,10 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
   padding: 40px 45px;
 }
 
+.pluginPage#language-packs .carousel-inner > .item {
+  padding: 40px 0px; 
+}
+
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -1929,6 +1933,20 @@ ol.carousel-indicators.content{
 
 }
 
+@media screen and (min-width: 1024px){
+    .site-header{
+        margin-bottom: 20px;
+    }
+
+    .site-container.whiteContainerBack > .site-container.whiteContainer{
+      margin-top: 20px;
+    }
+
+    .user-groups #myCarousel{
+      margin-top: 60px;
+    }
+}
+
 
 @media (min-width: 1024px){
 
@@ -1967,15 +1985,15 @@ ol.carousel-indicators.content{
   }
 
   .pentahoHome .item .left-side-slide {
-    padding-bottom: 40px;
-    padding-top: 40px;
+    /*padding-bottom: 40px;
+    padding-top: 40px;*/
   }
 
 }
 
 @media (max-width: 1023px) {
   .pentahoHome .item .left-side-slide {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 0;
   }
 
@@ -2287,11 +2305,16 @@ old version - keep til the new one is approved
   font-weight: 500;
 }
 
-.pluginPage #containerHeader,
 .user-groups #containerHeader {
   margin-bottom: 35px;
   margin-top: 40px;
 }
+
+.pluginPage #containerHeader{
+  max-height: 315px;
+  height: 100%;
+}
+
 
 .pluginPage h5 {
   font-size: 30px;
@@ -3632,6 +3655,17 @@ a.link-marketplacetab:hover{
   margin-top: 20px;
 }
 
+.pluginPage.data-mining .btn.btn-header,
+.pluginPage.mondrian .btn.btn-header,
+.pluginPage.kettle .btn.btn-header,
+.pluginPage.reporting .btn.btn-header {
+  margin-top: 58px;
+}
+
+.ctools.home .btn.btn-header {
+  margin-top: 36px;
+}
+
 .link-header{
   margin-top: 60px;
 }
@@ -3741,6 +3775,10 @@ a.link-marketplacetab:hover{
   .ctools.home .backPage.fullWidthCtoolIntro.whiteGreyBg{
     padding-top: 0;
   }
+  
+  .pluginPage#language-packs .carousel-inner > .item {
+    padding: 40px 15px; 
+  }
 
 }
 
@@ -3774,7 +3812,7 @@ a.link-marketplacetab:hover{
 
 .ctools.home .mainContainer .site-container .header-txt-block
 {
-  margin-top: 18%;
+  margin-top: 30px;
 }
 
 .user-groups .slide .cbp-so-side-left .header-txt-block
@@ -3805,6 +3843,10 @@ a.link-marketplacetab:hover{
 
   .hidden-mobile{
     display: none;
+  }
+
+  .hidden-desktop.text-center + .cbp-so-side.cbp-so-side-left{
+      padding-bottom: 20px;
   }
 
   .user-groups #containerHeader .cbp-so-side.cbp-so-side-left{
@@ -4039,6 +4081,11 @@ body .owl-theme .owl-controls .owl-page span{
 .wrapper-with-margin{
   margin:0px auto;
   max-width: 1200px;
+}
+
+.pentahoHome .wrapper-with-margin{
+    /*max-height: 315px;
+    height: 100%;*/
 }
 
 .owl-theme .owl-controls .owl-buttons div{
@@ -4627,7 +4674,7 @@ a.small-link-to-pentaho:active {
   }
 
 
-  body.pluginPage #containerHeader,
+/*  body.pluginPage #containerHeader,*/
   body.user-groups #containerHeader {
     margin-bottom: 20px;
     margin-top: 15px;
@@ -4643,6 +4690,14 @@ a.small-link-to-pentaho:active {
 
   .main-plugin-footerNotes {
     padding-top: 20px;
+  }
+
+  .pluginPage #containerHeader{
+    max-height: none;
+  }
+
+  .pluginPage.project-maturity .whiteContainer{
+    padding-top: 0;
   }
 }
 
@@ -4793,7 +4848,7 @@ a.small-link-to-pentaho:active {
 }
 
 .pluginPage .pentaho-6-disclaimer {
-  margin: 10px 0px;
+    margin: 10px 0px 30px;
 }
 
 @media (max-width: 1199px) {
@@ -4841,6 +4896,10 @@ a.small-link-to-pentaho:active {
   position: relative;
   font-size: 13px;
   white-space: normal;
+}
+
+.disclaimer-body ol{
+    margin: 20px 0;
 }
 
 .showcaseDisclamer.subjectDescription {
@@ -5027,3 +5086,26 @@ body.open-demos .product-title{
   }
 
 }
+
+/* preload overlay  - tbd */
+/*body:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+  opacity: 1;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+}
+
+body.loaded:after{  
+  opacity: 0; 
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+*/
