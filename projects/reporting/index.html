@@ -10,13 +10,15 @@
         <meta name="description" content="Transform your data into information.">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
-        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/easy-responsive-tabs.css">
         <link rel="stylesheet" href="../../css/bootstrap-theme.css">
-        <link rel="stylesheet" href="../../css/main.css">
-        <link rel="stylesheet" href="../../css/master.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
         <link rel="stylesheet" href="../../css/cbpScroller.css">
         <link rel="stylesheet" href="../../css/owl.carousel.css">
         <link rel="stylesheet" href="../../css/owl.theme.css">
+        
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/master.css">
 
         <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -31,10 +33,12 @@
           <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
             <img src="../../img/CommunityReporting.gif" alt="" style="margin: 0;">
           </div>
-          <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-            <h2>Pentaho Reporting</h2>
-            <p>Suite of Open Source reporting tools that enables the creation of relational and analytical reports from a wide range of data sources.</p>
-            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
+          <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+            <div class="header-txt-block">
+              <h2>Pentaho Reporting</h2>
+              <p>Suite of Open Source reporting tools that enables the creation of relational and analytical reports from a wide range of data sources.</p>
+              <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
+            </div>
           </div>
           <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
             <img src="../../img/CommunityReporting.gif" alt="" style="margin: 0;">
@@ -142,15 +146,21 @@
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-3">
-                          <div class="mainConceptOption active" id="presentationLayer">Report Designer</div>
-                          <div class="mainConceptOption" id="dimensionalLayer">Reporting Engine</div>
-                          <div class="mainConceptOption" id="starLayer">Reporting SDK</div>
-                        </div>
-                        <div class="col-lg-9">
-                          <div class="mainConceptContent active" id="presentationLayerContent">The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data sources used.</div>
-                          <div class="mainConceptContent" id="dimensionalLayerContent">The <b>Reporting Engine</b> is an embeddable JAVA reporting library that is used by the Report Designer to generate reports. The library can be used in both server-side and client-side scenarios. Originally known as JFreeReport, it was designed to follow the approach of banded reporting with absolutely positioned elements.</div>
-                          <div class="mainConceptContent" id="starLayerContent">The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.</div>
+                        <div class="col-sm-12">
+                          <div id="documentationTabs" class="row">
+                            <ul class="resp-tabs-list col-sm-3">
+                              <li id="report-designer">Report Designer</li>
+                              <li id="reporting-engine">Reporting Engine</li>
+                              <li id="reporting-sdk">Reporting SDK</li>
+                            </ul>
+
+                            <div class="resp-tabs-container col-sm-9">
+                              <div id="report-designer"></div>
+                              <div id="reporting-engine"></div>
+                              <div id="reporting-sdk"></div>
+                            </div>
+                            <div class="clear"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -341,27 +351,22 @@
                         <div class="col-lg-4">
                         </div>
                       </div>
-                      <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-4">
-                          <div class="mainConceptOption active" id="presentationLayer1">Report Designer</div>
-                          <div class="mainConceptContent active" id="presentationLayer1Content">
-                            <p>
-                            The <b>Report Designer</b> is a desktop reporting tool that provides a visual design environment to easily create sophisticated and rich reports. It is geared towards experienced and power users, who are familiar with the concepts and data sources used.
-                            </p>
-                          </div>
+                      <!-- inner tabs -->
+                      <div class="row" id="new-features2" style="margin-top: 30px;">
+                        <div class="col-sm-12">
+                          <div id="documentationTabsMobile" class="row documentationTabs">
+                            <ul class="resp-tabs-list col-sm-3">
+                              <li id="report-designer">Report Designer</li>
+                              <li id="reporting-engine">Reporting Engine</li>
+                              <li id="reporting-sdk">Reporting SDK</li>
+                            </ul>
 
-                          <div class="mainConceptOption" id="dimensionalLayer1">Reporting Engine</div>
-                          <div class="mainConceptContent" id="dimensionalLayer1Content">
-                            <p>
-                            The <b>Reporting Engine</b> is an embeddable JAVA reporting library that is used by the Report Designer to generate reports. The library can be used in both server-side and client-side scenarios. Originally known as JFreeReport, it was designed to follow the approach of banded reporting with absolutely positioned elements.
-                            </p>
-                          </div>
-
-                          <div class="mainConceptOption" id="starLayer1">Reporting SDK</div>
-                          <div class="mainConceptContent" id="starLayer1Content">
-                            <p>
-                            The <b>Reporting Software Developers Kit (SDK)</b> is a packaging of the Classic Engine, documentation and all of the supporting libraries required to embed the Pentaho Reporting Engine into your application.
-                            </p>
+                            <div class="resp-tabs-container col-sm-9">
+                              <div id="report-designer"></div>
+                              <div id="reporting-engine"></div>
+                              <div id="reporting-sdk"></div>
+                            </div>
+                            <div class="clear"></div>
                           </div>
                         </div>
                       </div>
@@ -509,9 +514,9 @@
       </div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+        <script src="../../js/easyResponsiveTabs.js"></script>
         <script src="../../js/vendor/bootstrap.min.js"></script>
 
         <script src="../../js/main.js"></script>
@@ -521,10 +526,39 @@
         <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
 
         <script type="text/javascript">
+
+            /* load documentation tabs content */
+            $(function() {
+              $('.resp-tabs-container > div').each(function() {
+                var id = $(this).attr('id');
+                $(this).load("files/" + id + ".html");
+              });
+
+              $('#documentationTabsMobile .resp-tabs-container > div').each(function() {
+                var id = $(this).attr('id');
+                $(this).load("files/" + id + ".html");
+              });
+            });
+
             jQuery(document).ready(function ($) {
                 $('#tabs').tab();
                 $('.header-container').load('../../pentaho-templates/header.html');
 
+                $('#documentationTabs').easyResponsiveTabs({
+                  type: 'vertical', //Types: default, vertical, accordion
+                  width: 'auto', //auto or any custom width
+                  fit: true, // 100% fits in a container
+                  closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+                  activate: function() {} // Callback function, gets called if tab is switched
+                });
+
+                $('#documentationTabsMobile').easyResponsiveTabs({
+                  type: 'vertical', //Types: default, vertical, accordion
+                  width: 'auto', //auto or any custom width
+                  fit: true, // 100% fits in a container
+                  closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+                  activate: function() {} // Callback function, gets called if tab is switched
+                });
 
                 $(".sub-gallery").owlCarousel({
                   slideSpeed: 600,
@@ -540,6 +574,33 @@
                   $('.carousel-indicators.content li').removeClass('clicked');
                   $(this).addClass("clicked");
                 });
+                
+                if ($( window ).width() >= 769) {
+                    $('.header-txt-block').css("margin-top", ( (( $('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                } else $('.header-txt-block').css("margin-top", '20px');
+
+            });
+
+            // makes the header text content vertically align
+            $( document ).ready(function() {
+
+              $( window ).resize(function() {
+                if ($( window ).width() >= 769) {
+                  $('.header-txt-block').css("margin-top", ( (( $('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                } else $('.header-txt-block').css("margin-top", '20px');
+              });
+
+
+              // safari specific
+              if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+              $('img').load(function() {
+                $('.header-txt-block').css("margin-top", ( (( $('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                if ($( window ).width() <= 768) {
+                    $('.header-txt-block').css("margin-top", '20px');
+                }    
+              });
+              }  
+
             });
         </script>
 

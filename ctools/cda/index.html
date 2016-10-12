@@ -55,52 +55,53 @@
 
 <body class="data ctools cda">
   <div class="header-container"></div>
-  <div class="mainContainer">
-    <div class="fullWidthCtoolIntro lightGreyBg backPage">
-      <div class="site-container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="row">
-							<div class="col-md-4 col-sm-12 col-xs-12">
-                <h1 class="ctool-name">CDA</h1>
-              </div>
-							<div class="col-md-8 col-sm-12 col-xs-12">
-                <div class="row features-tabs ctool-info">
-                  <div class="col-md-4 col-xs-12 text-center">
-                    <span>Version: <a class="spacialink ctool-info-link" href="http://www.webdetails.pt/ctools-changelog/" target="_blank">16.01.22</a></span>
-                    </span>
-                  </div>
-                  <div class="col-md-4 col-xs-12 text-center">
-                    <span>License: <a class="spacialink ctool-info-link" href="http://www.mozilla.org/MPL/2.0/" target="_blank">MPLv2</a></span>
-                  </div>
-                  <div class="col-md-4 col-xs-12 text-center">
-                    <span>Available in: <a class="spacialink ctool-info-link" href="http://pentaho.com/marketplace/" target="_blank">Marketplace</a></span>
-                  </div>
-                </div>
-              </div>
+  <div class="mainContainer backPage lightGreyBg">
+    <div class="site-container cbp-so-section" id="containerHeader" style="height: auto;">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="header-carousel">
+          <div class="slide">
+            <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
+              <img src="../../../img/CommunityCDA.gif" alt="" style="margin: 0;">
             </div>
-            <div class="row">
-              <div class="ctool-description">
-                <div class="col-sm-12">
-                  <p>CDA is a Pentaho plugin designed for accessing data with great flexibility. Born for overcoming some cons of the older implementation, CDA allows you to access any of the many Pentaho datasources and:</p>
-                  <ul>
-                    <li>join different datasources just by editing an XML file;</li>
-                    <li>cache queries providing a great boost in performance;</li>
-                    <li>deliver data in different formats (csv, xls, etc.) through the Pentaho User Console;</li>
-                    <li>sort and paginate data server-side.</li>
-                  </ul>
-                  <p>Without worrying about the details, CDA can be used as a standalone plugin on the Pentaho BI server or in combination with CDE/CDF.</p>
-                  <p><br>
-                    <b>Credits:</b> Webdetails Team, Lead - Pedro Alves; Thomas Morgner; Daniel Einspanjer; Will Gorman; Sergio Ramazzina; Aaron Phillips; Pentaho Community
-                  </p>
+            <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+              <div class="header-txt-block">
+              <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                  <h2>CDA</h2>
+                  <br>
                 </div>
+                <div class="col-sm-4 col-xs-6">
+                  <p class="ctool-license-version">Version: <a class="" href="http://www.webdetails.pt/ctools-changelog/" target="_blank">16.01.22</a></p>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <p class="ctool-license-version">License: <a class="" href="http://www.mozilla.org/MPL/2.0/" target="_blank">MPLv2</a></p>
+                </div>
+                
               </div>
+              <p>CDA is a Pentaho plugin designed for accessing data with great flexibility. Born for overcoming some cons of the older implementation, CDA allows you to access and deliver data in different formats from the many Pentaho datasources.</p>
+                
+            </div>
+            </div>
+            <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
+              <img src="../../../img/CommunityCDA.gif" alt="" style="margin: 0;">
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="backPage fullWidthCtoolIntro darkContainer" style="padding: 0;">
+      <div class="site-container disclaimer">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="showcaseDisclamer subjectDescription">
+              <p><b>Credits:</b> Webdetails Team, Lead - Pedro Alves; Thomas Morgner; Daniel Einspanjer; Will Gorman; Sergio Ramazzina; Aaron Phillips; Pentaho Community
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="fullWidthCtoolInfo">
       <div class="site-container">
         <div class="row">
@@ -164,7 +165,35 @@
     $(function() {
     	$(".header-container").load("../../pentaho-templates/header.html");
       $(".community-footer").load("../../pentaho-templates/footer.html");
+
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
     });
+
+
+    // makes the header text content vertically align
+    $( document ).ready(function() {
+
+      $( window ).resize(function() {
+        if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+      });
+
+
+      // safari specific
+      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+        $('img').load(function() {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+          if ($( window ).width() <= 768) {
+              $('.header-txt-block').css("margin-top", '20px');
+          }    
+        });
+      }
+
+    });
+
 
     /* load documentation tabs content */
     $(function() {

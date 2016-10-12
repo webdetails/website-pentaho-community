@@ -37,10 +37,12 @@
           <img src="../../img/CommunityPlugins.gif" alt="">
           <!--<p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Kettle <img src="../../img/download-icon.png"></span></p>-->
         </div>
-        <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-          <h2>Pentaho Plugins</h2>
-          <p>Get involved. Explore, develop and contribute.</p>
-          <!--<p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Marketplace <img src="../../img/download-icon.png"></span></p>-->
+        <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+          <div class="header-txt-block">
+            <h2>Pentaho Plugins</h2>
+            <p>Get involved. Explore, develop and contribute.</p>
+            <!--<p class="large-button"><span class="btn btn-default btn-green" id="buttonDownloadCE">Download Marketplace <img src="../../img/download-icon.png"></span></p>-->
+          </div>
         </div>
         <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
           <img src="../../img/CommunityPlugins.gif" alt="">
@@ -293,6 +295,27 @@
         singleItem: true,
         mouseDrag: true,
         touchDrag: true
+      });    
+
+
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    });
+
+    // makes the header text content vertically align
+    $(window).resize(function() {
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    });
+
+    $( document ).ready(function() {
+      $('img').load(function() {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        if ($( window ).width() <= 768) {
+            $('.header-txt-block').css("margin-top", '20px');
+        }    
       });
     });
   </script>

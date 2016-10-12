@@ -31,10 +31,12 @@
           <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
             <img src="../../img/CommunityDataIntegration.gif" alt="" style="margin: 0;">
           </div>
-          <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-            <h2>Data Integration - <strong>Kettle</strong></h2>
-            <p>Data Integration (or <strong>Kettle</strong>) delivers powerful Extraction, Transformation, and Loading (ETL) capabilities, using a groundbreaking, metadata-driven approach.</p>
-            <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
+          <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+            <div class="header-txt-block">
+              <h2>Data Integration - <strong>Kettle</strong></h2>
+              <p>Data Integration (or <strong>Kettle</strong>) delivers powerful Extraction, Transformation, and Loading (ETL) capabilities, using a groundbreaking, metadata-driven approach.</p>
+              <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
+            </div>
           </div>
           <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
             <img src="../../img/CommunityDataIntegration.gif" alt="" style="margin: 0;">
@@ -616,6 +618,33 @@
                   mouseDrag: true,
                   touchDrag: true
                 });
+
+                if ($( window ).width() >= 769) {
+                    $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                } else $('.header-txt-block').css("margin-top", '20px');
+
+            });
+
+            // makes the header text content vertically align
+            $( document ).ready(function() {
+
+              $( window ).resize(function() {
+                if ($( window ).width() >= 769) {
+                  $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                } else $('.header-txt-block').css("margin-top", '20px');
+              });
+
+
+              // safari specific
+              if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+              $('img').load(function() {
+                $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                if ($( window ).width() <= 768) {
+                    $('.header-txt-block').css("margin-top", '20px');
+                }    
+              });
+              }  
+
             });
 
             $('.carousel-indicators.content li').click(function(){

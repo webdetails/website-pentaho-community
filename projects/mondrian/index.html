@@ -13,14 +13,15 @@
   <meta name="description" content="Online Analytical Processing server (OLAP) that enables business users to analyze complex and large quantities of data in real-time.">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/easy-responsive-tabs.css">
   <link rel="stylesheet" href="../../css/bootstrap.css">
   <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
   <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+  <link rel="stylesheet" href="../../css/cbpScroller.css">
+<!--   <link rel="stylesheet" href="../../css/owl.carousel.css">
+  <link rel="stylesheet" href="../../css/owl.theme.css"> -->
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/master.css">
-  <link rel="stylesheet" href="../../css/cbpScroller.css">
-  <link rel="stylesheet" href="../../css/owl.carousel.css">
-  <link rel="stylesheet" href="../../css/owl.theme.css">
 
   <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
@@ -38,12 +39,14 @@
             <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
               <img src="../../img/CommunityMondrian.gif" alt="" style="margin: 0;">
             </div>
-            <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-              <h2>Mondrian</h2>
-              <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
-              <p class="large-button">
-                <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
-              </p>
+            <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+              <div class="header-txt-block">
+                <h2>Mondrian</h2>
+                <p>Online Analytical Processing server (OLAP). Allows business users to analyze large and complex amounts of data in real-time.</p>
+                <p class="large-button">
+                  <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section</span>
+                </p>
+              </div>  
             </div>
             <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
               <img src="../../img/CommunityMondrian.gif" alt="" style="margin: 0;">
@@ -73,7 +76,7 @@
     <!-- /container -->
 
 
-    <div class="whiteContainerBack">
+    <div class="whiteContainerBack ">
       <div class="site-container whiteContainer">
         <div class="row" id="hiddenMobile">
           <div class="col-xs-12">
@@ -172,60 +175,41 @@
                     </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="row" id="new-features" style="margin-top: 10px;">
-                    <div class="col-lg-12">
-                      <div class="row first-feature-row" style="padding-top: 20px;">
-                        <div class="col-lg-12">
-                          <p>The
-                            <strong>Mondrian OLAP System</strong> uses
-                            <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the
-                            <strong>Presentation Layer</strong>, the
-                            <strong>Dimensional Layer</strong>, the
-                            <strong>Star Layer</strong>, and the
-                            <strong>Storage Layer</strong>.</p>
+                <div class="item" id="new-features">
+                  <div class="row">
+                    <div class="col-xs-12" style="padding-top: 30px;">
+                      <p>The
+                        <strong>Mondrian OLAP System</strong> uses
+                        <strong>Partitioned Cubes</strong>, allowing several fact tables. It also consists of four layers; working from the eyes of the user to the inward of the data center. These are: the
+                        <strong>Presentation Layer</strong>, the
+                        <strong>Dimensional Layer</strong>, the
+                        <strong>Star Layer</strong>, and the
+                        <strong>Storage Layer</strong>.
+                      </p>
+                    </div>
+                    <div class="col-xs-12">
+                      <h3>Partitioned Cubes</h3>
+                      <p>Whereas a regular cube has a single fact table, a <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-sm-12">
+                      <div id="documentationTabs" class="row">
+                        <ul class="resp-tabs-list col-sm-3">
+                          <li id="presentation">Presentation Layer</li>
+                          <li id="dimensional">Dimensional Layer</li>
+                          <li id="star">Star Layer</li>
+                          <li id="storage">Storage Layer</li>
+                        </ul>
+
+                        <div class="resp-tabs-container col-sm-9">
+                          <div id="presentation"></div>
+                          <div id="dimensional"></div>
+                          <div id="star"></div>
+                          <div id="storage"></div>
                         </div>
-                        <div class="col-lg-12">
-                          <h3>Partitioned Cubes</h3>
-                          <p>Whereas a regular cube has a single fact table, a
-                            <strong>Partitioned Cube</strong> has several fact tables, which are joined together. One partition might contain today's data, while another might hold historical data, giving a useful contribute for real-time analysis.</p>
-                        </div>
-                      </div>
-                      <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-3">
-                          <div class="mainConceptOption active" id="presentationLayer">
-                            <p>Presentation Layer</p>
-                          </div>
-                          <div class="mainConceptOption" id="dimensionalLayer">
-                            <p>Dimensional Layer</p>
-                          </div>
-                          <div class="mainConceptOption" id="starLayer">
-                            <p>Star Layer</p>
-                          </div>
-                          <div class="mainConceptOption" id="storageLayer">
-                            <p>Storage Layer</p>
-                          </div>
-                        </div>
-                        <div class="col-lg-9">
-                          <div class="mainConceptContent active" id="presentationLayerContent">
-                            <p>The
-                              <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts
-                              and advanced visualization tools such as clickable maps and dynamic graphics.</p>
-                          </div>
-                          <div class="mainConceptContent" id="dimensionalLayerContent">
-                            <p>The
-                              <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells
-                              within the axes.</p>
-                          </div>
-                          <div class="mainConceptContent" id="starLayerContent">
-                            <p>The
-                              <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</p>
-                          </div>
-                          <div class="mainConceptContent" id="storageLayerContent">
-                            <p>The
-                              <strong>Storage Layer</strong> is a Relational Database Management System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</p>
-                          </div>
-                        </div>
+                        <div class="clear"></div>
                       </div>
                     </div>
                   </div>
@@ -443,40 +427,24 @@
                       <div class="col-lg-4">
                       </div>
                     </div>
-                    <div class="row" id="mainConceptsRow">
-                      <div class="col-lg-4">
-                        <div class="mainConceptOption active" id="presentationLayer1">
-                          Presentation Layer
-                        </div>
-                        <div class="mainConceptContent active" id="presentationLayer1Content">
-                          <p>The
-                            <strong>Presentation Layer</strong> determines what's shown in the user's screen, and how he can interact to ask new questions. There are many ways to present multidimensional data sets, including pivot tables, pie, line or bar charts
-                            and advanced visualization tools such as clickable maps and dynamic graphics.</p>
-                        </div>
+                    <!-- inner tabs -->
+                    <div class="row" id="new-features2" style="margin-top: 30px;">
+                      <div class="col-sm-12">
+                        <div id="documentationTabsMobile" class="row documentationTabs">
+                          <ul class="resp-tabs-list col-sm-3" style="padding-left: 0;">
+                            <li id="presentation">Presentation Layer</li>
+                            <li id="dimensional">Dimensional Layer</li>
+                            <li id="star">Start Layer</li>
+                            <li id="storage">Storage Layer</li>
+                          </ul>
 
-                        <div class="mainConceptOption" id="dimensionalLayer1">
-                          Dimensional Layer
-                        </div>
-                        <div class="mainConceptContent" id="dimensionalLayer1Content">
-                          <p>The
-                            <strong>Dimensional Layer</strong> parses, validates and executes Multidimensional Expressions (MDX) queries. A query is evaluated in multiple phases and the axes are the first to be computed, right before the values of the cells within
-                            the axes.</p>
-                        </div>
-
-                        <div class="mainConceptOption" id="starLayer1">
-                          Star Layer
-                        </div>
-                        <div class="mainConceptContent" id="starLayer1Content">
-                          <p>The
-                            <strong>Star Layer</strong> is responsible for maintaining an aggregate cache. An aggregation is a set of measure values (cells) in memory, qualified by a set of dimension column values.</p>
-                        </div>
-
-                        <div class="mainConceptOption" id="storageLayer1">
-                          Storage Layer
-                        </div>
-                        <div class="mainConceptContent" id="storageLayer1Content">
-                          <p>The
-                            <strong>Storage Layer</strong> is a Relational Database Management System (RDBMS) and is responsible for providing aggregated cell data and members from dimension tables.</p>
+                          <div class="resp-tabs-container col-sm-9">
+                            <div id="presentation"></div>
+                            <div id="dimensional"></div>
+                            <div id="star"></div>
+                            <div id="storage"></div>
+                          </div>
+                          <div class="clear"></div>
                         </div>
                       </div>
                     </div>
@@ -633,6 +601,7 @@
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="../../js/easyResponsiveTabs.js"></script>
   <script>
     window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
   </script>
@@ -647,8 +616,38 @@
   <link rel="stylesheet" href="../../css/master.css">
 
   <script type="text/javascript">
+
+    /* load documentation tabs content */
+    $(function() {
+      $('.resp-tabs-container > div').each(function() {
+        var id = $(this).attr('id');
+        $(this).load("files/" + id + ".html");
+      });
+
+      $('#documentationTabsMobile .resp-tabs-container > div').each(function() {
+        var id = $(this).attr('id');
+        $(this).load("files/" + id + ".html");
+      });
+    });
+
     jQuery(document).ready(function($) {
       $('#tabs').tab();
+
+      $('#documentationTabs').easyResponsiveTabs({
+        type: 'vertical', //Types: default, vertical, accordion
+        width: 'auto', //auto or any custom width
+        fit: true, // 100% fits in a container
+        closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+        activate: function() {} // Callback function, gets called if tab is switched
+      });
+
+      $('#documentationTabsMobile').easyResponsiveTabs({
+        type: 'vertical', //Types: default, vertical, accordion
+        width: 'auto', //auto or any custom width
+        fit: true, // 100% fits in a container
+        closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+        activate: function() {} // Callback function, gets called if tab is switched
+      });
 
       $('.header-container').load('../../pentaho-templates/header.html');
 
@@ -657,7 +656,32 @@
         $(this).addClass("clicked");
       });
 
-      
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+
+    });
+
+    // makes the header text content vertically align
+    $( document ).ready(function() {
+
+      $( window ).resize(function() {
+        if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+      });
+
+
+      // safari specific
+      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+      $('img').load(function() {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        if ($( window ).width() <= 768) {
+            $('.header-txt-block').css("margin-top", '20px');
+        }    
+      });
+      }  
+
     });
   </script>
 

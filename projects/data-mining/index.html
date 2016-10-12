@@ -12,11 +12,14 @@
     <meta name="description" content="Set of tools for machine learning and data mining that helps you better understand and improve your business performance through predictive analytics.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/easy-responsive-tabs.css">
     <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/cbpScroller.css">
     <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+    
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/master.css">
-    <link rel="stylesheet" href="../../css/cbpScroller.css">
+
     <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body class="pluginPage data-mining">
@@ -31,15 +34,14 @@
                 <span class="btn btn-default btn-header" id="buttonDownloadCE-small">Download Section </span>
               </p> -->
             </div>
-            <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-              <h2>Data Mining -
-              <strong>Weka</strong>
-              </h2>
-              <p>Comprehensive set of tools for machine learning and data mining to enhance your insights through predictive analytics.</p>
-              <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
-              <!-- <p class="large-button">
-                <span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span>
-              </p> -->
+            <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+              <div class="header-txt-block">
+                <h2>Data Mining -
+                <strong>Weka</strong>
+                </h2>
+                <p>Comprehensive set of tools for machine learning and data mining to <br class="hidden-mobile">enhance your insights through predictive analytics.</p>
+                <p class="large-button"><span class="btn btn-default btn-header" id="buttonDownloadCE">Download Section </span></p>
+              </div>
             </div>
             <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
               <img src="../../img/CommunityDataMining.gif" alt="" style="margin: 0;">
@@ -51,7 +53,7 @@
         </div>
       </div>
       <!-- /container -->
-      <div class="whiteContainerBack">
+      <div class="whiteContainerBack site-container">
         <div class="container whiteContainer">
           <div class="row" id="hiddenMobile">
             <div id="myCarousel" class="carousel slide site-container">
@@ -150,52 +152,52 @@
                         <b>Cluster Panel</b>, the <b>Select Attributes Panel</b>, and the <b>Visualize Panel</b>.</p>
                       </div>
                     </div>
-                    <div class="row" id="mainConceptsRow">
-                      <div class="col-lg-3">
-                        <div class="mainConceptOption active" id="preprocessPanel">Preprocess Panel</div>
-                        <div class="mainConceptOption" id="classifyPanel">Classify Panel</div>
-                        <div class="mainConceptOption" id="associatePanel">Associate Panel</div>
-                        <div class="mainConceptOption" id="clusterPanel">Cluster Panel</div>
-                        <div class="mainConceptOption" id="selectAttributesPanel">Select Attributes Panel</div>
-                        <div class="mainConceptOption" id="visualizePanel">Visualize Panel</div>
-                      </div>
-                      <div class="col-lg-9">
-                        <div class="mainConceptContent active" id="preprocessPanelContent">The <b>Preprocess Panel</b> has facilities for importing data from a database, a CSV file, or other data file types, and for preprocessing this data using a so-called filtering algorithm. These filters can be used to transform
-                        the data (e.g., turning numeric attributes into discrete ones) and make it possible to delete instances and attributes according to specific criteria.</div>
-                        <div class="mainConceptContent" id="classifyPanelContent">The <b>Classify Panel</b> enables the user to apply classification and regression algorithms (indiscriminately called classifiers in Weka) allowing you to the resulting data set, to estimate the accuracy of the resulting predictive
-                        model, and to visualize erroneous predictions, ROC curves, etc., or the model itself (if the model is amenable to visualization like, e.g., a decision tree).</div>
-                        <div class="mainConceptContent" id="associatePanelContent">The <b>Associate Panel</b> provides access to association rule learners that attempt to identify all important interrelationships between attributes in the data.</div>
-                        <div class="mainConceptContent" id="clusterPanelContent">The <b>Cluster Panel</b> gives access to the clustering techniques in Weka, e.g., the simple k-means algorithm. There is also an implementation of the expectation maximization algorithm for learning a mixture of normal distributions.</div>
-                        <div class="mainConceptContent" id="selectAttributesPanelContent">The <b>Select Attributes Panel</b> provides algorithms for identifying the most predictive attributes in a data set.</div>
-                        <div class="mainConceptContent" id="visualizePanelContent">The <b>Visualize Panel</b> shows a scatter plot matrix, where individual scatter plots can be selected, enlarged and analyzed using various selection operators.</div>
+                    <div class="row" style="margin-top: 30px;">
+                    <div class="col-sm-12">
+                      <div id="documentationTabs" class="row">
+                        <ul class="resp-tabs-list col-sm-3">
+                          <li id="preprocess">Preprocess Panel</li>
+                          <li id="classify">Classify Panel</li>
+                          <li id="associate">Associate Panel</li>
+                          <li id="cluster">Cluster Panel</li>
+                          <li id="select-attributes">Select Attributes Panel</li>
+                          <li id="visualize">Visualize Panel</li>
+                        </ul>
+
+                        <div class="resp-tabs-container col-sm-9">
+                          <div id="preprocess"></div>
+                          <div id="classify"></div>
+                          <div id="associate"></div>
+                          <div id="cluster"></div>
+                          <div id="select-attributes"></div>
+                          <div id="visualize"></div>
+                        </div>
+                        <div class="clear"></div>
                       </div>
                     </div>
+                  </div>
                     <div class="row secondRow">
                       <div class="col-lg-12">
-                        <h3>Data Integration Plugins</h3>
+                        <h3>DATA INTEGRATION PLUGINS</h3>
                       </div>
                     </div>
                     <div class="row" id="mainConceptsRow2" style="margin-top: 0px;">
-                      <div class="col-lg-3">
-                        <div class="mainConceptOption active" id="wekaScoringPlugin">Weka Scoring Plugin</div>
-                        <div class="mainConceptOption" id="ARFFOutputPlugin">ARFF Output Plugin</div>
-                      </div>
-                      <div class="col-lg-9">
-                        <div class="mainConceptContent active" id="wekaScoringPluginContent">
-                          <div class="row">
-                            <div class="col-lg-12">The <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
-                              row of data. The Weka scoring plugin can handle all types of classifiers and clusterers that can be constructed in Weka.
-                              <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+Weka+Scoring+Plugin" target="_blank">here</a>.</div>
-                              <div class="col-lg-6"></div>
-                            </div>
+                      <div class="col-sm-12">
+                        <div id="documentationTabs2" class="row documentationTabs">
+                          <ul class="resp-tabs-list col-sm-3">
+                            <li id="weka-scoring">Weka Scoring Plugin</li>
+                            <li id="arff">ARFF Output Plugin</li>
+                          </ul>
+
+                          <div class="resp-tabs-container col-sm-9">
+                            <div id="weka-scoring"></div>
+                            <div id="arff"></div>
                           </div>
-                          <div class="mainConceptContent" id="ARFFOutputPluginContent">The
-                            <strong>ARFF Output Plugin</strong> is a tool that allows you to output data from Kettle to a file in WEKA's Attribute Relation File Format (ARFF). ARFF format is essentially the same as comma separated values (CSV) format, except with
-                            the addition of meta data on the attributes (fields) in the form of a header.
-                            <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+ARFF+Output+Plugin" target="_blank">here</a>.</div>
-                          </div>
+                          <div class="clear"></div>
                         </div>
-                        <div class="row secondRow">
+                      </div>
+                    </div>
+                        <div class="row">
                           <div class="col-lg-12">
                             <h3>Package Manager</h3>
                             <p>Weka
@@ -388,76 +390,74 @@
                         <div class="col-lg-4">
                         </div>
                       </div>
-                      <div class="row" id="mainConceptsRow">
-                        <div class="col-lg-4">
-                          <div class="mainConceptOption active" id="preprocessPanel">Preprocess Panel</div>
-                          <div class="mainConceptContent active" id="preprocessPanelContent">
-                            <p>The <b>Preprocess Panel</b> has facilities for importing data from a database, a CSV file, or other data file types, and for preprocessing this data using a so-called filtering algorithm. These filters can be used to transform
-                            the data (e.g., turning numeric attributes into discrete ones) and make it possible to delete instances and attributes according to specific criteria. </p>
-                          </div>
-                          <div class="mainConceptOption" id="classifyPanel">Classify Panel</div>
-                          <div class="mainConceptContent" id="classifyPanelContent">
-                            <p>The <b>Classify Panel</b> enables the user to apply classification and regression algorithms (indiscriminately called classifiers in Weka) allowing you to the resulting data set, to estimate the accuracy of the resulting predictive
-                            model, and to visualize erroneous predictions, ROC curves, etc., or the model itself (if the model is amenable to visualization like, e.g., a decision tree). </p>
-                          </div>
-                          <div class="mainConceptOption" id="associatePanel">Associate Panel</div>
-                          <div class="mainConceptContent" id="associatePanelContent">
-                            <p>The <b>Associate Panel</b> provides access to association rule learners that attempt to identify all important interrelationships between attributes in the data. </p>
-                          </div>
-                          <div class="mainConceptOption" id="clusterPanel">Cluster Panel</div>
-                          <div class="mainConceptContent" id="clusterPanelContent">
-                            <p>The <b>Cluster Panel</b> gives access to the clustering techniques in Weka, e.g., the simple k-means algorithm. There is also an implementation of the expectation maximization algorithm for learning a mixture of normal distributions. </p>
-                          </div>
-                          <div class="mainConceptOption" id="selectAttributesPanel">Select Attributes Panel</div>
-                          <div class="mainConceptContent" id="selectAttributesPanelContent">
-                          <p>The <b>Select Attributes Panel</b> provides algorithms for identifying the most predictive attributes in a data set.</div>
-                          <div class="mainConceptOption" id="visualizePanel">Visualize Panel</div>
-                          <div class="mainConceptContent" id="visualizePanelContent">
-                            <p>The <b>Visualize Panel</b> shows a scatter plot matrix, where individual scatter plots can be selected, enlarged and analyzed using various selection operators. </p>
+                      <!-- inner tabs -->
+                      <div class="row" id="new-features2" style="margin-top: 30px;">
+                        <div class="col-sm-12">
+                          <div id="documentationTabsMobile" class="row documentationTabs">
+                            <ul class="resp-tabs-list col-sm-3" style="padding-left: 0;">
+                              <li id="preprocess">Preprocess Panel</li>
+                              <li id="classify">Classify Panel</li>
+                              <li id="associate">Associate Panel</li>
+                              <li id="cluster">Cluster Panel</li>
+                              <li id="select-attributes">Select Attributes Panel</li>
+                              <li id="visualize">Visualize Panel</li>
+                            </ul>
+
+                            <div class="resp-tabs-container col-sm-9">
+                              <div id="preprocess"></div>
+                              <div id="classify"></div>
+                              <div id="associate"></div>
+                              <div id="cluster"></div>
+                              <div id="select-attributes"></div>
+                              <div id="visualize"></div>
+                            </div>
+                            <div class="clear"></div>
                           </div>
                         </div>
                       </div>
-                      <div class="row secondRow">
+
+                                            <!-- inner tabs -->
+                    <div class="row">
+                      <div class="col-lg-12 secondRow">
+                        <h3>DATA INTEGRATION PLUGINS</h3>
+                      </div>
+                    </div>
+                      <div class="row" id="new-features2" style="">
+                        <div class="col-sm-12">
+                          <div id="documentationTabs2Mobile" class="row documentationTabs">
+                            <ul class="resp-tabs-list col-sm-3" style="padding-left: 0;">
+                              <li id="weka-scoring">Weka Scoring Plugin</li>
+                              <li id="arff">ARFF Output Plugin</li>
+                            </ul>
+
+                            <div class="resp-tabs-container col-sm-9">
+                              <div id="weka-scoring"></div>
+                              <div id="arff"></div>
+                            </div>
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
                         <div class="col-lg-12">
-                          <h3 style="">Data Integration Plugins</h3>
+                          <h3 style="">PACKAGE MANAGER</h3>
                         </div>
                       </div>
                       <div class="row" id="mainConceptsRow2" style="margin-top: 0px;">
                         <div class="col-lg-12">
-                          <div class="mainConceptOption active" id="wekaScoringPlugin">Weka Scoring Plugin</div>
-                          <div class="mainConceptContent active" id="wekaScoringPluginContent">
-                            <p>
-                              The <strong>Weka Scoring Plugin</strong> is a tool that allows classification and clustering models created with Weka to be used to "score" new data as part of a Kettle transform. "Scoring" simply means attaching a prediction to an incoming
-                              row of data. The Weka scoring plugin can handle all types of classifiers and clusterers that can be constructed in Weka.
-                              <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+Weka+Scoring+Plugin" target="_blank">here</a>.</div>
-                            </p>
-                            <div class="mainConceptOption" id="ARFFOutputPlugin">ARFF Output Plugin</div>
-                            <div class="mainConceptContent" id="ARFFOutputPluginContent">
-                              <p>
-                                The <strong>ARFF Output Plugin</strong> is a tool that allows you to output data from Kettle to a file in WEKA's Attribute Relation File Format (ARFF). ARFF format is essentially the same as comma separated values (CSV) format, except with
-                                the addition of meta data on the attributes (fields) in the form of a header.
-                                <br>Documentation on this plugin can be found <a href="http://wiki.pentaho.com/display/DATAMINING/Using+the+ARFF+Output+Plugin" target="_blank">here</a>.</div>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="row secondRow">
-                            <div class="col-lg-12">
-                              <h3 style="margin-top: 50px;">Package Manager</h3>
-                            </div>
-                            <div class="col-lg-12">
-                              <p>Weka
-                              <strong>packages</strong> are bundles of additional functionality, separate from the capabilities supplied in the core system. A package consists of some jar files, documentation, metadata, and possibly source code.</p>
-                              <p>This allows users to select and install only what they need or are interested in, and also provides a simple mechanism for people to use when contributing to Weka. Some of the existing packages are provided by the Weka team, while
-                              others come from third parties.</p>
-                              <p>Weka includes a facility for the management of packages and a mechanism to load them dynamically at runtime – there are both a
-                                <strong>command-line</strong> and a
-                                <strong>GUI package manager</strong>. More information on how to use the Weka Package Manager is provided <a href="http://weka.wikispaces.com/How+do+I+use+the+package+manager%3F#GUI" target="_blank">here</a>, as well as a list of WEKA
-                                Packages <a href="http://weka.sourceforge.net/packageMetaData/">here</a>.</p>
-                              </div>
-                            </div>
+                          <p>Weka
+                          <strong>packages</strong> are bundles of additional functionality, separate from the capabilities supplied in the core system. A package consists of some jar files, documentation, metadata, and possibly source code.</p>
+                          <p>This allows users to select and install only what they need or are interested in, and also provides a simple mechanism for people to use when contributing to Weka. Some of the existing packages are provided by the Weka team, while
+                          others come from third parties.</p>
+                          <p>Weka includes a facility for the management of packages and a mechanism to load them dynamically at runtime – there are both a
+                            <strong>command-line</strong> and a
+                            <strong>GUI package manager</strong>. More information on how to use the Weka Package Manager is provided <a href="http://weka.wikispaces.com/How+do+I+use+the+package+manager%3F#GUI" target="_blank">here</a>, as well as a list of WEKA
+                            Packages <a href="http://weka.sourceforge.net/packageMetaData/">here</a>.</p>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
                       <div class="panel panel-default">
                         <div class="panel-heading">
                           <h4 class="panel-title">
@@ -603,6 +603,7 @@
         </div>
       </div>
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+      <script src="../../js/easyResponsiveTabs.js"></script>
       <script>
       window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
       </script>
@@ -611,14 +612,89 @@
       <script src="../../js/master.js"></script>
       <script src="../../js/classie.js"></script>
       <script src="../../js/twitter-bootstrap-hover-dropdown.js"></script>
+      <link rel="stylesheet" href="../../css/master.css">
       <script type="text/javascript">
-      jQuery(document).ready(function($) {
-      $('#tabs').tab();
-      $('.header-container').load('../../pentaho-templates/header.html');
-      $('.carousel-indicators.content li').click(function(){
-      $('.carousel-indicators.content li').removeClass('clicked');
-      $(this).addClass("clicked");
+
+      /* load documentation tabs content */
+      $(function() {
+        $('.resp-tabs-container > div').each(function() {
+          var id = $(this).attr('id');
+          $(this).load("files/" + id + ".html");
+        });
+
+        $('#documentationTabsMobile .resp-tabs-container > div').each(function() {
+          var id = $(this).attr('id');
+          $(this).load("files/" + id + ".html");
+        });
       });
+
+      jQuery(document).ready(function($) {
+        $('#tabs').tab();
+        $('.header-container').load('../../pentaho-templates/header.html');
+    
+        $('#documentationTabs').easyResponsiveTabs({
+          type: 'vertical', //Types: default, vertical, accordion
+          width: 'auto', //auto or any custom width
+          fit: true, // 100% fits in a container
+          closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+          activate: function() {} // Callback function, gets called if tab is switched
+        });
+
+        $('#documentationTabs2').easyResponsiveTabs({
+          type: 'vertical', //Types: default, vertical, accordion
+          width: 'auto', //auto or any custom width
+          fit: true, // 100% fits in a container
+          closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+          activate: function() {} // Callback function, gets called if tab is switched
+        });
+
+        $('#documentationTabsMobile').easyResponsiveTabs({
+          type: 'vertical', //Types: default, vertical, accordion
+          width: 'auto', //auto or any custom width
+          fit: true, // 100% fits in a container
+          closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+          activate: function() {} // Callback function, gets called if tab is switched
+        });
+
+        $('#documentationTabs2Mobile').easyResponsiveTabs({
+          type: 'vertical', //Types: default, vertical, accordion
+          width: 'auto', //auto or any custom width
+          fit: true, // 100% fits in a container
+          closed: true, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+          activate: function() {} // Callback function, gets called if tab is switched
+        });
+
+        $('.carousel-indicators.content li').click(function(){
+          $('.carousel-indicators.content li').removeClass('clicked');
+          $(this).addClass("clicked");
+        });
+
+        if ($( window ).width() >= 769) {
+            $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+
+      });
+
+      // makes the header text content vertically align
+      $( document ).ready(function() {
+
+        $( window ).resize(function() {
+          if ($( window ).width() >= 769) {
+            $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+          } else $('.header-txt-block').css("margin-top", '20px');
+        });
+
+
+        // safari specific
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+        $('img').load(function() {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+          if ($( window ).width() <= 768) {
+              $('.header-txt-block').css("margin-top", '20px');
+          }    
+        });
+        }  
+
       });
       </script>
       <script>

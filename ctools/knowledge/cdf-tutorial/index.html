@@ -55,27 +55,30 @@
 
 <body class="ctools training cdf-tutorial">
   <div class="header-container"></div>
-  <div class="mainContainer backPage">
-    <div class="fullWidthCtoolIntro ctool-header" style="padding: 0;">
+  <div class="mainContainer backPage lightGreyBg">
+    <div class="site-container cbp-so-section" id="containerHeader" style="height: auto;">
+      <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-12 col-xs-12 product-header">
-          <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12 knowledge-header">
-            <div class="row">
-              <div class="col-xs-12 header-txt-block">
-                <div class="site-container">
-                  <h2>CDF Tutorial</h2>
-                  <p>The Community Dashboard Framework (CDF) is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server. As the main developers of this community project, we understand that sometimes is not easy to achieve exactly what we want. To allow users to get the full benefit of CDF we've prepared a set of documentation -
-                  a step by step tutorial from "how to start" to the hidden features of this framework.</p>
-                </div>
+        <div class="header-carousel">
+          <div class="slide">
+          <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
+              <img src="../../../img/CommunityCDFTutorial.gif" alt="" style="margin: 0;">
+            </div>
+            <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+              <div class="header-txt-block">
+                <h2 style="padding: 0;">CDF Tutorial</h2>
+                <p>The Community Dashboard Framework is a project that provides an easy to use and powerful dashboard framework on top of the Pentaho BI server. To allow users to get the full benefit of CDF we've prepared a set of documentation - a step by step tutorial from "how to start" to the hidden features of this framework.</p>
               </div>
+            </div>
+            <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
+              <img src="../../../img/CommunityCDFTutorial.gif" alt="" style="margin: 0;">
             </div>
           </div>
         </div>
-        </div>
       </div>
     </div>
-    <div class="backPage fullWidthCtoolIntro darkContainer" style="padding: 0;">
+  </div>
+      <div class="backPage fullWidthCtoolIntro darkContainer" style="padding: 0;">
       <div class="site-container disclaimer">
         <div class="row">
           <div class="col-xs-12">
@@ -86,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="fullWidthCtoolIntro mainContainer" style="border-bottom: none; ">
+    <div class="fullWidthCtoolIntro mainContainer backPage" style="border-bottom: none; ">
       <div class="site-container product">
         <div class="row">
           <div class="col-sm-12">
@@ -277,7 +280,7 @@
         </div>
       </div>
     </div>
-    <div class="lightContainerBack purchase-terms">
+    <div class="lightContainerBack purchase-terms backPage">
         <div class="site-container product terms">
           <div class="row">
             <div class="col-xs-12">
@@ -303,7 +306,6 @@
           </div>
         </div>
     </div>
-  </div>
   </div>
   </div>
   <div class="modal fade dashboard-design-modal" id="cde-tutorial-interface1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -359,6 +361,30 @@
     $(function() {
       $(".header-container").load("../../../pentaho-templates/header.html");
       $(".community-footer").load("../../../pentaho-templates/footer.html");
+
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');  
+    });
+    
+    // makes the header text content vertically align
+    $( document ).ready(function() {
+      $( window ).resize(function() {
+        if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+      });
+
+
+      // safari specific
+      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+      $('img').load(function() {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        if ($( window ).width() <= 768) {
+            $('.header-txt-block').css("margin-top", '20px');
+        }    
+      });
+      }  
     });
   </script>
   

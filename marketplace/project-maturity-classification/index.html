@@ -34,11 +34,13 @@
         <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
           <img src="../../img/CommunityMaturityClassification.gif" alt="" style="margin: 0;">
         </div>
-        <div class="col-sm-7 cbp-so-side cbp-so-side-left">
-          <h2>Project Maturity
-            <br> Classification</h2>
-          <p>
+        <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+          <div class="header-txt-block">
+            <h2>Project Maturity
+              <br> Classification</h2>
+            <p>
             <strong>The model consists of two parallel lanes:</strong> one for Community and customer-sponsored projects and a second for projects which are part of the official Pentaho offering.</p>
+          </div>
         </div>
         <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
           <img src="../../img/CommunityMaturityClassification.gif" alt="" style="margin: 0;">
@@ -457,6 +459,25 @@
         $(this).addClass("clicked");
       });
     });
+
+    // makes the header text content vertically align
+    $(window).resize(function() {
+      if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    });
+
+    $( document ).ready(function() {
+      $('img').load(function() {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        if ($( window ).width() <= 768) {
+            $('.header-txt-block').css("margin-top", '20px');
+        }    
+      });
+    });
+
+
+
   </script>
 
   <script>

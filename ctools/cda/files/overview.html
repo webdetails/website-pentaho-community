@@ -3,9 +3,13 @@
 <p>Community Data Access (CDA) was designed to allow great flexibility for datasources.</p>
 <p>Most tools available can perform queries over a single datasource and there's no easy way to join data coming from different databases or in different languages (joining data from a SQL query with data from a MDX query). These tasks usually require an independent ETL job to synchronize different data sources and build a new database. CDA was developed as an abstraction tool between database connections and CDF (Community Dashboard Framework).</p>
 <p>It allows data to be retrieved from multiple data sources and combined in a single output that can easily be passed on to dashboard components. It serves three main purposes:</p>
-
+<br>
 <ul>
-	<li>Allows you to join data from different sources;</li>
+	<li>Allows you to join data from different sources just by editing an XML file;</li>
+	<li>Cache queries providing a great boost in performance;</li>
 	<li>Avoids SQL injection problems within CDF;</li>
-	<li>Allows an easier way to export data from queries.</li>
+	<li>Allows an easier way to export data from queries in different formats (csv, xls, etc.) through the Pentaho User Console;</li>
+	<li>Sort and paginate data server-side.</li>
 </ul>
+
+
