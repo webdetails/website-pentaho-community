@@ -7,6 +7,17 @@
 <!--<![endif]-->
 
 <head>
+  <script src="../../../js/vendor/jquery-1.10.1.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
+  </script>
+  <script>
+    window.onload = function () { 
+      if ($( window ).width() >= 769) {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    }
+  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Project Maturity Classification | Pentaho Community</title>
@@ -36,10 +47,11 @@
         </div>
         <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
           <div class="header-txt-block">
-            <h2>Project Maturity
-              <br> Classification</h2>
+            <h2>Project Maturity Classification</h2>
             <p>
-            <strong>The model consists of two parallel lanes:</strong> one for Community and customer-sponsored projects and a second for projects which are part of the official Pentaho offering.</p>
+              <strong>The model consists of two parallel lanes:</strong> one for Community and customer-sponsored projects and a second for projects which are part of the official Pentaho offering.
+            </p>
+            <a href="http://www.pentaho.com/marketplace/" class="btn btn-default btn-green mobile-center" style="max-width: 220px; text-align: center;">VISIT MARKETPLACE WEBSITE</a>
           </div>
         </div>
         <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
@@ -50,18 +62,6 @@
     <!-- /container -->
 
     <div class="whiteContainerBack">
-      <div class="darkContainer clearfix">
-        <div class="site-container">
-          <div class="row">
-            <div class="col-lg-9">
-              <p class="txt-greyArea">Visit the Pentaho Marketplace website. Find apps, PDI plugins and more.</p>
-            </div>
-            <div class="link-marketplacerow col-lg-3">
-              <a class="link-row" href="http://www.pentaho.com/marketplace/" target="_blank">Launch</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="clear"></div>
 
       <div class="site-container whiteContainer">
@@ -322,9 +322,6 @@
                         <span>Eng. | PM | Support | QA | DOC</span>
                       </div>
                     </div>
-
-
-
           </div>
         </div>
       </div>
@@ -340,7 +337,7 @@
               <div class="col-xs-6"></div>
               <div class="col-xs-6"></div>
             </div>
-            <a class="link-row first-btn" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
+            <a class="link-row" href="https://github.com/pentaho/marketplace-metadata" id="getStartedPropose" target="_blank">Learn more</a>
             <a class="link-row dev-guide-btn" href="http://wiki.pentaho.com/display/PEOpen/Development+Standards%2C+Guidelines+and+Best+Practices" id="getStartedPropose" target="_blank">Development Guide</a>
           </div>
           <!-- <div class="col-lg-5">
@@ -354,64 +351,45 @@
     <div class="container lightContainer" id="downloadList">
       <div class="row">
         <div class="col-lg-4">
-          <h2 class="h2-dark">Downloads</h2>
+          <h2 class="h2-dark">Get started</h2>
         </div>
         <div class="col-lg-8"></div>
       </div>
-      <div class="row" id="plugin-downloads">
-        <div class="col-lg-12 main-plugin-download">
-          <div class="row main-plugin-header">
-            <div class="col-lg-12 main-plugin-title">
-              <h3>Marketplace</h3>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="">Marketplace in Pentaho 6.0+</h3>
         </div>
-      </div>
-      <div class="row pentaho-6-disclaimer">
-        <div class="col-xs-12 disclaimer-header">
-          <h4 class="disclaimer-title">Marketplace in Pentaho 6.1</h4>
+        <div class="col-xs-12">
+            <p>If you're using the <strong>Community Edition</strong> of Pentaho 6.0+ you don't have to worry about this - Marketplace comes with it and it's ready to be used. <br>
+            If you have Pentaho 6.0+ <strong>Enterprise Edition</strong> and go to <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace Public Site</a> to try to download the Marketplace plugin, you'll see it's not there. <br>
+            The reason for that? It's an OSGi plugin and you already have it, but it comes disabled by default. Here are the instructions on how to enable it: </p>
+            <ol>
+              <li>Edit the file <pre>pentaho-solutions/system/karaf/etc/org.apache.karaf.features.cfg</pre></li>
+              <li>Find the key "featuresBoot" and add the feature "pentaho-marketplace". That line will then be something like:<br>
+              <pre>featuresBoot=config,management,kar,cxf,camel,camel-blueprint,camel-stream,pentaho-server,mongolap,pentaho-metaverse,pdi-dataservice-client,pentaho-yarn-obf,pentaho-marketplace</pre></li>
+            </ol>
+            <p>Restart your server, and you're done!</p>
         </div>
-            <div class="col-xs-12 disclaimer-body">
-              <p>If you're using the <strong>Community Edition</strong> of Pentaho 6.1 you don't have to worry about this - Marketplace comes with it and it's ready to be used. <br>
-              If you have Pentaho 6.1 <strong>Enterprise Edition</strong> and go to <a href="http://www.pentaho.com/marketplace/" target="_blank">Marketplace Public Site</a> to try to download the Marketplace plugin, you'll see it's not there. <br>
-              The reason for that? It's an OSGi plugin and you already have it, but it comes disabled by default. Here are the instructions on how to enable it: </p>
-              <ol>
-                <li>Edit the file <pre>pentaho-solutions/system/karaf/etc/org.apache.karaf.features.cfg</pre></li>
-                <li>Find the key "featuresBoot" and add the feature "pentaho-marketplace". That line will then be something like:<br>
-                <pre>featuresBoot=config,management,kar,cxf,camel,camel-blueprint,camel-stream,pentaho-server,mongolap,pentaho-metaverse,pdi-dataservice-client,pentaho-yarn-obf,pentaho-marketplace</pre></li>
-              </ol>
-              <p>Restart your server, and you're done!</p>
-            </div>
       </div>
       <div class="row">
         <div class="col-lg-12 main-plugin-content">
           <div class="row">
+            <div class="col-xs-12">
+              <h3 class="">Marketplace in Pentaho 5.4</h3>
+            </div>
             <div class="col-lg-12">
-              <p><b>Pentaho Marketplace</b> allows users to explore and test the plugins that are most relevant for them.
-                <br> Download and install plugins developed by the Pentaho Community, extending the capabilities of your Pentaho platform.</p>
+              <p>Just unzip the marketplace folder in your <code>/system/</code> folder, restart your server and you're done.</p>
             </div>
           </div>
           <div class="row" id="downloadList">
-            <div class="col-xs-12 col-md-4">
-                <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" target="_blank">Pentaho 5.4 <img src="../../img/download-icon.png"></a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.3.0.0-213/marketplace-5.3.0.0-213.zip" target="_blank">Pentaho 5.3 <img src="../../img/download-icon.png"></a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.2.0.0-209/marketplace-5.2.0.0-209.zip" target="_blank">Pentaho 5.2 <img src="../../img/download-icon.png"></a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/repositories/pentaho-public-release-repos/pentaho/marketplace/5.1.0.0-752/marketplace-5.1.0.0-752.zip" target="_blank">Pentaho 5.0 / 5.1 <img src="../../img/download-icon.png"></a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <p><a class="btn btn-default btn-green" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" target="_blank">Pentaho 4.8 <img src="../../img/download-icon.png"></a></p>
+            <div class="col-sm-4 col-xs-12">
+              <p><a class="btn btn-default btn-green" href="http://nexus.pentaho.org/content/groups/omni/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" target="_blank">Pentaho 5.4 <img src="../../img/download-icon.png"></a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div>  
   <div class="helpImproveWrapper">
     <div class="helpImprove">
       <div class="col-md-7 col-sm-12">
@@ -434,11 +412,6 @@
     </div>
   </div>
   </div>
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
-  </script>
 
   <script src="../../js/vendor/bootstrap.min.js"></script>
 

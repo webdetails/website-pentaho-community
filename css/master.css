@@ -283,12 +283,15 @@ Header Wrapper
     position: absolute;
     left: -3px;
     background-color: white;
-    padding: 0.75em 30px 1.5em;
     border: 1px solid #dadada;
     z-index: -1;
     top: -1000px;
     opacity: 0;
-    transition: z-index 0s 0.2s, top 0s 0.2s, opacity 0.2s; }
+    max-height: 0;
+    padding: 0;
+    clear: both;
+    overflow: hidden;
+  }
   /* line 186, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li.children--1 > ul {
     width: 252px;
@@ -353,7 +356,9 @@ Header Wrapper
     z-index: 2;
     top: 133%;
     opacity: 1;
-    transition: z-index 0s 0s, top 0s, opacity 0.2s; }
+    max-height: 500px;
+    padding: 0.75em 30px 1.5em;
+   }
   /* line 244, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu .nolink {
     cursor: default; }

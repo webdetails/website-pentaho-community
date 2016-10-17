@@ -7,6 +7,7 @@
 <!--<![endif]-->
 
 <head>
+
   <script src="../../../js/vendor/jquery-1.10.1.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
@@ -20,7 +21,7 @@
   </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Plugins | Pentaho Community</title>
+  <title>Marketplace | Pentaho Community</title>
   <meta name="description" content="Providing Pentaho, Partners, and Community Developers a marketplace for plugins within the BI Server product.">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
@@ -36,7 +37,7 @@
   <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
-<body class="pluginPage plugins">
+<body class="pluginPage marketplace marketplace-home">
 
   <div class="header-container"></div>
 
@@ -44,20 +45,18 @@
     <div class="site-container cbp-so-section" id="containerHeader">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-desktop text-center">
-          <img src="../../img/CommunityPlugins.gif" alt="">
-          <!--<p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Kettle <img src="../../img/download-icon.png"></span></p>-->
+        <div class="col-sm-5 col-sm-offset-1 cbp-so-side cbp-so-side-right hidden-desktop text-center">
+          <img src="../../img/Marketplace.gif" alt="">
         </div>
-        <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
+        <div class="col-sm-6 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
           <div class="header-txt-block">
-            <h2>Pentaho Plugins</h2>
-            <p>Get involved. Explore, develop and contribute.</p>
+            <h2>Pentaho Marketplace</h2>
+            <p>Extend the capabilities of your Pentaho platform with this simple way to install and maintain your plugins and language packs.</p>
             <a href="http://www.pentaho.com/marketplace/" class="btn btn-default btn-green mobile-center" style="max-width: 220px; text-align: center;">VISIT MARKETPLACE WEBSITE</a>
           </div>
         </div>
-        <div class="col-sm-5 cbp-so-side cbp-so-side-right hidden-mobile">
-          <img src="../../img/CommunityPlugins.gif" alt="">
-          <!--<p class="small-button-green"><span class="btn btn-default btn-green" id="buttonDownloadCE-small">Download Kettle <img src="../../img/download-icon.png"></span></p>-->
+        <div class="col-sm-5 col-sm-offset-1 cbp-so-side cbp-so-side-right hidden-mobile">
+          <img src="../../img/Marketplace.gif" alt="">
         </div>
       </div>
     </div>
@@ -76,26 +75,29 @@
                 <div class="active item" id="" style="padding-top: 0; padding-bottom: 0;">
                   <div class="row">
                     <div class="col-lg-12">
-                      <h3>Pentaho Marketplace — A home for your plugins</h3>
+                      <h3>Pentaho Marketplace</h3>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-5">
-                      <p>Pentaho Marketplace allows users to explore and test the plugins that are most relevant for them. It means high quality and useful plugins that users can use to get the most out of their business.
-                        <br><br> You can contribute with your own plugins and let everyone take advantage of your work, which represents a great path to get other people's feedback and involvement in your work.
-                        <br><br> Find more info below.</p>
+                    <div class="col-lg-7">
+                      <p>Pentaho Marketplace allows you to get in contact with plugins and language packs developed by the Pentaho Community.
+                        <br><br> You can contribute by submitting your plugins and language packs, letting everyone benefit from your work. This is a good way to receive feedback and have your work tested by other community members.
+                        <br><br> All the work that you can find in the Pentaho Marketplace has a Project Maturity Classification that clarifies what is supported and what is the level of support attached to the project.</p>
                     </div>
-                    <div class="col-lg-6 col-lg-offset-1 text-center">
-                          <div class="sub-gallery">
-                              <img src="../../img/marketplace-01.png" alt="">
-                              <img src="../../img/marketplace-02.png" alt="">
-                              <img src="../../img/marketplace-03.png" alt="">
-                              <img src="../../img/marketplace-04.png" alt="">
-                              <img src="../../img/marketplace-05.png" alt="">
-                          </div>
+                    <div class="col-lg-4 col-lg-offset-1">
+                      <div class="info-bar">
+                        <h4>Quick Links</h4>
+                        <a target="_blank" href="https://github.com/pentaho/marketplace-metadata">Marketplace Metadata Project</a>
+                        <br>
+                        <a target="_blank" href="http://nexus.pentaho.org/content/groups/omni/pentaho/marketplace/5.4.0.1-130/marketplace-5.4.0.1-130.zip" title="Marketplace for Pentaho 5.4">Download Marketplace 5.4</a>
+                        <br>
+                        <!-- <a target="_blank" href="http://ci.pentaho.com/job/marketplace-4.8/lastSuccessfulBuild/artifact/dist/marketplace-plugin-TRUNK-SNAPSHOT.zip" title="Marketplace for Pentaho 4.8">Download Marketplace 4.8</a><br> -->
+                        <a target="_blank" href="https://github.com/pentaho/marketplace">Source Code</a>
+                        <br>
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row secondRow">
                     <div class="col-lg-12">
                       <h3>Submit your plugins</h3>
                     </div>
@@ -179,10 +181,9 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-    
+
     <div class="lightContainerBack">
       <div class="container lightContainer" id="downloadList">
         <div class="row">
@@ -226,7 +227,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <div class="helpImproveWrapper">
     <div class="helpImprove">

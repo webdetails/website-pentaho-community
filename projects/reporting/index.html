@@ -3,26 +3,37 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Pentaho Reporting | Pentaho Community</title>
-        <meta name="description" content="Transform your data into information.">
-        <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
-        <link rel="stylesheet" href="../../css/easy-responsive-tabs.css">
-        <link rel="stylesheet" href="../../css/bootstrap-theme.css">
-        <link rel="stylesheet" href="../../css/bootstrap.css">
-        <link rel="stylesheet" href="../../css/cbpScroller.css">
-        <link rel="stylesheet" href="../../css/owl.carousel.css">
-        <link rel="stylesheet" href="../../css/owl.theme.css">
-        
-        <link rel="stylesheet" href="../../css/main.css">
-        <link rel="stylesheet" href="../../css/master.css">
+<head>
+  <script src="../../../js/vendor/jquery-1.10.1.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
+  </script>
+  <script>
+    window.onload = function () { 
+      if ($( window ).width() >= 769) {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Pentaho Reporting | Pentaho Community</title>
+  <meta name="description" content="Transform your data into information.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/easy-responsive-tabs.css">
+  <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/cbpScroller.css">
+  <link rel="stylesheet" href="../../css/owl.carousel.css">
+  <link rel="stylesheet" href="../../css/owl.theme.css">
+  
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/master.css">
 
-        <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body class="pluginPage reporting">
+  <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+    <body class="pluginPage reporting project">
 
     <div class="header-container"></div>
 
@@ -513,9 +524,6 @@
         </div>
       </div>
     </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="../../js/easyResponsiveTabs.js"></script>
         <script src="../../js/vendor/bootstrap.min.js"></script>
 
@@ -541,6 +549,11 @@
             });
 
             jQuery(document).ready(function ($) {
+                
+                if ($( window ).width() >= 769) {
+                    $('.header-txt-block').css("margin-top", ( (( $('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+                } else $('.header-txt-block').css("margin-top", '20px');
+
                 $('#tabs').tab();
                 $('.header-container').load('../../pentaho-templates/header.html');
 
@@ -574,10 +587,6 @@
                   $('.carousel-indicators.content li').removeClass('clicked');
                   $(this).addClass("clicked");
                 });
-                
-                if ($( window ).width() >= 769) {
-                    $('.header-txt-block').css("margin-top", ( (( $('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
-                } else $('.header-txt-block').css("margin-top", '20px');
 
             });
 

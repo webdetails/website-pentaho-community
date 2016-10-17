@@ -6,6 +6,13 @@
   <script>
     window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
   </script>
+  <script>
+    window.onload = function () { 
+      if ($( window ).width() >= 769) {
+        $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+      } else $('.header-txt-block').css("margin-top", '20px');
+    }
+  </script>
   <meta charset="utf-8">
   <title>CDF Tutorial | Pentaho Community</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />

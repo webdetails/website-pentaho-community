@@ -2,9 +2,16 @@
 <html>
 
 <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../../js/vendor/jquery-1.10.1.min.js"></script>
     <script>
-    window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
+    window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+    <script>
+      window.onload = function () { 
+        if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+      }
     </script>
     <meta charset="utf-8">
     <title>App Builder | Pentaho Community</title>

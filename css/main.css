@@ -1037,6 +1037,10 @@ div#getStarted .clearfix {
   body #quickstart.resp-tab-content.resp-tab-content-active h3:first-child{
     margin-top: 0px;
   }
+      
+  .btn.mobile-center{
+    margin: 0 auto 15px;
+  }
 }
 
 body.cde-tutorial .fullWidthCtoolIntro.mainContainer,
@@ -1103,7 +1107,7 @@ body h1.ctool-name{
   text-align: left;
   position: relative;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 18px !important;
   padding: 10px 15px;
   border-radius: 0px;
   text-decoration: none;
@@ -1111,6 +1115,10 @@ body h1.ctool-name{
   box-shadow: none !important;
   text-transform: uppercase;
   filter: none;
+}
+
+a.btn-green.btn{
+  line-height: 18px !important;
 }
 
 a.large-button {
@@ -1799,7 +1807,8 @@ div.panel-group div.panel div.panel-heading h4.panel-title a.accordion-toggle:no
 }
 
 .pluginPage#language-packs .carousel-inner > .item,
-.pluginPage.plugins .carousel-inner > .item {
+.pluginPage.plugins .carousel-inner > .item,
+.pluginPage.marketplace .carousel-inner > .item {
   padding: 40px 0px; 
 }
 
@@ -2105,9 +2114,11 @@ ol.carousel-indicators.content{
     bottom: 20px;
   }
 
-  .pentahoHome .item .left-side-slide {
+  .pentahoHome .item .left-side-slide,
+  .user-groups .item .cbp-so-side-left {
     /*padding-bottom: 40px;
     padding-top: 40px;*/
+    padding-left: 20px;
   }
 
 }
@@ -2496,7 +2507,8 @@ old version - keep til the new one is approved
 }
 
 .pluginPage #plugin-description,
-.pluginPage .plugin-contribute {
+.pluginPage .plugin-contribute,
+.pentahoHome .carousel-inner .item {
   padding-bottom: 0px;
   padding-left: 15px;
   padding-right: 15px;
@@ -3834,14 +3846,11 @@ a.link-marketplacetab:hover{
   margin-top: 60px;
 }
 
-.marketplace-text {
-  padding: 10px 0px 5px;
-  position: relative;
-  color: #616161;
-  font-size:16px;
-  text-align:center;
-  line-height:24px;
-  font-weight:400;
+.marketplace-box-header {    
+  width: 100%;
+  height: 120px;
+  background: url(../img/marketplace_sidebox.png) center center no-repeat;
+  background-size: cover;
 }
 
 .link-marketplacetab{
@@ -3851,14 +3860,25 @@ a.link-marketplacetab:hover{
   padding-top:12px;
 }
 
+.info-bar-marketplace .link-tab{
+  padding: 30px;
+}
+
+.info-bar-marketplace .link-tab p{
+  margin-bottom: 25px;
+}
+
 .link-tab{
 	text-align:center;
 	padding:10px 0px 0px 0px;
-  }
+}
+
+#showMobile .info-bar-marketplace .link-tab .link-marketplacetab{
+  padding: 8px 15px !important;
+}
 
 .info-bar-marketplace{
   border: 1px solid rgb(207, 207, 207);
-  padding: 10px 20px 10px;
   position: relative;
   border-radius: 0;
   margin-top: 30px;
@@ -3941,7 +3961,8 @@ a.link-marketplacetab:hover{
   }
   
   .pluginPage#language-packs .carousel-inner > .item,
-  .pluginPage.plugins .carousel-inner > .item {
+  .pluginPage.plugins .carousel-inner > .item,
+  .pluginPage.marketplace .carousel-inner > .item{
     padding: 40px 15px; 
   }
 
@@ -5289,3 +5310,113 @@ body.loaded:after{
   transition: opacity 0.5s ease;
 }
 */
+
+
+/*main menu - highlight*/
+@media (min-width: 1024px){
+  .home header .block-menu-block span.home:after,
+  .project header .block-menu-block span.project:after,
+  .ctools header .block-menu-block span.ctools:after,
+  .ctools header .block-menu-block span.ctools:after,
+  .training header .block-menu-block span.learn:after,
+  .library header .block-menu-block span.learn:after,
+  .pluginPage header .block-menu-block span.marketplace:after{
+    position: absolute;
+    content: "";
+    bottom: -7px;
+    right: 0;
+    left: -2px;
+    width: 100%;
+    height: 3px;
+    background: #303843;
+  }
+
+  .home.ctools header .block-menu-block .home:after,
+  .training.ctools header .block-menu-block .ctools:after,
+  .pluginPage.reporting.project header .block-menu-block .marketplace:after,
+  .pluginPage.data-mining.project header .block-menu-block .marketplace:after,
+  .pluginPage.kettle.project header .block-menu-block .marketplace:after,
+  .pluginPage.mondrian.project header .block-menu-block .marketplace:after{
+    display: none;
+  }
+
+  /* highlights dropdown - active option */
+  
+  .pentahoHome header .block-menu-block ul.menu li.home.pentahoHome a,
+  .pentahoHome header .block-menu-block ul.menu li.home.pentahoHome a:hover,
+  .user-groups header .block-menu-block ul.menu li.home.user-groups a,
+  .user-groups header .block-menu-block ul.menu li.home.user-groups a:hover,
+  .project.mondrian header .block-menu-block ul.menu li.project.mondrian a,
+  .project.mondrian header .block-menu-block ul.menu li.project.mondrian a:hover,
+  .project.kettle header .block-menu-block ul.menu li.project.data-integration a,
+  .project.kettle header .block-menu-block ul.menu li.project.data-integration a:hover,
+  .project.reporting header .block-menu-block ul.menu li.project.reporting a,
+  .project.reporting header .block-menu-block ul.menu li.project.reporting a:hover,
+  .project.data-mining header .block-menu-block ul.menu li.project.data-mining a,
+  .project.data-mining header .block-menu-block ul.menu li.project.data-mining a:hover,
+  .ctools.home header .block-menu-block ul.menu li.ctools-home a,
+  .ctools.home header .block-menu-block ul.menu li.ctools-home a:hover,
+  .ctools.cde header .block-menu-block ul.menu li.cde a,
+  .ctools.cde header .block-menu-block ul.menu li.cde a:hover,
+  .ctools.cdf header .block-menu-block ul.menu li.cdf a,
+  .ctools.cdf header .block-menu-block ul.menu li.cdf a:hover,
+  .ctools.ccc header .block-menu-block ul.menu li.ccc a,
+  .ctools.ccc header .block-menu-block ul.menu li.ccc a:hover,
+  .ctools.cgg header .block-menu-block ul.menu li.cgg a,
+  .ctools.cgg header .block-menu-block ul.menu li.cgg a:hover,
+  .ctools.cdv header .block-menu-block ul.menu li.cdv a,
+  .ctools.cdv header .block-menu-block ul.menu li.cdv a:hover,
+  .ctools.cdc header .block-menu-block ul.menu li.cdc a,
+  .ctools.cdc header .block-menu-block ul.menu li.cdc a:hover,
+  .ctools.cfr header .block-menu-block ul.menu li.cfr a,
+  .ctools.cfr header .block-menu-block ul.menu li.cfr a:hover,
+  .ctools.cst header .block-menu-block ul.menu li.cst a,
+  .ctools.cst header .block-menu-block ul.menu li.cst a:hover,
+  .ctools.app-builder header .block-menu-block ul.menu li.app-builder a,
+  .ctools.app-builder header .block-menu-block ul.menu li.app-builder a:hover,
+  .ctools.cte header .block-menu-block ul.menu li.cte a,
+  .ctools.cte header .block-menu-block ul.menu li.cte a:hover,
+  .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a,
+  .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a:hover,
+  .ctools.cda header .block-menu-block ul.menu li.cda a,
+  .ctools.cda header .block-menu-block ul.menu li.cda a:hover,
+  .ctools.cdg header .block-menu-block ul.menu li.cdg a,
+  .ctools.cdg header .block-menu-block ul.menu li.cdg a:hover,
+  .ctools.cdb header .block-menu-block ul.menu li.cdb a,
+  .ctools.cdb header .block-menu-block ul.menu li.cdb a:hover,
+  .training.cde-tutorial header .block-menu-block ul.menu li.cde-tutorial a,
+  .training.cde-tutorial header .block-menu-block ul.menu li.cde-tutorial a:hover,
+  .training.open-demos header .block-menu-block ul.menu li.open-demos a,
+  .training.open-demos header .block-menu-block ul.menu li.open-demos a:hover,
+  .training.cdf-tutorial header .block-menu-block ul.menu li.cdf-tutorial a,
+  .training.cdf-tutorial header .block-menu-block ul.menu li.cdf-tutorial a:hover,
+  .library header .block-menu-block ul.menu li.library a,
+  .library header .block-menu-block ul.menu li.library a:hover,
+  .marketplace-home header .block-menu-block ul.menu li.marketplace a,
+  .marketplace-home header .block-menu-block ul.menu li.marketplace a:hover,
+  .pluginPage.plugins header .block-menu-block ul.menu li.plugins a,
+  .pluginPage.plugins header .block-menu-block ul.menu li.plugins a:hover,
+  .language-packs header .block-menu-block ul.menu li.language-packs a,
+  .language-packs header .block-menu-block ul.menu li.language-packs a:hover,
+  .project-maturity header .block-menu-block ul.menu li.project-maturity a,
+  .project-maturity header .block-menu-block ul.menu li.project-maturity a:hover
+  {
+    background: #f5f5f5;
+    opacity: 0.7;
+    cursor: not-allowed !important;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;   
+    -ms-user-select: none;    
+    user-select: none;   
+  }
+}
+
+@media (max-width: 1024px){
+  .pluginPage.marketplace #containerHeader .btn-green{
+    margin-top: 20px;
+  }
+}
+
+
+

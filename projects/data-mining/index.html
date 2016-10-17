@@ -6,6 +6,17 @@
 <html class="no-js">
   <!--<![endif]-->
   <head>
+    <script src="../../../js/vendor/jquery-1.10.1.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+    <script>
+      window.onload = function () { 
+        if ($( window ).width() >= 769) {
+          $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
+        } else $('.header-txt-block').css("margin-top", '20px');
+      }
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Weka | Pentaho Community</title>
@@ -22,7 +33,7 @@
 
     <script src="../../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
-  <body class="pluginPage data-mining">
+  <body class="pluginPage data-mining project">
     <div class="header-container"></div>
     <div class="backPage cbp-so-scroller" id="cbp-so-scroller">
       <div class="site-container cbp-so-section" id="containerHeader">
@@ -602,11 +613,7 @@
           </div>
         </div>
       </div>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
       <script src="../../js/easyResponsiveTabs.js"></script>
-      <script>
-      window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.1.min.js"><\/script>')
-      </script>
       <script src="../../js/vendor/bootstrap.min.js"></script>
       <script src="../../js/main.js"></script>
       <script src="../../js/master.js"></script>
