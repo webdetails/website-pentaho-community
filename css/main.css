@@ -283,7 +283,7 @@ img {
 }
 
 .whiteContainer {
-  background: #fefefe;
+  background: #ffffff;
   margin: 0px auto;
   padding: 50px 0px 0px;
   display: block;
@@ -2011,6 +2011,15 @@ ol.carousel-indicators.content{
   .user-groups .item.community-slide{
     text-align: center !important;
     padding-top: 0;
+  }
+
+  .mobile-center{
+    text-align: center !important;
+  }
+
+  .new-release-wrapper{
+    padding-top: 10px !important;
+    padding-bottom: 25px !important;
   }
 
   .pentahoHome .item.community-slide h1{
@@ -5225,6 +5234,18 @@ h4 ~ p{
 
 .modal ul li{
   display: inline-block;
+}
+
+span.pentaho70release{
+  color: #015ca6;
+}
+
+.new-release h1{
+  color: #5e676f;
+}
+
+.new-release-wrapper{
+  padding: 10% 0;
 }
 
 @media (max-width: 1024px){
