@@ -2098,11 +2098,43 @@ ol.carousel-indicators.content{
   }
 
   .site-header .menu-name-main-menu > .menu > li > ul a:hover,
-  .site-header .menu-name-main-menu > .menu li.hover > .nolink,
+/*  .site-header .menu-name-main-menu > .menu li.hover > .nolink,*/
   .menu-name-main-menu > .menu li.hover > a{
     background: #303843;
   }
 
+  .site-header .menu-name-main-menu > .menu > li > ul li.external a:hover{
+    background-color: #005da6;
+  }
+
+  .site-header .menu-name-main-menu > .menu > li > ul li.external a:after{
+    content: "";
+    position: absolute;
+    top: calc( 50% - 2px);
+    margin-left: 15px;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #005da6;
+    border-right: 1px solid #005da6;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .site-header .menu-name-main-menu > .menu > li > ul li.external a:hover:after{
+    border-color: #ffffff; 
+  }
+
+  .site-header .menu-name-main-menu.menu-level-1 > .menu li.hover > .nolink{
+    background: #fff;
+    color: #343e47;
+    position: relative;
+    z-index: 9;
+    border-bottom: 1px solid #ffffff !important;
+    border-left: 1px solid #dadada !important;
+    border-right: 1px solid #dadada !important;
+    border-top: 1px solid #dadada !important;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -5344,12 +5376,17 @@ body.loaded:after{
   .pluginPage header .block-menu-block span.marketplace:after{
     position: absolute;
     content: "";
-    bottom: -7px;
+    top: 8px;
     right: 0;
-    left: -2px;
-    width: 100%;
-    height: 3px;
+    left: 0px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
     background: #303843;
+  }
+
+  body header .block-menu-block li.hover span:after{
+    display: none;
   }
 
   .home.ctools header .block-menu-block .home:after,

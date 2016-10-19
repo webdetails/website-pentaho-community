@@ -276,8 +276,10 @@ Header Wrapper
   /* line 169, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > a,
   .menu-name-main-menu > .menu > li > .nolink {
+    position: relative
     transition: all 0.2s;
-    padding: 0.5em 0.75em; }
+    padding: 0.5em 0.75em;
+    border: 1px solid transparent; }
   /* line 174, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul {
     position: absolute;
@@ -358,6 +360,7 @@ Header Wrapper
     opacity: 1;
     max-height: 500px;
     padding: 0.75em 30px 1.5em;
+    margin-top: 0;
    }
   /* line 244, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu .nolink {
