@@ -142,5 +142,14 @@
       "membersNum":  101,
       "groupUrl":    "http://www.meetup.com/Recife-Pentaho-User-Group/",
       "joinUrl":     "http://www.meetup.com/Recife-Pentaho-User-Group/join"
+   },
+   {
+      "name":        "Pentaho User Group DACH",
+      "city":        "Frankfurt",
+      "country":     "Germany",
+      "membersNum":  210,
+      "groupUrl":    "https://twitter.com/pug_dach",
+      "joinUrl":     "https://twitter.com/pug_dach"
    }
+
 ]
