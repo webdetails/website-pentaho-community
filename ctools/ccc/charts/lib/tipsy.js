@@ -362,7 +362,7 @@
         function hideTipsyCore(opId) {
             setTarget(null, null);
             setMark(null);
-            $fakeTipTarget && $fakeTipTarget.tipsy("leave");
+            $fakeTipTarget && $fakeTipTarget.data("tipsy") && $fakeTipTarget.tipsy("leave");
         }
         function hideOtherTipsies() {
             var hideTipsies = _sharedTipsyInfo && _sharedTipsyInfo.behaviors;

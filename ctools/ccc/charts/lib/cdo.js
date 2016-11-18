@@ -114,14 +114,18 @@ var cdo = function(def, pv) {
         var visible = def.get(keyArgs, "visible"), selected = def.get(keyArgs, "selected");
         return (null == visible ? null : !!visible) + ":" + (null == selected ? null : !!selected);
     }
-    function dim_createNullAtom(sourceValue) {
+    function dim_createNullAtom(sourceLabel) {
         var nullAtom = this._nullAtom;
         if (!nullAtom) {
             if (this.owner === this) {
-                var typeFormatter = this.type._formatter, label = typeFormatter ? def.string.to(typeFormatter.call(null, null, sourceValue)) : "";
+                var label = sourceLabel;
+                if (null == sourceLabel) {
+                    var typeFormatter = this.type._formatter;
+                    label = typeFormatter ? def.string.to(typeFormatter.call(null, null, null)) : "";
+                }
                 nullAtom = new cdo.Atom(this, null, label, null, "");
                 this.data._atomsBase[this.name] = nullAtom;
-            } else nullAtom = dim_createNullAtom.call(this.parent || this.linkParent, sourceValue);
+            } else nullAtom = dim_createNullAtom.call(this.parent || this.linkParent, sourceLabel);
             this._atomsByKey[""] = this._nullAtom = nullAtom;
             this._atoms.unshift(nullAtom);
         }
@@ -284,7 +288,6 @@ var cdo = function(def, pv) {
                     datumsByKey[key] = newDatum;
                     datumsById[id] = newDatum;
                     newDatums && newDatums.push(newDatum);
-                    data_processDatumAtoms.call(this, newDatum, internNewAtoms, doAtomGC);
                     if (!newDatum.isNull) {
                         selDatums && newDatum.isSelected && selDatums.set(id, newDatum);
                         newDatum.isVisible && visDatums.set(id, newDatum);
@@ -297,9 +300,6 @@ var cdo = function(def, pv) {
         if (oldDatums) {
             oldDatumsByKey = this._datumsByKey;
             oldDatumsById = this._datumsById;
-            isAdditive && doAtomGC && oldDatums.forEach(function(oldDatum) {
-                data_processDatumAtoms.call(this, oldDatum, !1, !0);
-            }, this);
         } else isAdditive = !1;
         if (isAdditive) {
             newDatums = [];
@@ -324,6 +324,21 @@ var cdo = function(def, pv) {
         } else {
             if (!(addDatums instanceof def.Query)) throw def.error.argumentInvalid("addDatums", "Argument is of invalid type.");
             addDatums.each(maybeAddDatum, this);
+        }
+        this.select && this.select(datums).forEach(cdo_removeDatumLocal, this);
+        oldDatums && isAdditive && doAtomGC && oldDatums.forEach(function(oldDatum) {
+            data_processDatumAtoms.call(this, oldDatum, !1, !0);
+        }, this);
+        if (newDatums || !isAdditive) {
+            isAdditive || (newDatums = datums);
+            newDatums.forEach(function(newDatum) {
+                data_processDatumAtoms.call(this, newDatum, internNewAtoms, doAtomGC);
+                if (!newDatum.isNull) {
+                    var id = newDatum.id;
+                    selDatums && newDatum.isSelected && selDatums.set(id, newDatum);
+                    newDatum.isVisible && visDatums.set(id, newDatum);
+                }
+            }, this);
         }
         if (doAtomGC) {
             var dims = this._dimensionsList;
@@ -389,6 +404,14 @@ var cdo = function(def, pv) {
             }
             ds.push(newDatum);
         }
+    }
+    function cdo_removeDatumLocal(datum) {
+        var datums = this._datums, selDatums = this._selectedNotNullDatums, id = datum.id;
+        datums.splice(datums.indexOf(datum), 1);
+        delete this._datumsById[id];
+        delete this._datumsByKey[datum.key];
+        selDatums && datum.isSelected && selDatums.rem(id);
+        datum.isVisible && this._visibleNotNullDatums.rem(id);
     }
     function data_processWhereSpec(whereSpec) {
         function processDatumFilter(datumFilter) {
@@ -1022,17 +1045,7 @@ var cdo = function(def, pv) {
             }
         }
         this._key = def.get(keyArgs, "key") || null;
-        this._comparer = def.get(keyArgs, "comparer");
-        if (void 0 === this._comparer) switch (this.valueType) {
-          case Number:
-          case Date:
-            this._comparer = def.compare;
-            break;
-
-          default:
-            this._comparer = null;
-        }
-        this.isComparable = null != this._comparer;
+        this.setComparer(keyArgs && keyArgs.comparer);
         var format, formatter = def.get(keyArgs, "formatter"), formatProto = def.get(keyArgs, "formatProto"), formatName = isNumber ? "number" : isDate ? "date" : "any";
         if (formatter) format = cdo.format(def.set({}, formatName, formatter), formatProto); else if (this.isDiscreteValueType) format = formProvider(null, formatProto); else {
             format = def.get(keyArgs, "format");
@@ -1062,6 +1075,16 @@ var cdo = function(def, pv) {
             }) : me._dc || (me._dc = function(a, b) {
                 return me.compare(a, b);
             }) : null;
+        },
+        setComparer: function(comparer) {
+            if (void 0 === comparer || !comparer && !this.isDiscrete) switch (this.valueType) {
+              case Number:
+              case Date:
+                comparer = def.compare;
+            }
+            this._comparer = comparer || null;
+            this.isComparable = null != this._comparer;
+            this._rc = this._dc = this._rac = this._dac = null;
         },
         atomComparer: function(reverse) {
             return reverse ? this._rac || (this._rac = this._createReverseAtomComparer()) : this._dac || (this._dac = this._createDirectAtomComparer());
@@ -1135,26 +1158,6 @@ var cdo = function(def, pv) {
           default:
             throw def.error.argumentInvalid("valueType", "Invalid valueType function: '{0}'.", [ valueType ]);
         }
-    };
-    cdo.DimensionType.extendSpec = function(dimName, dimSpec, keyArgs) {
-        var dimGroup = cdo.DimensionType.dimensionGroupName(dimName), userDimGroupsSpec = def.get(keyArgs, "dimensionGroups");
-        if (userDimGroupsSpec) {
-            var groupDimSpec = userDimGroupsSpec[dimGroup];
-            groupDimSpec && (dimSpec = def.create(groupDimSpec, dimSpec));
-        }
-        dimSpec || (dimSpec = {});
-        switch (dimGroup) {
-          case "category":
-            var isCategoryTimeSeries = def.get(keyArgs, "isCategoryTimeSeries", !1);
-            isCategoryTimeSeries && void 0 === dimSpec.valueType && (dimSpec.valueType = Date);
-            break;
-
-          case "value":
-            void 0 === dimSpec.valueType && (dimSpec.valueType = Number);
-        }
-        void 0 !== dimSpec.converter || dimSpec.valueType !== Date || dimSpec.rawFormat || (dimSpec.rawFormat = def.get(keyArgs, "timeSeriesFormat"));
-        dimSpec.formatProto = def.get(keyArgs, "formatProto");
-        return dimSpec;
     };
     def.type("cdo.ComplexType").init(function(dimTypeSpecs) {
         this._dims = {};
@@ -1249,7 +1252,7 @@ var cdo = function(def, pv) {
             }
             return dimension;
         },
-        addCalculation: function(calcSpec, dimsOptions) {
+        addCalculation: function(calcSpec) {
             calcSpec || def.fail.argumentRequired("calcSpec");
             var calculation = calcSpec.calculation || def.fail.argumentRequired("calculations[i].calculation"), dimNames = calcSpec.names;
             dimNames = def.string.is(dimNames) ? dimNames.split(/\s*\,\s*/) : def.array.as(dimNames);
@@ -1259,11 +1262,7 @@ var cdo = function(def, pv) {
                     if (name) {
                         name = name.replace(/^\s*(.+?)\s*$/, "$1");
                         !def.hasOwn(calcDimNames, name) || def.fail.argumentInvalid("calculations[i].names", "Dimension name '{0}' is already being calculated.", [ name ]);
-                        var dimType = this._dims[name];
-                        if (!dimType) {
-                            var dimSpec = cdo.DimensionType.extendSpec(name, null, dimsOptions);
-                            this.addDimension(name, dimSpec);
-                        }
+                        var dimType = this._dims[name] || def.fail.argumentInvalid("calculations[i].names", "Undefined dimension with name '{0}'' ", [ name ]);
                         calcDimNames[name] = !0;
                         dimType._toCalculated();
                     }
@@ -1375,12 +1374,28 @@ var cdo = function(def, pv) {
         configureComplexType: function(complexType, dimsOptions) {
             this._dimList.forEach(function(dimInfo) {
                 var dimName = dimInfo.name, spec = dimInfo.spec;
-                spec = cdo.DimensionType.extendSpec(dimName, spec, dimsOptions);
+                spec = this._extendSpec(dimName, spec, dimsOptions);
                 complexType.addDimension(dimName, spec);
-            });
+            }, this);
             this._calcList.forEach(function(calcSpec) {
-                complexType.addCalculation(calcSpec, dimsOptions);
+                complexType.addCalculation(calcSpec);
             });
+        },
+        _extendSpec: function(dimName, dimSpec, keyArgs) {
+            var dimGroup = cdo.DimensionType.dimensionGroupName(dimName);
+            dimSpec || (dimSpec = {});
+            switch (dimGroup) {
+              case "category":
+                var isCategoryTimeSeries = def.get(keyArgs, "isCategoryTimeSeries", !1);
+                isCategoryTimeSeries && void 0 === dimSpec.valueType && (dimSpec.valueType = Date);
+                break;
+
+              case "value":
+                void 0 === dimSpec.valueType && (dimSpec.valueType = Number);
+            }
+            void 0 !== dimSpec.converter || dimSpec.valueType !== Date || dimSpec.rawFormat || (dimSpec.rawFormat = def.get(keyArgs, "timeSeriesFormat"));
+            dimSpec.formatProto = def.get(keyArgs, "formatProto");
+            return dimSpec;
         }
     });
     def.type("cdo.Atom").init(function(dimension, value, label, rawValue, key) {
@@ -1680,36 +1695,37 @@ var cdo = function(def, pv) {
         },
         extent: function(keyArgs) {
             var tmp, atoms = this.atoms(keyArgs), L = atoms.length;
-            if (!L) return void 0;
-            var offset = this._nullAtom && null == atoms[0].value ? 1 : 0, countWithoutNull = L - offset;
-            if (countWithoutNull > 0) {
-                var min = atoms[offset], max = atoms[L - 1];
-                if (min !== max && def.get(keyArgs, "abs", !1)) {
-                    var minSign = min.value < 0 ? -1 : 1, maxSign = max.value < 0 ? -1 : 1;
-                    if (minSign === maxSign) 0 > maxSign && (tmp = max, max = min, min = tmp); else if (countWithoutNull > 2) {
-                        max.value < -min.value && (max = min);
-                        var zeroIndex = def.array.binarySearch(atoms, 0, this.type.comparer(), function(a) {
-                            return a.value;
-                        });
-                        if (0 > zeroIndex) {
-                            zeroIndex = ~zeroIndex;
-                            var negAtom = atoms[zeroIndex - 1], posAtom = atoms[zeroIndex];
-                            min = -negAtom.value < posAtom.value ? negAtom : posAtom;
-                        } else min = atoms[zeroIndex];
-                    } else max.value < -min.value && (tmp = max, max = min, min = tmp);
+            if (L) {
+                var offset = this._nullAtom && null == atoms[0].value ? 1 : 0, countWithoutNull = L - offset;
+                if (countWithoutNull > 0) {
+                    var min = atoms[offset], max = atoms[L - 1];
+                    if (min !== max && def.get(keyArgs, "abs", !1)) {
+                        var minSign = min.value < 0 ? -1 : 1, maxSign = max.value < 0 ? -1 : 1;
+                        if (minSign === maxSign) 0 > maxSign && (tmp = max, max = min, min = tmp); else if (countWithoutNull > 2) {
+                            max.value < -min.value && (max = min);
+                            var zeroIndex = def.array.binarySearch(atoms, 0, this.type.comparer(), function(a) {
+                                return a.value;
+                            });
+                            if (0 > zeroIndex) {
+                                zeroIndex = ~zeroIndex;
+                                var negAtom = atoms[zeroIndex - 1], posAtom = atoms[zeroIndex];
+                                min = -negAtom.value < posAtom.value ? negAtom : posAtom;
+                            } else min = atoms[zeroIndex];
+                        } else max.value < -min.value && (tmp = max, max = min, min = tmp);
+                    }
+                    return {
+                        min: min,
+                        max: max
+                    };
                 }
-                return {
-                    min: min,
-                    max: max
-                };
             }
-            return void 0;
         },
         min: function(keyArgs) {
             var atoms = this.atoms(keyArgs), L = atoms.length;
-            if (!L) return void 0;
-            var offset = this._nullAtom && null == atoms[0].value ? 1 : 0;
-            return L > offset ? atoms[offset] : void 0;
+            if (L) {
+                var offset = this._nullAtom && null == atoms[0].value ? 1 : 0;
+                return L > offset ? atoms[offset] : void 0;
+            }
         },
         max: function(keyArgs) {
             var atoms = this.atoms(keyArgs), L = atoms.length;
@@ -1763,7 +1779,7 @@ var cdo = function(def, pv) {
             return def.string.to(this.type._formatter ? this.type._formatter.call(null, value, sourceValue) : value);
         },
         intern: function(sourceValue, isVirtual) {
-            if (null == sourceValue || "" === sourceValue) return this._nullAtom || dim_createNullAtom.call(this, sourceValue);
+            if (null == sourceValue || "" === sourceValue) return this._nullAtom || dim_createNullAtom.call(this);
             if (sourceValue instanceof cdo.Atom) {
                 if (sourceValue.dimension !== this) throw def.error.operationInvalid("Atom is of a different dimension.");
                 return sourceValue;
@@ -1772,14 +1788,13 @@ var cdo = function(def, pv) {
             if ("object" == typeof sourceValue && "v" in sourceValue) {
                 label = sourceValue.f;
                 sourceValue = sourceValue.v;
-                if (null == sourceValue || "" === sourceValue) return this._nullAtom || dim_createNullAtom.call(this);
+                if (null == sourceValue || "" === sourceValue) return this._nullAtom || dim_createNullAtom.call(this, label);
             }
             if (isVirtual) value = sourceValue; else {
                 var converter = type._converter;
                 if (converter) {
                     value = converter(sourceValue);
                     if (null == value || "" === value) return this._nullAtom || dim_createNullAtom.call(this, sourceValue);
-                    label = void 0;
                 } else value = sourceValue;
             }
             var cast = type.cast;
@@ -1798,7 +1813,7 @@ var cdo = function(def, pv) {
         },
         read: function(sourceValue, label) {
             if (null == sourceValue || "" === sourceValue) return null;
-            var value, type = this.type, labelSpecified = null != label;
+            var value, type = this.type;
             if ("object" == typeof sourceValue && "v" in sourceValue) {
                 label = sourceValue.f;
                 sourceValue = sourceValue.v;
@@ -1807,7 +1822,6 @@ var cdo = function(def, pv) {
             var converter = type._converter;
             value = converter ? converter(sourceValue) : sourceValue;
             if (null == value || "" === value) return null;
-            !labelSpecified && converter && (label = null);
             var cast = type.cast;
             if (cast) {
                 value = cast(value);
@@ -2081,15 +2095,16 @@ var cdo = function(def, pv) {
         return cdo.Data.setVisible(datums, !allVisible);
     };
     cdo.Data.add({
+        select: null,
         load: function(atomz, keyArgs) {
             cdo_assertIsOwner.call(this);
-            var whereFun = def.get(keyArgs, "where"), isNullFun = def.get(keyArgs, "isNull"), datums = def.query(atomz).select(function(atoms) {
+            var whereFun = def.get(keyArgs, "where"), isNullFun = def.get(keyArgs, "isNull"), isAdditive = def.get(keyArgs, "isAdditive", !1), datums = def.query(atomz).select(function(atoms) {
                 var datum = new cdo.Datum(this, atoms);
                 isNullFun && isNullFun(datum) && (datum.isNull = !0);
                 return whereFun && !whereFun(datum) ? null : datum;
             }, this);
             data_setDatums.call(this, datums, {
-                isAdditive: !1,
+                isAdditive: isAdditive,
                 doAtomGC: !0
             });
         },
@@ -2097,15 +2112,10 @@ var cdo = function(def, pv) {
             var datums = this._datums;
             if (datums) {
                 this._sumAbsCache = null;
-                for (var removed, visDatums = this._visibleNotNullDatums, selDatums = this._selectedNotNullDatums, datumsByKey = this._datumsByKey, datumsById = this._datumsById, i = 0, L = datums.length; L > i; ) {
+                for (var removed, i = 0, L = datums.length; L > i; ) {
                     var datum = datums[i];
                     if (datum.isVirtual) {
-                        var id = datum.id, key = datum.key;
-                        datums.splice(i, 1);
-                        delete datumsById[id];
-                        delete datumsByKey[key];
-                        selDatums && datum.isSelected && selDatums.rem(id);
-                        datum.isVisible && visDatums.rem(id);
+                        cdo_removeDatumLocal.call(this, datum);
                         L--;
                         removed = !0;
                     } else i++;
@@ -2745,8 +2755,7 @@ var cdo = function(def, pv) {
         this._isCatDiscrete = catRole.grouping.isDiscrete();
         this._stretchEnds = stretchEnds;
         this._catInfos = qAllCatDatas.select(function(allCatData, catIndex) {
-            var catData = visibleData.child(allCatData.key);
-            catInfo = {
+            var catData = visibleData.child(allCatData.key), catInfo = {
                 data: catData || allCatData,
                 value: allCatData.value,
                 isInterpolated: !1,

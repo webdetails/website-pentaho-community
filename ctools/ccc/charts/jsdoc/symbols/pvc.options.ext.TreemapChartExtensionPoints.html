@@ -213,6 +213,8 @@ ul.inheritsList
             
                 <li><a href="../symbols/pvc.options.Pointing.html">Pointing</a></li>
             
+                <li><a href="../symbols/pvc.options.SlidingWindow.html">SlidingWindow</a></li>
+            
                 <li><a href="../symbols/pvc.options.Tooltip.html">Tooltip</a></li>
             
                 <li><a href="../symbols/pvc.options.VisualRole.html">VisualRole</a></li>
@@ -539,6 +541,8 @@ ul.inheritsList
         <ul class="classList">
             <li><i>Classes</i></li>
             
+                <li><a href="../symbols/pvc.options.varia.CompatibilityFlags.html">CompatibilityFlags</a></li>
+            
                 <li><a href="../symbols/pvc.options.varia.PlotTrending.html">PlotTrending</a></li>
             
                 <li><a href="../symbols/pvc.options.varia.Sides.html">Sides</a></li>
@@ -551,9 +555,13 @@ ul.inheritsList
         <ul class="classList">
             <li><i>Enumerations</i></li>
             
+            <li><a href="../symbols/pvc.options.varia.AxisDomainAlign.html">AxisDomainAlign</a></li>
+            
             <li><a href="../symbols/pvc.options.varia.AxisDomainRoundingMode.html">AxisDomainRoundingMode</a></li>
             
             <li><a href="../symbols/pvc.options.varia.AxisDomainScope.html">AxisDomainScope</a></li>
+            
+            <li><a href="../symbols/pvc.options.varia.AxisLabelRotationDirection.html">AxisLabelRotationDirection</a></li>
             
             <li><a href="../symbols/pvc.options.varia.AxisOverlappedLabelsMode.html">AxisOverlappedLabelsMode</a></li>
             
@@ -576,6 +584,8 @@ ul.inheritsList
             <li><a href="../symbols/pvc.options.varia.DotShapeType.html">DotShapeType</a></li>
             
             <li><a href="../symbols/pvc.options.varia.LegendClickMode.html">LegendClickMode</a></li>
+            
+            <li><a href="../symbols/pvc.options.varia.LegendOverflow.html">LegendOverflow</a></li>
             
             <li><a href="../symbols/pvc.options.varia.LineAreaInterpolation.html">LineAreaInterpolation</a></li>
             
@@ -612,6 +622,10 @@ ul.inheritsList
             <li><a href="../symbols/pvc.options.varia.TextAlignment.html">TextAlignment</a></li>
             
             <li><a href="../symbols/pvc.options.varia.TextBaseline.html">TextBaseline</a></li>
+            
+            <li><a href="../symbols/pvc.options.varia.TimeInterval.html">TimeInterval</a></li>
+            
+            <li><a href="../symbols/pvc.options.varia.TimeRatio.html">TimeRatio</a></li>
             
             <li><a href="../symbols/pvc.options.varia.TooltipAutoContent.html">TooltipAutoContent</a></li>
             
@@ -788,6 +802,18 @@ ul.inheritsList
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
 								<div class="fixedFont">
+								<b><a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#errorMessage">errorMessage</a></b>
+								</div>
+								<div class="description">The extension point of a generic error label.</div>
+							</td>
+						</tr>
+					
+                        <!-- First member of a given category, output a category header -->
+                        
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
 								<b><a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#invalidDataMessage">invalidDataMessage</a></b>
 								</div>
 								<div class="description">The extension point of the "invalid data" label.</div>
@@ -876,7 +902,7 @@ ul.inheritsList
 				<!-- Prefer inherited members along own ones
 				
 				<dl class="inheritsList">
-				<dt>Fields borrowed from class <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html">pvc.options.ext.ChartExtensionPoints</a>: </dt><dd><a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#invalidDataMessage">invalidDataMessage</a>, <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#noDataMessage">noDataMessage</a>, <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#rubberBand">rubberBand</a></dd><dt>Fields borrowed from class <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html">pvc.options.ext.BasicChartExtensionPoints</a>: </dt><dd><a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#base">base</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#chart">chart</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#content">content</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#plot">plot</a></dd>
+				<dt>Fields borrowed from class <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html">pvc.options.ext.ChartExtensionPoints</a>: </dt><dd><a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#errorMessage">errorMessage</a>, <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#invalidDataMessage">invalidDataMessage</a>, <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#noDataMessage">noDataMessage</a>, <a href="../symbols/pvc.options.ext.ChartExtensionPoints.html#rubberBand">rubberBand</a></dd><dt>Fields borrowed from class <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html">pvc.options.ext.BasicChartExtensionPoints</a>: </dt><dd><a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#base">base</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#chart">chart</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#content">content</a>, <a href="../symbols/pvc.options.ext.BasicChartExtensionPoints.html#plot">plot</a></dd>
 				</dl>
 				
                 -->
@@ -1013,6 +1039,34 @@ ul.inheritsList
                         
 					<hr />
 				
+					<a name="errorMessage"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/pvc.options.marks.LabelExtensionPoint.html">pvc.options.marks.LabelExtensionPoint</a>}</span>
+					<b>errorMessage</b>
+					
+					</div>
+					<div class="description">
+						The extension point of a generic error label.<p>Use <tt>errorMessage_text</tt> to change the messagethat is shown when the chart is provided withno data or empty data.</p><p>Set <tt>errorMessage_visible</tt> to <tt>false</tt>to hide the error message and not render the chart in such a case.Rendering errors are made available through <tt>chart.getLastRenderError()</tt>.</p>
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+                        
+						
+                        
+                            <dl class="detailList">
+                                <dt class="heading">Borrowed from:</dt>
+                                <dd><a href="../symbols/pvc.options.ext.ChartExtensionPoints.html">ChartExtensionPoints</a></dd>
+							</dl>
+                        
+					<hr />
+				
 					<a name="invalidDataMessage"> </a>
 					<div class="fixedFont">
 					
@@ -1021,7 +1075,7 @@ ul.inheritsList
 					
 					</div>
 					<div class="description">
-						The extension point of the "invalid data" label.<p>Data is invalid when it does not satisfy the requirementsof a visualization.For example, the Pie, Sunburst and Treemap charts requirethat the sum of the absolute values be positive (zero excluded).</p><p>Use <tt>invalidDataMessage_text</tt> to change the messagethat is shown when a chart is provided withinvalid data.</p>
+						The extension point of the "invalid data" label.<p>Data is invalid when it does not satisfy the requirementsof a visualization.For example, the Pie, Sunburst and Treemap charts requirethat the sum of the absolute values be positive (zero excluded).</p><p>Use <tt>invalidDataMessage_text</tt> to change the messagethat is shown when a chart is provided withinvalid data.</p><p>Set <tt>invalidDataMessage_visible</tt> to <tt>false</tt>to hide the error message and not render the chart in such a case.Rendering errors are made available through <tt>chart.getLastRenderError()</tt>.</p>
 						
 						
 					</div>
@@ -1049,7 +1103,7 @@ ul.inheritsList
 					
 					</div>
 					<div class="description">
-						The extension point of the "no data" label.<p>Use <tt>noDataMessage_text</tt> to change the messagethat is shown when the chart is provided withno data or empty data.</p>
+						The extension point of the "no data" label.<p>Use <tt>noDataMessage_text</tt> to change the messagethat is shown when the chart is provided withno data or empty data.</p><p>Set <tt>noDataMessage_visible</tt> to <tt>false</tt>to hide the error message and not render the chart in such a case.Rendering errors are made available through <tt>chart.getLastRenderError()</tt>.</p>
 						
 						
 					</div>
@@ -1209,7 +1263,7 @@ ul.inheritsList
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Oct 20 2015 16:28:04 GMT+0100 (BST)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Nov 18 2016 11:14:52 GMT-0000 (GMT)
 		</div>
 	</body>
 </html>

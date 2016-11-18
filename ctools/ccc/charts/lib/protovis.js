@@ -26,7 +26,7 @@
 
 /*! Copyright 2010 Stanford Visualization Group, Mike Bostock, BSD license. */
 
-/*! 10fd5c729c201633f0967565b7cc78a0d507bab7 */
+/*! a0b332882a484c26e667975737885bedb1486435 */
 
 /*
  * TERMS OF USE - EASING EQUATIONS
@@ -62,326 +62,6 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-function genNumberTicks(N, min, max, options) {
-    var ticks, span = max - min;
-    if (span && isFinite(span)) {
-        var precision = pv.parseNumNonNeg(pv.get(options, "precision", 0)), precisionMin = pv.parseNumNonNeg(pv.get(options, "precisionMin", 0)), precisionMax = pv.parseNumNonNeg(pv.get(options, "precisionMax", 1 / 0)), roundInside = pv.get(options, "roundInside", !0);
-        isFinite(precision) || (precision = 0);
-        isFinite(precisionMin) || (precisionMin = 0);
-        precisionMax || (precisionMax = 1 / 0);
-        var exponentMin = pv.get(options, "numberExponentMin"), exponentMax = pv.get(options, "numberExponentMax");
-        null != exponentMin && isFinite(exponentMin) && (precisionMin = Math.max(precisionMin, Math.pow(10, Math.floor(exponentMin))));
-        null != exponentMax && isFinite(exponentMax) && (precisionMax = Math.min(precisionMax, 5 * Math.pow(10, Math.floor(exponentMax))));
-        if (roundInside) {
-            precisionMin > span && (precisionMin = span);
-            precisionMax > span && (precisionMax = span);
-        }
-        precisionMin > precisionMax && (precisionMax = precisionMin);
-        precision ? precision = Math.max(Math.min(precision, precisionMax), precisionMin) : precisionMin === precisionMax && (precision = precisionMin);
-        var result, precMin, precMax, NObtained, overflow = 0, fixed = !!precision;
-        if (fixed) {
-            result = {
-                base: Math.abs(precision),
-                mult: 1,
-                value: 1
-            };
-            result.value = result.base;
-        } else {
-            var NMax = pv.parseNumNonNeg(pv.get(options, "tickCountMax", 1 / 0));
-            1 > NMax && (NMax = 1);
-            null == N ? N = Math.min(10, NMax) : isFinite(N) ? N > NMax && (N = NMax) : N = isFinite(NMax) ? NMax : 10;
-            result = {
-                base: isFinite(N) ? pv.logFloor(span / N, 10) : 0,
-                mult: 1,
-                value: 1
-            };
-            result.value = result.base;
-            if (precisionMin > 0) {
-                precMin = readNumberPrecision(precisionMin, !0);
-                if (result.value < precMin.value) {
-                    numberCopyResult(result, precMin);
-                    overflow = -1;
-                }
-            }
-            if (isFinite(precisionMax)) {
-                precMax = readNumberPrecision(precisionMax, !1);
-                if (precMin && precMax.value <= precMin.value) precMax = null; else if (precMax.value < result.value) {
-                    numberCopyResult(result, precMax);
-                    overflow = 1;
-                }
-            }
-            if (1 !== overflow && isFinite(N) && result.mult < 10) {
-                NObtained = span / result.base;
-                if (NObtained > N) {
-                    var err = N / NObtained;
-                    .15 >= err ? result.mult = 10 : result.mult < 5 && (.35 >= err ? result.mult = 5 : result.mult < 2 && .75 >= err && (result.mult = 2));
-                    if (result.mult > 1) {
-                        result.value = result.base * result.mult;
-                        if (precMin && result.value < precMin.value) {
-                            numberCopyResult(result, precMin);
-                            overflow = -1;
-                        } else if (precMax && precMax.value < result.value) {
-                            numberCopyResult(result, precMax);
-                            overflow = 1;
-                        } else if (10 === result.mult) {
-                            result.base *= 10;
-                            result.mult = 1;
-                        }
-                    }
-                }
-            }
-        }
-        for (var resultPrev; ;) {
-            var step = result.value, start = step * Math[roundInside ? "ceil" : "floor"](min / step), end = step * Math[roundInside ? "floor" : "ceil"](max / step);
-            if (resultPrev && (start > end || precMax && end - start > precMax.value)) {
-                result = resultPrev;
-                break;
-            }
-            var exponent = Math.floor(pv.log(step, 10) + 1e-10);
-            result.decPlaces = Math.max(0, -exponent);
-            result.ticks = pv.range(start, end + step, step);
-            if (fixed || overflow > 0 || result.ticks.length <= NMax) break;
-            if (resultPrev && resultPrev.ticks.length <= result.ticks.length) {
-                result = resultPrev;
-                break;
-            }
-            result = numberResultAbove(resultPrev = result);
-        }
-        ticks = result.ticks;
-        ticks.step = result.value;
-        ticks.base = result.base;
-        ticks.mult = result.mult;
-        ticks.decPlaces = result.decPlaces;
-        ticks.format = pv.Format.number().fractionDigits(result.decPlaces);
-    } else {
-        ticks = [ +min ];
-        ticks.step = ticks.base = ticks.mult = 1;
-        ticks.decPlaces = 0;
-        ticks.format = pv.Format.number().fractionDigits(0);
-    }
-    return ticks;
-}
-
-function numberCopyResult(to, from) {
-    to.base = from.base;
-    to.mult = from.mult;
-    to.value = from.value;
-    return to;
-}
-
-function numberResultAbove(result) {
-    var out = numberCopyResult({}, result);
-    switch (out.mult) {
-      case 5:
-        out.mult = 1;
-        out.base *= 10;
-        break;
-
-      case 2:
-        out.mult = 5;
-        break;
-
-      case 1:
-        out.mult = 2;
-    }
-    out.value = out.base * out.mult;
-    return out;
-}
-
-function readNumberPrecision(precision, isMin) {
-    0 > precision && (precision = -precision);
-    var base = pv.logFloor(precision, 10), mult = precision / base;
-    isMin ? mult > 5 ? (mult = 1, base *= 10) : mult = mult > 2 ? 5 : mult > 1 ? 2 : 1 : mult = mult >= 5 ? 5 : mult >= 2 ? 2 : 1;
-    return {
-        base: base,
-        mult: mult,
-        value: base * mult,
-        source: precision
-    };
-}
-
-function newDate(x) {
-    return new Date(x);
-}
-
-function genDateTicks(N, min, max, precision, format, weekStart, options) {
-    var ticks, span = max - min;
-    if (span && isFinite(span)) {
-        precision = parseDatePrecision(pv.get(options, "precision"), precision);
-        var precisionMin = parseDatePrecision(pv.get(options, "precisionMin"), 0), precisionMax = parseDatePrecision(pv.get(options, "precisionMax"), 1 / 0);
-        precisionMin > precisionMax && (precisionMax = precisionMin);
-        precision ? precision = Math.max(Math.min(precision, precisionMax), precisionMin) : precisionMin === precisionMax && (precision = precisionMin);
-        var NMax = pv.parseNumNonNeg(pv.get(options, "tickCountMax", 1 / 0));
-        2 > NMax && (NMax = 2);
-        N = Math.min(null == N ? 5 : N, NMax);
-        for (var precResultPrev, keyArgs = {
-            weekStart: weekStart,
-            roundInside: pv.get(options, "roundInside", 1)
-        }, precResult = chooseDatePrecision(N, span, precision, precisionMin, precisionMax, keyArgs), fixed = precResult.fixed, overflow = precResult.overflow; ;) {
-            precResult.ticks = ticks = precResult.comp.ticks(min, max, precResult.mult, keyArgs);
-            if (precResultPrev && precResult.precMax && ticks[ticks.length - 1] - ticks[0] > precResult.precMax.value) {
-                precResult = precResultPrev;
-                break;
-            }
-            if (fixed || overflow > 0 || precResult.ticks.length <= NMax) break;
-            if (precResultPrev && precResultPrev.ticks.length <= precResult.ticks.length) {
-                precResult = precResultPrev;
-                break;
-            }
-            precResultPrev = precResult;
-            precResult = precResult.comp.resultAbove(precResult.mult);
-        }
-        ticks = precResult.ticks;
-        ticks.step = precResult.value;
-        ticks.base = precResult.comp.value;
-        ticks.mult = precResult.mult;
-        ticks.format = parseTickDateFormat(format) || precResult.comp.format;
-    } else {
-        ticks = [ newDate(min) ];
-        ticks.step = ticks.base = ticks.mult = 1;
-        ticks.format = pv.Format.date("%x");
-    }
-    return ticks;
-}
-
-function chooseDatePrecision(N, span, precision, precisionMin, precisionMax, options) {
-    var dateComp, castResult, precMin, precMax, overflow = 0, mult = 1, fixed = !!precision;
-    if (precision) {
-        castResult = readDatePrecision(precision, !1);
-        if (castResult.value !== precision) dateComp = castResult.comp.withPrecision(precision); else {
-            dateComp = castResult.comp;
-            mult = castResult.mult;
-        }
-    } else {
-        if (isFinite(N)) {
-            dateComp = getGreatestLessOrEqualDateComp(span, N);
-            mult = dateComp.multiple(span / dateComp.value, options);
-        } else {
-            dateComp = lowestPrecisionValueDateComp();
-            mult = 1;
-        }
-        precision = dateComp.value * mult;
-        precisionMin > precision && (precMin = readDatePrecision(precisionMin, !0));
-        precision > precisionMax && (precMax = readDatePrecision(precisionMax, !1));
-        if (precMin && precision < precMin.value) {
-            dateComp = precMin.comp;
-            mult = precMin.mult;
-            overflow = -1;
-        } else if (precMax && precisionMin < precMax.value && precMax.value < precision) {
-            dateComp = precMax.comp;
-            mult = precMax.mult;
-            overflow = 1;
-        }
-    }
-    return {
-        comp: dateComp,
-        mult: mult,
-        value: dateComp.value * mult,
-        source: precision,
-        overflow: overflow,
-        fixed: fixed,
-        precMin: precMin,
-        precMax: precMax
-    };
-}
-
-function readDatePrecision(precision, ceil) {
-    return null == precision || 0 >= precision || !isFinite(precision) ? null : (ceil ? lowestPrecisionValueDateComp : highestPrecisionValueDateComp)().castValue(precision, ceil);
-}
-
-function DateComponent(value, prev, keyArgs) {
-    this.value = value;
-    this.mult = keyArgs.mult || 1;
-    this.base = 1 === this.mult ? this.value : Math.floor(this.value / this.mult);
-    dateCompCopyArgs.forEach(function(p) {
-        null != keyArgs[p] && (this[p] = keyArgs[p]);
-    }, this);
-    keyArgs.floor && (this.floorLocal = keyArgs.floor);
-    this.format = parseTickDateFormat(keyArgs.format);
-    this.first = pv.functor(keyArgs.first || 0);
-    this.prev = prev;
-    this.next = null;
-    prev && (prev.next = this);
-}
-
-function parseTickDateFormat(format) {
-    return null == format ? null : "function" == typeof format ? format : pv.Format.date(format);
-}
-
-function firstWeekStartOfMonth(date, dateTickWeekStart) {
-    var d = new Date(date.getFullYear(), date.getMonth(), 1), wd = dateTickWeekStart - d.getDay();
-    if (wd) {
-        0 > wd && (wd += 7);
-        d.setDate(d.getDate() + wd);
-    }
-    return d;
-}
-
-function parseDatePrecision(value, dv) {
-    if ("string" == typeof value) {
-        var n = +value;
-        if (isNaN(n)) {
-            if (value) {
-                var m = /^(\d*)([a-zA-Z]+)$/.exec(value);
-                if (m) {
-                    value = parseDateInterval(m[2]);
-                    value && (value *= +m[1] || 1);
-                }
-            }
-        } else value = n;
-    }
-    ("number" != typeof value || 0 > value) && (value = null != dv ? dv : 0);
-    return value;
-}
-
-function parseDateInterval(s) {
-    switch (s) {
-      case "y":
-        return 31536e6;
-
-      case "m":
-        return 2592e6;
-
-      case "w":
-        return 6048e5;
-
-      case "d":
-        return 864e5;
-
-      case "h":
-        return 36e5;
-
-      case "M":
-        return 6e4;
-
-      case "s":
-        return 1e3;
-
-      case "ms":
-        return 1;
-    }
-}
-
-function defDateComp(value, keyArgs) {
-    var prev = highestPrecisionValueDateComp();
-    _dateComps.push(new DateComponent(value, prev, keyArgs));
-}
-
-function lowestPrecisionValueDateComp() {
-    return _dateComps[0];
-}
-
-function highestPrecisionValueDateComp() {
-    return _dateComps.length ? _dateComps[_dateComps.length - 1] : null;
-}
-
-function getGreatestLessOrEqualDateComp(length, N) {
-    null == N && (N = 1);
-    var comp, prev = highestPrecisionValueDateComp();
-    do comp = prev; while (length < N * comp.value && (prev = comp.prev));
-    return comp;
-}
 
 Array.prototype.map || (Array.prototype.map = function(f, o) {
     for (var n = this.length, result = new Array(n), i = 0; n > i; i++) i in this && (result[i] = f.call(o, this[i], i, this));
@@ -1943,391 +1623,682 @@ pv.Scale.common = {
     }
 };
 
-pv.Scale.quantitative = function() {
-    function scale(x) {
-        var j = pv.search(d, x);
-        0 > j && (j = -j - 2);
-        j = Math.max(0, Math.min(i.length - 1, j));
-        return i[j]((f(x) - l[j]) / (l[j + 1] - l[j]));
-    }
-    var dateTickFormat, dateTickPrecision, lastTicks, d = [ 0, 1 ], l = [ 0, 1 ], r = [ 0, 1 ], i = [ pv.identity ], type = Number, n = !1, f = pv.identity, g = pv.identity, tickFormatter = null, dateTickWeekStart = 0;
-    scale.transform = function(forward, inverse) {
-        f = function(x) {
-            return n ? -forward(-x) : forward(x);
-        };
-        g = function(y) {
-            return n ? -inverse(-y) : inverse(y);
-        };
-        l = d.map(f);
-        return this;
-    };
-    scale.domain = function(array, min, max) {
-        if (arguments.length) {
-            var o;
-            if (array instanceof Array) {
-                arguments.length < 2 && (min = pv.identity);
-                arguments.length < 3 && (max = min);
-                o = array.length && min(array[0]);
-                d = array.length ? [ pv.min(array, min), pv.max(array, max) ] : [];
+!function() {
+    function genNumberTicks(N, min, max, options) {
+        var ticks, span = max - min;
+        if (span && isFinite(span)) {
+            var precision = pv.parseNumNonNeg(pv.get(options, "precision", 0)), precisionMin = pv.parseNumNonNeg(pv.get(options, "precisionMin", 0)), precisionMax = pv.parseNumNonNeg(pv.get(options, "precisionMax", 1 / 0)), roundInside = pv.get(options, "roundInside", !0);
+            isFinite(precision) || (precision = 0);
+            isFinite(precisionMin) || (precisionMin = 0);
+            precisionMax || (precisionMax = 1 / 0);
+            var exponentMin = pv.get(options, "numberExponentMin"), exponentMax = pv.get(options, "numberExponentMax");
+            null != exponentMin && isFinite(exponentMin) && (precisionMin = Math.max(precisionMin, Math.pow(10, Math.floor(exponentMin))));
+            null != exponentMax && isFinite(exponentMax) && (precisionMax = Math.min(precisionMax, 5 * Math.pow(10, Math.floor(exponentMax))));
+            if (roundInside) {
+                precisionMin > span && (precisionMin = span);
+                precisionMax > span && (precisionMax = span);
+            }
+            precisionMin > precisionMax && (precisionMax = precisionMin);
+            precision ? precision = Math.max(Math.min(precision, precisionMax), precisionMin) : precisionMin === precisionMax && (precision = precisionMin);
+            var result, precMin, precMax, NObtained, overflow = 0, fixed = !!precision;
+            if (fixed) {
+                result = {
+                    base: Math.abs(precision),
+                    mult: 1,
+                    value: 1
+                };
+                result.value = result.base;
             } else {
-                o = array;
-                d = Array.prototype.slice.call(arguments).map(Number);
+                var NMax = pv.parseNumNonNeg(pv.get(options, "tickCountMax", 1 / 0));
+                1 > NMax && (NMax = 1);
+                null == N ? N = Math.min(10, NMax) : isFinite(N) ? N > NMax && (N = NMax) : N = isFinite(NMax) ? NMax : 10;
+                result = {
+                    base: isFinite(N) ? pv.logFloor(span / N, 10) : 0,
+                    mult: 1,
+                    value: 1
+                };
+                result.value = result.base;
+                if (precisionMin > 0) {
+                    precMin = readNumberPrecision(precisionMin, !0);
+                    if (result.value < precMin.value) {
+                        numberCopyResult(result, precMin);
+                        overflow = -1;
+                    }
+                }
+                if (isFinite(precisionMax)) {
+                    precMax = readNumberPrecision(precisionMax, !1);
+                    if (precMin && precMax.value <= precMin.value) precMax = null; else if (precMax.value < result.value) {
+                        numberCopyResult(result, precMax);
+                        overflow = 1;
+                    }
+                }
+                if (1 !== overflow && isFinite(N) && result.mult < 10) {
+                    NObtained = span / result.base;
+                    if (NObtained > N) {
+                        var err = N / NObtained;
+                        .15 >= err ? result.mult = 10 : result.mult < 5 && (.35 >= err ? result.mult = 5 : result.mult < 2 && .75 >= err && (result.mult = 2));
+                        if (result.mult > 1) {
+                            result.value = result.base * result.mult;
+                            if (precMin && result.value < precMin.value) {
+                                numberCopyResult(result, precMin);
+                                overflow = -1;
+                            } else if (precMax && precMax.value < result.value) {
+                                numberCopyResult(result, precMax);
+                                overflow = 1;
+                            } else if (10 === result.mult) {
+                                result.base *= 10;
+                                result.mult = 1;
+                            }
+                        }
+                    }
+                }
             }
-            d.length ? 1 == d.length && (d = [ d[0], d[0] ]) : d = [ -(1 / 0), 1 / 0 ];
-            n = (d[0] || d[d.length - 1]) < 0;
-            l = d.map(f);
-            type = o instanceof Date ? newDate : Number;
-            return this;
-        }
-        return d.map(type);
-    };
-    scale.range = function() {
-        if (arguments.length) {
-            r = Array.prototype.slice.call(arguments);
-            r.length ? 1 == r.length && (r = [ r[0], r[0] ]) : r = [ -(1 / 0), 1 / 0 ];
-            i = [];
-            for (var j = 0; j < r.length - 1; j++) i.push(pv.Scale.interpolator(r[j], r[j + 1]));
-            return this;
-        }
-        return r;
-    };
-    scale.invert = function(y) {
-        var j = pv.search(r, y);
-        0 > j && (j = -j - 2);
-        j = Math.max(0, Math.min(i.length - 1, j));
-        return type(g(l[j] + (y - r[j]) / (r[j + 1] - r[j]) * (l[j + 1] - l[j])));
-    };
-    scale.ticks = function(N, options) {
-        var start = d[0], end = d[d.length - 1], reverse = start > end, min = reverse ? end : start, max = reverse ? start : end;
-        lastTicks = type === newDate ? genDateTicks(N, min, max, dateTickPrecision, dateTickFormat, dateTickWeekStart, options) : genNumberTicks(N, min, max, options);
-        return reverse ? lastTicks.reverse() : lastTicks;
-    };
-    scale.dateTickFormat = function() {
-        if (arguments.length) {
-            dateTickFormat = arguments[0];
-            return this;
-        }
-        return dateTickFormat;
-    };
-    scale.dateTickPrecision = function() {
-        if (arguments.length) {
-            dateTickPrecision = parseDatePrecision(arguments[0], 0);
-            return this;
-        }
-        return dateTickPrecision;
-    };
-    scale.dateTickWeekStart = function(weekStart) {
-        if (arguments.length) {
-            switch (("" + weekStart).toLowerCase()) {
-              case "0":
-              case "sunday":
-                dateTickWeekStart = 0;
-                break;
-
-              case "1":
-              case "monday":
-                dateTickWeekStart = 1;
-                break;
-
-              case "2":
-              case "tuesday":
-                dateTickWeekStart = 2;
-                break;
-
-              case "3":
-              case "wednesday":
-                dateTickWeekStart = 3;
-                break;
-
-              case "4":
-              case "thursday":
-                dateTickWeekStart = 4;
-                break;
-
-              case "5":
-              case "friday":
-                dateTickWeekStart = 5;
-                break;
-
-              case "6":
-              case "saturday":
-                dateTickWeekStart = 6;
-                break;
-
-              default:
-                dateTickWeekStart = 0;
+            for (var resultPrev; ;) {
+                var step = result.value, start = step * Math[roundInside ? "ceil" : "floor"](min / step), end = step * Math[roundInside ? "floor" : "ceil"](max / step);
+                if (resultPrev && (start > end || precMax && end - start > precMax.value)) {
+                    result = resultPrev;
+                    break;
+                }
+                var exponent = Math.floor(pv.log(step, 10) + 1e-10);
+                result.decPlaces = Math.max(0, -exponent);
+                result.ticks = pv.range(start, end + step, step);
+                if (fixed || overflow > 0 || result.ticks.length <= NMax) break;
+                if (resultPrev && resultPrev.ticks.length <= result.ticks.length) {
+                    result = resultPrev;
+                    break;
+                }
+                result = numberResultAbove(resultPrev = result);
             }
-            return this;
+            ticks = result.ticks;
+            ticks.step = result.value;
+            ticks.base = result.base;
+            ticks.mult = result.mult;
+            ticks.decPlaces = result.decPlaces;
+            ticks.format = pv.Format.number().fractionDigits(result.decPlaces);
+        } else {
+            ticks = [ +min ];
+            ticks.step = ticks.base = ticks.mult = 1;
+            ticks.decPlaces = 0;
+            ticks.format = pv.Format.number().fractionDigits(0);
         }
-        return dateTickWeekStart;
-    };
-    scale.tickFormatter = function(f) {
-        if (arguments.length) {
-            tickFormatter = f;
-            return this;
+        return ticks;
+    }
+    function numberCopyResult(to, from) {
+        to.base = from.base;
+        to.mult = from.mult;
+        to.value = from.value;
+        return to;
+    }
+    function numberResultAbove(result) {
+        var out = numberCopyResult({}, result);
+        switch (out.mult) {
+          case 5:
+            out.mult = 1;
+            out.base *= 10;
+            break;
+
+          case 2:
+            out.mult = 5;
+            break;
+
+          case 1:
+            out.mult = 2;
         }
-        return tickFormatter;
-    };
-    scale.tickFormat = function(t, index) {
-        var text;
-        if (tickFormatter) {
-            if (!lastTicks) {
-                lastTicks = [];
-                lastTicks.step = lastTicks.base = lastTicks.mult = 1;
-                lastTicks.decPlaces = 0;
-                lastTicks.format = String;
+        out.value = out.base * out.mult;
+        return out;
+    }
+    function readNumberPrecision(precision, isMin) {
+        0 > precision && (precision = -precision);
+        var base = pv.logFloor(precision, 10), mult = precision / base;
+        isMin ? mult > 5 ? (mult = 1, base *= 10) : mult = mult > 2 ? 5 : mult > 1 ? 2 : 1 : mult = mult >= 5 ? 5 : mult >= 2 ? 2 : 1;
+        return {
+            base: base,
+            mult: mult,
+            value: base * mult,
+            source: precision
+        };
+    }
+    function newDate(x) {
+        return new Date(x);
+    }
+    function genDateTicks(N, min, max, precision, format, weekStart, options) {
+        var ticks, span = max - min;
+        if (span && isFinite(span)) {
+            precision = parseDatePrecision(pv.get(options, "precision"), precision);
+            var precisionMin = parseDatePrecision(pv.get(options, "precisionMin"), 0), precisionMax = parseDatePrecision(pv.get(options, "precisionMax"), 1 / 0);
+            precisionMin > precisionMax && (precisionMax = precisionMin);
+            precision ? precision = Math.max(Math.min(precision, precisionMax), precisionMin) : precisionMin === precisionMax && (precision = precisionMin);
+            var NMax = pv.parseNumNonNeg(pv.get(options, "tickCountMax", 1 / 0));
+            2 > NMax && (NMax = 2);
+            N = Math.min(null == N ? 5 : N, NMax);
+            for (var precResultPrev, keyArgs = {
+                weekStart: weekStart,
+                roundInside: pv.get(options, "roundInside", 1)
+            }, precResult = chooseDatePrecision(N, span, precision, precisionMin, precisionMax, keyArgs), fixed = precResult.fixed, overflow = precResult.overflow; ;) {
+                precResult.ticks = ticks = precResult.comp.ticks(min, max, precResult.mult, keyArgs);
+                if (precResultPrev && precResult.precMax && ticks[ticks.length - 1] - ticks[0] > precResult.precMax.value) {
+                    precResult = precResultPrev;
+                    break;
+                }
+                if (fixed || overflow > 0 || precResult.ticks.length <= NMax) break;
+                if (precResultPrev && precResultPrev.ticks.length <= precResult.ticks.length) {
+                    precResult = precResultPrev;
+                    break;
+                }
+                precResultPrev = precResult;
+                precResult = precResult.comp.resultAbove(precResult.mult);
             }
-            var precision = type !== Number ? lastTicks.step : lastTicks.decPlaces;
-            text = tickFormatter.call(lastTicks, t, precision, null != index ? index : -1);
-        } else text = lastTicks ? lastTicks.format(t) : String(t);
-        return text;
-    };
-    scale.nice = function() {
-        if (2 != d.length) return this;
-        var start = d[0], end = d[d.length - 1], reverse = start > end, min = reverse ? end : start, max = reverse ? start : end, span = max - min;
-        if (!span || !isFinite(span)) return this;
-        var step = Math.pow(10, Math.round(Math.log(span) / Math.log(10)) - 1);
-        d = [ Math.floor(min / step) * step, Math.ceil(max / step) * step ];
-        reverse && d.reverse();
-        l = d.map(f);
-        return this;
-    };
-    pv.copyOwn(scale, pv.Scale.common);
-    scale.domain.apply(scale, arguments);
-    return scale;
-};
-
-var dateCompCopyArgs = [ "get", "set", "multiple", "multiples", "thresholds", "closeds", "castValue" ];
-
-DateComponent.prototype.increment = function(d, n) {
-    null == n && (n = 1);
-    1 !== this.mult && (n *= this.mult);
-    this.set(d, this.get(d) + n);
-};
-
-DateComponent.prototype.get = function(d) {
-    return d.getMilliseconds();
-};
-
-DateComponent.prototype.set = function(d, v) {
-    d.setMilliseconds(v);
-};
-
-DateComponent.prototype.floorLocal = function(d, options) {};
-
-DateComponent.prototype.floor = function(d, options) {
-    var skip = 0;
-    if (1 !== this.mult) {
-        this.floorLocal(d, options);
-        skip = this.base;
+            ticks = precResult.ticks;
+            ticks.step = precResult.value;
+            ticks.base = precResult.comp.value;
+            ticks.mult = precResult.mult;
+            ticks.format = parseTickDateFormat(format) || precResult.comp.format;
+        } else {
+            ticks = [ newDate(min) ];
+            ticks.step = ticks.base = ticks.mult = 1;
+            ticks.format = pv.Format.date("%x");
+        }
+        return ticks;
     }
-    for (var comp = this.prev; comp; ) {
-        1 === comp.mult && comp.value !== skip && comp.clear(d, options);
-        comp = comp.prev;
+    function chooseDatePrecision(N, span, precision, precisionMin, precisionMax, options) {
+        var dateComp, castResult, precMin, precMax, overflow = 0, mult = 1, fixed = !!precision;
+        if (precision) {
+            castResult = readDatePrecision(precision, !1);
+            if (castResult.value !== precision) dateComp = castResult.comp.withPrecision(precision); else {
+                dateComp = castResult.comp;
+                mult = castResult.mult;
+            }
+        } else {
+            if (isFinite(N)) {
+                dateComp = getGreatestLessOrEqualDateComp(span, N);
+                mult = dateComp.multiple(span / dateComp.value, options);
+            } else {
+                dateComp = lowestPrecisionValueDateComp();
+                mult = 1;
+            }
+            precision = dateComp.value * mult;
+            precisionMin > precision && (precMin = readDatePrecision(precisionMin, !0));
+            precision > precisionMax && (precMax = readDatePrecision(precisionMax, !1));
+            if (precMin && precision < precMin.value) {
+                dateComp = precMin.comp;
+                mult = precMin.mult;
+                overflow = -1;
+            } else if (precMax && precisionMin < precMax.value && precMax.value < precision) {
+                dateComp = precMax.comp;
+                mult = precMax.mult;
+                overflow = 1;
+            }
+        }
+        return {
+            comp: dateComp,
+            mult: mult,
+            value: dateComp.value * mult,
+            source: precision,
+            overflow: overflow,
+            fixed: fixed,
+            precMin: precMin,
+            precMax: precMax
+        };
     }
-};
-
-DateComponent.prototype.floorMultiple = function(d, n, options) {
-    var first = this.first(d, options), delta = this.get(d) - first;
-    if (delta) {
-        var M = n * this.mult, offset = Math.floor(delta / M) * M;
-        this.set(d, first + offset);
+    function readDatePrecision(precision, ceil) {
+        return null == precision || 0 >= precision || !isFinite(precision) ? null : (ceil ? lowestPrecisionValueDateComp : highestPrecisionValueDateComp)().castValue(precision, ceil);
     }
-};
-
-DateComponent.prototype.clear = function(d, options) {
-    this.set(d, this.first(d, options));
-};
-
-DateComponent.prototype.multiple = function(N, options) {
-    for (var ms = this.multiples, ts = this.thresholds, cl = this.closeds, L = ms.length, i = -1; ++i < L; ) if (cl[i] ? N <= ts[i] : N < ts[i]) return ms[i];
-    throw new Error("Invalid configuration.");
-};
-
-DateComponent.prototype.resultAbove = function(mult) {
-    return this.castValue(this.value * mult + .1, !0);
-};
-
-DateComponent.prototype.castValue = function(value, ceil) {
-    var ms = this.multiples;
-    if (!ms) return this._castValueResult(1, value, 1);
-    var i, m = value / this.value, L = ms.length;
-    if (ceil) {
-        i = -1;
-        for (;++i < L; ) if (m <= ms[i]) return this._castValueResult(ms[i], value, 0);
-        return this.next ? this.next.castValue(value, ceil) : this._castValueResult(ms[L - 1], value, 1);
+    function DateComponent(value, prev, keyArgs) {
+        this.value = value;
+        this.mult = keyArgs.mult || 1;
+        this.base = 1 === this.mult ? this.value : Math.floor(this.value / this.mult);
+        dateCompCopyArgs.forEach(function(p) {
+            null != keyArgs[p] && (this[p] = keyArgs[p]);
+        }, this);
+        keyArgs.floor && (this.floorLocal = keyArgs.floor);
+        this.format = parseTickDateFormat(keyArgs.format);
+        this.first = pv.functor(keyArgs.first || 0);
+        this.prev = prev;
+        this.next = null;
+        prev && (prev.next = this);
     }
-    i = L;
-    for (;i--; ) if (ms[i] <= m) return this._castValueResult(ms[i], value, 0);
-    return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(ms[0], value, -1);
-};
-
-DateComponent.prototype._castValueResult = function(mult, value, overflow) {
-    return {
-        comp: this,
-        mult: mult,
-        value: this.value * mult,
-        source: value,
-        overflow: overflow
-    };
-};
-
-DateComponent.prototype.withPrecision = function(value) {
-    var comp = this;
-    this.value !== value && (comp = new DateComponent(value, null, {
-        mult: value,
-        format: this.format
-    }));
-    return comp;
-};
-
-DateComponent.prototype.ticks = function(min, max, mult, options) {
-    var ticks = [], tick = new Date(min);
-    this.floor(tick, options);
-    mult > 1 && this.floorMultiple(tick, mult, options);
-    if (pv.get(options, "roundInside", 1)) {
-        min !== +tick && this.increment(tick, mult);
-        do {
-            ticks.push(new Date(tick));
-            this.increment(tick, mult);
-        } while (max >= tick);
-    } else {
-        ticks.push(new Date(tick));
-        do {
-            this.increment(tick, mult);
-            ticks.push(new Date(tick));
-        } while (max > tick);
+    function parseTickDateFormat(format) {
+        return null == format ? null : "function" == typeof format ? format : pv.Format.date(format);
     }
-    return ticks;
-};
-
-var _dateComps = [];
-
-defDateComp(1, {
-    format: "%S.%Qs",
-    multiples: [ 1, 5, 25, 50, 100, 250 ],
-    thresholds: [ 10, 50, 100, 200, 1e3, 1 / 0 ],
-    closeds: [ 1, 1, 1, 1, 1, 1 ]
-});
-
-defDateComp(1e3, {
-    get: function(d) {
-        return d.getSeconds();
-    },
-    set: function(d, v) {
-        d.setSeconds(v);
-    },
-    format: "%I:%M:%S",
-    multiples: [ 1, 5, 10, 15 ],
-    thresholds: [ 10, 60, 90, 1 / 0 ],
-    closeds: [ 1, 1, 1, 1 ]
-});
-
-defDateComp(6e4, {
-    get: function(d) {
-        return d.getMinutes();
-    },
-    set: function(d, v) {
-        d.setMinutes(v);
-    },
-    format: "%I:%M %p",
-    multiples: [ 1, 5, 10, 15 ],
-    thresholds: [ 10, 15, 30, 1 / 0 ],
-    closeds: [ 1, 1, 1, 1 ]
-});
-
-defDateComp(36e5, {
-    get: function(d) {
-        return d.getHours();
-    },
-    set: function(d, v) {
-        d.setHours(v);
-    },
-    format: "%I:%M %p",
-    multiples: [ 1, 3, 6 ],
-    thresholds: [ 10, 20, 1 / 0 ],
-    closeds: [ 1, 1, 1 ]
-});
-
-defDateComp(864e5, {
-    get: function(d) {
-        return d.getDate();
-    },
-    set: function(d, v) {
-        d.setDate(v);
-    },
-    format: "%m/%d",
-    first: 1,
-    multiples: [ 1, 2, 3, 5 ],
-    thresholds: [ 10, 15, 30, 1 / 0 ],
-    closeds: [ 1, 0, 0, 1 ]
-});
-
-defDateComp(6048e5, {
-    get: function(d) {
-        return d.getDate();
-    },
-    set: function(d, v) {
-        d.setDate(v);
-    },
-    mult: 7,
-    floor: function(d, options) {
-        var wd = d.getDay() - pv.get(options, "weekStart", 0);
-        if (0 !== wd) {
+    function firstWeekStartOfMonth(date, dateTickWeekStart) {
+        var d = new Date(date.getFullYear(), date.getMonth(), 1), wd = dateTickWeekStart - d.getDay();
+        if (wd) {
             0 > wd && (wd += 7);
-            this.set(d, this.get(d) - wd);
+            d.setDate(d.getDate() + wd);
         }
-    },
-    first: function(d, options) {
-        return this.get(firstWeekStartOfMonth(d, pv.get(options, "weekStart", 0)));
-    },
-    format: "%m/%d",
-    multiples: [ 1, 2, 3 ],
-    thresholds: [ 10, 15, 1 / 0 ],
-    closeds: [ 1, 1, 1 ]
-});
-
-defDateComp(2592e6, {
-    get: function(d) {
-        return d.getMonth();
-    },
-    set: function(d, v) {
-        d.setMonth(v);
-    },
-    format: "%m/%Y",
-    multiples: [ 1, 2, 3 ],
-    thresholds: [ 12, 24, 1 / 0 ],
-    closeds: [ 1, 1, 1 ]
-});
-
-defDateComp(31536e6, {
-    get: function(d) {
-        return d.getFullYear();
-    },
-    set: function(d, v) {
-        d.setFullYear(v);
-    },
-    format: "%Y",
-    multiple: function(N) {
-        if (10 >= N) return 1;
-        var mult = pv.logCeil(N / 15, 10);
-        2 > N / mult ? mult /= 5 : 5 > N / mult && (mult /= 2);
-        return mult;
-    },
-    castValue: function(value, ceil) {
-        var base, mult, M = value / this.value;
-        if (1 > M) {
-            if (!ceil) return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(1, value, -1);
-            base = 1;
-        } else base = pv.logFloor(M, 10);
-        mult = M / base;
-        if (ceil) if (mult > 5) {
-            base *= 10;
-            mult = 1;
-        } else mult = mult > 2 ? 5 : mult > 1 ? 2 : 1; else if (mult > 5) mult = 5; else if (mult > 2) mult = 2; else if (mult > 1) mult = 1; else if (1 > mult) return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(base, value, -1);
-        return this._castValueResult(base * mult, value, 0);
+        return d;
     }
-});
+    function parseDatePrecision(value, dv) {
+        if ("string" == typeof value) {
+            var n = +value;
+            if (isNaN(n)) {
+                if (value) {
+                    var m = /^(\d*)([a-zA-Z]+)$/.exec(value);
+                    if (m) {
+                        value = parseDateInterval(m[2]);
+                        value && (value *= +m[1] || 1);
+                    }
+                }
+            } else value = n;
+        }
+        ("number" != typeof value || 0 > value) && (value = null != dv ? dv : 0);
+        return value;
+    }
+    function parseDateInterval(s) {
+        switch (s) {
+          case "year":
+          case "y":
+            return 31536e6;
+
+          case "month":
+          case "m":
+            return 2592e6;
+
+          case "week":
+          case "w":
+            return 6048e5;
+
+          case "day":
+          case "d":
+            return 864e5;
+
+          case "hour":
+          case "h":
+            return 36e5;
+
+          case "minute":
+          case "M":
+            return 6e4;
+
+          case "second":
+          case "s":
+            return 1e3;
+
+          case "millisecond":
+          case "ms":
+            return 1;
+        }
+    }
+    function defDateComp(value, keyArgs) {
+        var prev = highestPrecisionValueDateComp();
+        _dateComps.push(new DateComponent(value, prev, keyArgs));
+    }
+    function lowestPrecisionValueDateComp() {
+        return _dateComps[0];
+    }
+    function highestPrecisionValueDateComp() {
+        return _dateComps.length ? _dateComps[_dateComps.length - 1] : null;
+    }
+    function getGreatestLessOrEqualDateComp(length, N) {
+        null == N && (N = 1);
+        var comp, prev = highestPrecisionValueDateComp();
+        do comp = prev; while (length < N * comp.value && (prev = comp.prev));
+        return comp;
+    }
+    pv.Scale.quantitative = function() {
+        function scale(x) {
+            var j = pv.search(d, x);
+            0 > j && (j = -j - 2);
+            j = Math.max(0, Math.min(i.length - 1, j));
+            return i[j]((f(x) - l[j]) / (l[j + 1] - l[j]));
+        }
+        var dateTickFormat, dateTickPrecision, lastTicks, d = [ 0, 1 ], l = [ 0, 1 ], r = [ 0, 1 ], i = [ pv.identity ], type = Number, n = !1, f = pv.identity, g = pv.identity, tickFormatter = null, dateTickWeekStart = 0;
+        scale.transform = function(forward, inverse) {
+            f = function(x) {
+                return n ? -forward(-x) : forward(x);
+            };
+            g = function(y) {
+                return n ? -inverse(-y) : inverse(y);
+            };
+            l = d.map(f);
+            return this;
+        };
+        scale.domain = function(array, min, max) {
+            if (arguments.length) {
+                var o;
+                if (array instanceof Array) {
+                    arguments.length < 2 && (min = pv.identity);
+                    arguments.length < 3 && (max = min);
+                    o = array.length && min(array[0]);
+                    d = array.length ? [ pv.min(array, min), pv.max(array, max) ] : [];
+                } else {
+                    o = array;
+                    d = Array.prototype.slice.call(arguments).map(Number);
+                }
+                d.length ? 1 == d.length && (d = [ d[0], d[0] ]) : d = [ -(1 / 0), 1 / 0 ];
+                n = (d[0] || d[d.length - 1]) < 0;
+                l = d.map(f);
+                type = o instanceof Date ? newDate : Number;
+                return this;
+            }
+            return d.map(type);
+        };
+        scale.range = function() {
+            if (arguments.length) {
+                r = Array.prototype.slice.call(arguments);
+                r.length ? 1 == r.length && (r = [ r[0], r[0] ]) : r = [ -(1 / 0), 1 / 0 ];
+                i = [];
+                for (var j = 0; j < r.length - 1; j++) i.push(pv.Scale.interpolator(r[j], r[j + 1]));
+                return this;
+            }
+            return r;
+        };
+        scale.invert = function(y) {
+            var j = pv.search(r, y);
+            0 > j && (j = -j - 2);
+            j = Math.max(0, Math.min(i.length - 1, j));
+            return type(g(l[j] + (y - r[j]) / (r[j + 1] - r[j]) * (l[j + 1] - l[j])));
+        };
+        scale.ticks = function(N, options) {
+            var start = d[0], end = d[d.length - 1], reverse = start > end, min = reverse ? end : start, max = reverse ? start : end;
+            lastTicks = type === newDate ? genDateTicks(N, min, max, dateTickPrecision, dateTickFormat, dateTickWeekStart, options) : genNumberTicks(N, min, max, options);
+            return reverse ? lastTicks.reverse() : lastTicks;
+        };
+        scale.dateTickFormat = function() {
+            if (arguments.length) {
+                dateTickFormat = arguments[0];
+                return this;
+            }
+            return dateTickFormat;
+        };
+        scale.dateTickPrecision = function() {
+            if (arguments.length) {
+                dateTickPrecision = parseDatePrecision(arguments[0], 0);
+                return this;
+            }
+            return dateTickPrecision;
+        };
+        scale.dateTickWeekStart = function(weekStart) {
+            if (arguments.length) {
+                switch (("" + weekStart).toLowerCase()) {
+                  case "0":
+                  case "sunday":
+                    dateTickWeekStart = 0;
+                    break;
+
+                  case "1":
+                  case "monday":
+                    dateTickWeekStart = 1;
+                    break;
+
+                  case "2":
+                  case "tuesday":
+                    dateTickWeekStart = 2;
+                    break;
+
+                  case "3":
+                  case "wednesday":
+                    dateTickWeekStart = 3;
+                    break;
+
+                  case "4":
+                  case "thursday":
+                    dateTickWeekStart = 4;
+                    break;
+
+                  case "5":
+                  case "friday":
+                    dateTickWeekStart = 5;
+                    break;
+
+                  case "6":
+                  case "saturday":
+                    dateTickWeekStart = 6;
+                    break;
+
+                  default:
+                    dateTickWeekStart = 0;
+                }
+                return this;
+            }
+            return dateTickWeekStart;
+        };
+        scale.tickFormatter = function(f) {
+            if (arguments.length) {
+                tickFormatter = f;
+                return this;
+            }
+            return tickFormatter;
+        };
+        scale.tickFormat = function(t, index) {
+            var text;
+            if (tickFormatter) {
+                if (!lastTicks) {
+                    lastTicks = [];
+                    lastTicks.step = lastTicks.base = lastTicks.mult = 1;
+                    lastTicks.decPlaces = 0;
+                    lastTicks.format = String;
+                }
+                var precision = type !== Number ? lastTicks.step : lastTicks.decPlaces;
+                text = tickFormatter.call(lastTicks, t, precision, null != index ? index : -1);
+            } else text = lastTicks ? lastTicks.format(t) : String(t);
+            return text;
+        };
+        scale.nice = function() {
+            if (2 != d.length) return this;
+            var start = d[0], end = d[d.length - 1], reverse = start > end, min = reverse ? end : start, max = reverse ? start : end, span = max - min;
+            if (!span || !isFinite(span)) return this;
+            var step = Math.pow(10, Math.round(Math.log(span) / Math.log(10)) - 1);
+            d = [ Math.floor(min / step) * step, Math.ceil(max / step) * step ];
+            reverse && d.reverse();
+            l = d.map(f);
+            return this;
+        };
+        pv.copyOwn(scale, pv.Scale.common);
+        scale.domain.apply(scale, arguments);
+        return scale;
+    };
+    var dateCompCopyArgs = [ "get", "set", "multiple", "multiples", "thresholds", "closeds", "castValue" ];
+    DateComponent.prototype.increment = function(d, n) {
+        null == n && (n = 1);
+        1 !== this.mult && (n *= this.mult);
+        this.set(d, this.get(d) + n);
+    };
+    DateComponent.prototype.get = function(d) {
+        return d.getMilliseconds();
+    };
+    DateComponent.prototype.set = function(d, v) {
+        d.setMilliseconds(v);
+    };
+    DateComponent.prototype.floorLocal = function(d, options) {};
+    DateComponent.prototype.floor = function(d, options) {
+        var skip = 0;
+        if (1 !== this.mult) {
+            this.floorLocal(d, options);
+            skip = this.base;
+        }
+        for (var comp = this.prev; comp; ) {
+            1 === comp.mult && comp.value !== skip && comp.clear(d, options);
+            comp = comp.prev;
+        }
+    };
+    DateComponent.prototype.floorMultiple = function(d, n, options) {
+        var first = this.first(d, options), delta = this.get(d) - first;
+        if (delta) {
+            var M = n * this.mult, offset = Math.floor(delta / M) * M;
+            this.set(d, first + offset);
+        }
+    };
+    DateComponent.prototype.clear = function(d, options) {
+        this.set(d, this.first(d, options));
+    };
+    DateComponent.prototype.multiple = function(N, options) {
+        for (var ms = this.multiples, ts = this.thresholds, cl = this.closeds, L = ms.length, i = -1; ++i < L; ) if (cl[i] ? N <= ts[i] : N < ts[i]) return ms[i];
+        throw new Error("Invalid configuration.");
+    };
+    DateComponent.prototype.resultAbove = function(mult) {
+        return this.castValue(this.value * mult + .1, !0);
+    };
+    DateComponent.prototype.castValue = function(value, ceil) {
+        var ms = this.multiples;
+        if (!ms) return this._castValueResult(1, value, 1);
+        var i, m = value / this.value, L = ms.length;
+        if (ceil) {
+            i = -1;
+            for (;++i < L; ) if (m <= ms[i]) return this._castValueResult(ms[i], value, 0);
+            return this.next ? this.next.castValue(value, ceil) : this._castValueResult(ms[L - 1], value, 1);
+        }
+        i = L;
+        for (;i--; ) if (ms[i] <= m) return this._castValueResult(ms[i], value, 0);
+        return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(ms[0], value, -1);
+    };
+    DateComponent.prototype._castValueResult = function(mult, value, overflow) {
+        return {
+            comp: this,
+            mult: mult,
+            value: this.value * mult,
+            source: value,
+            overflow: overflow
+        };
+    };
+    DateComponent.prototype.withPrecision = function(value) {
+        var comp = this;
+        this.value !== value && (comp = new DateComponent(value, null, {
+            mult: value,
+            format: this.format
+        }));
+        return comp;
+    };
+    DateComponent.prototype.ticks = function(min, max, mult, options) {
+        var ticks = [], tick = new Date(min);
+        this.floor(tick, options);
+        mult > 1 && this.floorMultiple(tick, mult, options);
+        if (pv.get(options, "roundInside", 1)) {
+            min !== +tick && this.increment(tick, mult);
+            do {
+                ticks.push(new Date(tick));
+                this.increment(tick, mult);
+            } while (max >= tick);
+        } else {
+            ticks.push(new Date(tick));
+            do {
+                this.increment(tick, mult);
+                ticks.push(new Date(tick));
+            } while (max > tick);
+        }
+        return ticks;
+    };
+    pv.parseDatePrecision = parseDatePrecision;
+    var _dateComps = [];
+    defDateComp(1, {
+        format: "%S.%Qs",
+        multiples: [ 1, 5, 25, 50, 100, 250 ],
+        thresholds: [ 10, 50, 100, 200, 1e3, 1 / 0 ],
+        closeds: [ 1, 1, 1, 1, 1, 1 ]
+    });
+    defDateComp(1e3, {
+        get: function(d) {
+            return d.getSeconds();
+        },
+        set: function(d, v) {
+            d.setSeconds(v);
+        },
+        format: "%I:%M:%S",
+        multiples: [ 1, 5, 10, 15 ],
+        thresholds: [ 10, 60, 90, 1 / 0 ],
+        closeds: [ 1, 1, 1, 1 ]
+    });
+    defDateComp(6e4, {
+        get: function(d) {
+            return d.getMinutes();
+        },
+        set: function(d, v) {
+            d.setMinutes(v);
+        },
+        format: "%I:%M %p",
+        multiples: [ 1, 5, 10, 15 ],
+        thresholds: [ 10, 15, 30, 1 / 0 ],
+        closeds: [ 1, 1, 1, 1 ]
+    });
+    defDateComp(36e5, {
+        get: function(d) {
+            return d.getHours();
+        },
+        set: function(d, v) {
+            d.setHours(v);
+        },
+        format: "%I:%M %p",
+        multiples: [ 1, 3, 6 ],
+        thresholds: [ 10, 20, 1 / 0 ],
+        closeds: [ 1, 1, 1 ]
+    });
+    defDateComp(864e5, {
+        get: function(d) {
+            return d.getDate();
+        },
+        set: function(d, v) {
+            d.setDate(v);
+        },
+        format: "%m/%d",
+        first: 1,
+        multiples: [ 1, 2, 3, 5 ],
+        thresholds: [ 10, 15, 30, 1 / 0 ],
+        closeds: [ 1, 0, 0, 1 ]
+    });
+    defDateComp(6048e5, {
+        get: function(d) {
+            return d.getDate();
+        },
+        set: function(d, v) {
+            d.setDate(v);
+        },
+        mult: 7,
+        floor: function(d, options) {
+            var wd = d.getDay() - pv.get(options, "weekStart", 0);
+            if (0 !== wd) {
+                0 > wd && (wd += 7);
+                this.set(d, this.get(d) - wd);
+            }
+        },
+        first: function(d, options) {
+            return this.get(firstWeekStartOfMonth(d, pv.get(options, "weekStart", 0)));
+        },
+        format: "%m/%d",
+        multiples: [ 1, 2, 3 ],
+        thresholds: [ 10, 15, 1 / 0 ],
+        closeds: [ 1, 1, 1 ]
+    });
+    defDateComp(2592e6, {
+        get: function(d) {
+            return d.getMonth();
+        },
+        set: function(d, v) {
+            d.setMonth(v);
+        },
+        format: "%m/%Y",
+        multiples: [ 1, 2, 3 ],
+        thresholds: [ 12, 24, 1 / 0 ],
+        closeds: [ 1, 1, 1 ]
+    });
+    defDateComp(31536e6, {
+        get: function(d) {
+            return d.getFullYear();
+        },
+        set: function(d, v) {
+            d.setFullYear(v);
+        },
+        format: "%Y",
+        multiple: function(N) {
+            if (10 >= N) return 1;
+            var mult = pv.logCeil(N / 15, 10);
+            2 > N / mult ? mult /= 5 : 5 > N / mult && (mult /= 2);
+            return mult;
+        },
+        castValue: function(value, ceil) {
+            var base, mult, M = value / this.value;
+            if (1 > M) {
+                if (!ceil) return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(1, value, -1);
+                base = 1;
+            } else base = pv.logFloor(M, 10);
+            mult = M / base;
+            if (ceil) if (mult > 5) {
+                base *= 10;
+                mult = 1;
+            } else mult = mult > 2 ? 5 : mult > 1 ? 2 : 1; else if (mult > 5) mult = 5; else if (mult > 2) mult = 2; else if (mult > 1) mult = 1; else if (1 > mult) return this.prev ? this.prev.castValue(value, ceil) : this._castValueResult(base, value, -1);
+            return this._castValueResult(base * mult, value, 0);
+        }
+    });
+}();
 
 pv.Scale.linear = function() {
     var scale = pv.Scale.quantitative();
@@ -6950,7 +6921,7 @@ pv.Ease = function() {
             s = p / 4;
         } else s = p / (2 * Math.PI) * Math.asin(1 / a);
         return function(t) {
-            return 0 >= t || t >= 1 ? t : -(a * Math.pow(2, 10 * --t) * Math.sin(2 * (t - s) * Math.PI / p));
+            return 0 >= t || t >= 1 ? t : -(a * Math.pow(2, 10 * --t) * Math.sin((t - s) * (2 * Math.PI) / p));
         };
     }
     function back(s) {

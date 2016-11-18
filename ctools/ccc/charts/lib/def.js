@@ -1686,7 +1686,7 @@ var def = function() {
             return asClass;
         },
         isSubClassOf: function(Ctor, BaseCtor) {
-            return !(!Ctor || !BaseCtor || Ctor !== BaseCtor && !def.is(F_protoOrSelf(Ctor), BaseCtor));
+            return !(!Ctor || !BaseCtor) && (Ctor === BaseCtor || def.is(F_protoOrSelf(Ctor), BaseCtor));
         }
     });
     var fields_privProp = the_priv_key.property();
@@ -2348,13 +2348,13 @@ var def = function() {
             return rows.map(function(r) {
                 switch (r) {
                   case rowSepMarkerFirst:
-                    return renderRow(r, "╤", "═", "╔", "╗");
+                    return renderRow(r, "╤", "�?", "╔", "╗");
 
                   case rowSepMarker:
                     return rowSep || (rowSep = renderRow(r, "┼", "─", "╟", "╢"));
 
                   case rowSepMarkerLast:
-                    return renderRow(r, "╧", "═", "╚", "╝");
+                    return renderRow(r, "╧", "�?", "╚", "�?");
                 }
                 return renderRow(r, "│", " ", "║", "║");
             }).join("\n");
