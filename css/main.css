@@ -4614,6 +4614,8 @@ a.userGroup-link {
   background: url(../img/books/Header.jpg) no-repeat center center;
   height: 400px;
   background-size: cover;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .library .cbp-so-side-left > div{
