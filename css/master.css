@@ -345,6 +345,11 @@ Header Wrapper
     font-size: 12px;
     margin-bottom: 0;
     margin-top: 15px;}
+  
+  .block-menu-block .menu-level-1 > .menu .menu li:nth-child(-n+3) span{
+    margin-top: 0;
+  }
+
   /* line 230, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul > li > ul > li > a {
     font-size: .8125em; }
@@ -359,7 +364,8 @@ Header Wrapper
     top: 133%;
     opacity: 1;
     max-height: 500px;
-    padding: 0.75em 30px 1.5em;
+    /*padding: 0.75em 30px 1.5em;*/
+    padding: 20px 30px;
     margin-top: 0;
    }
   /* line 244, ../_sass/components/header/_nav.scss */
