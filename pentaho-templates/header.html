@@ -127,13 +127,53 @@
             </div>
         </div>
     </header>
+
+    <!--custom dashboards side widget-->
+    <div class="sticky-info-services container visible">
+        <div class="wrapper">
+            <div class="sticky-handle"></div>
+                <a href="http://www.pentaho.com/service/custom-dashboards" target="_blank">        
+                    <div class="sticky-info-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="sticky-header-img">
+                                    <img src="/img/steelwheels-slider.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="info-text">
+                                    <h3 style="margin-top: 5px; margin-bottom: 15px;">Pentaho Custom Dashboards</h3>
+                                    <p style="margin-bottom: 0;">Work with us to build advanced dashboard solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </div>
+
     <script type="text/javascript">
     $('.nav-toggle').click(function() {
-    $('.nav-container').toggleClass("open");
-    $(this).toggleClass("open");
+        $('.nav-container').toggleClass("open");
+        $(this).toggleClass("open");
     });
     $('.main-nav ul.menu li').click(function() {
-    $('.main-nav ul.menu li').not(this).removeClass('open');
-    $(this).toggleClass('open');
+        $('.main-nav ul.menu li').not(this).removeClass('open');
+        $(this).toggleClass('open');
     });
+
+    $( document ).ready(function() {
+
+        if (localStorage.getItem("dismissedServices") == "true"){
+            $('.sticky-info-services').removeClass('visible');
+        }
+
+        $('.sticky-handle').click(function() {
+            $('.sticky-info-services').toggleClass('visible');
+            localStorage.setItem("dismissedServices", "true" );
+        });
+
+    });
+
+
     </script>
