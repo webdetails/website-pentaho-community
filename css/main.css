@@ -277,7 +277,7 @@ img {
 
 .whiteContainerBack {
   width: 100%;
-  background-color: #fefefe;
+  background-color: #ffffff;
   display: block;
   position: relative;
 }
@@ -939,9 +939,7 @@ ul.menu li.no-link > a{
 }
 
 .nav-container:not(.open) .menu-name-main-menu > .menu li.dropdown-header:not(:first-child){
-  border-top: 1px solid #CCCCCC;
   padding-top: 24px;
-  margin-top: 10px;
 }
 
 .community-footer .helpImprove p{
@@ -2553,6 +2551,10 @@ old version - keep til the new one is approved
   padding-bottom: 0px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.user-groups .pluginPage #plugin-description{
+  padding: 0;
 }
 
 .pluginPage #new-features .first-feature-row .feature-title {
@@ -5438,6 +5440,8 @@ body.loaded:after{
   .ctools.cte header .block-menu-block ul.menu li.cte a:hover,
   .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a,
   .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a:hover,
+  .ctools.cbf header .block-menu-block ul.menu li.cbf a,
+  .ctools.cbf header .block-menu-block ul.menu li.cbf a:hover,
   .ctools.cda header .block-menu-block ul.menu li.cda a,
   .ctools.cda header .block-menu-block ul.menu li.cda a:hover,
   .ctools.cdg header .block-menu-block ul.menu li.cdg a,
@@ -5470,6 +5474,15 @@ body.loaded:after{
     -ms-user-select: none;    
     user-select: none;   
   }
+
+  ul.menu li.menu-item-wrapper.ctools > ul.menu{
+    padding-right: 0;
+  }
+
+  ul.menu li.menu-item-wrapper.ctools > ul.menu li:nth-child(odd){
+    margin-right: 5px;
+  }
+
 }
 
 @media (max-width: 1024px){
@@ -5607,6 +5620,10 @@ body.loaded:after{
   transform: rotate(180deg);
 }
 
+body:not(.ctools) .sticky-info-services.container,
+body:not(.ctools) .sticky-info-services.container{
+  display: none !important;
+}
 
 @media (max-width: 1023px){
   
