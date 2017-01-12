@@ -5404,70 +5404,12 @@ body.loaded:after{
 
   /* highlights dropdown - active option */
   
-  .pentahoHome header .block-menu-block ul.menu li.home.pentahoHome a,
-  .pentahoHome header .block-menu-block ul.menu li.home.pentahoHome a:hover,
-  .user-groups header .block-menu-block ul.menu li.home.user-groups a,
-  .user-groups header .block-menu-block ul.menu li.home.user-groups a:hover,
-  .project.mondrian header .block-menu-block ul.menu li.project.mondrian a,
-  .project.mondrian header .block-menu-block ul.menu li.project.mondrian a:hover,
-  .project.kettle header .block-menu-block ul.menu li.project.data-integration a,
-  .project.kettle header .block-menu-block ul.menu li.project.data-integration a:hover,
-  .project.reporting header .block-menu-block ul.menu li.project.reporting a,
-  .project.reporting header .block-menu-block ul.menu li.project.reporting a:hover,
-  .project.data-mining header .block-menu-block ul.menu li.project.data-mining a,
-  .project.data-mining header .block-menu-block ul.menu li.project.data-mining a:hover,
-  .ctools.home header .block-menu-block ul.menu li.ctools-home a,
-  .ctools.home header .block-menu-block ul.menu li.ctools-home a:hover,
-  .ctools.cde header .block-menu-block ul.menu li.cde a,
-  .ctools.cde header .block-menu-block ul.menu li.cde a:hover,
-  .ctools.cdf header .block-menu-block ul.menu li.cdf a,
-  .ctools.cdf header .block-menu-block ul.menu li.cdf a:hover,
-  .ctools.ccc header .block-menu-block ul.menu li.ccc a,
-  .ctools.ccc header .block-menu-block ul.menu li.ccc a:hover,
-  .ctools.cgg header .block-menu-block ul.menu li.cgg a,
-  .ctools.cgg header .block-menu-block ul.menu li.cgg a:hover,
-  .ctools.cdv header .block-menu-block ul.menu li.cdv a,
-  .ctools.cdv header .block-menu-block ul.menu li.cdv a:hover,
-  .ctools.cdc header .block-menu-block ul.menu li.cdc a,
-  .ctools.cdc header .block-menu-block ul.menu li.cdc a:hover,
-  .ctools.cfr header .block-menu-block ul.menu li.cfr a,
-  .ctools.cfr header .block-menu-block ul.menu li.cfr a:hover,
-  .ctools.cst header .block-menu-block ul.menu li.cst a,
-  .ctools.cst header .block-menu-block ul.menu li.cst a:hover,
-  .ctools.app-builder header .block-menu-block ul.menu li.app-builder a,
-  .ctools.app-builder header .block-menu-block ul.menu li.app-builder a:hover,
-  .ctools.cte header .block-menu-block ul.menu li.cte a,
-  .ctools.cte header .block-menu-block ul.menu li.cte a:hover,
-  .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a,
-  .ctools.cbf2 header .block-menu-block ul.menu li.cbf2 a:hover,
-  .ctools.cbf header .block-menu-block ul.menu li.cbf a,
-  .ctools.cbf header .block-menu-block ul.menu li.cbf a:hover,
-  .ctools.cda header .block-menu-block ul.menu li.cda a,
-  .ctools.cda header .block-menu-block ul.menu li.cda a:hover,
-  .ctools.cdg header .block-menu-block ul.menu li.cdg a,
-  .ctools.cdg header .block-menu-block ul.menu li.cdg a:hover,
-  .ctools.cdb header .block-menu-block ul.menu li.cdb a,
-  .ctools.cdb header .block-menu-block ul.menu li.cdb a:hover,
-  .training.cde-tutorial header .block-menu-block ul.menu li.cde-tutorial a,
-  .training.cde-tutorial header .block-menu-block ul.menu li.cde-tutorial a:hover,
-  .training.open-demos header .block-menu-block ul.menu li.open-demos a,
-  .training.open-demos header .block-menu-block ul.menu li.open-demos a:hover,
-  .training.cdf-tutorial header .block-menu-block ul.menu li.cdf-tutorial a,
-  .training.cdf-tutorial header .block-menu-block ul.menu li.cdf-tutorial a:hover,
-  .library header .block-menu-block ul.menu li.library a,
-  .library header .block-menu-block ul.menu li.library a:hover,
-  .marketplace-home header .block-menu-block ul.menu li.marketplace a,
-  .marketplace-home header .block-menu-block ul.menu li.marketplace a:hover,
-  .pluginPage.plugins header .block-menu-block ul.menu li.plugins a,
-  .pluginPage.plugins header .block-menu-block ul.menu li.plugins a:hover,
-  .language-packs header .block-menu-block ul.menu li.language-packs a,
-  .language-packs header .block-menu-block ul.menu li.language-packs a:hover,
-  .project-maturity header .block-menu-block ul.menu li.project-maturity a,
-  .project-maturity header .block-menu-block ul.menu li.project-maturity a:hover
+  body header .block-menu-block ul.menu li.active a,
+  body header .block-menu-block ul.menu li.active a:hover
   {
     background: #f5f5f5;
     opacity: 0.7;
-    cursor: not-allowed !important;
+    cursor: not-allowed!important;
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;   
