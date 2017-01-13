@@ -902,7 +902,7 @@ ul.slick-dots li,
       padding: 18px 0 3px 10px;
       color: #FFFFFF;
       font-size: 12px !important;
-      font-weight: 300;
+      font-weight: 400;
       margin-left: 0;
   }
 
@@ -5417,12 +5417,11 @@ body.loaded:after{
     user-select: none;   
   }
 
-  ul.menu li.menu-item-wrapper.ctools > ul.menu{
-    padding-right: 0;
-  }
 
-  ul.menu li.menu-item-wrapper.ctools > ul.menu li:nth-child(odd){
+
+  ul.menu li.menu-item-wrapper.ctools > ul.menu li:nth-child(odd):not(.leaf){
     margin-right: 5px;
+    padding-right: 5px;
   }
 
 }

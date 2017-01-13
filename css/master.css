@@ -308,8 +308,8 @@ Header Wrapper
     left: -100px; }
   /*custom selector - added by PG */
   .menu-name-main-menu > .menu > li.children--4 > ul {
-    width: 510px;
-    left: -100px;
+    width: 540px;
+    left: -130px;
     padding: 12px 0px 12px 30px; }
   /* line 198, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li.last > ul {
@@ -317,7 +317,7 @@ Header Wrapper
     right: -70px; }
   /* line 202, ../_sass/components/header/_nav.scss */
   .menu-name-main-menu > .menu > li > ul > li {
-    width: 230px;
+    width: 235px;
     float: left;
     /*margin-right: 20px*/; }
     /* line 206, ../_sass/components/header/_nav.scss */
@@ -348,6 +348,20 @@ Header Wrapper
   
   .block-menu-block .menu-level-1 > .menu .menu li:nth-child(-n+2) span{
     margin-top: 0;
+  }
+
+  .region-main-nav li.learn ul.menu li span.nolink{
+    padding: 7px 10px;
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: -4px;
+  }
+
+  .region-main-nav li.learn ul.menu ul.menu > li:not(.first) ul.menu{
+    margin-top: 15px;
   }
 
   /* line 230, ../_sass/components/header/_nav.scss */
@@ -479,7 +493,8 @@ Header Wrapper
       .nav-container ul li.expanded span.nolink:hover {
         cursor: pointer; }
       /* line 99, ../_sass/components/header/_resp_nav.scss */
-      .nav-container ul li.expanded span.nolink:after {
+      .nav-container ul li.expanded span.nolink:after,
+      .nav-container.open ul li.expanded.open > span.nolink:after {
         float: right;
         content: "+";
         position: absolute;
@@ -495,7 +510,20 @@ Header Wrapper
         line-height: 26px;
         display: inline-block;
         text-align: center;
-        font-weight: 100; }
+        font-weight: 100;
+        
+        -webkit-transition: transform 0.2s ease-in-out;
+        -moz-transition: transform 0.2s ease-in-out;
+        -o-transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-container ul li.expanded.open span.nolink:after{
+          font-size: 24px !important;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
     /* line 118, ../_sass/components/header/_resp_nav.scss */
     .nav-container ul li.expanded ul.menu {
       display: none;
