@@ -9,7 +9,7 @@
       window.jQuery || document.write('<script src="../../js/vendor/jquery-1.12.4.min.js"><\/script>')
     </script>
     <script>
-      window.onload = function () { 
+      window.onload = function () {
         if ($( window ).width() >= 769) {
           $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
         } else $('.header-txt-block').css("margin-top", '20px');
@@ -481,7 +481,7 @@
             <div class="col-lg-12 main-plugin-content">
               <div class="row">
                 <div class="col-lg-12 main-plugin-title">
-                  <h3>Data Integration 7.0</h3>
+                  <h3>Data Integration 7.1</h3>
                 </div>
               </div>
               <div class="row">
@@ -491,7 +491,7 @@
               </div>
               <div class="row main-plugin-footerNotes" >
                 <div class="col-sm-4 col-xs-12">
-                    <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.0/pdi-ce-7.0.0.0-25.zip/download" target="_blank">7.0 Stable <img src="../../img/download-icon.png"></a>
+                    <a class="btn btn-default btn-green" href="http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.1/pdi-ce-7.1.0.0-12.zip/download" target="_blank">7.1 Stable <img src="../../img/download-icon.png"></a>
                 </div>
               </div>
               <div class="row main-plugin-footerNotes" >
@@ -511,7 +511,7 @@
                   <p>
                     <a href="http://jira.pentaho.com/browse/PDI#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel" target="_blank" class="external-link">Change Log</a>
                   </p>
-                </div>                
+                </div>
                 <div class="col-xs-12 col-sm-4 text-right text-sm-left clearfix">
                   <p><a href="http://sourceforge.net/projects/pentaho/files/Data Integration" target="_blank" class="external-link">Older versions</a></p>
                 </div>
@@ -542,7 +542,7 @@
         </div>
       </div>
     </div>
-    
+
       <div class="modal fade dashboard-design-modal" id="instructions-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog instructions">
       <div class="modal-content">
@@ -569,7 +569,7 @@
                   <li>Run spoon.sh file, it should be under /data-integration.</li>
                   <li>On some installations of Ubuntu 14.04, Unity doesn't display the menu bar. In order to fix that, spoon.sh has a setting to disable this integration, <code>export UBUNTU_MENUPROXY=0</code>. You can try to remove that setting if you wish to see if it works propery on your machine</li>
                 </ul>
-                  
+
                 <h4>CentOS 6 Desktop:</h4>
                   <ul>
                     <li>The libwebkitgtk package needs to be installed. This can be done by running <code>yum install libwebkitgtk</code></li>
@@ -644,14 +644,14 @@
 
 
           // safari specific
-          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  {
           $('img').load(function() {
             $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
             if ($( window ).width() <= 768) {
                 $('.header-txt-block').css("margin-top", '20px');
-            }    
+            }
           });
-          }  
+          }
 
         });
 
