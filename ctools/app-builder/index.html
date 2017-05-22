@@ -7,7 +7,7 @@
     window.jQuery || document.write('<script src="../../js/vendor/jquery-1.12.4.min.js"><\/script>')
     </script>
     <script>
-      window.onload = function () { 
+      window.onload = function () {
         if ($( window ).width() >= 769) {
           $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
         } else $('.header-txt-block').css("margin-top", '20px');
@@ -38,18 +38,18 @@
     <meta name="twitter:site" content="@pentaho">
     <meta name="twitter:title" content="App Builder | Pentaho">
     <meta name="twitter:description" content="App Builder is a plugin creator instrument that sits on 2 major cornerstones of the Pentaho ecosystem: CTools and PDI.">
-    <meta name="twitter:image:src" content="http://www.webdetails.pt/img/share/webdetails-sparkl.png">
+    <meta name="twitter:image:src" content="http://ww3.pentaho.com/img/share/webdetails-sparkl.png">
     <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="http://www.webdetails.pt/ctools/app-builder/">
+    <meta property="og:url" content="http://community.pentaho.com/ctools/app-builder/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="App Builder | Pentaho">
-    <meta property="og:image" content="http://www.webdetails.pt/img/share/webdetails-sparkl.png" />
+    <meta property="og:image" content="http://ww3.pentaho.com/img/share/webdetails-sparkl.png" />
     <meta property="og:description" content="App Builder is a plugin creator instrument that sits on 2 major cornerstones of the Pentaho ecosystem: CTools and PDI.">
     <meta property="og:site_name" content="Pentaho">
     <!-- Social: Google+ / Schema.org  -->
     <meta itemprop="name" content="App Builder | Pentaho">
     <meta itemprop="description" content="App Builder is a plugin creator instrument that sits on 2 major cornerstones of the Pentaho ecosystem: CTools and PDI.">
-    <meta itemprop="image" content="http://www.webdetails.pt/img/share/webdetails-sparkl.png">
+    <meta itemprop="image" content="http://ww3.pentaho.com/img/share/webdetails-sparkl.png">
 </head>
 
 <body class="dashboard ctools app-builder nav-ctools-app-builder">
@@ -64,7 +64,7 @@
                   <img src="../../img/CommunityAppBuilder.gif" alt="" style="margin: 0;">
                 </div>
                 <div class="col-sm-7 cbp-so-side cbp-so-side-left" style="padding-top: 0;">
-                    
+
                     <div class="header-txt-block">
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
@@ -72,13 +72,13 @@
                           <br>
                         </div>
                         <div class="col-sm-3 col-xs-6">
-                          <p class="ctool-license-version">Version: <a class="" href="http://www.webdetails.pt/ctools-changelog/" target="_blank">6.0.1.1</a></p>
+                          <p class="ctool-license-version">Version: <a class="" href="http://ww3.pentaho.com/ctools-changelog/" target="_blank">6.0.1.1</a></p>
                         </div>
                         <div class="col-sm-3 col-xs-6">
                           <p class="ctool-license-version">License: <a class="" href="http://www.mozilla.org/MPL/2.0/" target="_blank">MPLv2</a></p>
-                        </div>                   
+                        </div>
                     </div>
-                  
+
                     <p>App Builder is a plugin creator instrument that sits on two major cornerstones of the Pentaho ecosystem: CTools and PDI. Aiming to leverage as much as possible of our existing stack, anyone familiar with those tools will be able to build plugins.</p>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
 
         if ($( window ).width() >= 769) {
           $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
-        } else $('.header-txt-block').css("margin-top", '20px');  
+        } else $('.header-txt-block').css("margin-top", '20px');
     });
 
 
@@ -163,12 +163,12 @@
 
 
         // safari specific
-        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  { 
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  {
             $('img').load(function() {
               $('.header-txt-block').css("margin-top", ( ( ($('#containerHeader').height() - $('.header-txt-block').height() ) / 2) - 10) + 'px');
               if ($( window ).width() <= 768) {
                   $('.header-txt-block').css("margin-top", '20px');
-              }    
+              }
             });
         }
 
