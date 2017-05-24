@@ -9,7 +9,9 @@ userGroupsApp.controller('userGroupsCtrl', function ($scope, $http) {
 
 			$.each(res.data, function (index, value) {
 				if ($.inArray(value.country, $scope.countries) === -1) {
-					$scope.countries.push(value.country);
+					if (value.country != "") {
+						$scope.countries.push(value.country);
+					}
 				}
 			});
 
