@@ -149,6 +149,14 @@
         "membersNum": 64,
         "groupUrl": "https://www.meetup.com/pentaho-user-group-dach/",
         "joinUrl": "https://www.meetup.com/pentaho-user-group-dach/join"
+    },
+    {
+        "name": "Titorlab Business Intelligence",
+        "city": "",
+        "country": "",
+        "membersNum": 0,
+        "groupUrl": "https://groups.google.com/d/forum/titorlab-bi",
+        "joinUrl": "https://groups.google.com/d/forum/titorlab-bi"
     }
 
 ]
