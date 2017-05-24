@@ -109,7 +109,8 @@
                       </a>
                       <div class="userGroup-memberArea clearfix">
                         <div class="userGroup-members pull-left">
-                          <span class="userGroup-membersNum">{{ group.membersNum }}</span>
+                          <span ng-if="group.membersNum > 0" class="userGroup-membersNum">{{ group.membersNum }}</span>
+                          <span ng-if="group.membersNum <= 0" class="userGroup-membersNum">–</span>
                           <span> Members</span>
                         </div>
                         <div class="userGroup-join pull-right">
