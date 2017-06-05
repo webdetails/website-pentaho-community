@@ -151,10 +151,10 @@
         "joinUrl": "https://www.meetup.com/pentaho-user-group-dach/join"
     },
     {
-        "name": "Titorlab Business Intelligence",
-        "city": "",
-        "country": "",
-        "membersNum": 0,
+        "name": "Lima Business Intelligence",
+        "city": "Lima",
+        "country": "Peru",
+        "membersNum": 3,
         "groupUrl": "https://groups.google.com/d/forum/titorlab-bi",
         "joinUrl": "https://groups.google.com/d/forum/titorlab-bi"
     }
